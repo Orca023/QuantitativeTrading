@@ -6,27 +6,29 @@
 
 <p word-wrap: break-word; word-break: break-all; overflow-x: hidden; overflow-x: hidden;></p>
 
-一. 其中「`StatisticalServerJulia`」項目，使用 Julia 程式設計語言 ( computer programming language )，借用第三方擴展模組 ( third-party extensions ( libraries or modules ) ) : 「`HTTP`」「`JSON`」「`LsqFit`」「`Interpolations`」「`DataInterpolations`」「`Roots`」實現.
+一. 其中「`QuantitativeTradingJulia`」項目，使用 Julia 程式設計語言 ( computer programming language )，借用第三方擴展模組 ( third-party extensions ( libraries or modules ) ) : 「`Optim`」「`JSON`」「`CSV`」「`XLSX`」「`JLD`」「`DataFrames`」實現 .
 
-1. 借用「`HTTP`」模組，實現 http 協議 web 伺服器 ( Server ) 功能.
+1. 借用「`Optim`」模組的「`optimize`」函數，實現優化算法 ( parameters optimization ) 即通用形式優化問題求解 ( optimization ) 功能，最優化此數量化交易模型「`QuantitativeTradingJulia`」參數 .
 
-2. 借用「`JSON`」模組，實現 Julia 原生數據類型字典 ( Base.Dict ) 對象 ( Object ) 與 JSON 字符串 ( String ) 對象 ( Object ) 之間，數據類型相互轉換.
+2. 借用「`JSON`」模組，實現 Julia 原生數據類型字典 ( Base.Dict ) 對象 ( Object ) 與 JSON 字符串 ( String ) 對象 ( Object ) 之間，數據類型相互轉換 .
 
-3. 借用「`LsqFit`」模組，實現自定義任意形式初等函數 ( Elementary Function ) 方程擬合 ( Fit ) 運算.
+3. 借用「`CSV`」模組，實現程式設計語言 ( computer programming language ) : Julia 操作逗號 ( , ) 分隔符檔 ( .csv ) 讀 (read) , 寫 ( write ) 功能 .
 
-4. 借用「`Interpolations`」和「`DataInterpolations`」模組，實現插值 ( Interpolation ) 運算.
+4. 借用「`XLSX`」模組，實現程式設計語言 ( computer programming language ) : Julia 操作微軟電子表格 ( Windows - Office - Excel ) 檔 ( .xlsx ) 讀 (read) , 寫 ( write ) 功能 .
 
-5. 借用「`Roots`」模組，實現任意形式自定義初等函數一元方程求根 ( Solving Equation )，即求解反函數 ( Inverse ) .
+5. 借用「`JLD`」模組，實現程式設計語言 ( computer programming language ) : Julia 操作 Hierarchical Data Format version 5 , HDF5 格式的數據持久化存儲 ( Julia data format , JLD ) 檔 ( .jld ) 讀 (read) , 寫 ( write ) 功能 .
 
-二. 其中「`StatisticalServerPython`」項目，使用 Python3 程式設計語言 ( computer programming language )，借用第三方擴展模組 ( third-party extensions ( libraries or modules ) ) : 「`numpy`」「`scipy`」實現.
+6. 借用「`DataFrames`」模組，實現程式設計語言 ( computer programming language ) : Julia 處理數據框 ( Julia - DataFrame ) 類型的數據 .
 
-1. 借用「`numpy`」模組，實現基礎數學向量 ( Vector ) 運算.
+二. 其中「`QuantitativeTradingPython`」項目，使用 Python3 程式設計語言 ( computer programming language )，借用第三方擴展模組 ( third-party extensions ( libraries or modules ) ) : 「`numpy`」「`scipy`」「`pandas`」實現 .
 
-2. 借用「`scipy`」項目的優化模組「`optimize`」的「`curve_fit`」函數，實現自定義任意形式初等函數 ( Elementary Function ) 方程擬合 ( Fit ) 運算.
+1. 借用「`numpy`」模組，實現基礎數學向量 ( Vector ) 運算 .
 
-3. 借用「`scipy`」項目的插值模組「`interpolate`」的「`make_interp_spline`」「`BSpline`」「`interp1d`」「`UnivariateSpline`」「`lagrange`」函數，實現插值 ( Interpolation ) 運算.
+2. 借用「`scipy`」項目的優化模組「`optimize`」的「`minimize`」函數，實現優化算法 ( parameters optimization ) 即通用形式優化問題求解 ( optimization ) 功能，最優化此數量化交易模型「`QuantitativeTradingPython`」參數 .
 
-4. 借用「`scipy`」項目的優化模組「`optimize`」的「`root`」函數，實現任意形式自定義初等函數一元方程求根 ( Solving Equation )，即求解反函數 ( Inverse ) .
+3. 借用「`pandas`」模組，實現程式設計語言 ( computer programming language ) : Python 操作逗號 ( , ) 分隔符檔 ( .csv ) 和微軟電子表格 ( Windows - Office - Excel ) 檔 ( .xlsx ) 讀 (read) , 寫 ( write ) 功能 .
+
+4. 借用「`pandas`」模組，實現程式設計語言 ( computer programming language ) : Python 處理數據框 ( Python - DataFrame ) 類型的數據 .
 
 ---
 
