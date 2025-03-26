@@ -1,11 +1,6 @@
-# QuantitativeTrading
-可擴展的數量化交易模型框架（scalable quantitative trading model frame），主要使用 Julia , Python 程式設計語言（computer programming language）實現序列遍歷（sequence traversal）和參數優化算法（parameters optimization）。
-
-
-
-## 統計運算伺服器 StatisticalServer : StatisticalServerJulia , StatisticalServerPython
+## 數量化交易模型 QuantitativeTrading : QuantitativeTradingJulia , QuantitativeTradingPython
 #### Julia , Python
-#### 使用「Criss」倉庫 ( repositories ) 「Interface.jl」或「Interface.py」模組 ( module )，搭建可擴展的統計計算伺服器框架 ( scalable statistical calculation server frame )，借用第三方擴展模組 ( third-party extensions ( libraries or modules ) )，分別使用 Julia 或 Python 程式設計語言 ( computer programming language ) 各自獨立實現的竝立兩套方案算法 ( algorithm ) .
+#### 可擴展的數量化交易模型框架 ( scalable quantitative trading model frame ) , 分別使用 Julia 或 Python 程式設計語言 ( computer programming language ) 各自獨立實現 Julia , Pyhton 兩套方案序列遍歷 ( sequence traversal ) 動作 , 借用 Julia 或 Python 的第三方擴展包 ( third-party extensions ( libraries or modules ) ) 實現 Julia , Python 兩套方案優化算法 ( parameters optimization ) 參數最優化.
 
 ---
 
