@@ -38,7 +38,7 @@
 
 ---
 
-一. 代碼脚本檔 ( script file ) : `StatisticalServer/StatisticalServerJulia/Interface.jl` , `StatisticalServer/StatisticalServerPython/Interface.py`
+一. 代碼脚本檔 ( script file ) : `QuantitativeTrading/QuantitativeTradingJulia/src/Quantitative_Data_Cleaning.jl` , `QuantitativeTrading/QuantitativeTradingPython/src/Quantitative_Data_Cleaning.py`
 
 代碼脚本 ( Script ) 檔 : `Interface.jl` 或 `Interface.py` 是伺服器 ( Server ) 函數 ( Function ) , 具體功能是實現: 讀入 ( read ) 數據, 寫出 ( write ) 結果.
 
