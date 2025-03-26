@@ -70,27 +70,29 @@
 
 代碼脚本 ( Script ) 檔 : `StatisticalAlgorithmServer.jl` 或 `StatisticalAlgorithmServer.py` 是伺服器（Server）啓動入口，引用 ( Import ) 檔 `Interface.jl` 或 `Interface.py` 裏的伺服器 ( Server ) 讀入 ( read ) 待處理的原始數據, 然後, 實現數據分發路由 ( Router ) 功能, 可通過修改代碼脚本 ( Script ) 檔 : `Router.jl` 或 `Router.py` 裏的 : `do_data` 和 `do_Request` 兩個函數 ( Function ) , 實現自定義規則的數據分發運算處理並返回 ( return ) 運算結果, 然後再將運算結果, 通過引用 ( Import ) 檔 `Interface.jl` 或 `Interface.py` 裏的伺服器 ( Server ) 回饋寫出 ( write ) 結果返回 ( return ) 至用戶端 ( Client ) .
 
-五. 檔案夾 ( folder ) : `StatisticalServer/Julia/` , `StatisticalServer/Python/`
+七. 純文本文檔 ( .txt ) : `QuantitativeTrading/QuantitativeTradingJulia/config.txt` , `QuantitativeTrading/QuantitativeTradingPython/config.txt`
 
-檔案夾 ( folder )「`StatisticalServer/Julia/`」爲微軟視窗系統 ( Windows10 x86_64 ) 程式設計語言 ( Julia ) 解釋器 ( Interpreter ) 二進位可執行檔 ( julia.exe ) 的儲存位置，需自行下載後，將其解壓縮，保存至「`C:/StatisticalServer/Julia/Julia-1.9.3/bin/julia.exe`」路徑.
+代碼脚本 ( Script ) 檔 : `StatisticalAlgorithmServer.jl` 或 `StatisticalAlgorithmServer.py` 是伺服器（Server）啓動入口，引用 ( Import ) 檔 `Interface.jl` 或 `Interface.py` 裏的伺服器 ( Server ) 讀入 ( read ) 待處理的原始數據, 然後, 實現數據分發路由 ( Router ) 功能, 可通過修改代碼脚本 ( Script ) 檔 : `Router.jl` 或 `Router.py` 裏的 : `do_data` 和 `do_Request` 兩個函數 ( Function ) , 實現自定義規則的數據分發運算處理並返回 ( return ) 運算結果, 然後再將運算結果, 通過引用 ( Import ) 檔 `Interface.jl` 或 `Interface.py` 裏的伺服器 ( Server ) 回饋寫出 ( write ) 結果返回 ( return ) 至用戶端 ( Client ) .
 
 檔案夾 ( folder )「`StatisticalServer/Python/`」爲微軟視窗系統 ( Windows10 x86_64 ) 程式設計語言 ( Python3 ) 解釋器 ( Interpreter ) 二進位可執行檔 ( python.exe ) 的儲存位置，需自行下載後，將其解壓縮，保存至「`C:/StatisticalServer/Python/Python311/python.exe`」路徑.
 
-六. 檔案夾 ( folder ) : `StatisticalServer/html/`
+八. 檔案夾 ( folder ) : `QuantitativeTrading/Data/`
 
-檔案夾 ( folder )「`StatisticalServer/html/`」爲使用瀏覽器 ( Browser ) 作爲用戶端 ( Client ) 時，統計運算伺服器「`StatisticalServer`」向用戶端瀏覽器 ( Browser ) 發送 ( Respond ) 的標準通用標記語言代碼脚本 ( .html ) 檔.
+檔案夾 ( folder )「`QuantitativeTrading/Data/`」爲使用瀏覽器 ( Browser ) 作爲用戶端 ( Client ) 時，統計運算伺服器「`StatisticalServer`」向用戶端瀏覽器 ( Browser ) 發送 ( Respond ) 的標準通用標記語言代碼脚本 ( .html ) 檔.
 
 其中 :
 
-代碼脚本檔「`index.html`」爲應用交互頁面，因應網址 ( Uniform Resource Locator , URL ) 爲 : 
+檔案夾 ( folder )「`QuantitativeTrading/Data/K-Day/`」爲應用交互頁面，因應網址 ( Uniform Resource Locator , URL ) 爲 : 
 `http://[::1]:10001/index.html`
 
-代碼脚本檔「`administrator.html`」爲管理頁面，因應網址 ( Uniform Resource Locator , URL ) 爲 : 
+程式設計語言 ( computer programming language ) : Julia 數據持久化存儲 Hierarchical Data Format version 5 , HDF5 格式的數據 ( Julia data format , JLD ) 檔 ( .jld )「`steppingData.jld`」爲待計算的原數據示例，是用戶端瀏覽器 ( Browser ) 應用交互頁面「`index.html`」待計算表格内的原數據，單擊「讀取待處理的數據文檔」按鈕 ( Button ) 後，從本地硬盤 ( Disk , Read-Only Memory ) 導入至瀏覽器 ( Browser ) 應用交互頁面「`index.html`」待計算表格内的數據文檔示例.
+
+程式設計語言 ( computer programming language ) : Python 數據持久化存儲序列化 ( pickling ) 二進位字節流 ( bytes ) 檔 ( .pickle )「`steppingData.pickle`」爲待計算的原數據示例，是用戶端瀏覽器 ( Browser ) 應用交互頁面「`index.html`」待計算表格内的原數據，單擊「讀取待處理的數據文檔」按鈕 ( Button ) 後，從本地硬盤 ( Disk , Read-Only Memory ) 導入至瀏覽器 ( Browser ) 應用交互頁面「`index.html`」待計算表格内的數據文檔示例.
+
+逗號 ( , ) 分隔符檔 ( .csv )「`SZ#002611.csv`」爲計算結果數據示例，是用戶端瀏覽器 ( Browser ) 應用交互頁面「`index.html`」計算結果表格内數據，單擊「保存運算結果數據文檔」按鈕 ( Button ) 後，從瀏覽器 ( Browser ) 應用交互頁面「`index.html`」計算結果表格内導出至本地硬盤 ( Disk , Read-Only Memory ) 存儲的數據文檔示例.
+
+微軟電子表格 ( Windows - Office - Excel ) 檔「`SZ#002611.xlsx`」爲管理頁面，因應網址 ( Uniform Resource Locator , URL ) 爲 : 
 `http://[::1]:10001/administrator.html`
-
-逗號 ( , ) 分隔符檔 ( .csv )「`calculated.csv`」爲計算結果數據示例，是用戶端瀏覽器 ( Browser ) 應用交互頁面「`index.html`」計算結果表格内數據，單擊「保存運算結果數據文檔」按鈕 ( Button ) 後，從瀏覽器 ( Browser ) 應用交互頁面「`index.html`」計算結果表格内導出至本地硬盤 ( Disk , Read-Only Memory ) 存儲的數據文檔示例.
-
-逗號 ( , ) 分隔符檔 ( .csv )「`LogisticLog5PInputData.csv`」爲待計算的原數據示例，是用戶端瀏覽器 ( Browser ) 應用交互頁面「`index.html`」待計算表格内的原數據，單擊「讀取待處理的數據文檔」按鈕 ( Button ) 後，從本地硬盤 ( Disk , Read-Only Memory ) 導入至瀏覽器 ( Browser ) 應用交互頁面「`index.html`」待計算表格内的數據文檔示例.
 
 可自行修改標準通用標記語言代碼脚本 ( .html ) 檔「`index.html`」「`SelectStatisticalAlgorithms.html`」「`InputHTML.html`」「`OutputHTML.html`」内的 HTML , JavaScript , CSS 代碼，擴展交互頁面「`index.html`」内統計方法的連接 ( Browser Client Request ) 選項.
 
