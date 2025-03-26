@@ -68,11 +68,11 @@
 
 八. 檔案夾 ( folder ) : `QuantitativeTrading/Data/`
 
-檔案夾 ( folder )「`QuantitativeTrading/Data/`」爲日棒缐 ( K - Line ) 數據的保存位置 .
+檔案夾 ( folder )「`QuantitativeTrading/Data/`」爲日棒缐 ( K - Line ) 數據檔的保存位置 .
 
 其中 :
 
-1. 檔案夾 ( folder )「`QuantitativeTrading/Data/K-Day/`」爲日棒缐 ( K - Line ) 原始數據逗號 ( , ) 分隔符檔 ( .csv ) 的保存位置，如此例通過深圳市招商證券股份有限公司 ( CHINA MERCHANTS SECURITIES CO., LTD. ) 用戶端 ( zyyht.exe ) 下載得到中華人民共和國人民幣認購和交易的普通股票 ( A shares ) 數據逗號 ( , ) 分隔符檔 ( .csv ) 示例 .
+1. 檔案夾 ( folder )「`QuantitativeTrading/Data/K-Day/`」爲日棒缐 ( K - Line ) 原始數據逗號 ( , ) 分隔符檔 ( .csv ) 的保存位置，如此例通過深圳市招商證券股份有限公司 ( CHINA MERCHANTS SECURITIES CO., LTD. ) 證券交易服務用戶端 ( zyyht.exe ) 下載得到中華人民共和國人民幣認購和交易的普通股票 ( A shares ) 數據逗號 ( , ) 分隔符檔 ( .csv ) 示例 .
 
 2. 程式設計語言 ( computer programming language ) : Julia 數據檔 ( .jld ) 「`QuantitativeTrading/Data/steppingData.jld`」是使用「`Quantitative_Data_Cleaning.jl`」模組初步清理日棒缐 ( K - Line ) 原始數據獲得標準化日棒缐 ( K - Line ) 數據本地存儲爲程式設計語言 ( computer programming language ) : Julia 數據持久化存儲 Hierarchical Data Format version 5 , HDF5 格式的數據 ( Julia data format , JLD ) 檔 ( .jld ) 示例 .
 
@@ -1176,6 +1176,13 @@ https://www.microsoft.com/zh-tw/download/office
 https://learn.microsoft.com/zh-tw/deployoffice/office2019/overview
 
 ---
+
+
+[深圳市招商證券股份有限公司 ( CHINA MERCHANTS SECURITIES CO., LTD. ) 證券交易服務用戶端 ( zyyht.exe ) 官方下載頁](https://yht.cmschina.com/download.html): 
+https://yht.cmschina.com/download.html
+
+
+
 
 開箱即用 ( out of the box ) ( portable application ) 已配置第三方擴展模組 ( third-party extensions ( libraries or modules ) ) 的程式設計語言 ( computer programming language ) : Julia 解釋器 ( Interpreter ) 和 Python 解釋器 ( Interpreter ) 運行環境的壓縮檔 ( .7z ) 的 [百度網盤(pan.baidu.com)](https://pan.baidu.com/s/1MZMNeeRz02zpEzSV0xcFBA?pwd=cy8g) 下載頁: 
 https://pan.baidu.com/s/1MZMNeeRz02zpEzSV0xcFBA?pwd=cy8g
