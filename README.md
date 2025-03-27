@@ -211,7 +211,7 @@ C:\QuantitativeTrading> C:/QuantitativeTrading/Python/Python311/python.exe C:/Qu
 training_data = 
 ```
 {
-    str("002611") : {
+    str("002607") : {
         str("date_transaction") : [ datetime.date("2022-03-14") , datetime.date("2022-03-15") , datetime.date("2022-03-16") , ... ],
         str("turnover_volume") : [ int(10002) , int(10003) , int(10001) , ... ],
         str("opening_price") : [ float(1.81) , float(1.52) , float(1.23) , ... ],
@@ -220,7 +220,7 @@ training_data =
         str("high_price") : [ float(1.91) , float(1.62) , float(1.93) , ... ],
         ...
     },
-    str("002612") : {
+    str("002608") : {
         str("date_transaction") : [ datetime.date("2022-03-14") , datetime.date("2022-03-15") , datetime.date("2022-03-16") , ... ],
         str("turnover_volume") : [ int(10002) , int(10003) , int(10001) , ... ],
         str("opening_price") : [ float(1.81) , float(1.52) , float(1.23) , ... ],
@@ -229,7 +229,7 @@ training_data =
         str("high_price") : [ float(1.91) , float(1.62) , float(1.93) , ... ],
         ...
     },
-    str("002613") : {
+    str("002609") : {
         str("date_transaction") : [ datetime.date("2022-03-14") , datetime.date("2022-03-15") , datetime.date("2022-03-16") , ... ],
         str("turnover_volume") : [ int(10002) , int(10003) , int(10001) , ... ],
         str("opening_price") : [ float(1.81) , float(1.52) , float(1.23) , ... ],
@@ -773,7 +773,7 @@ C:\StatisticalServer> C:/StatisticalServer/Julia/Julia-1.9.3/bin/julia.exe -p 4 
 training_data = 
 ```
 Base.Dict{Core.String, Core.Any}(
-    Base.string("002611") => Base.Dict{Core.String, Core.Any}(
+    Base.string("002607") => Base.Dict{Core.String, Core.Any}(
         Base.string("date_transaction") : Core.Array{Core.Union{Dates.Date, Dates.DateTime, Core.Float64, Core.Int64, Core.UInt64, Core.Bool, Core.String, Core.Nothing, Base.Missing}, 1}()[ Dates.Date("2022-03-14") , Dates.Date("2022-03-15") , Dates.Date("2022-03-16") , ... ],
         Base.string("turnover_volume") : Core.Array{Core.Union{Core.Float64, Core.Int64, Core.UInt64, Core.Bool, Core.String, Core.Nothing, Base.Missing}, 1}()[ Core.Int64(10002) , Core.Int64(10003) , Core.Int64(10001) , ... ],
         Base.string("opening_price") : Core.Array{Core.Union{Core.Float64, Core.Int64, Core.UInt64, Core.Bool, Core.String, Core.Nothing, Base.Missing}, 1}()[ Core.Float64(1.81) , Core.Float64(1.52) , Core.Float64(1.23) , ... ],
@@ -782,7 +782,7 @@ Base.Dict{Core.String, Core.Any}(
         Base.string("high_price") : Core.Array{Core.Union{Core.Float64, Core.Int64, Core.UInt64, Core.Bool, Core.String, Core.Nothing, Base.Missing}, 1}()[ Core.Float64(1.91) , Core.Float64(1.62) , Core.Float64(1.93) , ... ],
         ...
     ),
-    Base.string("002612") => Base.Dict{Core.String, Core.Any}(
+    Base.string("002608") => Base.Dict{Core.String, Core.Any}(
         Base.string("date_transaction") : Core.Array{Core.Union{Dates.Date, Dates.DateTime, Core.Float64, Core.Int64, Core.UInt64, Core.Bool, Core.String, Core.Nothing, Base.Missing}, 1}()[ Dates.Date("2022-03-14") , Dates.Date("2022-03-15") , Dates.Date("2022-03-16") , ... ],
         Base.string("turnover_volume") : Core.Array{Core.Union{Core.Float64, Core.Int64, Core.UInt64, Core.Bool, Core.String, Core.Nothing, Base.Missing}, 1}()[ Core.Int64(10002) , Core.Int64(10003) , Core.Int64(10001) , ... ],
         Base.string("opening_price") : Core.Array{Core.Union{Core.Float64, Core.Int64, Core.UInt64, Core.Bool, Core.String, Core.Nothing, Base.Missing}, 1}()[ Core.Float64(1.81) , Core.Float64(1.52) , Core.Float64(1.23) , ... ],
@@ -791,7 +791,7 @@ Base.Dict{Core.String, Core.Any}(
         Base.string("high_price") : Core.Array{Core.Union{Core.Float64, Core.Int64, Core.UInt64, Core.Bool, Core.String, Core.Nothing, Base.Missing}, 1}()[ Core.Float64(1.91) , Core.Float64(1.62) , Core.Float64(1.93) , ... ],
         ...
     ),
-    Base.string("002613") => Base.Dict{Core.String, Core.Any}(
+    Base.string("002609") => Base.Dict{Core.String, Core.Any}(
         Base.string("date_transaction") : Core.Array{Core.Union{Dates.Date, Dates.DateTime, Core.Float64, Core.Int64, Core.UInt64, Core.Bool, Core.String, Core.Nothing, Base.Missing}, 1}()[ Dates.Date("2022-03-14") , Dates.Date("2022-03-15") , Dates.Date("2022-03-16") , ... ],
         Base.string("turnover_volume") : Core.Array{Core.Union{Core.Float64, Core.Int64, Core.UInt64, Core.Bool, Core.String, Core.Nothing, Base.Missing}, 1}()[ Core.Int64(10002) , Core.Int64(10003) , Core.Int64(10001) , ... ],
         Base.string("opening_price") : Core.Array{Core.Union{Core.Float64, Core.Int64, Core.UInt64, Core.Bool, Core.String, Core.Nothing, Base.Missing}, 1}()[ Core.Float64(1.81) , Core.Float64(1.52) , Core.Float64(1.23) , ... ],
