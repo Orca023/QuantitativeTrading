@@ -197,29 +197,29 @@ training_data =
 {
     str("002611") : {
         str("date_transaction") : [ datetime.date("2022-03-14") , datetime.date("2022-03-15") , datetime.date("2022-03-16") , ... ],
-        str("turnover_volume") : [ int(10002), int(10003), int(10001), ... ],
-        str("opening_price") : [ float(1.81), float(1.52), float(1.23), ... ],
-        str("close_price") : [ float(1.21), float(1.52), float(1.83), ... ],
-        str("low_price") : [ float(1.11), float(1.42), float(1.13), ... ],
-        str("high_price") : [ float(1.91), float(1.62), float(1.93), ... ],
+        str("turnover_volume") : [ int(10002) , int(10003) , int(10001) , ... ],
+        str("opening_price") : [ float(1.81) , float(1.52) , float(1.23) , ... ],
+        str("close_price") : [ float(1.21) , float(1.52) , float(1.83) , ... ],
+        str("low_price") : [ float(1.11) , float(1.42) , float(1.13) , ... ],
+        str("high_price") : [ float(1.91) , float(1.62) , float(1.93) , ... ],
         ...
     },
     str("002612") : {
         str("date_transaction") : [ datetime.date("2022-03-14") , datetime.date("2022-03-15") , datetime.date("2022-03-16") , ... ],
-        str("turnover_volume") : [ int(10002), int(10003), int(10001), ... ],
-        str("opening_price") : [ float(1.81), float(1.52), float(1.23), ... ],
-        str("close_price") : [ float(1.21), float(1.52), float(1.83), ... ],
-        str("low_price") : [ float(1.11), float(1.42), float(1.13), ... ],
-        str("high_price") : [ float(1.91), float(1.62), float(1.93), ... ],
+        str("turnover_volume") : [ int(10002) , int(10003) , int(10001) , ... ],
+        str("opening_price") : [ float(1.81) , float(1.52) , float(1.23) , ... ],
+        str("close_price") : [ float(1.21) , float(1.52) , float(1.83) , ... ],
+        str("low_price") : [ float(1.11) , float(1.42) , float(1.13) , ... ],
+        str("high_price") : [ float(1.91) , float(1.62) , float(1.93) , ... ],
         ...
     },
     str("002613") : {
         str("date_transaction") : [ datetime.date("2022-03-14") , datetime.date("2022-03-15") , datetime.date("2022-03-16") , ... ],
-        str("turnover_volume") : [ int(10002), int(10003), int(10001), ... ],
-        str("opening_price") : [ float(1.81), float(1.52), float(1.23), ... ],
-        str("close_price") : [ float(1.21), float(1.52), float(1.83), ... ],
-        str("low_price") : [ float(1.11), float(1.42), float(1.13), ... ],
-        str("high_price") : [ float(1.91), float(1.62), float(1.93), ... ],
+        str("turnover_volume") : [ int(10002) , int(10003) , int(10001) , ... ],
+        str("opening_price") : [ float(1.81) , float(1.52) , float(1.23) , ... ],
+        str("close_price") : [ float(1.21) , float(1.52) , float(1.83) , ... ],
+        str("low_price") : [ float(1.11) , float(1.42) , float(1.13) , ... ],
+        str("high_price") : [ float(1.91) , float(1.62) , float(1.93) , ... ],
         ...
     },
     ...
