@@ -982,6 +982,21 @@ https://julianlsolvers.github.io/Optim.jl/stable/
 [Julia - Optim 官方 GitHub 網站倉庫頁](https://github.com/JuliaNLSolvers/Optim.jl.git): 
 https://github.com/JuliaNLSolvers/Optim.jl
 
+[Julia - JLD 官方 GitHub 網站倉庫頁](https://github.com/JuliaIO/JLD.jl): 
+https://github.com/JuliaIO/JLD.jl.git
+
+[Julia - DataFrames 官方 GitHub 網站倉庫頁](https://github.com/JuliaData/DataFrames.jl): 
+https://github.com/JuliaData/DataFrames.jl.git
+
+[Julia - CSV 官方 GitHub 網站倉庫頁](https://github.com/JuliaData/CSV.jl): 
+https://github.com/JuliaData/CSV.jl.git
+
+[Julia - XLSX 官方手冊](https://felipenoris.github.io/XLSX.jl/stable/): 
+https://felipenoris.github.io/XLSX.jl/stable/
+
+[Julia - XLSX 官方 GitHub 網站倉庫頁](https://github.com/felipenoris/XLSX.jl): 
+https://github.com/felipenoris/XLSX.jl.git
+
 [Julia - HTTP 官方 GitHub 網站倉庫頁](https://github.com/JuliaWeb/HTTP.jl): 
 https://github.com/JuliaWeb/HTTP.jl.git
 
@@ -1047,6 +1062,9 @@ https://github.com/JuliaIO
 
 [程式設計 Julia 語言第三方擴展模組 ( third-party extensions ( libraries or modules ) ) : 「JuliaWeb」項目官方 GitHub 網站賬戶](https://github.com/JuliaWeb): 
 https://github.com/JuliaWeb
+
+[程式設計 Julia 語言第三方擴展模組 ( third-party extensions ( libraries or modules ) ) : 「JuliaData」項目官方 GitHub 網站賬戶](https://github.com/JuliaData): 
+https://github.com/JuliaData
 
 [程式設計 Julia 語言第三方擴展模組 ( third-party extensions ( libraries or modules ) ) : 「JuliaPlots」項目官方 GitHub 網站賬戶](https://github.com/JuliaPlots): 
 https://github.com/JuliaPlots
