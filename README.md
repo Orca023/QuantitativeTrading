@@ -774,14 +774,14 @@ print(result["testData"]["SizePosition_transaction_sequence"]["002611"])
 ```
 return_stepping_Dict = BackTesting_Stepper(
     steppingData = {
-        "600118": training_data["600118"],
-        "600119": training_data["600119"],
-        "600120": training_data["600120"],
-        "002607": training_data["002607"],
-        "002608": training_data["002608"],
-        "002609": training_data["002609"],
-        "002611": training_data["002611"]
-    },  # 訓練集，標準化日棒缐（K Line Daily）數據字典 ( Python - dict ) ;
+        "600118": stepping_data["600118"],
+        "600119": stepping_data["600119"],
+        "600120": stepping_data["600120"],
+        "002607": stepping_data["002607"],
+        "002608": stepping_data["002608"],
+        "002609": stepping_data["002609"],
+        "002611": stepping_data["002611"]
+    },  # 回測數據集，標準化日棒缐（K Line Daily）數據字典 ( Python - dict ) ;
     risk_threshold = float(0.8),  # risk_threshold_drawdown_loss,  # 自定義的風險控制閾值，强制平倉，可接受的最大回撤比例：Long_Position = sell_price ÷ buy_price、Short_Selling = 1 + ((sell_price - buy_price) ÷ sell_price) ;
     training_sequence_length = int(60),  # 推進分析（Stepper movement）（propulsion analysis）每一次步進，訓練集數據自定義的交易日截取長度;
     training_ticker_symbol = [str(item) for item in stepping_data.keys()]  # training_data_ticker_symbol_Array,  # 訓練集納入股票代碼字符串的一維數組，函數 dict.keys() 表示獲取字典的所有 key 值，返回值爲字符串列表（list）;
@@ -1706,58 +1706,82 @@ println(result["testData"]["SizePosition_transaction_sequence"]["002611"]);
 
 7. 代碼脚本檔 ( script file ) 「`QuantitativeTrading/QuantitativeTradingJulia/src/Quantitative_BackTesting.jl`」内函數 ( Function ) 運行示例 :
 ```
-
+return_stepping_Dict = BackTesting_Stepper(
+    steppingData = Base.Dict{Core.String, Core.Any}(
+        "600118" => stepping_data["600118"],
+        "600119" => stepping_data["600119"],
+        "600120" => stepping_data["600120"],
+        "002607" => stepping_data["002607"],
+        "002608" => stepping_data["002608"],
+        "002609" => stepping_data["002609"],
+        "002611" => stepping_data["002611"]
+    ),  Base.Dict{Core.String, Core.Any}(),  # 回測數據集，標準化日棒缐（K Line Daily）數據字典 ( Julia - Base.Dict ) ;
+    risk_threshold = Core.Float64(0.8),  # risk_threshold_drawdown_loss,  # 自定義的風險控制閾值，强制平倉，可接受的最大回撤比例：Long_Position = sell_price ÷ buy_price、Short_Selling = 1 + ((sell_price - buy_price) ÷ sell_price) ;
+    training_sequence_length = Core.Int64(60),  # 推進分析（Stepper movement）（propulsion analysis）每一次步進，訓練集數據自定義的交易日截取長度;
+    training_ticker_symbol = [Base.string(item) for item in Base.keys(stepping_data)],  # training_data_ticker_symbol_Array,  # 訓練集納入股票代碼字符串的一維數組，函數 Base.keys(Dict) 表示獲取字典的所有 key 值，返回值爲字符串向量（Base.Vector）;
+    testing_ticker_symbol = [Base.string(item) for item in Base.keys(stepping_data)],  # testing_data_ticker_symbol_Array,  # 訓練集納入股票代碼字符串的一維數組，函數 Base.keys(Dict) 表示獲取字典的所有 key 值，返回值爲字符串向量（Base.Vector）;
+    testing_sequence_length = Core.Int64(1),  # 推進分析（Stepper movement）（propulsion analysis）每一次步進，測試集數據自定義的交易日截取長度;
+    SizePosition = SizePosition,  # (arguments) -> begin return arguments; end,
+    SizePosition_fit_model = SizePosition_fit_model,  # (arguments) -> begin return arguments; end,
+    SizePosition_Pdata_0 = Core.Array{Core.Any, 1}(),  # SizePosition_Parameter_Array,  # 倉位優化迭代參數初值;  # ::Core.Array{Core.Any, 1}[::Base.Dict{Core.String, Core.Any} = Base.Dict{Core.String, Core.Any}("ticker_symbol" => Base.Dict{Core.String, Core.Any}("Long_Position" => ::Core.Float64 = Core.Float64(), "Short_Selling" => ::Core.Float64 = Core.Float64())), ::Base.Dict{Core.String, Core.Any} = Base.Dict{Core.String, Core.Any}("ticker_symbol" => Base.Dict{Core.String, Core.Any}("Long_Position" => ::Core.Float64 = Core.Float64(), "Short_Selling" => ::Core.Float64 = Core.Float64()))],
+    SizePosition_weight = Core.Array{Core.Any, 1}(),  # [Core.Float64(1.0) for i in 1:Base.length(stepping_data)],  # 倉位優化迭代數據權重值;
+    SizePosition_Plower = [Plower_weight_MarketTiming_Dict, Plower_weight_PickStock_Dict],  # [-Base.Inf, -Base.Inf],  # 倉位優化迭代參數值約束下限;  # ::Core.Array{Core.Any, 1}[::Base.Dict{Core.String, Core.Any} = Base.Dict{Core.String, Core.Any}("ticker_symbol" => Base.Dict{Core.String, Core.Any}("Long_Position" => ::Core.Float64 = Core.Float64(0.0), "Short_Selling" => ::Core.Float64 = Core.Float64(0.0))), ::Base.Dict{Core.String, Core.Any} = Base.Dict{Core.String, Core.Any}("ticker_symbol" => Base.Dict{Core.String, Core.Any}("Long_Position" => ::Core.Float64 = Core.Float64(), "Short_Selling" => ::Core.Float64 = Core.Float64()))],
+    SizePosition_Pupper = [Pupper_weight_MarketTiming_Dict, Pupper_weight_PickStock_Dict],  # [+Base.Inf, +Base.Inf],  # 倉位優化迭代參數值約束上限;  # ::Core.Array{Core.Any, 1}[::Base.Dict{Core.String, Core.Any} = Base.Dict{Core.String, Core.Any}("ticker_symbol" => Base.Dict{Core.String, Core.Any}("Long_Position" => ::Core.Float64 = Core.Float64(1.0), "Short_Selling" => ::Core.Float64 = Core.Float64(1.0))), ::Base.Dict{Core.String, Core.Any} = Base.Dict{Core.String, Core.Any}("ticker_symbol" => Base.Dict{Core.String, Core.Any}("Long_Position" => ::Core.Float64 = Core.Float64(), "Short_Selling" => ::Core.Float64 = Core.Float64()))],
+    PickStock = PickStock,  # (arguments) -> begin return arguments; end,
+    PickStock_fit_model = PickStock_fit_model,  # (arguments) -> begin return arguments; end,
+    PickStock_Pdata_0 = Core.Array{Core.Float64, 1}(),  # [5, 3],  # PickStock_Parameter,  # 選股優化迭代參數初值;  # ::Core.Array{Core.Any, 1}[::Base.Dict{Core.String, Core.Any} = Base.Dict{Core.String, Core.Any}("ticker_symbol" => Base.Dict{Core.String, Core.Any}("Long_Position" => ::Core.Float64 = Core.Float64(), "Short_Selling" => ::Core.Float64 = Core.Float64())), ::Base.Dict{Core.String, Core.Any} = Base.Dict{Core.String, Core.Any}("ticker_symbol" => Base.Dict{Core.String, Core.Any}("Long_Position" => ::Core.Float64 = Core.Float64(), "Short_Selling" => ::Core.Float64 = Core.Float64()))],
+    PickStock_weight = Core.Array{Core.Float64, 1}(),  # [Core.Float64(1.0) for i in 1:Base.length(stepping_data)],  # 選股優化迭代數據權重值;
+    PickStock_Plower = [Core.Int64(1), Core.Int64(1)],  # [-Base.Inf, -Base.Inf],  # 選股優化迭代參數值約束下限;  # ::Core.Array{Core.Any, 1}[::Base.Dict{Core.String, Core.Any} = Base.Dict{Core.String, Core.Any}("ticker_symbol" => Base.Dict{Core.String, Core.Any}("Long_Position" => ::Core.Float64 = Core.Float64(0.0), "Short_Selling" => ::Core.Float64 = Core.Float64(0.0))), ::Base.Dict{Core.String, Core.Any} = Base.Dict{Core.String, Core.Any}("ticker_symbol" => Base.Dict{Core.String, Core.Any}("Long_Position" => ::Core.Float64 = Core.Float64(), "Short_Selling" => ::Core.Float64 = Core.Float64()))],
+    PickStock_Pupper = [Core.Int64([if (Core.Int64(maximum_stepping_data) > Core.Int64(0)) Core.Int64(maximum_stepping_data) else Core.Int64(1) end for i in Core.Int64(1):Core.Int64(1)][Core.Int64(1)]), Core.Int64([if (Core.Int64(maximum_ticker_symbol_stepping_data) > Core.Int64(0)) Core.Int64(maximum_ticker_symbol_stepping_data) else Core.Int64(1) end for i in Core.Int64(1):Core.Int64(1)][Core.Int64(1)])],  # [+Base.Inf, +Base.Inf],  # 選股優化迭代參數值約束上限;  # ::Core.Array{Core.Any, 1}[::Base.Dict{Core.String, Core.Any} = Base.Dict{Core.String, Core.Any}("ticker_symbol" => Base.Dict{Core.String, Core.Any}("Long_Position" => ::Core.Float64 = Core.Float64(1.0), "Short_Selling" => ::Core.Float64 = Core.Float64(1.0))), ::Base.Dict{Core.String, Core.Any} = Base.Dict{Core.String, Core.Any}("ticker_symbol" => Base.Dict{Core.String, Core.Any}("Long_Position" => ::Core.Float64 = Core.Float64(), "Short_Selling" => ::Core.Float64 = Core.Float64()))],
+    MarketTiming = MarketTiming,  # (arguments) -> begin return arguments; end,
+    MarketTiming_fit_model = MarketTiming_fit_model,  # (arguments) -> begin return arguments; end,
+    MarketTiming_Pdata_0 = Core.Array{Core.Float64, 1}(),  # [5, 0.1, -0.1, 0.0],  # MarketTiming_Parameter,  # 擇時優化迭代參數初值;  # ::Core.Array{Core.Any, 1}[::Base.Dict{Core.String, Core.Any} = Base.Dict{Core.String, Core.Any}("ticker_symbol" => Base.Dict{Core.String, Core.Any}("Long_Position" => ::Core.Float64 = Core.Float64(), "Short_Selling" => ::Core.Float64 = Core.Float64())), ::Base.Dict{Core.String, Core.Any} = Base.Dict{Core.String, Core.Any}("ticker_symbol" => Base.Dict{Core.String, Core.Any}("Long_Position" => ::Core.Float64 = Core.Float64(), "Short_Selling" => ::Core.Float64 = Core.Float64()))],
+    MarketTiming_weight = Core.Array{Core.Float64, 1}(),  # [Core.Float64(1.0) for i in 1:Base.length(stepping_data)],  # 擇時優化迭代數據權重值;
+    MarketTiming_Plower = [Core.Int64(1), -Base.Inf, -Base.Inf, -Base.Inf],  # [-Base.Inf, -Base.Inf, -Base.Inf, -Base.Inf],  # 擇時優化迭代參數值約束下限;  # ::Core.Array{Core.Any, 1}[::Base.Dict{Core.String, Core.Any} = Base.Dict{Core.String, Core.Any}("ticker_symbol" => Base.Dict{Core.String, Core.Any}("Long_Position" => ::Core.Float64 = Core.Float64(0.0), "Short_Selling" => ::Core.Float64 = Core.Float64(0.0))), ::Base.Dict{Core.String, Core.Any} = Base.Dict{Core.String, Core.Any}("ticker_symbol" => Base.Dict{Core.String, Core.Any}("Long_Position" => ::Core.Float64 = Core.Float64(), "Short_Selling" => ::Core.Float64 = Core.Float64()))],
+    MarketTiming_Pupper = [Core.Int64([if (Core.Int64(maximum_stepping_data) > Core.Int64(0)) Core.Int64(maximum_stepping_data) else Core.Int64(1) end for i in Core.Int64(1):Core.Int64(1)][Core.Int64(1)]), +Base.Inf, +Base.Inf, +Base.Inf],  # [+Base.Inf, +Base.Inf, +Base.Inf, +Base.Inf],  # 擇時優化迭代參數值約束上限;  # ::Core.Array{Core.Any, 1}[::Base.Dict{Core.String, Core.Any} = Base.Dict{Core.String, Core.Any}("ticker_symbol" => Base.Dict{Core.String, Core.Any}("Long_Position" => ::Core.Float64 = Core.Float64(1.0), "Short_Selling" => ::Core.Float64 = Core.Float64(1.0))), ::Base.Dict{Core.String, Core.Any} = Base.Dict{Core.String, Core.Any}("ticker_symbol" => Base.Dict{Core.String, Core.Any}("Long_Position" => ::Core.Float64 = Core.Float64(), "Short_Selling" => ::Core.Float64 = Core.Float64()))],
+    Quantitative_Indicators_Function = Intuitive_Momentum_KLine,  # (arguments) -> begin return arguments; end,
+    investment_method = investment_method  # "Long_Position_and_Short_Selling" , "Long_Position" , "Short_Selling" ;  # 選擇是否允許「賣空」交易;
+);
+println("number PickStock : ", return_stepping_Dict["number_PickStock"]);
+println("number PickStock Long Position : ", return_stepping_Dict["number_PickStock_Long_Position"]);
+println("number PickStock Short Selling : ", return_stepping_Dict["number_PickStock_Short_Selling"]);
+println("number transaction : ", return_stepping_Dict["number_transaction_total"]);
+println("number transaction Long Position : ", return_stepping_Dict["number_transaction_total_Long_Position"]);
+println("number transaction Short Selling : ", return_stepping_Dict["number_transaction_total_Short_Selling"]);
+println("maximum drawdown : ", return_stepping_Dict["maximum_drawdown"]);
+println("maximum drawdown Long Position : ", return_stepping_Dict["maximum_drawdown_Long_Position"]);
+println("maximum drawdown Short Selling : ", return_stepping_Dict["maximum_drawdown_Short_Selling"]);
+println("profit total : ", return_stepping_Dict["profit_total"]);
+println("Long Position profit total : ", return_stepping_Dict["Long_Position_profit_total"]);
+println("Short Selling profit total : ", return_stepping_Dict["Short_Selling_profit_total"]);
+println("profit Positive : ", return_stepping_Dict["profit_Positive"]);
+println("profit Negative : ", return_stepping_Dict["profit_Negative"]);
+println("Long Position profit Positive : ", return_stepping_Dict["Long_Position_profit_Positive"]);
+println("Long Position profit Negative : ", return_stepping_Dict["Long_Position_profit_Negative"]);
+println("Short Selling profit Positive : ", return_stepping_Dict["Short_Selling_profit_Positive"]);
+println("Short Selling profit Negative : ", return_stepping_Dict["Short_Selling_profit_Negative"]);
+println("profit Positive probability : ", return_stepping_Dict["profit_Positive_probability"]);
+println("profit Negative probability : ", return_stepping_Dict["profit_Negative_probability"]);
+println("Long Position profit Positive probability : ", return_stepping_Dict["Long_Position_profit_Positive_probability"]);
+println("Long Position profit Negative probability : ", return_stepping_Dict["Long_Position_profit_Negative_probability"]);
+println("Short Selling profit Positive probability : ", return_stepping_Dict["Short_Selling_profit_Positive_probability"]);
+println("Short Selling profit Negative probability : ", return_stepping_Dict["Short_Selling_profit_Negative_probability"]);
+println("average price amplitude date transaction : ", return_stepping_Dict["average_price_amplitude_date_transaction"]);
+println("Long Position average price amplitude date transaction : ", return_stepping_Dict["Long_Position_average_price_amplitude_date_transaction"]);
+println("Short Selling average price amplitude date transaction : ", return_stepping_Dict["Short_Selling_average_price_amplitude_date_transaction"]);
+println("average volume turnover date transaction : ", return_stepping_Dict["average_volume_turnover_date_transaction"]);
+println("Long Position average volume turnover date transaction : ", return_stepping_Dict["Long_Position_average_volume_turnover_date_transaction"]);
+println("Short Selling average volume turnover date transaction : ", return_stepping_Dict["Short_Selling_average_volume_turnover_date_transaction"]);
+println("average date transaction between : ", return_stepping_Dict["average_date_transaction_between"]);
+println("Long Position average date transaction between : ", return_stepping_Dict["Long_Position_average_date_transaction_between"]);
+println("Short Selling average date transaction between : ", return_stepping_Dict["Short_Selling_average_date_transaction_between"]);
+println("PickStock Long Position Array :", "\n", return_stepping_Dict["PickStock_Long_Position"]);
+println("PickStock Short Selling Array :", "\n", return_stepping_Dict["PickStock_Short_Selling"]);
+println("PickStock Array :", "\n", return_stepping_Dict["PickStock"]);
+println("profit paired transaction Dict :", "\n", return_stepping_Dict["profit_paired_transaction"]);
+println("transaction sequence Dict :", "\n", return_stepping_Dict["transaction_sequence"]);
+println("stepping sequence Array :", "\n", return_stepping_Dict["stepping_sequence"]);
 ```
-
-
-
-控制臺啓動傳參釋意, 各參數之間以一個空格字符 ( `SPACE` ) ( `00100000` ) 分隔, 鍵(Key) ~ 值(Value) 之間以一個等號字符 ( `=` ) 連接, 即類比 `Key=Value` 的形式 :
-
-1. (必), (自定義), 安裝配置的程式設計語言 ( Julia ) 解釋器 ( Interpreter ) 環境的二進制可執行檔啓動存儲路徑全名, 預設值爲 :  `C:/StatisticalServer/Julia/Julia-1.9.3/bin/julia.exe`
-
-2. (必), (自定義), 語言 ( Julia ) 程式代碼脚本 ( Script ) 檔 ( `StatisticalAlgorithmServer.jl` ) 的存儲路徑全名, 預設值爲 :  `C:/StatisticalServer/StatisticalServerJulia/StatisticalAlgorithmServer.jl`
-
-   注意, 因爲「`StatisticalAlgorithmServer.jl`」檔中脚本代碼需要加載引入「`Interface.jl`」檔, 所以需要保持「`StatisticalAlgorithmServer.jl`」檔與「`Interface.jl`」檔在相同目錄下, 不然就需要手動修改「`StatisticalAlgorithmServer.jl`」檔中有關引用「`Interface.jl`」檔的加載路徑代碼, 以確保能正確引入「`Interface.jl`」檔.
-
-3. (選), (鍵 `configFile` 固定, 值 `C:/StatisticalServer/StatisticalServerJulia/config.txt` 自定義), 用於傳入配置文檔的保存路徑全名, 預設值爲 :  `configFile=C:/StatisticalServer/StatisticalServerJulia/config.txt`
-
-4. (選), (鍵 `interface_Function` 固定, 值 `file_Monitor` 自定義, [ `file_Monitor`, `http_Server`, `http_Client` ] 取其一), 用於傳入選擇啓動哪一種接口服務, 外設硬盤 ( Hard Disk ) 文檔 ( File ) 作橋, 外設網卡 ( Network Interface Card ) 埠 ( Port ) 作橋, 預設值爲 :  `interface_Function=file_Monitor`
-
-以下是當參數 : `interface_Function` 取 : `http_Server` 值時, 可在控制臺命令列傳入的參數 :
-
-7. (選), (鍵 `number_Worker_threads` 固定, 值 `0` 自定義), 用於傳入創建並發數目, 子進程 ( Sub Process ) 並發, 或者, 子缐程 ( Sub Threading ) 並發, 即, 可以設爲等於物理中央處理器 ( Central Processing Unit ) 的數目, 取 `0` 值表示不開啓並發架構, 預設值爲 :  `number_Worker_threads=0`
-
-15. (選), (鍵 `host` 固定, 值 `::0` 自定義, 例如 [ `::0`, `::1`, `0.0.0.0`, `127.0.0.1`, `localhost` ] 取其一), 用於傳入伺服器 ( `http_Server` ) 監聽的外設網卡 ( Network Interface Card ) 地址 ( IPv6 , IPv4 ) 或域名, 預設值爲 :  `host=::0`
-
-16. (選), (鍵 `port` 固定, 值 `10001` 自定義), 用於傳入伺服器 ( `http_Server` ) 監聽的外設網卡 ( Network Interface Card ) 自定義設定的埠號 ( `1 ~ 65535` ), 預設值爲 :  `port=10001`
-
-17. (選), (鍵 `key` 固定, 賬號密碼連接符 `:` 固定, 值 `username` 和 `password` 自定義), 用於傳入自定義的訪問網站驗證 ( `Authorization` ) 用戶名和密碼, 預設值爲 :  `key=username:password`
-
-18. (選), (鍵 `isConcurrencyHierarchy` 固定, 值 `Tasks` 自定義, 例如 [ `Tasks`, `Multi-Threading`, `Multi-Processes` ] 取其一), 用於選擇並發種類, 多進程 ( Process ) 並發, 或者, 多缐程 ( Threading ) 並發, 或者, 多協程 ( Tasks ) 並發, 當取值為多缐程 `Multi-Threading` 時，必須在啓動 Julia 解釋器之前，在控制臺命令行修改環境變量 : `export JULIA_NUM_THREADS=4(Linux OSX)` 或 `set JULIA_NUM_THREADS=4(Windows)` 來設置預創建多個缐程, 預設值爲 :  `isConcurrencyHierarchy=Tasks`
-
-19. (選), (鍵 `webPath` 固定, 值 `C:/StatisticalServer/html/` 自定義), 用於傳入伺服器 ( `http_Server` ) 啓動運行的自定義的根目錄 (項目空間) 路徑全名, 預設值爲 :  `webPath=C:/StatisticalServer/html/`
-
-20. (選), (鍵 `readtimeout` 固定, 值 `0` 自定義), 用於傳入客戶端請求數據讀取超時中止時長，單位 ( Unit ) 爲秒 ( Second ), 取 `0` 值表示不做判斷是否超時, 預設值爲 :  `readtimeout=0`
-
-以下是當參數 : `interface_Function` 取 : `http_Client` 值時, 可在控制臺命令列傳入的參數 :
-
-15. (選), (鍵 `host` 固定, 值 `::1` 自定義, 例如 [ `::1`, `127.0.0.1`, `localhost` ] 取其一), 用於傳入用戶端連接器 ( `http_Client` ) 向外設網卡 ( Network Interface Card ) 發送請求的地址 ( IPv6 , IPv4 ) 或域名, 預設值爲 :  `host=::1`
-
-16. (選), (鍵 `port` 固定, 值 `10001` 自定義), 用於傳入用戶端連接器 ( `http_Client` ) 向外設網卡 ( Network Interface Card ) 發送請求的埠號 ( `1 ~ 65535` ), 預設值爲 :  `port=10001`
-
-21. (選), (鍵 `URL` 固定, 取值自定義, 例如配置爲 `http://[::1]:10001/index.html` 值), 用於傳入用戶端連接器 ( `http_Client` ) 向外設網卡 ( Network Interface Card ) 發送請求的地址, 萬維網統一資源定位系統 ( Uniform Resource Locator ) 地址字符串, 預設值爲 :  `URL=""`
-
-22. (選), (鍵 `proxy` 固定, 取值自定義, 例如配置爲 `http://[::1]:10001/index.html` 值), 當用戶端連接器 ( `http_Client` ) 向外設網卡 ( Network Interface Card ) 發送請求時, 若需要代理轉發, 用於傳入轉發代理服務器的地址, 萬維網統一資源定位系統 ( Uniform Resource Locator ) 地址字符串, 預設值爲 :  `proxy=""`
-
-23. (選), (鍵 `requestMethod` 固定, 值 `POST` 自定義, 例如 [ `POST`, `GET` ] 取其一), 用戶端連接器 ( `http_Client` ) 向外設網卡 ( Network Interface Card ) 發送請求的類型, 預設值爲 :  `requestMethod=POST`
-
-20. (選), (鍵 `readtimeout` 固定, 值 `0` 自定義), 用於傳入服務端響應數據讀取超時中止時長，單位 ( Unit ) 爲秒 ( Second ), 取 `0` 值表示不做判斷是否超時, 預設值爲 :  `readtimeout=0`
-
-24. (選), (鍵 `connecttimeout` 固定, 值 `0` 自定義), 用於傳入客戶端請求鏈接超時中止時長，單位 ( Unit ) 爲秒 ( Second ), 取 `0` 值表示不做判斷是否超時, 預設值爲 :  `connecttimeout=0`
-
-25. (選), (鍵 `Authorization` 固定, 賬號密碼連接符 `:` 固定, 值 `username` 和 `password` 自定義), 用於傳入用戶端連接器 ( `http_Client` ) 向外設網卡 ( Network Interface Card ) 發送請求的驗證 ( Authorization ) 的賬號密碼字符串, 預設值爲 :  `Authorization=username:password`
-
-26. (選), (鍵 `Cookie` 固定, 其中 `Cookie` 名稱 `Session_ID` 可以設計爲固定, `Cookie` 值 `request_Key->username:password` 可以設計爲自定義), 用於傳入用戶端連接器 ( `http_Client` ) 向外設網卡 ( Network Interface Card ) 發送請求的 `Cookies` 值字符串, 預設值爲 :  `Cookie=Session_ID=request_Key->username:password`
 
 ---
 
