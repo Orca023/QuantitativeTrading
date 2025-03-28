@@ -110,6 +110,73 @@ Operating System: Google-Pixel-7 Android-11 Termux-0.118 Ubuntu-22.04-LTS-rootfs
 
 Interpreter: Python-3.12.4-tar.xz
 
+微軟視窗系統 ( Window10 x86_64 ) 控制臺命令列 ( cmd ) 配置程式設計語言 ( Python ) 解釋器 ( Interpreter ) 隔離運行環境 :
+
+1. 首先，在微軟視窗系統 ( Window10 x86_64 ) 控制臺命令列 ( cmd ) 創建程式設計語言 ( Python ) 解釋器 ( Interpreter ) 隔離運行環境「`C:/QuantitativeTrading/QuantitativeTradingPython/`」 :
+```
+C:\QuantitativeTrading> C:/QuantitativeTrading/Python/Python311/python.exe -m venv C:/QuantitativeTrading/QuantitativeTradingPython/
+```
+運行結束後，可以看到在「`C:/QuantitativeTrading/`」路徑下已經多了一個「`QuantitativeTradingPython`」文件夾，就是新創建成功的「`C:/QuantitativeTrading/QuantitativeTradingPython/`」項目的工作空間 .
+
+2. 微軟視窗系統 ( Window10 x86_64 ) 控制臺命令列 ( cmd ) 進入新創建的「`C:/QuantitativeTrading/QuantitativeTradingPython/`」項目工作空間 :
+```
+C:\QuantitativeTrading> cd C:/QuantitativeTrading/QuantitativeTradingPython/
+```
+
+3. 微軟視窗系統 ( Window10 x86_64 ) 控制臺命令列 ( cmd ) 運行啓動指令，激活進入程式設計語言 ( Python ) 解釋器 ( Interpreter ) 隔離運行環境「`C:/QuantitativeTrading/QuantitativeTradingPython/`」 :
+```
+C:\QuantitativeTrading\QuantitativeTradingPython> C:/QuantitativeTrading/QuantitativeTradingPython/Scripts/activate.bat
+```
+
+4. 最後, 在程式設計語言 ( Python ) 解釋器 ( Interpreter ) 隔離運行環境「`C:/QuantitativeTrading/QuantitativeTradingPython/`」下, 安裝配置第三方擴展包 ( packages ) :
+
+安裝配置程式設計語言 ( Python ) 的第三方擴展模組「`numpy`」 :
+```
+(QuantitativeTradingPython) C:\QuantitativeTrading\QuantitativeTradingPython> C:/QuantitativeTrading/QuantitativeTradingPython/Scripts/pip.exe install numpy
+```
+安裝配置程式設計語言 ( Python ) 的第三方擴展模組「`scipy`」 :
+```
+(QuantitativeTradingPython) C:\QuantitativeTrading\QuantitativeTradingPython> C:/QuantitativeTrading/QuantitativeTradingPython/Scripts/pip.exe install scipy
+```
+安裝配置程式設計語言 ( Python ) 的第三方擴展模組「`pyarrow`」 :
+```
+(QuantitativeTradingPython) C:\QuantitativeTrading\QuantitativeTradingPython> C:/QuantitativeTrading/QuantitativeTradingPython/Scripts/pip.exe install pyarrow
+```
+安裝配置程式設計語言 ( Python ) 的第三方擴展模組「`pillow`」 :
+```
+(QuantitativeTradingPython) C:\QuantitativeTrading\QuantitativeTradingPython> C:/QuantitativeTrading/QuantitativeTradingPython/Scripts/pip.exe install pillow
+```
+安裝配置程式設計語言 ( Python ) 的第三方擴展模組「`openpyxl`」 :
+```
+(QuantitativeTradingPython) C:\QuantitativeTrading\QuantitativeTradingPython> C:/QuantitativeTrading/QuantitativeTradingPython/Scripts/pip.exe install openpyxl
+```
+安裝配置程式設計語言 ( Python ) 的第三方擴展模組「`xlrd`」 :
+```
+(QuantitativeTradingPython) C:\QuantitativeTrading\QuantitativeTradingPython> C:/QuantitativeTrading/QuantitativeTradingPython/Scripts/pip.exe install xlrd
+```
+安裝配置程式設計語言 ( Python ) 的第三方擴展模組「`pandas`」 :
+```
+(QuantitativeTradingPython) C:\QuantitativeTrading\QuantitativeTradingPython> C:/QuantitativeTrading/QuantitativeTradingPython/Scripts/pip.exe install pandas
+```
+安裝配置程式設計語言 ( Python ) 的第三方擴展模組「`matplotlib`」 :
+```
+(QuantitativeTradingPython) C:\QuantitativeTrading\QuantitativeTradingPython> C:/QuantitativeTrading/QuantitativeTradingPython/Scripts/pip.exe install matplotlib
+```
+安裝配置程式設計語言 ( Python ) 的第三方擴展模組「`statsmodels`」 :
+```
+(QuantitativeTradingPython) C:\QuantitativeTrading\QuantitativeTradingPython> C:/QuantitativeTrading/QuantitativeTradingPython/Scripts/pip.exe install statsmodels
+```
+安裝配置程式設計語言 ( Python ) 的第三方擴展模組「`scikit-learn`」 :
+```
+(QuantitativeTradingPython) C:\QuantitativeTrading\QuantitativeTradingPython> C:/QuantitativeTrading/QuantitativeTradingPython/Scripts/pip.exe install sklearn
+```
+
+5. 從已激活的程式設計語言 ( Python ) 解釋器 ( Interpreter ) 隔離運行環境「`C:/QuantitativeTrading/QuantitativeTradingPython/`」退出返回至微軟視窗系統 ( Window10 x86_64 ) 控制臺命令列 ( cmd ) 環境，使用如下指令 :
+```
+(QuantitativeTradingPython) C:\QuantitativeTrading\QuantitativeTradingPython> C:/QuantitativeTrading/QuantitativeTradingPython/Scripts/deactivate.bat
+```
+即可 .
+
 ![]()
 
 Interpreter :
@@ -178,6 +245,9 @@ https://xlrd.readthedocs.io/en/latest/?badge=latest
 https://github.com/python-excel/xlrd.git
 
 [Python - pillow 官方 GitHub 網站倉庫頁](https://github.com/python-pillow/Pillow): 
+https://github.com/python-pillow/Pillow.git
+
+[Python - pyarrow 官方 GitHub 網站倉庫頁](https://github.com/python-pillow/Pillow): 
 https://github.com/python-pillow/Pillow.git
 
 [Python - matplotlib 官方網站](https://matplotlib.org/): 
@@ -892,7 +962,7 @@ Operating System: Google-Pixel-7 Android-11 Termux-0.118 Ubuntu-22.04-LTS-rootfs
 
 Interpreter: julia-1.10.4-linux-aarch64.tar.gz
 
-微軟視窗系統 ( Window10 x86_64 ) 控制臺命令列 ( cmd ) 配置程式設計語言 ( Julia ) 解釋器 ( Interpreter ) 運行環境 :
+微軟視窗系統 ( Window10 x86_64 ) 控制臺命令列 ( cmd ) 配置程式設計語言 ( Julia ) 解釋器 ( Interpreter ) 隔離運行環境 :
 
 1. 首先，微軟視窗系統 ( Window10 x86_64 ) 控制臺命令列 ( cmd ) 啓動程式設計語言 ( Julia ) 解釋器 ( Interpreter ) 進入語言 ( Julia ) 的運行環境 :
 ```
@@ -958,6 +1028,14 @@ julia> ]
 安裝配置程式設計語言 ( Julia ) 的第三方擴展模組「`HTTP`」 :
 ```
 (QuantitativeTradingJulia) pkg> add HTTP
+```
+安裝配置程式設計語言 ( Julia ) 的第三方擴展模組「`Gadfly`」 :
+```
+(QuantitativeTradingJulia) pkg> add Gadfly
+```
+安裝配置程式設計語言 ( Julia ) 的第三方擴展模組「`Plots`」 :
+```
+(QuantitativeTradingJulia) pkg> add Plots
 ```
 鍵盤按下退格鍵「`Backspce`」退出程式設計語言 ( Julia ) 解釋器 ( Interpreter ) 控制臺命令行的擴展包安裝環境，返回到程式設計語言 ( Julia ) 解釋器 ( Interpreter ) 控制臺命令行環境 .
 退出程式設計語言 ( Julia ) 解釋器 ( Interpreter ) 控制臺命令行環境返回至微軟視窗系統 ( Window10 x86_64 ) 控制臺命令列 ( cmd ) 環境，使用如下指令 :
