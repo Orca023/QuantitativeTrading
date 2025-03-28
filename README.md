@@ -617,7 +617,7 @@ return_SizePosition_fit_model = SizePosition_fit_model(
     weight_PickStock_Dict,  # {},  # 選股組合占比;
     MarketTiming_Parameter,  # {},  # 按照擇時規則優化之後的參數字典;
     PickStock_Parameter,  # {},  # 按照選股規則優化之後的參數字典;
-    PickStock_ticker_symbol,  # [],  # 依照選股規則排序篩選出的股票代碼字符串存儲數組;
+    PickStock_ticker_symbol,  # [[str()]],  # 依照選股規則排序篩選出的股票代碼字符串存儲數組;
     PickStock,  # lambda argument : argument,
     PickStock_fit_model,  # lambda argument : argument,
     MarketTiming,  # lambda argument : argument,
@@ -731,7 +731,7 @@ result = SizePosition(
     Pupper = [Pupper_weight_MarketTiming_Dict, Pupper_weight_PickStock_Dict],  # 優化迭代參數值約束上限;
     MarketTiming_Parameter = MarketTiming_Parameter,  # {},  # 按照擇時規則優化之後的參數字典;
     PickStock_Parameter = PickStock_Parameter,  # {},  # 按照選股規則優化之後的參數字典;
-    PickStock_ticker_symbol = PickStock_ticker_symbol,  # [],  # 依照選股規則排序篩選出的股票代碼字符串存儲數組;
+    PickStock_ticker_symbol = PickStock_ticker_symbol,  # [[str()]],  # 依照選股規則排序篩選出的股票代碼字符串存儲數組;
     SizePosition_fit_model = SizePosition_fit_model,  # lambda argument : argument,
     PickStock = PickStock,  # lambda argument : argument,
     PickStock_fit_model = PickStock_fit_model,  # lambda argument : argument,
@@ -1538,18 +1538,26 @@ println(result["testData"]["PickStock_transaction_sequence"]["002611"]);
 6. 代碼脚本檔 ( script file ) 「`QuantitativeTrading/QuantitativeTradingJulia/src/Quantitative_SizePosition.jl`」内函數 ( Function ) 運行示例 :
 ```
 return_SizePosition_fit_model = SizePosition_fit_model(
-    training_data,  # ::Base.Dict{Core.String, Core.Any} = Base.Dict{Core.String, Core.Any}(),  # ::Core.Array{Core.Float64, 2} = testing_data,  # ::Core.Array{Core.Float64, 2} = Core.Array{Core.Float64, 2}(undef, (0, 0)), # ::Core.Array{Core.Array{Core.Float64, 1}, 1} = Core.Array{Core.Array{Core.Float64, 1}, 1}(),
-    weight_MarketTiming_Dict,  # ::Base.Dict{Core.String, Core.Any} = Base.Dict{Core.String, Core.Any}(),  # 股票擇時交易倉位占比;
-    weight_PickStock_Dict,  # ::Base.Dict{Core.String, Core.Any} = Base.Dict{Core.String, Core.Any}(),  # 選股組合占比;
-    MarketTiming_Parameter,  # 按照擇時規則優化之後的參數字典;  # ::Base.Dict{Core.String, Core.Any} = Base.Dict{Core.String, Core.Any}(),
-    PickStock_Parameter,  # 按照選股規則優化之後的參數字典;  # ::Base.Dict{Core.String, Core.Any} = Base.Dict{Core.String, Core.Any}(),
-    PickStock_ticker_symbol,  # = Core.Array{Core.Any, 1}(),  # ::Core.Array{Core.Array{Core.String, 1}, 1} = Core.Array{Core.Array{Core.String, 1}, 1}(),  # 依照選股規則排序篩選出的股票代碼字符串存儲數組;
-    PickStock,
-    PickStock_fit_model,
-    MarketTiming,
-    MarketTiming_fit_model,
-    Intuitive_Momentum_KLine,
-    "Long_Position_and_Short_Selling"  # "Long_Position_and_Short_Selling" , "Long_Position" , "Short_Selling" ;
+    Base.Dict{Core.String, Core.Any}(
+        "600118" => training_data["600118"],
+        "600119" => training_data["600119"],
+        "600120" => training_data["600120"],
+        "002607" => training_data["002607"],
+        "002608" => training_data["002608"],
+        "002609" => training_data["002609"],
+        "002611" => training_data["002611"]
+    ),  Base.Dict{Core.String, Core.Any}(),  # 標準化日棒缐（K Line Daily）數據字典 ( Julia - Base.Dict ) ;
+    weight_MarketTiming_Dict,  # Base.Dict{Core.String, Core.Any}(),  # 股票擇時交易倉位占比;
+    weight_PickStock_Dict,  # Base.Dict{Core.String, Core.Any}(),  # 選股組合占比;
+    MarketTiming_Parameter,  # Base.Dict{Core.String, Core.Any}(),  # 按照擇時規則優化之後的參數字典;
+    PickStock_Parameter,  # Base.Dict{Core.String, Core.Any}(),  # 按照選股規則優化之後的參數字典;
+    PickStock_ticker_symbol,  # ::Core.Array{Core.Array{Core.String, 1}, 1} = Core.Array{Core.Array{Core.String, 1}, 1}(),  # 依照選股規則排序篩選出的股票代碼字符串存儲數組;
+    PickStock,  # (arguments) -> begin return arguments; end,
+    PickStock_fit_model,  # (arguments) -> begin return arguments; end,
+    MarketTiming,  # (arguments) -> begin return arguments; end,
+    MarketTiming_fit_model,  # (arguments) -> begin return arguments; end,
+    Intuitive_Momentum_KLine,  # (arguments) -> begin return arguments; end,
+    "Long_Position_and_Short_Selling"  # "Long_Position_and_Short_Selling" , "Long_Position" , "Short_Selling" ;  # 選擇是否允許「賣空」交易;
 );
 println("y_profit = ", return_SizePosition_fit_model["y_profit"]);  # 每兩次對衝交易利潤 × 權重，加權纍加總計;
 println("y_Long_Position_profit = ", return_SizePosition_fit_model["y_Long_Position_profit"]);  # 每兩次對衝交易利潤 × 權重，加權纍加總計;
@@ -1633,41 +1641,41 @@ println(return_SizePosition_fit_model["SizePosition_transaction_sequence"]["0026
 ```
 ```
 result = SizePosition(
-    training_data = training_data,  # ::Core.Array{Core.Float64, 2} = testing_data,  # ::Core.Array{Core.Float64, 2} = Core.Array{Core.Float64, 2}(undef, (0, 0)), # ::Core.Array{Core.Array{Core.Float64, 1}, 1} = Core.Array{Core.Array{Core.Float64, 1}, 1}(),
-    # training_date_transaction = Core.Array{Dates.Date, 1}(),
-    # training_opening_price = Core.Array{Core.Union{Core.Float16, Core.String, Core.Nothing}, 1}(),
-    # training_close_price = Core.Array{Core.Union{Core.Float16, Core.String, Core.Nothing}, 1}(),
-    # training_low_price = Core.Array{Core.Union{Core.Float16, Core.String, Core.Nothing}, 1}(),
-    # training_high_price = Core.Array{Core.Union{Core.Float16, Core.String, Core.Nothing}, 1}(),
-    # training_turnover_volume = Core.Array{Core.Union{Core.UInt64, Core.String, Core.Nothing}, 1}(),
-    # training_turnover_rate = Core.Array{Core.Union{Core.Float16, Core.String, Core.Nothing}, 1}(),
-    # training_price_earnings = Core.Array{Core.Union{Core.Float16, Core.String, Core.Nothing}, 1}(),
-    testing_data = testing_data,  # ::Core.Array{Core.Float64, 2};  # ::Core.Array{Core.Array{Core.Float64, 1}, 1};
-    # testing_date_transaction = Core.Array{Dates.Date, 1}(),
-    # testing_opening_price = Core.Array{Core.Union{Core.Float16, Core.String, Core.Nothing}, 1}(),
-    # testing_close_price = Core.Array{Core.Union{Core.Float16, Core.String, Core.Nothing}, 1}(),
-    # testing_low_price = Core.Array{Core.Union{Core.Float16, Core.String, Core.Nothing}, 1}(),
-    # testing_high_price = Core.Array{Core.Union{Core.Float16, Core.String, Core.Nothing}, 1}(),
-    # testing_turnover_volume = Core.Array{Core.Union{Core.UInt64, Core.String, Core.Nothing}, 1}(),
-    # testing_turnover_rate = Core.Array{Core.Union{Core.Float16, Core.String, Core.Nothing}, 1}(),
-    # testing_price_earnings = Core.Array{Core.Union{Core.Float16, Core.String, Core.Nothing}, 1}(),
-    Pdata_0 = [weight_MarketTiming_Dict, weight_PickStock_Dict],  # training_data["002611"]["Pdata_0"],
-    weight = Core.Array{Core.Float64, 1}(),  # training_data["002611"]["weight"],
-    Plower = [Plower_weight_MarketTiming_Dict, Plower_weight_PickStock_Dict],
-    Pupper = [Pupper_weight_MarketTiming_Dict, Pupper_weight_PickStock_Dict],
-    MarketTiming_Parameter = MarketTiming_Parameter,  # 按照擇時規則優化之後的參數字典;  # ::Base.Dict{Core.String, Core.Any} = Base.Dict{Core.String, Core.Any}(),
-    PickStock_Parameter = PickStock_Parameter,  # 按照選股規則優化之後的參數字典;  # ::Base.Dict{Core.String, Core.Any} = Base.Dict{Core.String, Core.Any}(),
-    PickStock_ticker_symbol = PickStock_ticker_symbol,  # Core.Array{Core.Any, 1}(),  # ::Core.Array{Core.Array{Core.String, 1}, 1} = Core.Array{Core.Array{Core.String, 1}, 1}(),  # 依照選股規則排序篩選出的股票代碼字符串存儲數組;
-    SizePosition_fit_model = SizePosition_fit_model,
-    PickStock = PickStock,
-    PickStock_fit_model = PickStock_fit_model,
-    MarketTiming = MarketTiming,
-    MarketTiming_fit_model = MarketTiming_fit_model,
-    Quantitative_Indicators_Function = Intuitive_Momentum_KLine,
-    investment_method = "Long_Position_and_Short_Selling"  # "Long_Position_and_Short_Selling" , "Long_Position" , "Short_Selling" ;
+    training_data = Base.Dict{Core.String, Core.Any}(
+        "600118" => training_data["600118"],
+        "600119" => training_data["600119"],
+        "600120" => training_data["600120"],
+        "002607" => training_data["002607"],
+        "002608" => training_data["002608"],
+        "002609" => training_data["002609"],
+        "002611" => training_data["002611"]
+    ),  Base.Dict{Core.String, Core.Any}(),  # 訓練集，標準化日棒缐（K Line Daily）數據字典 ( Julia - Base.Dict ) ;
+    testing_data = Base.Dict{Core.String, Core.Any}(
+        "600118" => testing_data["600118"],
+        "600119" => testing_data["600119"],
+        "600120" => testing_data["600120"],
+        "002607" => testing_data["002607"],
+        "002608" => testing_data["002608"],
+        "002609" => testing_data["002609"],
+        "002611" => testing_data["002611"]
+    ),  Base.Dict{Core.String, Core.Any}(),  # 測試集，標準化日棒缐（K Line Daily）數據字典 ( Julia - Base.Dict ) ;
+    Pdata_0 = [weight_MarketTiming_Dict, weight_PickStock_Dict],  # training_data["002611"]["Pdata_0"],  # 優化迭代參數初值;
+    weight = Core.Array{Core.Float64, 1}(),  # training_data["002611"]["weight"],  # 優化迭代數據權重值;
+    Plower = [Plower_weight_MarketTiming_Dict, Plower_weight_PickStock_Dict],  # 優化迭代參數值約束下限;
+    Pupper = [Pupper_weight_MarketTiming_Dict, Pupper_weight_PickStock_Dict],  # 優化迭代參數值約束上限;
+    MarketTiming_Parameter = MarketTiming_Parameter,  # Base.Dict{Core.String, Core.Any}(),  # 按照擇時規則優化之後的參數字典;
+    PickStock_Parameter = PickStock_Parameter,  # Base.Dict{Core.String, Core.Any}(),  # 按照選股規則優化之後的參數字典;
+    PickStock_ticker_symbol = PickStock_ticker_symbol,  # ::Core.Array{Core.Array{Core.String, 1}, 1} = Core.Array{Core.Array{Core.String, 1}, 1}(),  # 依照選股規則排序篩選出的股票代碼字符串存儲數組;
+    SizePosition_fit_model = SizePosition_fit_model,  # (arguments) -> begin return arguments; end,
+    PickStock = PickStock,  # (arguments) -> begin return arguments; end,
+    PickStock_fit_model = PickStock_fit_model,  # (arguments) -> begin return arguments; end,
+    MarketTiming = MarketTiming,  # (arguments) -> begin return arguments; end,
+    MarketTiming_fit_model = MarketTiming_fit_model,  # (arguments) -> begin return arguments; end,
+    Quantitative_Indicators_Function = Intuitive_Momentum_KLine,  # (arguments) -> begin return arguments; end,
+    investment_method = "Long_Position_and_Short_Selling"  # "Long_Position_and_Short_Selling" , "Long_Position" , "Short_Selling" ;  # 選擇是否允許「賣空」交易;
 );
-println("Coefficient 1 weight_MarketTiming : ", result["Coefficient"][1]);  # 優化得到的參數;
-println("Coefficient 2 weight_PickStock : ", result["Coefficient"][2]);  # 優化得到的參數;
+println("Coefficient 1 weight_MarketTiming : ", "\n", result["Coefficient"][1]);  # 優化得到的參數;
+println("Coefficient 2 weight_PickStock : ", "\n", result["Coefficient"][2]);  # 優化得到的參數;
 println("maximum drawdown per share : ", result["testData"]["maximum_drawdown"]);  # 兩次對衝交易之間的最大回撤值，取極值統計;
 println("maximum drawdown Long Position per share : ", result["testData"]["maximum_drawdown_Long_Position"]);  # 兩次對衝交易之間的最大回撤值，取極值統計;
 println("maximum drawdown Short Selling per share : ", result["testData"]["maximum_drawdown_Short_Selling"]);  # 兩次對衝交易之間的最大回撤值，取極值統計;
