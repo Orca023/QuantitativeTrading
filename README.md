@@ -873,152 +873,83 @@ Interpreter: julia-1.10.4-linux-aarch64.tar.gz
 
 微軟視窗系統 ( Window10 x86_64 ) 控制臺命令列 ( cmd ) 配置程式設計語言 ( Julia ) 解釋器 ( Interpreter ) 運行環境 :
 
-1. 創建程式設計語言 ( Julia ) 解釋器 ( Interpreter ) 隔離運行環境 :
+1. 首先，微軟視窗系統 ( Window10 x86_64 ) 控制臺命令列 ( cmd ) 啓動程式設計語言 ( Julia ) 解釋器 ( Interpreter ) 進入語言 ( Julia ) 的運行環境 :
 ```
-C:\> C:/QuantitativeTrading/Julia/Julia-1.9.3/bin/julia.exe --project=C:/QuantitativeTrading/QuantitativeTradingJulia/
-```
-
-
-程式代碼脚本檔 `Interface.jl` 裏, 函數 `http_Server`, `http_Client` 使用了第三方模組 `HTTP.jl` , `JSON.jl` 擴展包 ( packages ) ,
-
-程式代碼脚本檔 `StatisticalAlgorithmServer.jl` 和 `Router.jl` 裏, 函數 `do_data`, `do_Request`, `do_Response` 使用了第三方模組 `JSON.jl` 擴展包 ( packages ) ,
-
-所以, 需事先安裝配置成功, 加載導入之後, 才能正常運行.
-
-首先在作業系統 ( Operating System ) 控制臺命令列窗口 ( bash, cmd ) 啓動程式設計語言 ( Julia ) 解釋器 ( Interpreter ) 進入語言 ( Julia ) 的運行環境 :
-
-谷歌安卓系統 之 Termux 系統 之 烏班圖系統 ( Android-11 Termux-0.118 Ubuntu-22.04-LTS-rootfs Arm64-aarch64 ) 控制臺命令列 ( bash ) 運行啓動指令 :
-```
-root@localhost:~# /usr/julia/julia-1.10.4/bin/julia --project=/home/StatisticalServer/StatisticalServerJulia/
+C:\QuantitativeTrading> C:/QuantitativeTrading/Julia/Julia-1.9.3/bin/julia.exe
 ```
 
-微軟視窗系統 ( Window10 x86_64 ) 控制臺命令列 ( cmd ) 運行啓動指令 :
+2. 然後，創建程式設計語言 ( Julia ) 解釋器 ( Interpreter ) 隔離運行環境「`C:/QuantitativeTrading/QuantitativeTradingJulia/`」 :
+
+從程式設計語言 ( Julia ) 解釋器 ( Interpreter ) 控制臺命令行進入程式設計語言 ( Julia ) 解釋器 ( Interpreter ) 控制臺命令行的擴展包安裝環境 :
 ```
-C:\StatisticalServer> C:/QuantitativeTrading/Julia/Julia-1.9.3/bin/julia.exe --project=C:/QuantitativeTrading/QuantitativeTradingJulia/
+julia> ]
+```
+在程式設計語言 ( Julia ) 解釋器 ( Interpreter ) 控制臺命令行的擴展包安裝環境在當前目錄創建隔離運行環境「`QuantitativeTradingJulia`」項目 :
+```
+(@v1.9) pkg> generate ./QuantitativeTradingJulia
+```
+運行結束後，可以看到在「`C:/QuantitativeTrading/`」路徑下已經多了一個「`QuantitativeTradingJulia`」文件夾，就是新創建成功的「`C:/QuantitativeTrading/QuantitativeTradingJulia/`」項目的工作空間 .
+鍵盤按下退格鍵「`Backspce`」退出程式設計語言 ( Julia ) 解釋器 ( Interpreter ) 控制臺命令行的擴展包安裝環境，返回到程式設計語言 ( Julia ) 解釋器 ( Interpreter ) 控制臺命令行環境 .
+退出程式設計語言 ( Julia ) 解釋器 ( Interpreter ) 控制臺命令行環境返回至微軟視窗系統 ( Window10 x86_64 ) 控制臺命令列 ( cmd ) 環境，使用如下指令 :
+```
+julia> exit()
+```
+微軟視窗系統 ( Window10 x86_64 ) 控制臺命令列 ( cmd ) 進入新創建的「`C:/QuantitativeTrading/QuantitativeTradingJulia/`」項目工作空間 :
+```
+C:\QuantitativeTrading> cd C:/QuantitativeTrading/QuantitativeTradingJulia/
 ```
 
-然後, 在程式設計語言 ( Julia ) 解釋器 ( Interpreter ) 運行環境下, 安裝配置第三方擴展包 ( packages ) :
-
-程式設計語言 ( Julia ) 的第三方擴展模組 HTTP.jl 安裝配置説明 :
+3. 微軟視窗系統 ( Window10 x86_64 ) 控制臺命令列 ( cmd ) 運行啓動指令，進入程式設計語言 ( Julia ) 解釋器 ( Interpreter ) 隔離運行環境「`C:/QuantitativeTrading/QuantitativeTradingJulia/`」 :
 ```
-julia> using Pkg
-julia> Pkg.add("HTTP")
-```
-程式設計語言 ( Julia ) 的第三方擴展模組 HTTP.jl 加載導入説明 :
-```
-julia> using HTTP
-```
-程式設計語言 ( Julia ) 的第三方擴展模組 JSON.jl 安裝配置説明 :
-```
-julia> using Pkg
-julia> Pkg.add("JSON")
-```
-程式設計語言 ( Julia ) 的第三方擴展模組 JSON.jl 加載導入説明 :
-```
-julia> using JSON
+C:\QuantitativeTrading\QuantitativeTradingJulia> C:/QuantitativeTrading/Julia/Julia-1.9.3/bin/julia.exe --project=C:/QuantitativeTrading/QuantitativeTradingJulia/
 ```
 
-![]()
+4. 最後, 在程式設計語言 ( Julia ) 解釋器 ( Interpreter ) 隔離運行環境「`C:/QuantitativeTrading/QuantitativeTradingJulia/`」下, 安裝配置第三方擴展包 ( packages ) :
 
-[程式設計 Julia 語言解釋器 ( Interpreter ) 第三方擴展模組 ( module ) ( packages ) 托管網站官方手冊](https://julialang.org/packages/): 
-https://julialang.org/packages/
-
-[程式設計 Julia 語言解釋器 ( Interpreter ) 官方 General.jl 模組 GitHub 網站倉庫頁](https://github.com/JuliaRegistries/General): 
-https://github.com/JuliaRegistries/General.git
-
-[程式設計 Julia 語言解釋器 ( Interpreter ) 第三方擴展模組 HTTP.jl 的官方 GitHub 網站倉庫頁](https://github.com/JuliaWeb/HTTP.jl): 
-https://github.com/JuliaWeb/HTTP.jl.git
-
-[程式設計 Julia 語言解釋器 ( Interpreter ) 第三方擴展模組 JSON.jl 的官方 GitHub 網站倉庫頁](https://github.com/JuliaIO/JSON.jl): 
-https://github.com/JuliaIO/JSON.jl.git
+從程式設計語言 ( Julia ) 解釋器 ( Interpreter ) 控制臺命令行進入程式設計語言 ( Julia ) 解釋器 ( Interpreter ) 控制臺命令行的擴展包安裝環境 :
+```
+julia> ]
+```
+安裝配置程式設計語言 ( Julia ) 的第三方擴展模組「`JSON`」 :
+```
+(QuantitativeTradingJulia) pkg> add JSON
+```
+安裝配置程式設計語言 ( Julia ) 的第三方擴展模組「`Optim`」 :
+```
+(QuantitativeTradingJulia) pkg> add Optim
+```
+安裝配置程式設計語言 ( Julia ) 的第三方擴展模組「`JLD`」 :
+```
+(QuantitativeTradingJulia) pkg> add JLD
+```
+安裝配置程式設計語言 ( Julia ) 的第三方擴展模組「`DataFrames`」 :
+```
+(QuantitativeTradingJulia) pkg> add DataFrames
+```
+安裝配置程式設計語言 ( Julia ) 的第三方擴展模組「`CSV`」 :
+```
+(QuantitativeTradingJulia) pkg> add CSV
+```
+安裝配置程式設計語言 ( Julia ) 的第三方擴展模組「`XLSX`」 :
+```
+(QuantitativeTradingJulia) pkg> add XLSX
+```
+安裝配置程式設計語言 ( Julia ) 的第三方擴展模組「`HTTP`」 :
+```
+(QuantitativeTradingJulia) pkg> add HTTP
+```
+鍵盤按下退格鍵「`Backspce`」退出程式設計語言 ( Julia ) 解釋器 ( Interpreter ) 控制臺命令行的擴展包安裝環境，返回到程式設計語言 ( Julia ) 解釋器 ( Interpreter ) 控制臺命令行環境 .
+退出程式設計語言 ( Julia ) 解釋器 ( Interpreter ) 控制臺命令行環境返回至微軟視窗系統 ( Window10 x86_64 ) 控制臺命令列 ( cmd ) 環境，使用如下指令 :
+```
+julia> exit()
+```
+即可 .
 
 ![]()
 
 Interpreter :
 
 julia - 1.10.4
-
-julia - 1.10.4 - packages :
-
-&nbsp;&nbsp;&nbsp;&nbsp;Artifacts
-
-&nbsp;&nbsp;&nbsp;&nbsp;Base64
-
-&nbsp;&nbsp;&nbsp;&nbsp;BitFlags - 0.1.8
-
-&nbsp;&nbsp;&nbsp;&nbsp;CodecZlib - 0.7.4
-
-&nbsp;&nbsp;&nbsp;&nbsp;ConcurrentUtilities - 2.4.1
-
-&nbsp;&nbsp;&nbsp;&nbsp;Dates
-
-&nbsp;&nbsp;&nbsp;&nbsp;ExceptionUnwrapping - 0.1.10
-
-&nbsp;&nbsp;&nbsp;&nbsp;HTTP - 1.10.8
-
-&nbsp;&nbsp;&nbsp;&nbsp;InteractiveUtils
-
-&nbsp;&nbsp;&nbsp;&nbsp;JLLWrappers - 1.5.0
-
-&nbsp;&nbsp;&nbsp;&nbsp;JSON - 0.21.4
-
-&nbsp;&nbsp;&nbsp;&nbsp;Libdl
-
-&nbsp;&nbsp;&nbsp;&nbsp;Logging
-
-&nbsp;&nbsp;&nbsp;&nbsp;LoggingExtras - 1.0.3
-
-&nbsp;&nbsp;&nbsp;&nbsp;Markdown
-
-&nbsp;&nbsp;&nbsp;&nbsp;MbedTLS - 1.1.9
-
-&nbsp;&nbsp;&nbsp;&nbsp;MbedTLS_jll - 2.28.2+0
-
-&nbsp;&nbsp;&nbsp;&nbsp;Mmap
-
-&nbsp;&nbsp;&nbsp;&nbsp;MozillaCACerts_jll - 2022.10.11
-
-&nbsp;&nbsp;&nbsp;&nbsp;NetworkOptions - 1.2.0
-
-&nbsp;&nbsp;&nbsp;&nbsp;OpenSSL - 1.4.3
-
-&nbsp;&nbsp;&nbsp;&nbsp;OpenSSL_jll - 3.0.13+1
-
-&nbsp;&nbsp;&nbsp;&nbsp;Parsers - 2.8.1
-
-&nbsp;&nbsp;&nbsp;&nbsp;PrecompileTools - 1.2.1
-
-&nbsp;&nbsp;&nbsp;&nbsp;Preferences - 1.4.3
-
-&nbsp;&nbsp;&nbsp;&nbsp;Printf
-
-&nbsp;&nbsp;&nbsp;&nbsp;Random
-
-&nbsp;&nbsp;&nbsp;&nbsp;SHA - 0.7.0
-
-&nbsp;&nbsp;&nbsp;&nbsp;Serialization
-
-&nbsp;&nbsp;&nbsp;&nbsp;SimpleBufferStream - 1.1.0
-
-&nbsp;&nbsp;&nbsp;&nbsp;Sockets
-
-&nbsp;&nbsp;&nbsp;&nbsp;TOML - 1.0.3
-
-&nbsp;&nbsp;&nbsp;&nbsp;Test
-
-&nbsp;&nbsp;&nbsp;&nbsp;TranscodingStreams - 0.10.9
-
-&nbsp;&nbsp;&nbsp;&nbsp;TranscodingStreams.extensions
-
-&nbsp;&nbsp;&nbsp;&nbsp;URIs - 1.5.1
-
-&nbsp;&nbsp;&nbsp;&nbsp;UUIDs
-
-&nbsp;&nbsp;&nbsp;&nbsp;Unicode
-
-&nbsp;&nbsp;&nbsp;&nbsp;Zlib_jll - 1.2.13+0
-
-![]()
 
 [程式設計 Julia 語言解釋器 ( Interpreter ) 官方網站](https://julialang.org/): 
 https://julialang.org/
@@ -1041,6 +972,27 @@ https://github.com/JuliaRegistries/General.git
 ![]()
 
 程式設計 Julia 語言統計算法 ( algorithm ) 借用第三方擴展模組 ( third-party extensions ( libraries or modules ) ) 説明 :
+
+[Julia - JSON 官方 GitHub 網站倉庫頁](https://github.com/JuliaIO/JSON.jl): 
+https://github.com/JuliaIO/JSON.jl.git
+
+[Julia - Optim 官方手冊](https://julianlsolvers.github.io/Optim.jl/stable/): 
+https://julianlsolvers.github.io/Optim.jl/stable/
+
+[Julia - Optim 官方 GitHub 網站倉庫頁](https://github.com/JuliaNLSolvers/Optim.jl.git): 
+https://github.com/JuliaNLSolvers/Optim.jl
+
+[Julia - HTTP 官方 GitHub 網站倉庫頁](https://github.com/JuliaWeb/HTTP.jl): 
+https://github.com/JuliaWeb/HTTP.jl.git
+
+[Julia - JuMP 官方網站](https://jump.dev/): 
+https://jump.dev/
+
+[Julia - JuMP 官方手冊](https://jump.dev/JuMP.jl/stable/): 
+https://jump.dev/JuMP.jl/stable/
+
+[Julia - JuMP 官方 GitHub 網站倉庫頁](https://github.com/jump-dev/JuMP.jl): 
+https://github.com/jump-dev/JuMP.jl.git
 
 [Julia - LsqFit 官方手冊](https://julianlsolvers.github.io/LsqFit.jl/latest/): 
 https://julianlsolvers.github.io/LsqFit.jl/latest/
@@ -1071,21 +1023,6 @@ https://juliadiff.org/ForwardDiff.jl/stable/
 
 [Julia - ForwardDiff 官方 GitHub 網站倉庫頁](https://github.com/JuliaDiff/ForwardDiff.jl): 
 https://github.com/JuliaDiff/ForwardDiff.jl.git
-
-[Julia - Optim 官方手冊](https://julianlsolvers.github.io/Optim.jl/stable/): 
-https://julianlsolvers.github.io/Optim.jl/stable/
-
-[Julia - Optim 官方 GitHub 網站倉庫頁](https://github.com/JuliaNLSolvers/Optim.jl.git): 
-https://github.com/JuliaNLSolvers/Optim.jl
-
-[Julia - JuMP 官方網站](https://jump.dev/): 
-https://jump.dev/
-
-[Julia - JuMP 官方手冊](https://jump.dev/JuMP.jl/stable/): 
-https://jump.dev/JuMP.jl/stable/
-
-[Julia - JuMP 官方 GitHub 網站倉庫頁](https://github.com/jump-dev/JuMP.jl): 
-https://github.com/jump-dev/JuMP.jl.git
 
 [Julia - Symbolics 官方手冊](https://docs.sciml.ai/Symbolics/stable/): 
 https://docs.sciml.ai/Symbolics/stable/
