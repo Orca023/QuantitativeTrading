@@ -1,4 +1,4 @@
-## 數量化低頻交易模型 QuantitativeTrading : QuantitativeTradingJulia , QuantitativeTradingPython
+## 低頻數量化交易模型 QuantitativeTrading : QuantitativeTradingJulia , QuantitativeTradingPython
 #### Julia , Python
 #### 可擴展的數量化交易模型框架 ( scalable quantitative trading model frame ) , 分別使用 Julia 或 Python 程式設計語言 ( computer programming language ) 各自獨立實現 Julia , Pyhton 兩套方案序列遍歷 ( sequence traversal ) 動作 , 借用 Julia 或 Python 的第三方擴展包 ( third-party extensions ( libraries or modules ) ) 實現 Julia , Python 兩套方案優化算法 ( parameters optimization ) 參數最優化.
 
