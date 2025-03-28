@@ -1232,11 +1232,11 @@ println("intuitive momentum indicator", return_Intuitive_Momentum_KLine["P1_Intu
 4. 代碼脚本檔 ( script file ) 「`QuantitativeTrading/QuantitativeTradingJulia/src/Quantitative_MarketTiming.jl`」内函數 ( Function ) 運行示例 :
 ```
 return_MarketTiming_fit_model = MarketTiming_fit_model(
-    Base.Dict{Core.String, Core.Any}("002611" => training_data["002611"]),  # training_data,  # ::Base.Dict{Core.String, Core.Any} = Base.Dict{Core.String, Core.Any}(),  # ::Core.Array{Core.Float64, 2} = testing_data,  # ::Core.Array{Core.Float64, 2} = Core.Array{Core.Float64, 2}(undef, (0, 0)), # ::Core.Array{Core.Array{Core.Float64, 1}, 1} = Core.Array{Core.Array{Core.Float64, 1}, 1}(),
-    Core.Int64(10),  # P1,  # 觀察收益率歷史向前推的交易日長度;
-    Core.Float64(+0.58),  # P2  # 買入閾值;
-    Core.Float64(-0.02),  # P3  # 賣出閾值;
-    Core.Float64(0.0),  # P4,  # risk threshold drawdown loss; # 風險控制閾值，强制平倉，可接受的最大回撤比例：Long_Position = sell_price ÷ buy_price、Short_Selling = 1 + ((sell_price - buy_price) ÷ sell_price) ;
+    Base.Dict{Core.String, Core.Any}("002611" => training_data["002611"]),  # Base.Dict{Core.String, Core.Any}(),  # 標準化日棒缐（K Line Daily）數據字典 ( Julia - Base.Dict ) ;
+    Core.Int64(10),  # 觀察收益率歷史向前推的交易日長度;  # Parameter-1;
+    Core.Float64(+0.58),  # 買入閾值;  # Parameter-2;
+    Core.Float64(-0.02),  # 賣出閾值;  # Parameter-3;
+    Core.Float64(0.0),  # risk threshold drawdown loss;  # 風險控制閾值 Parameter-4;  # 强制平倉，可接受的最大回撤比例：Long_Position = sell_price ÷ buy_price、Short_Selling = 1 + ((sell_price - buy_price) ÷ sell_price) ;
     Intuitive_Momentum_KLine,  # (arguments) -> begin return arguments; end,
     "Long_Position_and_Short_Selling"  # "Long_Position_and_Short_Selling" , "Long_Position" , "Short_Selling" ;  # 選擇是否允許「賣空」交易;
 );
@@ -1323,28 +1323,12 @@ println(return_MarketTiming_fit_model["002611"]["P1_Array"]);  # 依照擇時規
 ```
 ```
 result = MarketTiming(
-    training_data = Base.Dict{Core.String, Core.Any}("002611" => training_data["002611"]),  # ::Core.Array{Core.Float64, 2} = testing_data,  # ::Core.Array{Core.Float64, 2} = Core.Array{Core.Float64, 2}(undef, (0, 0)), # ::Core.Array{Core.Array{Core.Float64, 1}, 1} = Core.Array{Core.Array{Core.Float64, 1}, 1}(),
-    # training_date_transaction = Core.Array{Dates.Date, 1}(),
-    # training_opening_price = Core.Array{Core.Union{Core.Float16, Core.String, Core.Nothing}, 1}(),
-    # training_close_price = Core.Array{Core.Union{Core.Float16, Core.String, Core.Nothing}, 1}(),
-    # training_low_price = Core.Array{Core.Union{Core.Float16, Core.String, Core.Nothing}, 1}(),
-    # training_high_price = Core.Array{Core.Union{Core.Float16, Core.String, Core.Nothing}, 1}(),
-    # training_turnover_volume = Core.Array{Core.Union{Core.UInt64, Core.String, Core.Nothing}, 1}(),
-    # training_turnover_rate = Core.Array{Core.Union{Core.Float16, Core.String, Core.Nothing}, 1}(),
-    # training_price_earnings = Core.Array{Core.Union{Core.Float16, Core.String, Core.Nothing}, 1}(),
-    testing_data = Base.Dict{Core.String, Core.Any}("002611" => testing_data["002611"]),  # ::Core.Array{Core.Float64, 2};  # ::Core.Array{Core.Array{Core.Float64, 1}, 1};
-    # testing_date_transaction = Core.Array{Dates.Date, 1}(),
-    # testing_opening_price = Core.Array{Core.Union{Core.Float16, Core.String, Core.Nothing}, 1}(),
-    # testing_close_price = Core.Array{Core.Union{Core.Float16, Core.String, Core.Nothing}, 1}(),
-    # testing_low_price = Core.Array{Core.Union{Core.Float16, Core.String, Core.Nothing}, 1}(),
-    # testing_high_price = Core.Array{Core.Union{Core.Float16, Core.String, Core.Nothing}, 1}(),
-    # testing_turnover_volume = Core.Array{Core.Union{Core.UInt64, Core.String, Core.Nothing}, 1}(),
-    # testing_turnover_rate = Core.Array{Core.Union{Core.Float16, Core.String, Core.Nothing}, 1}(),
-    # testing_price_earnings = Core.Array{Core.Union{Core.Float16, Core.String, Core.Nothing}, 1}(),
-    Pdata_0 = [Core.Int64(3), Core.Float64(+0.1), Core.Float64(-0.1), Core.Float64(0.0)],  #training_data["002611"]["Pdata_0"],
-    # weight = Core.Array{Core.Float64, 1}(),  # training_data["002611"]["weight"],
-    Plower = [-Base.Inf, -Base.Inf, -Base.Inf, -Base.Inf],  # training_data["002611"]["Plower"],
-    Pupper = [+Base.Inf, +Base.Inf, +Base.Inf, +Base.Inf],  # training_data["002611"]["Pupper"],
+    training_data = Base.Dict{Core.String, Core.Any}("002611" => training_data["002611"]),  # Base.Dict{Core.String, Core.Any}(),  # 訓練集，標準化日棒缐（K Line Daily）數據字典 ( Julia - Base.Dict ) ;
+    testing_data = Base.Dict{Core.String, Core.Any}("002611" => testing_data["002611"]),  # Base.Dict{Core.String, Core.Any}(),  # 測試集，標準化日棒缐（K Line Daily）數據字典 ( Julia - Base.Dict ) ;
+    Pdata_0 = [Core.Int64(3), Core.Float64(+0.1), Core.Float64(-0.1), Core.Float64(0.0)],  #training_data["002611"]["Pdata_0"],  # 優化迭代參數初值;
+    weight = Core.Array{Core.Float64, 1}(),  # training_data["002611"]["weight"],  # 優化迭代數據權重值;
+    Plower = [-Base.Inf, -Base.Inf, -Base.Inf, -Base.Inf],  # training_data["002611"]["Plower"],  # 優化迭代參數值約束下限;
+    Pupper = [+Base.Inf, +Base.Inf, +Base.Inf, +Base.Inf],  # training_data["002611"]["Pupper"],  # 優化迭代參數值約束上限;
     MarketTiming_fit_model = MarketTiming_fit_model,  # (arguments) -> begin return arguments; end,
     Quantitative_Indicators_Function = Intuitive_Momentum_KLine,  # (arguments) -> begin return arguments; end,
     investment_method = "Long_Position_and_Short_Selling"  # "Long_Position_and_Short_Selling" , "Long_Position" , "Short_Selling" ;  # 選擇是否允許「賣空」交易;
