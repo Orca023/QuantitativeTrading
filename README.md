@@ -278,6 +278,7 @@ return_Intuitive_Momentum_KLine = Intuitive_Momentum_KLine(
         "moving_average_3": training_data["002611"]["moving_average_3"],  # 日棒缐（K Line Daily）數據交易日尾筆成交價（收盤價）三日移動平均缐值;
         "moving_average_5": training_data["002611"]["moving_average_5"],  # 日棒缐（K Line Daily）數據交易日尾筆成交價（收盤價）五日移動平均缐值;
         "moving_average_10": training_data["002611"]["moving_average_10"],  # 日棒缐（K Line Daily）數據交易日尾筆成交價（收盤價）十日移動平均缐值;
+        "turnover_rate": training_data["002611"]["turnover_rate"]  # 成交量換手率;
     },  # {}  # 標準化日棒缐（K Line Daily）數據字典 ( Python - dict ) ;
     int(3),  # 觀察收益率歷史向前推的交易日長度;
     y_P_Positive = None,  # float(1.0),  # 增長率（正）的可能性（頻率）示意;
@@ -1177,10 +1178,55 @@ Base.Dict{Core.String, Core.Any}(
 
 3. 代碼脚本檔 ( script file ) 「`QuantitativeTrading/QuantitativeTradingJulia/src/Quantitative_Indicators.jl`」内函數 ( Function ) 運行示例 :
 ```
-
+return_Intuitive_Momentum = Intuitive_Momentum(
+    training_data["002611"]["close_price"],  # 時間序列 ( time series ) 數據一維數組 ( Julia - Base.Dict ) ;  # ::Core.Array{Core.Union{Core.String, Core.Float64, Core.Int64, Core.UInt64, Core.Bool, Core.Nothing, Base.Missing}, 1},
+    Core.Int64(3);  # 觀察收益率歷史向前推的交易日長度;  # Parameter-1;
+    y_P_Positive = Core.Float64(1.0),  # Core.nothing,  # ::Core.Float64  # 增長率（正）的可能性（頻率）示意;
+    y_P_Negative = Core.Float64(1.0),  # Core.nothing,  # ::Core.Float64  # 衰退率（負）的可能性（頻率）示意;
+    weight = Core.Array{Core.Float64, 1}()  # Core.nothing  # [Core.Float64(Core.Int64(i) / Core.Int64(Parameter-1)) for i in 1:Core.Int64(Parameter-1)]  # 每計增長率的權重（weight）值，距離當下時長的倒數（直覺推理有效性示意）;
+);
+println("closing price growth rate", return_Intuitive_Momentum);
 ```
 ```
-
+return_Intuitive_Momentum_KLine = Intuitive_Momentum_KLine(
+    Base.Dict{Core.String, Core.Any}(
+        "date_transaction" => training_data["002611"]["date_transaction"],  # 交易日期;
+        "turnover_volume" => training_data["002611"]["turnover_volume"],  # 成交量;
+        "opening_price" => training_data["002611"]["opening_price"],  # 開盤成交價;
+        "close_price" => training_data["002611"]["close_price"],  # 收盤成交價;
+        "low_price" => training_data["002611"]["low_price"],  # 最低成交價;
+        "high_price" => training_data["002611"]["high_price"],  # 最高成交價;
+        "focus" => training_data["002611"]["focus"],  # 當日成交價重心;
+        "amplitude" => training_data["002611"]["amplitude"],  # 當日成交價絕對振幅;
+        "amplitude_rate" => training_data["002611"]["amplitude_rate"],  # 當日成交價相對振幅（%）;
+        "opening_price_Standardization" => training_data["002611"]["opening_price_Standardization"],  # 日棒缐（K Line Daily）數據交易日首筆成交價（開盤價）標準化值;
+        "closing_price_Standardization" => training_data["002611"]["closing_price_Standardization"],  # 日棒缐（K Line Daily）數據交易日尾筆成交價（收盤價）標準化值;
+        "low_price_Standardization" => training_data["002611"]["low_price_Standardization"],  # 日棒缐（K Line Daily）數據交易日最低成交價標準化值;
+        "high_price_Standardization" => training_data["002611"]["high_price_Standardization"],  # 日棒缐（K Line Daily）數據交易日最高成交價標準化值;
+        "turnover_volume_growth_rate" => training_data["002611"]["turnover_volume_growth_rate"],  # 成交量的成長率;
+        "opening_price_growth_rate" => training_data["002611"]["opening_price_growth_rate"],  # 開盤價的成長率;
+        "closing_price_growth_rate" => training_data["002611"]["closing_price_growth_rate"],  # 收盤價的成長率;
+        "closing_minus_opening_price_growth_rate" => training_data["002611"]["closing_minus_opening_price_growth_rate"],  # 收盤價減開盤價的成長率;
+        "high_price_proportion" => training_data["002611"]["high_price_proportion"],  # 收盤價和開盤價裏的最大值占最高價的比例;
+        "low_price_proportion" => training_data["002611"]["low_price_proportion"],  # 最低價占收盤價和開盤價裏的最小值的比例;
+        "moving_average_3" => training_data["002611"]["moving_average_3"],  # 日棒缐（K Line Daily）數據交易日尾筆成交價（收盤價）三日移動平均缐值;
+        "moving_average_5" => training_data["002611"]["moving_average_5"],  # 日棒缐（K Line Daily）數據交易日尾筆成交價（收盤價）五日移動平均缐值;
+        "moving_average_10" => training_data["002611"]["moving_average_10"],  # 日棒缐（K Line Daily）數據交易日尾筆成交價（收盤價）十日移動平均缐值;
+        "turnover_rate" => training_data["002611"]["turnover_rate"]  # 成交量換手率;
+    ),  # Base.Dict{Core.String, Core.Any}(),  # 標準化日棒缐（K Line Daily）數據字典 ( Julia - Base.Dict ) ;
+    Core.Int64(3);  # 觀察收益率歷史向前推的交易日長度;  # Parameter-1;
+    y_P_Positive = Core.nothing,  # ::Core.Float64 = Core.Float64(1.0),  # 增長率（正）的可能性（頻率）示意;
+    y_P_Negative = Core.nothing,  # ::Core.Float64 = Core.Float64(1.0),  # 衰退率（負）的可能性（頻率）示意;
+    weight = Core.nothing,  # Core.Array{Core.Float64, 1}()  # [Core.Float64(Core.Int64(i) / Core.Int64(Parameter-1)) for i in 1:Core.Int64(Parameter-1)],  # 每計增長率的權重（weight）值，距離當下時長的倒數（直覺推理有效性示意）;
+    Intuitive_Momentum = Intuitive_Momentum  # (arguments) -> begin return arguments; end
+);
+println("turnover volume growth rate", return_Intuitive_Momentum_KLine["P1_turnover_volume_growth_rate"]);
+println("opening price growth rate", return_Intuitive_Momentum_KLine["P1_opening_price_growth_rate"]);
+println("closing price growth rate", return_Intuitive_Momentum_KLine["P1_closing_price_growth_rate"]);
+println("closing minus opening price growth rate", return_Intuitive_Momentum_KLine["P1_closing_minus_opening_price_growth_rate"]);
+println("high price proportion", return_Intuitive_Momentum_KLine["P1_high_price_proportion"]);
+println("low price proportion", return_Intuitive_Momentum_KLine["P1_low_price_proportion"]);
+println("intuitive momentum indicator", return_Intuitive_Momentum_KLine["P1_Intuitive_Momentum"]);
 ```
 
 4. 代碼脚本檔 ( script file ) 「`QuantitativeTrading/QuantitativeTradingJulia/src/Quantitative_MarketTiming.jl`」内函數 ( Function ) 運行示例 :
