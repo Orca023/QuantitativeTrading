@@ -90,9 +90,9 @@
 
 $\color{rgba(255,0,0,1.0)}{注意，}$
 
-$\color{rgba(255,0,0,1.0)}{1. 注意，}$
+1. $\color{rgba(255,0,0,1.0)}{注意，}$
 
-$\color{rgba(255,0,0,1.0)}{2. 注意，}$
+2. $\color{rgba(255,0,0,1.0)}{注意，}$
 
 ---
 
@@ -871,7 +871,13 @@ Operating System: Google-Pixel-7 Android-11 Termux-0.118 Ubuntu-22.04-LTS-rootfs
 
 Interpreter: julia-1.10.4-linux-aarch64.tar.gz
 
-注意,
+微軟視窗系統 ( Window10 x86_64 ) 控制臺命令列 ( cmd ) 配置程式設計語言 ( Julia ) 解釋器 ( Interpreter ) 運行環境 :
+
+1. 創建程式設計語言 ( Julia ) 解釋器 ( Interpreter ) 隔離運行環境 :
+```
+C:\> C:/QuantitativeTrading/Julia/Julia-1.9.3/bin/julia.exe --project=C:/QuantitativeTrading/QuantitativeTradingJulia/
+```
+
 
 程式代碼脚本檔 `Interface.jl` 裏, 函數 `http_Server`, `http_Client` 使用了第三方模組 `HTTP.jl` , `JSON.jl` 擴展包 ( packages ) ,
 
@@ -888,7 +894,7 @@ root@localhost:~# /usr/julia/julia-1.10.4/bin/julia --project=/home/StatisticalS
 
 微軟視窗系統 ( Window10 x86_64 ) 控制臺命令列 ( cmd ) 運行啓動指令 :
 ```
-C:\StatisticalServer> C:/StatisticalServer/Julia/Julia-1.9.3/bin/julia.exe --project=C:/StatisticalServer/StatisticalServerJulia/
+C:\StatisticalServer> C:/QuantitativeTrading/Julia/Julia-1.9.3/bin/julia.exe --project=C:/QuantitativeTrading/QuantitativeTradingJulia/
 ```
 
 然後, 在程式設計語言 ( Julia ) 解釋器 ( Interpreter ) 運行環境下, 安裝配置第三方擴展包 ( packages ) :
