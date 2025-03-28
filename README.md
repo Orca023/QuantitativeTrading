@@ -1537,10 +1537,163 @@ println(result["testData"]["PickStock_transaction_sequence"]["002611"]);
 
 6. 代碼脚本檔 ( script file ) 「`QuantitativeTrading/QuantitativeTradingJulia/src/Quantitative_SizePosition.jl`」内函數 ( Function ) 運行示例 :
 ```
-
+return_SizePosition_fit_model = SizePosition_fit_model(
+    training_data,  # ::Base.Dict{Core.String, Core.Any} = Base.Dict{Core.String, Core.Any}(),  # ::Core.Array{Core.Float64, 2} = testing_data,  # ::Core.Array{Core.Float64, 2} = Core.Array{Core.Float64, 2}(undef, (0, 0)), # ::Core.Array{Core.Array{Core.Float64, 1}, 1} = Core.Array{Core.Array{Core.Float64, 1}, 1}(),
+    weight_MarketTiming_Dict,  # ::Base.Dict{Core.String, Core.Any} = Base.Dict{Core.String, Core.Any}(),  # 股票擇時交易倉位占比;
+    weight_PickStock_Dict,  # ::Base.Dict{Core.String, Core.Any} = Base.Dict{Core.String, Core.Any}(),  # 選股組合占比;
+    MarketTiming_Parameter,  # 按照擇時規則優化之後的參數字典;  # ::Base.Dict{Core.String, Core.Any} = Base.Dict{Core.String, Core.Any}(),
+    PickStock_Parameter,  # 按照選股規則優化之後的參數字典;  # ::Base.Dict{Core.String, Core.Any} = Base.Dict{Core.String, Core.Any}(),
+    PickStock_ticker_symbol,  # = Core.Array{Core.Any, 1}(),  # ::Core.Array{Core.Array{Core.String, 1}, 1} = Core.Array{Core.Array{Core.String, 1}, 1}(),  # 依照選股規則排序篩選出的股票代碼字符串存儲數組;
+    PickStock,
+    PickStock_fit_model,
+    MarketTiming,
+    MarketTiming_fit_model,
+    Intuitive_Momentum_KLine,
+    "Long_Position_and_Short_Selling"  # "Long_Position_and_Short_Selling" , "Long_Position" , "Short_Selling" ;
+);
+println("y_profit = ", return_SizePosition_fit_model["y_profit"]);  # 每兩次對衝交易利潤 × 權重，加權纍加總計;
+println("y_Long_Position_profit = ", return_SizePosition_fit_model["y_Long_Position_profit"]);  # 每兩次對衝交易利潤 × 權重，加權纍加總計;
+println("y_Short_Selling_profit = ", return_SizePosition_fit_model["y_Short_Selling_profit"]);  # 每兩次對衝交易利潤 × 權重，加權纍加總計;
+println("y_loss = ", return_SizePosition_fit_model["y_loss"]);  # 每兩次對衝交易最大回撤 × 權重，加權取極值總計;
+println("y_Long_Position_loss = ", return_SizePosition_fit_model["y_Long_Position_loss"]);  # 每兩次對衝交易最大回撤 × 權重，加權取極值總計;
+println("y_Short_Selling_loss = ", return_SizePosition_fit_model["y_Short_Selling_loss"]);  # 每兩次對衝交易最大回撤 × 權重，加權取極值總計;
+println("maximum_drawdown = ", return_SizePosition_fit_model["maximum_drawdown"]);  # 兩次對衝交易之間的最大回撤值，取極值統計;
+println("maximum_drawdown_Long_Position = ", return_SizePosition_fit_model["maximum_drawdown_Long_Position"]);  # 兩次對衝交易之間的最大回撤值，取極值統計;
+println("maximum_drawdown_Short_Selling = ", return_SizePosition_fit_model["maximum_drawdown_Short_Selling"]);  # 兩次對衝交易之間的最大回撤值，取極值統計;
+println("profit_total = ", return_SizePosition_fit_model["profit_total"]);  # 每兩次對衝交易利潤 × 頻率，纍加總計;
+println("Long_Position_profit_total = ", return_SizePosition_fit_model["Long_Position_profit_total"]);  # 每兩次對衝交易利潤 × 頻率，纍加總計;
+println("Short_Selling_profit_total = ", return_SizePosition_fit_model["Short_Selling_profit_total"]);  # 每兩次對衝交易利潤 × 頻率，纍加總計;
+println("profit_Positive = ", return_SizePosition_fit_model["profit_Positive"]);  # 每兩次對衝交易收益纍加總計;
+println("profit_Negative = ", return_SizePosition_fit_model["profit_Negative"]);  # 每兩次對衝交易損失纍加總計;
+println("Long_Position_profit_Positive = ", return_SizePosition_fit_model["Long_Position_profit_Positive"]);  # 每兩次對衝交易收益纍加總計;
+println("Long_Position_profit_Negative = ", return_SizePosition_fit_model["Long_Position_profit_Negative"]);  # 每兩次對衝交易損失纍加總計;
+println("Short_Selling_profit_Positive = ", return_SizePosition_fit_model["Short_Selling_profit_Positive"]);  # 每兩次對衝交易收益纍加總計;
+println("Short_Selling_profit_Negative = ", return_SizePosition_fit_model["Short_Selling_profit_Negative"]);  # 每兩次對衝交易損失纍加總計;
+println("profit_Positive_probability = ", return_SizePosition_fit_model["profit_Positive_probability"]);  # 每兩次對衝交易正利潤概率;
+println("profit_Negative_probability = ", return_SizePosition_fit_model["profit_Negative_probability"]);  # 每兩次對衝交易負利潤概率;
+println("Long_Position_profit_Positive_probability = ", return_SizePosition_fit_model["Long_Position_profit_Positive_probability"]);  # 每兩次對衝交易正利潤概率;
+println("Long_Position_profit_Negative_probability = ", return_SizePosition_fit_model["Long_Position_profit_Negative_probability"]);  # 每兩次對衝交易負利潤概率;
+println("Short_Selling_profit_Positive_probability = ", return_SizePosition_fit_model["Short_Selling_profit_Positive_probability"]);  # 每兩次對衝交易正利潤概率;
+println("Short_Selling_profit_Negative_probability = ", return_SizePosition_fit_model["Short_Selling_profit_Negative_probability"]);  # 每兩次對衝交易負利潤概率;
+println("average_price_amplitude_date_transaction = ", return_SizePosition_fit_model["average_price_amplitude_date_transaction"]);  # 兩兩次對衝交易日成交價振幅平方和，均值;
+println("Long_Position_average_price_amplitude_date_transaction = ", return_SizePosition_fit_model["Long_Position_average_price_amplitude_date_transaction"]);  # 兩兩次對衝交易日成交價振幅平方和，均值;
+println("Short_Selling_average_price_amplitude_date_transaction = ", return_SizePosition_fit_model["Short_Selling_average_price_amplitude_date_transaction"]);  # 兩兩次對衝交易日成交價振幅平方和，均值;
+println("average_volume_turnover_date_transaction = ", return_SizePosition_fit_model["average_volume_turnover_date_transaction"]);  # 兩次對衝交易日成交量（換手率）均值;
+println("Long_Position_average_volume_turnover_date_transaction = ", return_SizePosition_fit_model["Long_Position_average_volume_turnover_date_transaction"]);  # 兩次對衝交易日成交量（換手率）均值;
+println("Short_Selling_average_volume_turnover_date_transaction = ", return_SizePosition_fit_model["Short_Selling_average_volume_turnover_date_transaction"]);  # 兩次對衝交易日成交量（換手率）均值;
+println("average_date_transaction_between = ", return_SizePosition_fit_model["average_date_transaction_between"]);  # 兩次交易間隔日長，均值;
+println("Long_Position_average_date_transaction_between = ", return_SizePosition_fit_model["Long_Position_average_date_transaction_between"]);  # 兩次對衝交易間隔日長，均值;
+println("Short_Selling_average_date_transaction_between = ", return_SizePosition_fit_model["Short_Selling_average_date_transaction_between"]);  # 兩次對衝交易間隔日長，均值;
+println("number_SizePosition_transaction = ", return_SizePosition_fit_model["number_PickStock_transaction"]);  # 交易過股票的總隻數;
+println(return_SizePosition_fit_model["SizePosition_transaction_sequence"]);
+println(return_SizePosition_fit_model["SizePosition_transaction_sequence"]["002611"]["Long_Position_profit_date_transaction"]);  # 每兩次對衝交易利潤，向量;
+println(return_SizePosition_fit_model["SizePosition_transaction_sequence"]["002611"]["Short_Selling_profit_date_transaction"]);  # 每兩次對衝交易利潤，向量;
+println(return_SizePosition_fit_model["SizePosition_transaction_sequence"]["002611"]["Long_Position_price_amplitude_date_transaction"]);  # 兩次對衝交易日成交價振幅平方和，向量;
+println(return_SizePosition_fit_model["SizePosition_transaction_sequence"]["002611"]["Short_Selling_price_amplitude_date_transaction"]);  # 兩次對衝交易日成交價振幅平方和，向量;
+println(return_SizePosition_fit_model["SizePosition_transaction_sequence"]["002611"]["Long_Position_volume_turnover_date_transaction"]);  # 兩次對衝交易日成交量（換手率）向量;
+println(return_SizePosition_fit_model["SizePosition_transaction_sequence"]["002611"]["Short_Selling_volume_turnover_date_transaction"]);  # 兩次對衝交易日成交量（換手率）向量;
+println(return_SizePosition_fit_model["SizePosition_transaction_sequence"]["002611"]["Long_Position_date_transaction_between"]);  # 兩次對衝交易間隔日長，向量;
+println(return_SizePosition_fit_model["SizePosition_transaction_sequence"]["002611"]["Short_Selling_date_transaction_between"]);  # 兩次對衝交易間隔日長，向量;
+println(return_SizePosition_fit_model["SizePosition_transaction_sequence"]["002611"]["Long_Position_date_transaction"]);  # 按規則執行交易的日期，向量;
+println(return_SizePosition_fit_model["SizePosition_transaction_sequence"]["002611"]["Long_Position_date_transaction"][1]);  # 交易規則自動選取的交易日期;
+println(return_SizePosition_fit_model["SizePosition_transaction_sequence"]["002611"]["Long_Position_date_transaction"][2]);  # 交易規則自動選取的買入或賣出;
+println(return_SizePosition_fit_model["SizePosition_transaction_sequence"]["002611"]["Long_Position_date_transaction"][3]);  # 交易規則自動選取的成交價;
+println(return_SizePosition_fit_model["SizePosition_transaction_sequence"]["002611"]["Long_Position_date_transaction"][4]);  # 交易規則自動選取的成交量;
+println(return_SizePosition_fit_model["SizePosition_transaction_sequence"]["002611"]["Long_Position_date_transaction"][5]);  # 交易規則自動選取的成交次數記錄;
+println(return_SizePosition_fit_model["SizePosition_transaction_sequence"]["002611"]["Long_Position_date_transaction"][6]);  # 交易規則自動選取的交易日期的序列號，用於繪圖可視化;
+println(return_SizePosition_fit_model["SizePosition_transaction_sequence"]["002611"]["Long_Position_date_transaction"][7]);  # 交易日（Dates.Date 類型）;
+println(return_SizePosition_fit_model["SizePosition_transaction_sequence"]["002611"]["Long_Position_date_transaction"][8]);  # 當日總成交量（turnover volume）;
+println(return_SizePosition_fit_model["SizePosition_transaction_sequence"]["002611"]["Long_Position_date_transaction"][9]);  # 當日開盤（opening）成交價;
+println(return_SizePosition_fit_model["SizePosition_transaction_sequence"]["002611"]["Long_Position_date_transaction"][10]);  # 當日收盤（closing）成交價;
+println(return_SizePosition_fit_model["SizePosition_transaction_sequence"]["002611"]["Long_Position_date_transaction"][11]);  # 當日最低（low）成交價;
+println(return_SizePosition_fit_model["SizePosition_transaction_sequence"]["002611"]["Long_Position_date_transaction"][12]);  # 當日最高（high）成交價;
+println(return_SizePosition_fit_model["SizePosition_transaction_sequence"]["002611"]["Long_Position_date_transaction"][13]);  # 當日總成交金額（turnover amount）;
+println(return_SizePosition_fit_model["SizePosition_transaction_sequence"]["002611"]["Long_Position_date_transaction"][14]);  # 當日成交量（turnover volume）換手率（turnover rate）;
+println(return_SizePosition_fit_model["SizePosition_transaction_sequence"]["002611"]["Long_Position_date_transaction"][15]);  # 當日每股收益（price earnings）;
+println(return_SizePosition_fit_model["SizePosition_transaction_sequence"]["002611"]["Long_Position_date_transaction"][16]);  # 當日每股净值（book value per share）;
+println(return_SizePosition_fit_model["SizePosition_transaction_sequence"]["002611"]["Short_Selling_date_transaction"]);  # 按規則執行交易的日期，向量;
+println(return_SizePosition_fit_model["SizePosition_transaction_sequence"]["002611"]["Short_Selling_date_transaction"][1]);  # 交易規則自動選取的交易日期;
+println(return_SizePosition_fit_model["SizePosition_transaction_sequence"]["002611"]["Short_Selling_date_transaction"][2]);  # 交易規則自動選取的買入或賣出;
+println(return_SizePosition_fit_model["SizePosition_transaction_sequence"]["002611"]["Short_Selling_date_transaction"][3]);  # 交易規則自動選取的成交價;
+println(return_SizePosition_fit_model["SizePosition_transaction_sequence"]["002611"]["Short_Selling_date_transaction"][4]);  # 交易規則自動選取的成交量;
+println(return_SizePosition_fit_model["SizePosition_transaction_sequence"]["002611"]["Short_Selling_date_transaction"][5]);  # 交易規則自動選取的成交次數記錄;
+println(return_SizePosition_fit_model["SizePosition_transaction_sequence"]["002611"]["Short_Selling_date_transaction"][6]);  # 交易規則自動選取的交易日期的序列號，用於繪圖可視化;
+println(return_SizePosition_fit_model["SizePosition_transaction_sequence"]["002611"]["Short_Selling_date_transaction"][7]);  # 交易日（Dates.Date 類型）;
+println(return_SizePosition_fit_model["SizePosition_transaction_sequence"]["002611"]["Short_Selling_date_transaction"][8]);  # 當日總成交量（turnover volume）;
+println(return_SizePosition_fit_model["SizePosition_transaction_sequence"]["002611"]["Short_Selling_date_transaction"][9]);  # 當日開盤（opening）成交價;
+println(return_SizePosition_fit_model["SizePosition_transaction_sequence"]["002611"]["Short_Selling_date_transaction"][10]);  # 當日收盤（closing）成交價;
+println(return_SizePosition_fit_model["SizePosition_transaction_sequence"]["002611"]["Short_Selling_date_transaction"][11]);  # 當日最低（low）成交價;
+println(return_SizePosition_fit_model["SizePosition_transaction_sequence"]["002611"]["Short_Selling_date_transaction"][12]);  # 當日最高（high）成交價;
+println(return_SizePosition_fit_model["SizePosition_transaction_sequence"]["002611"]["Short_Selling_date_transaction"][13]);  # 當日總成交金額（turnover amount）;
+println(return_SizePosition_fit_model["SizePosition_transaction_sequence"]["002611"]["Short_Selling_date_transaction"][14]);  # 當日成交量（turnover volume）換手率（turnover rate）;
+println(return_SizePosition_fit_model["SizePosition_transaction_sequence"]["002611"]["Short_Selling_date_transaction"][15]);  # 當日每股收益（price earnings）;
+println(return_SizePosition_fit_model["SizePosition_transaction_sequence"]["002611"]["Short_Selling_date_transaction"][16]);  # 當日每股净值（book value per share）;
+println(return_SizePosition_fit_model["SizePosition_transaction_sequence"]["002611"]["revenue_and_expenditure_records_date_transaction"]);  # 每次交易的收支記錄序列，不區分做多（Long Position）或做空（Short Selling），向量;
+println(return_SizePosition_fit_model["SizePosition_transaction_sequence"]["002611"]["P1_Array"]);  # 依照擇時規則計算得到參數 P1 值的序列存儲數組;
 ```
 ```
-
+result = SizePosition(
+    training_data = training_data,  # ::Core.Array{Core.Float64, 2} = testing_data,  # ::Core.Array{Core.Float64, 2} = Core.Array{Core.Float64, 2}(undef, (0, 0)), # ::Core.Array{Core.Array{Core.Float64, 1}, 1} = Core.Array{Core.Array{Core.Float64, 1}, 1}(),
+    # training_date_transaction = Core.Array{Dates.Date, 1}(),
+    # training_opening_price = Core.Array{Core.Union{Core.Float16, Core.String, Core.Nothing}, 1}(),
+    # training_close_price = Core.Array{Core.Union{Core.Float16, Core.String, Core.Nothing}, 1}(),
+    # training_low_price = Core.Array{Core.Union{Core.Float16, Core.String, Core.Nothing}, 1}(),
+    # training_high_price = Core.Array{Core.Union{Core.Float16, Core.String, Core.Nothing}, 1}(),
+    # training_turnover_volume = Core.Array{Core.Union{Core.UInt64, Core.String, Core.Nothing}, 1}(),
+    # training_turnover_rate = Core.Array{Core.Union{Core.Float16, Core.String, Core.Nothing}, 1}(),
+    # training_price_earnings = Core.Array{Core.Union{Core.Float16, Core.String, Core.Nothing}, 1}(),
+    testing_data = testing_data,  # ::Core.Array{Core.Float64, 2};  # ::Core.Array{Core.Array{Core.Float64, 1}, 1};
+    # testing_date_transaction = Core.Array{Dates.Date, 1}(),
+    # testing_opening_price = Core.Array{Core.Union{Core.Float16, Core.String, Core.Nothing}, 1}(),
+    # testing_close_price = Core.Array{Core.Union{Core.Float16, Core.String, Core.Nothing}, 1}(),
+    # testing_low_price = Core.Array{Core.Union{Core.Float16, Core.String, Core.Nothing}, 1}(),
+    # testing_high_price = Core.Array{Core.Union{Core.Float16, Core.String, Core.Nothing}, 1}(),
+    # testing_turnover_volume = Core.Array{Core.Union{Core.UInt64, Core.String, Core.Nothing}, 1}(),
+    # testing_turnover_rate = Core.Array{Core.Union{Core.Float16, Core.String, Core.Nothing}, 1}(),
+    # testing_price_earnings = Core.Array{Core.Union{Core.Float16, Core.String, Core.Nothing}, 1}(),
+    Pdata_0 = [weight_MarketTiming_Dict, weight_PickStock_Dict],  # training_data["002611"]["Pdata_0"],
+    weight = Core.Array{Core.Float64, 1}(),  # training_data["002611"]["weight"],
+    Plower = [Plower_weight_MarketTiming_Dict, Plower_weight_PickStock_Dict],
+    Pupper = [Pupper_weight_MarketTiming_Dict, Pupper_weight_PickStock_Dict],
+    MarketTiming_Parameter = MarketTiming_Parameter,  # 按照擇時規則優化之後的參數字典;  # ::Base.Dict{Core.String, Core.Any} = Base.Dict{Core.String, Core.Any}(),
+    PickStock_Parameter = PickStock_Parameter,  # 按照選股規則優化之後的參數字典;  # ::Base.Dict{Core.String, Core.Any} = Base.Dict{Core.String, Core.Any}(),
+    PickStock_ticker_symbol = PickStock_ticker_symbol,  # Core.Array{Core.Any, 1}(),  # ::Core.Array{Core.Array{Core.String, 1}, 1} = Core.Array{Core.Array{Core.String, 1}, 1}(),  # 依照選股規則排序篩選出的股票代碼字符串存儲數組;
+    SizePosition_fit_model = SizePosition_fit_model,
+    PickStock = PickStock,
+    PickStock_fit_model = PickStock_fit_model,
+    MarketTiming = MarketTiming,
+    MarketTiming_fit_model = MarketTiming_fit_model,
+    Quantitative_Indicators_Function = Intuitive_Momentum_KLine,
+    investment_method = "Long_Position_and_Short_Selling"  # "Long_Position_and_Short_Selling" , "Long_Position" , "Short_Selling" ;
+);
+println("Coefficient 1 weight_MarketTiming : ", result["Coefficient"][1]);  # 優化得到的參數;
+println("Coefficient 2 weight_PickStock : ", result["Coefficient"][2]);  # 優化得到的參數;
+println("maximum drawdown per share : ", result["testData"]["maximum_drawdown"]);  # 兩次對衝交易之間的最大回撤值，取極值統計;
+println("maximum drawdown Long Position per share : ", result["testData"]["maximum_drawdown_Long_Position"]);  # 兩次對衝交易之間的最大回撤值，取極值統計;
+println("maximum drawdown Short Selling per share : ", result["testData"]["maximum_drawdown_Short_Selling"]);  # 兩次對衝交易之間的最大回撤值，取極值統計;
+println("profit total per share : ", result["testData"]["profit_total"]);
+println("Long Position profit total per share : ", result["testData"]["Long_Position_profit_total"]);
+println("Short Selling profit total per share : ", result["testData"]["Short_Selling_profit_total"]);
+println("profit positive per share : ", result["testData"]["profit_Positive"]);
+println("profit negative per share : ", result["testData"]["profit_Negative"]);
+println("Long Position profit positive per share : ", result["testData"]["Long_Position_profit_Positive"]);
+println("Long Position profit negative per share : ", result["testData"]["Long_Position_profit_Negative"]);
+println("Short Selling profit positive per share : ", result["testData"]["Short_Selling_profit_Positive"]);
+println("Short Selling profit negative per share : ", result["testData"]["Short_Selling_profit_Negative"]);
+println("profit positive probability : ", result["testData"]["profit_Positive_probability"]);
+println("profit negative probability : ", result["testData"]["profit_Negative_probability"]);
+println("Long Position profit positive probability : ", result["testData"]["Long_Position_profit_Positive_probability"]);
+println("Long Position profit negative probability : ", result["testData"]["Long_Position_profit_Negative_probability"]);
+println("Short Selling profit positive probability : ", result["testData"]["Short_Selling_profit_Positive_probability"]);
+println("Short Selling profit negative probability : ", result["testData"]["Short_Selling_profit_Negative_probability"]);
+println("average date transaction between : ", result["testData"]["average_date_transaction_between"]);
+println("Long Position average date transaction between : ", result["testData"]["Long_Position_average_date_transaction_between"]);
+println("Short Selling average date transaction between : ", result["testData"]["Short_Selling_average_date_transaction_between"]);
+println("number_PickStock_transaction : ", result["testData"]["number_PickStock_transaction"]);  # 交易過股票的總隻數;
+println(result["testData"]["SizePosition_transaction_sequence"]["002611"]["P1_Array"]);
+println(result["testData"]["SizePosition_transaction_sequence"]["002611"]["Long_Position_date_transaction"]);
+println(result["testData"]["SizePosition_transaction_sequence"]["002611"]["Short_Selling_date_transaction"]);
+println(result["testData"]["SizePosition_transaction_sequence"]["002611"]);
 ```
 
 7. 代碼脚本檔 ( script file ) 「`QuantitativeTrading/QuantitativeTradingJulia/src/Quantitative_BackTesting.jl`」内函數 ( Function ) 運行示例 :
