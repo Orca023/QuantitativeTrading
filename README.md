@@ -1788,8 +1788,8 @@ println("stepping sequence Array :", "\n", return_stepping_Dict["stepping_sequen
 [深圳市招商證券股份有限公司 ( CHINA MERCHANTS SECURITIES CO., LTD. ) 證券交易服務用戶端 ( zyyht.exe ) 官方下載頁](https://yht.cmschina.com/download.html): 
 https://yht.cmschina.com/download.html
 
-開箱即用 ( out of the box ) ( portable application ) 已配置第三方擴展模組 ( third-party extensions ( libraries or modules ) ) 的程式設計語言 ( computer programming language ) : Julia 解釋器 ( Interpreter ) 和 Python 解釋器 ( Interpreter ) 運行環境的壓縮檔 ( .7z ) 的 [百度網盤(pan.baidu.com)](链接: https://pan.baidu.com/s/16jdb-nX45cR5uZZKMItsjQ?pwd=kgbh) 下載頁: 
-链接: https://pan.baidu.com/s/16jdb-nX45cR5uZZKMItsjQ?pwd=kgbh
+開箱即用 ( out of the box ) ( portable application ) 已配置第三方擴展模組 ( third-party extensions ( libraries or modules ) ) 的程式設計語言 ( computer programming language ) : Julia 解釋器 ( Interpreter ) 和 Python 解釋器 ( Interpreter ) 運行環境的壓縮檔 ( .7z ) 的 [百度網盤(pan.baidu.com)](https://pan.baidu.com/s/16jdb-nX45cR5uZZKMItsjQ?pwd=kgbh) 下載頁: 
+https://pan.baidu.com/s/16jdb-nX45cR5uZZKMItsjQ?pwd=kgbh
 
 提取碼：kgbh
 
