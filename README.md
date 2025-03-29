@@ -97,7 +97,7 @@ $\color{rgba(255,0,0,1.0)}{2. 量化交易模型「`QuantitativeTradingJulia`」
 
 **
 
-注意，現實此兩處尚不具備實用性，需自行視具體問題個性化調整，持續精進使之具備實用性：}$
+注意，現實此兩處尚不具備實用性，需自行視具體問題個性化調整，持續精進使之具備實用性 :
 
 1. 代碼脚本 ( Script ) 檔「Quantitative_Indicators.jl」「Quantitative_Indicators.py」從日棒缐 ( K - Line ) 原始數據抽象，計算日棒缐 ( K - Line ) 數據趨勢强度示意指標值，也就是所謂交易策略，尚不具備實用性，需自行個性化調整完備，使之具有實用性 .
 
