@@ -90,7 +90,7 @@
 
 **注意，現時此兩處尚不具實用性，需自行視具體問題個性化修整精進，使之具備實用性 :**
 
-**1. 代碼脚本 ( Script ) 檔「`Quantitative_Indicators.jl`」「`Quantitative_Indicators.py`」計算趨勢强度示意值，從日棒缐 ( K - Line ) 數據抽象，即所謂交易策略，尚不具備實用性，需自行，個性化調整完備，使之具有實用性 .**
+**1. 代碼脚本 ( Script ) 檔「`Quantitative_Indicators.jl`」「`Quantitative_Indicators.py`」計算趨勢强度示意值，從日棒缐 ( K - Line ) 數據抽象，即所謂交易策略，尚不具備實用性，需個性化自行調整完備，使之具有實用性 .**
 
 **2. 量化交易模型「`QuantitativeTradingJulia`」「`QuantitativeTradingPython`」的參數優化器 ( optimization ) 選用未做計算效率考量，尚不具備實用性，需酌情調整，可自行選用更換第三方優化器 ( optimization ) 提升計算效率，使之具有實用性 .**
 
