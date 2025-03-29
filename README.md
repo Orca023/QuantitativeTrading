@@ -88,14 +88,14 @@
 
 此量化交易模型「`QuantitativeTradingPython`」的優化器 ( optimization ) 借用程式設計語言 ( computer programming language ) : Python 第三方擴展模組 ( third-party extensions ( libraries or modules ) ) : 「`scipy`」項目内優化模組「`optimize`」内「`minimize`」函數 ( Function ) 實現，未做計算效率優化，可自行變更調整優化器，並自行調整代碼脚本 ( Script ) 檔「`Quantitative_MarketTiming.py`」「`Quantitative_PickStock.py`」「`Quantitative_SizePosition.py`」内函數 ( Function ) 因應協調，可實現優化效率提速 .
 
-$\color{rgba(255,0,0,1.0)}{注意，現實此兩處尚不具備實用性，需自行視具體問題個性化調整，持續精進使之具備實用性：}$
+$\color{rgba(255,0,0,1.0)}{注意，現實此兩處尚不具備實用性，需自行視具體問題個性化調整，持續精進使之具備實用性 :}$
 
 $\color{rgba(255,0,0,1.0)}{1. 代碼脚本 ( Script ) 檔「`Quantitative_Indicators.jl`」「`Quantitative_Indicators.py`」從日棒缐 ( K - Line ) 原始數據抽象，計算日棒缐 ( K - Line ) 數據趨勢强度示意指標值，也就是所謂交易策略，尚不具備實用性，需自行個性化調整完備，使之具有實用性 .}$
 
 $\color{rgba(255,0,0,1.0)}{2. 量化交易模型「`QuantitativeTradingJulia`」「`QuantitativeTradingPython`」參數的優化器 ( optimization ) 選用未做計算效率考量，尚不具備實用性，需酌情調整，可自行更換第三方優化器 ( optimization ) 提升計算效率，使之具有實用性 .}$
 
 
-$\color{rgba(255,0,0,1.0)}{
+**
 
 注意，現實此兩處尚不具備實用性，需自行視具體問題個性化調整，持續精進使之具備實用性：}$
 
@@ -103,7 +103,7 @@ $\color{rgba(255,0,0,1.0)}{
 
 2. 量化交易模型「QuantitativeTradingJulia」「QuantitativeTradingPython」參數的優化器 ( optimization ) 選用未做計算效率考量，尚不具備實用性，需酌情調整，可自行更換第三方優化器 ( optimization ) 提升計算效率，使之具有實用性 .
 
-}$
+**
 
 ---
 
