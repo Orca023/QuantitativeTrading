@@ -1,0 +1,40 @@
+# configFile=/data/data/com.termux/files/home/QuantitativeTrading/QuantitativeTradingJulia/config.txt
+
+# input_K_Line=/data/data/com.termux/files/home/QuantitativeTrading/Data/K-Day-source/
+# # input_K_Line=/data/data/com.termux/files/home/QuantitativeTrading/Data/K-Day-source/SZ#002611.csv
+# # input_K_Line=/data/data/com.termux/files/home/QuantitativeTrading/Data/SZ#002611.xlsx
+# is_save_JLD=true
+# output_jld_K_Line=/data/data/com.termux/files/home/QuantitativeTrading/Data/steppingData.jld
+# is_save_csv=false
+# output_csv_K_Line=/data/data/com.termux/files/home/QuantitativeTrading/Data/K-Day/
+# is_save_xlsx=false
+# output_xlsx_K_Line=/data/data/com.termux/files/home/QuantitativeTrading/Data/K-Day/
+# Cleaned_K_Line=/data/data/com.termux/files/home/QuantitativeTrading/Data/steppingData.jld
+
+
+# configFile=/home/QuantitativeTrading/QuantitativeTradingJulia/config.txt
+
+# input_K_Line=/home/QuantitativeTrading/Data/K-Day-source/
+# # input_K_Line=/home/QuantitativeTrading/Data/K-Day-source/SZ#002611.csv
+# # input_K_Line=/home/QuantitativeTrading/Data/SZ#002611.xlsx
+# is_save_JLD=true
+# output_jld_K_Line=/home/QuantitativeTrading/Data/steppingData.jld
+# is_save_csv=false
+# output_csv_K_Line=/home/QuantitativeTrading/Data/K-Day/
+# is_save_xlsx=false
+# output_xlsx_K_Line=/home/QuantitativeTrading/Data/K-Day/
+# Cleaned_K_Line=/home/QuantitativeTrading/Data/steppingData.jld
+
+
+# configFile=C:/QuantitativeTrading/QuantitativeTradingJulia/config.txt
+
+input_K_Line=C:/QuantitativeTrading/Data/K-Day-source/
+# input_K_Line=C:/QuantitativeTrading/Data/K-Day-source/SZ#002611.csv
+# input_K_Line=C:/QuantitativeTrading/Data/SZ#002611.xlsx
+is_save_JLD=false
+output_jld_K_Line=C:/QuantitativeTrading/Data/steppingData.jld
+is_save_csv=false
+output_csv_K_Line=C:/QuantitativeTrading/Data/K-Day/
+is_save_xlsx=false
+output_xlsx_K_Line=C:/QuantitativeTrading/Data/K-Day/
+Cleaned_K_Line=C:/QuantitativeTrading/Data/steppingData.jld
