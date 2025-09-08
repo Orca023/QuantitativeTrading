@@ -963,19 +963,19 @@ Julia Explain : Quantitative_Indicators.jl , Quantitative_Data_Cleaning.jl , Qua
 
 Operating System: Acer-NEO-2023 Windows10 x86_64 Inter(R)-Core(TM)-m3-6Y30
 
-Interpreter: julia-1.9.3-win64.exe
+Interpreter: julia-1.10.10-win64.exe
 
-Interpreter: julia-1.10.4-linux-x86_64.tar.gz
+Interpreter: julia-1.10.10-linux-x86_64.tar.gz
 
 Operating System: Google-Pixel-7 Android-11 Termux-0.118 Ubuntu-22.04-LTS-rootfs Arm64-aarch64 MSM8998-Snapdragon835-Qualcomm®-Kryo™-280
 
-Interpreter: julia-1.10.4-linux-aarch64.tar.gz
+Interpreter: julia-1.10.10-linux-aarch64.tar.gz
 
 微軟視窗系統 ( Window10 x86_64 ) 控制臺命令列 ( cmd ) 配置程式設計語言 ( Julia ) 解釋器 ( Interpreter ) 隔離運行環境 :
 
 1. 首先，微軟視窗系統 ( Window10 x86_64 ) 控制臺命令列 ( cmd ) 啓動程式設計語言 ( Julia ) 解釋器 ( Interpreter ) 進入語言 ( Julia ) 的運行環境 :
 ```
-C:\QuantitativeTrading> C:/QuantitativeTrading/Julia/Julia-1.9.3/bin/julia.exe
+C:\QuantitativeTrading> C:/QuantitativeTrading/Julia/Julia-1.10.10/bin/julia.exe
 ```
 
 2. 然後，創建程式設計語言 ( Julia ) 解釋器 ( Interpreter ) 隔離運行環境「`C:/QuantitativeTrading/QuantitativeTradingJulia/`」 :
@@ -1001,7 +1001,7 @@ C:\QuantitativeTrading> cd C:/QuantitativeTrading/QuantitativeTradingJulia/
 
 3. 微軟視窗系統 ( Window10 x86_64 ) 控制臺命令列 ( cmd ) 運行啓動指令，進入程式設計語言 ( Julia ) 解釋器 ( Interpreter ) 隔離運行環境「`C:/QuantitativeTrading/QuantitativeTradingJulia/`」 :
 ```
-C:\QuantitativeTrading\QuantitativeTradingJulia> C:/QuantitativeTrading/Julia/Julia-1.9.3/bin/julia.exe --project=C:/QuantitativeTrading/QuantitativeTradingJulia/
+C:\QuantitativeTrading\QuantitativeTradingJulia> C:/QuantitativeTrading/Julia/Julia-1.10.10/bin/julia.exe --project=C:/QuantitativeTrading/QuantitativeTradingJulia/
 ```
 
 4. 最後, 在程式設計語言 ( Julia ) 解釋器 ( Interpreter ) 隔離運行環境「`C:/QuantitativeTrading/QuantitativeTradingJulia/`」下, 安裝配置第三方擴展包 ( packages ) :
@@ -1057,7 +1057,7 @@ julia> exit()
 
 Interpreter :
 
-julia - 1.10.4
+julia - 1.10.10
 
 [程式設計 Julia 語言解釋器 ( Interpreter ) 官方網站](https://julialang.org/): 
 https://julialang.org/
@@ -1211,14 +1211,14 @@ https://juliahub.com/
 
 控制臺命令列 ( bash ) 運行啓動指令 :
 ```
-root@localhost:~# /usr/julia/julia-1.10.4/bin/julia -p 4 --project=/QuantitativeTrading/QuantitativeTradingJulia/ /home/QuantitativeTrading/QuantitativeTradingJulia/src/Quantitative_Data_Cleaning.jl configFile=/home/QuantitativeTrading/QuantitativeTradingJulia/config.txt input_K_Line=/home/QuantitativeTrading/Data/K-Day-source/ is_save_JLD=false output_jld_K_Line=/home/QuantitativeTrading/Data/steppingData.jld is_save_csv=false output_csv_K_Line=/home/QuantitativeTrading/Data/K-Day/ is_save_xlsx=false output_xlsx_K_Line=/home/QuantitativeTrading/Data/K-Day/
+root@localhost:~# /usr/julia/julia-1.10.10/bin/julia -p 4 --project=/QuantitativeTrading/QuantitativeTradingJulia/ /home/QuantitativeTrading/QuantitativeTradingJulia/src/Quantitative_Data_Cleaning.jl configFile=/home/QuantitativeTrading/QuantitativeTradingJulia/config.txt input_K_Line=/home/QuantitativeTrading/Data/K-Day-source/ is_save_JLD=false output_jld_K_Line=/home/QuantitativeTrading/Data/steppingData.jld is_save_csv=false output_csv_K_Line=/home/QuantitativeTrading/Data/K-Day/ is_save_xlsx=false output_xlsx_K_Line=/home/QuantitativeTrading/Data/K-Day/
 ```
 
 微軟視窗系統 ( Window10 x86_64 )
 
 控制臺命令列 ( cmd ) 運行啓動指令 :
 ```
-C:\StatisticalServer> C:/StatisticalServer/Julia/Julia-1.9.3/bin/julia.exe -p 4 --project=C:/QuantitativeTrading/QuantitativeTradingJulia/ C:/QuantitativeTrading/QuantitativeTradingJulia/src/Quantitative_Data_Cleaning.jl configFile=C:/QuantitativeTrading/QuantitativeTradingJulia/config.txt input_K_Line=C:/QuantitativeTrading/Data/K-Day-source/ is_save_JLD=true output_jld_K_Line=C:/QuantitativeTrading/Data/steppingData.jld is_save_csv=false output_csv_K_Line=C:/QuantitativeTrading/Data/K-Day/ is_save_xlsx=false output_xlsx_K_Line=C:/QuantitativeTrading/Data/K-Day/
+C:\StatisticalServer> C:/StatisticalServer/Julia/Julia-1.10.10/bin/julia.exe -p 4 --project=C:/QuantitativeTrading/QuantitativeTradingJulia/ C:/QuantitativeTrading/QuantitativeTradingJulia/src/Quantitative_Data_Cleaning.jl configFile=C:/QuantitativeTrading/QuantitativeTradingJulia/config.txt input_K_Line=C:/QuantitativeTrading/Data/K-Day-source/ is_save_JLD=true output_jld_K_Line=C:/QuantitativeTrading/Data/steppingData.jld is_save_csv=false output_csv_K_Line=C:/QuantitativeTrading/Data/K-Day/ is_save_xlsx=false output_xlsx_K_Line=C:/QuantitativeTrading/Data/K-Day/
 ```
 
 2. 標準化日棒缐 ( K - Line ) 數據以程式設計語言 ( computer programming language ) : Julia 字典類型 ( Julia - Base.Dict ) 數據傳入，數據格式可類比如下 :
@@ -1876,19 +1876,19 @@ https://pan.baidu.com/s/16jdb-nX45cR5uZZKMItsjQ?pwd=kgbh
 
 開箱即用 ( out of the box ) ( portable application ) 檔 :
 
-1. 壓縮檔 : `Julia-1.9.3-Window10-AMD_FX8800P_x86_64.7z`
+1. 壓縮檔 : `Julia-1.10.10-Window10-AMD_FX8800P_x86_64.7z`
 
-壓縮檔「`Julia-1.9.3-Window10-AMD_FX8800P_x86_64.7z`」爲微軟視窗作業系統 ( Operating System: Acer-NEO-2023 Windows10 x86_64 Inter(R)-Core(TM)-m3-6Y30 ) 程式設計語言 ( Julia ) 解釋器 ( Interpreter ) 二進位可執行檔 ( julia-1.9.3-win64.exe ) 開箱即用 ( out of the box ) ( portable application ) 免安裝版，需自行下載解壓縮，將其保存至檔案夾 ( folder ) : `QuantitativeTrading/Julia/` 内，最終完整路徑應爲「`QuantitativeTrading/Julia/Julia-1.9.3/bin/julia.exe`」
+壓縮檔「`Julia-1.10.10-Window10-AMD_FX8800P_x86_64.7z`」爲微軟視窗作業系統 ( Operating System: Acer-NEO-2023 Windows10 x86_64 Inter(R)-Core(TM)-m3-6Y30 ) 程式設計語言 ( Julia ) 解釋器 ( Interpreter ) 二進位可執行檔 ( julia-1.10.10-win64.exe ) 開箱即用 ( out of the box ) ( portable application ) 免安裝版，需自行下載解壓縮，將其保存至檔案夾 ( folder ) : `QuantitativeTrading/Julia/` 内，最終完整路徑應爲「`QuantitativeTrading/Julia/Julia-1.10.10/bin/julia.exe`」
 
 2. 壓縮檔 : `Python-3.11.2-Window10-AMD_FX8800P_x86_64.7z`
 
 壓縮檔「`Python-3.11.2-Window10-AMD_FX8800P_x86_64.7z`」爲微軟視窗作業系統 ( Operating System: Acer-NEO-2023 Windows10 x86_64 Inter(R)-Core(TM)-m3-6Y30 ) 程式設計語言 ( Python ) 解釋器 ( Interpreter ) 二進位可執行檔 ( python-3.11.2-amd64.exe ) 開箱即用 ( out of the box ) ( portable application ) 免安裝版，需自行下載解壓縮，將其保存至檔案夾 ( folder ) : `QuantitativeTrading/Python/` 内，最終完整路徑應爲「`QuantitativeTrading/Python/Python311/python.exe`」
 
-3. 壓縮檔 : `QuantitativeTradingJulia-Julia1.9.3-Window10-AMD_FX8800P_x86_64.7z`
+3. 壓縮檔 : `QuantitativeTradingJulia-Julia1.10.10-Window10-AMD_FX8800P_x86_64.7z`
 
-壓縮檔「`QuantitativeTradingJulia-Julia1.9.3-Window10-AMD_FX8800P_x86_64.7z`」爲微軟視窗作業系統 ( Operating System: Acer-NEO-2023 Windows10 x86_64 Inter(R)-Core(TM)-m3-6Y30 ) 數量化交易模型 'QuantitativeTradingJulia' 開箱即用 ( out of the box ) ( portable application ) 版，已配置計算機程式設計語言 ( computer programming language ) : Julia 解釋器 ( Interpreter ) 運行此數量化交易模型 'QuantitativeTradingJulia' 項目所需的第三方擴展模組 ( third-party extensions ( libraries or modules ) ) 的運行環境，可自行下載解壓縮，將其保存至檔案夾 ( folder ) : `QuantitativeTrading/QuantitativeTradingJulia/` 内，再因應協調配置壓縮檔「`Julia-1.9.3-Window10-AMD_FX8800P_x86_64.7z`」之後，即可使用如下指令啓動運行數量化交易模型「`QuantitativeTradingJulia`」項目 : 
+壓縮檔「`QuantitativeTradingJulia-Julia1.10.10-Window10-AMD_FX8800P_x86_64.7z`」爲微軟視窗作業系統 ( Operating System: Acer-NEO-2023 Windows10 x86_64 Inter(R)-Core(TM)-m3-6Y30 ) 數量化交易模型 'QuantitativeTradingJulia' 開箱即用 ( out of the box ) ( portable application ) 版，已配置計算機程式設計語言 ( computer programming language ) : Julia 解釋器 ( Interpreter ) 運行此數量化交易模型 'QuantitativeTradingJulia' 項目所需的第三方擴展模組 ( third-party extensions ( libraries or modules ) ) 的運行環境，可自行下載解壓縮，將其保存至檔案夾 ( folder ) : `QuantitativeTrading/QuantitativeTradingJulia/` 内，再因應協調配置壓縮檔「`Julia-1.10.10-Window10-AMD_FX8800P_x86_64.7z`」之後，即可使用如下指令啓動運行數量化交易模型「`QuantitativeTradingJulia`」項目 : 
 ```
-C:\QuantitativeTrading> C:/QuantitativeTrading/Julia/Julia-1.9.3/bin/julia.exe -p 4 --project=C:/QuantitativeTrading/QuantitativeTradingJulia/ C:/QuantitativeTrading/QuantitativeTradingJulia/src/QuantitativeTradingServer.jl configFile=C:/QuantitativeTrading/QuantitativeTradingJulia/config.txt interface_Function=http_Server webPath=C:/QuantitativeTrading/html/ host=::0 port=10001 key=username:password number_Worker_threads=1 isConcurrencyHierarchy=Tasks readtimeout=0 connecttimeout=0 input_K_Line=C:/QuantitativeTrading/Data/K-Day-source/ is_save_JLD=true output_jld_K_Line=C:/QuantitativeTrading/Data/steppingData.jld is_save_csv=false output_csv_K_Line=C:/QuantitativeTrading/Data/K-Day/ is_save_xlsx=false output_xlsx_K_Line=C:/QuantitativeTrading/Data/K-Day/ Cleaned_K_Line=C:/QuantitativeTrading/Data/steppingData.jld
+C:\QuantitativeTrading> C:/QuantitativeTrading/Julia/Julia-1.10.10/bin/julia.exe -p 4 --project=C:/QuantitativeTrading/QuantitativeTradingJulia/ C:/QuantitativeTrading/QuantitativeTradingJulia/src/QuantitativeTradingServer.jl configFile=C:/QuantitativeTrading/QuantitativeTradingJulia/config.txt interface_Function=http_Server webPath=C:/QuantitativeTrading/html/ host=::0 port=10001 key=username:password number_Worker_threads=1 isConcurrencyHierarchy=Tasks readtimeout=0 connecttimeout=0 input_K_Line=C:/QuantitativeTrading/Data/K-Day-source/ is_save_JLD=true output_jld_K_Line=C:/QuantitativeTrading/Data/steppingData.jld is_save_csv=false output_csv_K_Line=C:/QuantitativeTrading/Data/K-Day/ is_save_xlsx=false output_xlsx_K_Line=C:/QuantitativeTrading/Data/K-Day/ Cleaned_K_Line=C:/QuantitativeTrading/Data/steppingData.jld
 ```
 
 4. 壓縮檔 : `QuantitativeTradingPython-Python3.11.2-Window10-AMD_FX8800P_x86_64.7z`
@@ -1908,7 +1908,7 @@ C:\QuantitativeTrading> C:/QuantitativeTrading/Python/Python311/python.exe C:/Qu
 
 程式設計語言 ( computer programming language ) : Julia 實現，使用如下指令:
 ```
-C:\QuantitativeTrading> C:/QuantitativeTrading/Julia/Julia-1.9.3/bin/julia.exe -p 4 --project=C:/QuantitativeTrading/QuantitativeTradingJulia/ C:/QuantitativeTrading/QuantitativeTradingJulia/src/QuantitativeTradingServer.jl configFile=C:/QuantitativeTrading/QuantitativeTradingJulia/config.txt interface_Function=http_Server webPath=C:/QuantitativeTrading/html/ host=::0 port=10001 key=username:password number_Worker_threads=1 isConcurrencyHierarchy=Tasks readtimeout=0 connecttimeout=0 input_K_Line=C:/QuantitativeTrading/Data/K-Day-source/ is_save_JLD=true output_jld_K_Line=C:/QuantitativeTrading/Data/steppingData.jld is_save_csv=false output_csv_K_Line=C:/QuantitativeTrading/Data/K-Day/ is_save_xlsx=false output_xlsx_K_Line=C:/QuantitativeTrading/Data/K-Day/ Cleaned_K_Line=C:/QuantitativeTrading/Data/steppingData.jld
+C:\QuantitativeTrading> C:/QuantitativeTrading/Julia/Julia-1.10.10/bin/julia.exe -p 4 --project=C:/QuantitativeTrading/QuantitativeTradingJulia/ C:/QuantitativeTrading/QuantitativeTradingJulia/src/QuantitativeTradingServer.jl configFile=C:/QuantitativeTrading/QuantitativeTradingJulia/config.txt interface_Function=http_Server webPath=C:/QuantitativeTrading/html/ host=::0 port=10001 key=username:password number_Worker_threads=1 isConcurrencyHierarchy=Tasks readtimeout=0 connecttimeout=0 input_K_Line=C:/QuantitativeTrading/Data/K-Day-source/ is_save_JLD=true output_jld_K_Line=C:/QuantitativeTrading/Data/steppingData.jld is_save_csv=false output_csv_K_Line=C:/QuantitativeTrading/Data/K-Day/ is_save_xlsx=false output_xlsx_K_Line=C:/QuantitativeTrading/Data/K-Day/ Cleaned_K_Line=C:/QuantitativeTrading/Data/steppingData.jld
 ```
 程式設計語言 ( computer programming language ) : Python 實現，使用如下指令:
 ```
@@ -1924,7 +1924,7 @@ C:\StatisticalServer> C:/Windows/System32/cmd.exe C:/QuantitativeTrading/startSe
 ```
 使用二進位可執行檔「`QuantitativeTrading.exe`」啓動，使用如下指令 : 
 ```
-C:\QuantitativeTrading> C:/QuantitativeTrading/QuantitativeTrading.exe configFile=C:/QuantitativeTrading/config.txt executableFile=C:/QuantitativeTrading/Julia/Julia-1.9.3/julia.exe interpreterFile=-p,4,--project=C:/QuantitativeTrading/QuantitativeTradingJulia/ scriptFile=C:/QuantitativeTrading/QuantitativeTradingJulia/src/QuantitativeTradingServer.jl configInstructions=configFile=/home/QuantitativeTrading/QuantitativeTradingJulia/config.txt,interface_Function=http_Server,webPath=C:/QuantitativeTrading/html/,host=::0,port=10001,key=username:password,number_Worker_threads=1,isConcurrencyHierarchy=Tasks,input_K_Line=C:/QuantitativeTrading/Data/K-Day-source/,is_save_JLD=true,output_jld_K_Line=C:/QuantitativeTrading/Data/steppingData.jld,is_save_csv=false,output_csv_K_Line=C:/QuantitativeTrading/Data/K-Day/,is_save_xlsx=false,output_xlsx_K_Line=C:/QuantitativeTrading/Data/K-Day/,Cleaned_K_Line=C:/QuantitativeTrading/Data/steppingData.jld
+C:\QuantitativeTrading> C:/QuantitativeTrading/QuantitativeTrading.exe configFile=C:/QuantitativeTrading/config.txt executableFile=C:/QuantitativeTrading/Julia/Julia-1.10.10/julia.exe interpreterFile=-p,4,--project=C:/QuantitativeTrading/QuantitativeTradingJulia/ scriptFile=C:/QuantitativeTrading/QuantitativeTradingJulia/src/QuantitativeTradingServer.jl configInstructions=configFile=/home/QuantitativeTrading/QuantitativeTradingJulia/config.txt,interface_Function=http_Server,webPath=C:/QuantitativeTrading/html/,host=::0,port=10001,key=username:password,number_Worker_threads=1,isConcurrencyHierarchy=Tasks,input_K_Line=C:/QuantitativeTrading/Data/K-Day-source/,is_save_JLD=true,output_jld_K_Line=C:/QuantitativeTrading/Data/steppingData.jld,is_save_csv=false,output_csv_K_Line=C:/QuantitativeTrading/Data/K-Day/,is_save_xlsx=false,output_xlsx_K_Line=C:/QuantitativeTrading/Data/K-Day/,Cleaned_K_Line=C:/QuantitativeTrading/Data/steppingData.jld
 ```
 
 6. 壓縮檔 : `google-pixel-2_android-11_termux-0.118_arm64_ubuntu-22.04_arm64_QuantitativeTrading.tar.gz`
