@@ -1,0 +1,116 @@
+# configFile=/data/data/com.termux/files/home/QuantitativeTrading/QuantitativeTradingPython/config.txt
+
+# interface_Function=http_Server
+# # interface_Function=http_Client
+# webPath=/data/data/com.termux/files/home/QuantitativeTrading/html/
+# host=::0
+# # host=::1
+# port=10001
+# Key=username:password
+# Is_multi_thread=False
+# number_Worker_process=0
+# is_Monitor_Concurrent=0
+# is_monitor=False
+# time_sleep=0.02
+# monitor_dir=/data/data/com.termux/files/home/QuantitativeTrading/Intermediary/
+# monitor_file=/data/data/com.termux/files/home/QuantitativeTrading/Intermediary/intermediary_write_C.txt
+# output_dir=/data/data/com.termux/files/home/QuantitativeTrading/Intermediary/
+# output_file=/data/data/com.termux/files/home/QuantitativeTrading/Intermediary/intermediary_write_Python.txt
+# temp_cache_IO_data_dir=/data/data/com.termux/files/home/QuantitativeTrading/temp/
+# URL=http://username:password@127.0.0.1:8081/index.html?a=1&b=2&c=3#a1
+# # URL=http://username:password@[fe80::e458:959e:cf12:695%25]:10001/index.html?a=1&b=2&c=3#a1
+# requestMethod=POST
+# # requestMethod=GET
+# Authorization=username:password
+# # Authorization=Basic dXNlcm5hbWU6cGFzc3dvcmQ=
+# Cookie=session_id=request_Key->username:password
+# # Cookie=session_id=cmVxdWVzdF9LZXktPnVzZXJuYW1lOnBhc3N3b3Jk
+# time_out=0.5
+# postData={"Client_say":"Python-3.11.2 http.client.HTTPConnection()."}
+# input_K_Line=/data/data/com.termux/files/home/QuantitativeTrading/Data/K-Day-source/
+# is_save_pickle=True
+# output_pickle_K_Line=/data/data/com.termux/files/home/QuantitativeTrading/Data/steppingData.pickle
+# is_save_csv=False
+# output_csv_K_Line=/data/data/com.termux/files/home/QuantitativeTrading/Data/K-Day/
+# is_save_xlsx=False
+# output_xlsx_K_Line=/data/data/com.termux/files/home/QuantitativeTrading/Data/K-Day/
+# Cleaned_K_Line=/data/data/com.termux/files/home/QuantitativeTrading/Data/steppingData.pickle
+# K_Line_source={\"002611\":{\"date_transaction\":[\"2019-01-02\",\"2019-01-03\",\"2019-01-04\"],\"turnover_volume\":[7385675,33846475,27957054],\"opening_price\":[3.75,3.76,3.84],\"close_price\":[3.76,3.94,3.98],\"low_price\":[3.73,3.72,3.80],\"high_price\":[3.80,4.14,4.00]}}
+
+# configFile=/home/QuantitativeTrading/QuantitativeTradingPython/config.txt
+
+# interface_Function=http_Server
+# # interface_Function=http_Client
+# webPath=/home/QuantitativeTrading/html/
+# host=::0
+# # host=::1
+# port=10001
+# Key=username:password
+# Is_multi_thread=False
+# number_Worker_process=0
+# is_Monitor_Concurrent=0
+# is_monitor=False
+# time_sleep=0.02
+# monitor_dir=/home/QuantitativeTrading/Intermediary/
+# monitor_file=/home/QuantitativeTrading/Intermediary/intermediary_write_C.txt
+# output_dir=/home/QuantitativeTrading/Intermediary/
+# output_file=/home/QuantitativeTrading/Intermediary/intermediary_write_Python.txt
+# temp_cache_IO_data_dir=/home/QuantitativeTrading/temp/
+# URL=http://username:password@127.0.0.1:8081/index.html?a=1&b=2&c=3#a1
+# # URL=http://username:password@[fe80::e458:959e:cf12:695%25]:10001/index.html?a=1&b=2&c=3#a1
+# requestMethod=POST
+# # requestMethod=GET
+# Authorization=username:password
+# # Authorization=Basic dXNlcm5hbWU6cGFzc3dvcmQ=
+# Cookie=session_id=request_Key->username:password
+# # Cookie=session_id=cmVxdWVzdF9LZXktPnVzZXJuYW1lOnBhc3N3b3Jk
+# time_out=0.5
+# postData={"Client_say":"Python-3.11.2 http.client.HTTPConnection()."}
+# input_K_Line=/home/QuantitativeTrading/Data/K-Day-source/
+# is_save_pickle=True
+# output_pickle_K_Line=/home/QuantitativeTrading/Data/steppingData.pickle
+# is_save_csv=False
+# output_csv_K_Line=/home/QuantitativeTrading/Data/K-Day/
+# is_save_xlsx=False
+# output_xlsx_K_Line=/home/QuantitativeTrading/Data/K-Day/
+# Cleaned_K_Line=/home/QuantitativeTrading/Data/steppingData.pickle
+# K_Line_source={\"002611\":{\"date_transaction\":[\"2019-01-02\",\"2019-01-03\",\"2019-01-04\"],\"turnover_volume\":[7385675,33846475,27957054],\"opening_price\":[3.75,3.76,3.84],\"close_price\":[3.76,3.94,3.98],\"low_price\":[3.73,3.72,3.80],\"high_price\":[3.80,4.14,4.00]}}
+
+# configFile=C:/QuantitativeTrading/QuantitativeTradingPython/config.txt
+
+interface_Function=http_Server
+# interface_Function=http_Client
+webPath=C:/QuantitativeTrading/html/
+host=::0
+# host=::0
+port=10001
+Key=username:password
+Is_multi_thread=False
+number_Worker_process=0
+is_Monitor_Concurrent=0
+is_monitor=False
+time_sleep=0.02
+monitor_dir=C:/QuantitativeTrading/Intermediary/
+monitor_file=C:/QuantitativeTrading/Intermediary/intermediary_write_C.txt
+output_dir=C:/QuantitativeTrading/Intermediary/
+output_file=C:/QuantitativeTrading/Intermediary/intermediary_write_Python.txt
+temp_cache_IO_data_dir=C:/QuantitativeTrading/temp/
+URL=http://username:password@127.0.0.1:8081/index.html?a=1&b=2&c=3#a1
+# URL=http://username:password@[fe80::e458:959e:cf12:695%25]:10001/index.html?a=1&b=2&c=3#a1
+requestMethod=POST
+# requestMethod=GET
+Authorization=username:password
+# Authorization=Basic dXNlcm5hbWU6cGFzc3dvcmQ=
+Cookie=session_id=request_Key->username:password
+# Cookie=session_id=cmVxdWVzdF9LZXktPnVzZXJuYW1lOnBhc3N3b3Jk
+time_out=0.5
+postData={"Client_say":"Python-3.11.2 http.client.HTTPConnection()."}
+input_K_Line=C:/QuantitativeTrading/Data/K-Day-source/
+is_save_pickle=True
+output_pickle_K_Line=C:/QuantitativeTrading/Data/steppingData.pickle
+is_save_csv=False
+output_csv_K_Line=C:/QuantitativeTrading/Data/K-Day/
+is_save_xlsx=False
+output_xlsx_K_Line=C:/QuantitativeTrading/Data/K-Day/
+Cleaned_K_Line=C:/QuantitativeTrading/Data/steppingData.pickle
+# K_Line_source={\"002611\":{\"date_transaction\":[\"2019-01-02\",\"2019-01-03\",\"2019-01-04\"],\"turnover_volume\":[7385675,33846475,27957054],\"opening_price\":[3.75,3.76,3.84],\"close_price\":[3.76,3.94,3.98],\"low_price\":[3.73,3.72,3.80],\"high_price\":[3.80,4.14,4.00]}}
