@@ -6966,176 +6966,62 @@ Request - POST =
 Respond - body = 
 ```
 {
-    "Coefficient" : [
-        100.007982422761,
-        42148.4577551448,
-        1.0001564001486,
-        4221377.92224082
-    ],
-    "Coefficient-StandardDeviation" : [
-        0.00781790123184812,
-        2104.76673086505,
-        0.0000237490808220821,
-        210359.023599377
-    ],
-    "Coefficient-Confidence-Lower-95%" : [
-        99.9908250045862,
-        37529.2688077105,
-        1.0001042796499,
-        3759717.22485611
-    ],
-    "Coefficient-Confidence-Upper-95%" : [
-        100.025139840936,
-        46767.6467025791,
-        1.00020852064729,
-        4683038.61962554
-    ],
-    "Yfit" : [
-        100.008980483748,
-        199.99155580718,
-        299.992070696316,
-        399.99603100866,
-        500.000567344017,
-        600.00431688223,
-        700.006476967595,
-        800.006517272442,
-        900.004060927778,
-        999.998826196417,
-        1099.99059444852
-    ],
-    "Yfit-Uncertainty-Lower" : [
-        99.0089499294379,
-        198.991136273453,
-        298.990136898385,
-        398.991624763274,
-        498.99282487668,
-        598.992447662226,
-        698.989753032473,
-        798.984266632803,
-        898.975662941844,
-        998.963708008532,
-        1098.94822805642
-    ],
-    "Yfit-Uncertainty-Upper" : [
-        101.00901103813,
-        200.991951293373,
-        300.993902825086,
-        401.000210884195,
-        501.007916682505,
-        601.015588680788,
-        701.022365894672,
-        801.027666045591,
-        901.031064750697,
-        1001.0322361364,
-        1101.0309201882
-    ],
-    "Residual" : [
-        0.00898048374801874,
-        -0.00844419281929731,
-        -0.00792930368334055,
-        -0.00396899133920669,
-        0.000567344017326831,
-        0.00431688223034143,
-        0.00647696759551763,
-        0.00651727244257926,
-        0.00406092777848243,
-        -0.00117380358278751,
-        -0.00940555147826671
-    ],
-    "testData" : {
-        "Ydata" : [
-            [150.0, 148.0, 152.0],
-            [200.0, 198.0, 202.0],
-            [250.0, 248.0, 252.0],
-            [350.0, 348.0, 352.0],
-            [450.0, 448.0, 452.0],
-            [550.0, 548.0, 552.0],
-            [650.0, 648.0, 652.0],
-            [750.0, 748.0, 752.0],
-            [850.0, 848.0, 852.0],
-            [950.0, 948.0, 952.0],
-            [1050.0, 1048.0, 1052.0]
-        ],
-        "test-Xvals" : [
-            0.500050586546119,
-            1.00008444458554,
-            1.50008923026377,
-            2.50006143908055,
-            3.50001668919562,
-            4.49997400999207,
-            5.49994366811569,
-            6.49993211621922,
-            7.49994379302719,
-            8.49998194168741,
-            9.50004903674755
-        ],
-        "test-Xvals-Uncertainty-Lower" : [
-            0.499936310423273,
-            0.999794808816128,
-            1.49963107921017,
-            2.49927920023971,
-            3.49892261926065,
-            4.49857747071072,
-            5.4982524599721,
-            6.4979530588239,
-            7.49768303155859,
-            8.49744512880161,
-            9.49724144950174
-        ],
-        "test-Xvals-Uncertainty-Upper" : [
-            0.500160692642957,
-            1.00036584601127,
-            1.50053513648402,
-            2.5008235803856,
-            3.50108303720897,
-            4.50133543331854,
-            5.50159259771137,
-            6.50186196458511,
-            7.50214864756277,
-            8.50245638268284,
-            9.50278802032924
-        ],
-        "Xdata" : [
-            0.5,
-            1.0,
-            1.5,
-            2.5,
-            3.5,
-            4.5,
-            5.5,
-            6.5,
-            7.5,
-            8.5,
-            9.5
-        ],
-        "test-Yfit" : [
-            149.99283432168886,
-            199.98780598165467,
-            249.98704946506768,
-            349.9910371559672,
-            449.9975369446911,
-            550.0037557953037,
-            650.0081868763082,
-            750.0098833059892,
-            850.0081939375959,
-            950.002643218264,
-            1049.9928684998304
-        ],
-        "test-Yfit-Uncertainty-Lower" : [],
-        "test-Yfit-Uncertainty-Upper" : [],
-        "test-Residual" : [
-            [0.000050586546119],
-            [0.00008444458554],
-            [0.00008923026377],
-            [0.00006143908055],
-            [0.00001668919562],
-            [-0.00002599000793],
-            [-0.0000563318843],
-            [-0.00006788378077],
-            [-0.0000562069728],
-            [-0.00001805831259],
-            [0.00004903674755]
-        ]
+    "request_Url" : "/SizePosition?Key=username:password&algorithmUser=username&algorithmPass=password&algorithmName=SizePosition",
+    "request_Authorization" : "Basic dXNlcm5hbWU6cGFzc3dvcmQ=",
+    "request_Cookie" : "session_id=cmVxdWVzdF9LZXktPnVzZXJuYW1lOnBhc3N3b3Jk",
+    "time" : "2024-02-03 17:59:58.239794",
+    "Server_say" : "",
+    "error" : "",
+    "configFile" : "C:/QuantitativeTrading/QuantitativeTradingJulia/config.txt",
+    // "configFile" : "C:/QuantitativeTrading/QuantitativeTradingPython/config.txt",
+    "trading_direction" : "Long_Position_and_Short_Selling",
+    "ticker_symbol" : ["002611", ... ],
+    "is_Optimize" : "false",
+    "MarketTiming_Pdata_0" : [3, +0.1, -0.1, 0.0],
+    "PickStock_Pdata_0" : [3, 5],
+    "SizePosition_Pdata_0" : [1.0, 1.0],
+    "return_SizePosition" : {
+        "Coefficient" : {
+            "002611" : {
+                "Long_Position" : [Floating-Point, Floating-Point],
+                "Short_Selling" : [Floating-Point, Floating-Point]
+            },
+            ...
+        },
+        "number_PickStock_transaction" : Integer,
+        "y_profit" : Floating-Point,  // 每兩次對衝交易利潤 × 權重，加權纍加總計;
+        "y_Long_Position_profit" : Floating-Point,  // 每兩次對衝交易利潤 × 權重，加權纍加總計;
+        "y_Short_Selling_profit" : Floating-Point,  // 每兩次對衝交易利潤 × 權重，加權纍加總計;
+        "y_loss" : Floating-Point,  // 每兩次對衝交易最大回撤 × 權重，加權取極值總計;
+        "y_Long_Position_loss" : Floating-Point,  // 每兩次對衝交易最大回撤 × 權重，加權取極值總計;
+        "y_Short_Selling_loss" : Floating-Point,  // 每兩次對衝交易最大回撤 × 權重，加權取極值總計;
+        "maximum_drawdown" : Floating-Point,  // 兩次對衝交易之間的最大回撤值，取極值統計;
+        "maximum_drawdown_Long_Position" : Floating-Point,  // 兩次對衝交易之間的最大回撤值，取極值統計;
+        "maximum_drawdown_Short_Selling" : Floating-Point,  // 兩次對衝交易之間的最大回撤值，取極值統計;
+        "profit_total" : Floating-Point,  // 每兩次對衝交易利潤 × 權重，纍加總計;
+        "Long_Position_profit_total" : Floating-Point,  // 每兩次對衝交易利潤 × 權重，纍加總計;
+        "Short_Selling_profit_total" : Floating-Point,  // 每兩次對衝交易利潤 × 權重，纍加總計;
+        "profit_Positive" : Floating-Point,  // 每兩次對衝交易收益纍加總計;
+        "profit_Negative" : Floating-Point,  // 每兩次對衝交易損失纍加總計;
+        "Long_Position_profit_Positive" : Floating-Point,  // 每兩次對衝交易收益纍加總計;
+        "Long_Position_profit_Negative" : Floating-Point,  // 每兩次對衝交易損失纍加總計;
+        "Short_Selling_profit_Positive" : Floating-Point,  // 每兩次對衝交易收益纍加總計;
+        "Short_Selling_profit_Negative" : Floating-Point,  // 每兩次對衝交易損失纍加總計;
+        "profit_Positive_probability" : Floating-Point,  // 每兩次對衝交易正利潤概率;
+        "profit_Negative_probability" : Floating-Point,  // 每兩次對衝交易負利潤概率;
+        "Long_Position_profit_Positive_probability" : Floating-Point,  // 每兩次對衝交易正利潤概率;
+        "Long_Position_profit_Negative_probability" : Floating-Point,  // 每兩次對衝交易負利潤概率;
+        "Short_Selling_profit_Positive_probability" : Floating-Point,  // 每兩次對衝交易正利潤概率;
+        "Short_Selling_profit_Negative_probability" : Floating-Point,  // 每兩次對衝交易負利潤概率;
+        "average_price_amplitude_date_transaction" : Floating-Point,  // 兩兩次對衝交易日成交價振幅平方和，均值;
+        "Long_Position_average_price_amplitude_date_transaction" : Floating-Point,  // 兩兩次對衝交易日成交價振幅平方和，均值;
+        "Short_Selling_average_price_amplitude_date_transaction" : Floating-Point,  // 兩兩次對衝交易日成交價振幅平方和，均值;
+        "average_volume_turnover_date_transaction" : Integer,  // 兩次對衝交易日成交量（換手率）均值;
+        "Long_Position_average_volume_turnover_date_transaction" : Integer,  // 兩次對衝交易日成交量（換手率）均值;
+        "Short_Selling_average_volume_turnover_date_transaction" : Integer,  // 兩次對衝交易日成交量（換手率）均值;
+        "average_date_transaction_between" : Integer,  // 兩次交易間隔日長，均值;
+        "Long_Position_average_date_transaction_between" : Integer,  // 兩次對衝交易間隔日長，均值;
+        "Short_Selling_average_date_transaction_between" : Integer  // 兩次對衝交易間隔日長，均值;
     }
 }
 ```
@@ -7747,176 +7633,68 @@ Request - POST =
 Respond - body = 
 ```
 {
-    "Coefficient" : [
-        100.007982422761,
-        42148.4577551448,
-        1.0001564001486,
-        4221377.92224082
-    ],
-    "Coefficient-StandardDeviation" : [
-        0.00781790123184812,
-        2104.76673086505,
-        0.0000237490808220821,
-        210359.023599377
-    ],
-    "Coefficient-Confidence-Lower-95%" : [
-        99.9908250045862,
-        37529.2688077105,
-        1.0001042796499,
-        3759717.22485611
-    ],
-    "Coefficient-Confidence-Upper-95%" : [
-        100.025139840936,
-        46767.6467025791,
-        1.00020852064729,
-        4683038.61962554
-    ],
-    "Yfit" : [
-        100.008980483748,
-        199.99155580718,
-        299.992070696316,
-        399.99603100866,
-        500.000567344017,
-        600.00431688223,
-        700.006476967595,
-        800.006517272442,
-        900.004060927778,
-        999.998826196417,
-        1099.99059444852
-    ],
-    "Yfit-Uncertainty-Lower" : [
-        99.0089499294379,
-        198.991136273453,
-        298.990136898385,
-        398.991624763274,
-        498.99282487668,
-        598.992447662226,
-        698.989753032473,
-        798.984266632803,
-        898.975662941844,
-        998.963708008532,
-        1098.94822805642
-    ],
-    "Yfit-Uncertainty-Upper" : [
-        101.00901103813,
-        200.991951293373,
-        300.993902825086,
-        401.000210884195,
-        501.007916682505,
-        601.015588680788,
-        701.022365894672,
-        801.027666045591,
-        901.031064750697,
-        1001.0322361364,
-        1101.0309201882
-    ],
-    "Residual" : [
-        0.00898048374801874,
-        -0.00844419281929731,
-        -0.00792930368334055,
-        -0.00396899133920669,
-        0.000567344017326831,
-        0.00431688223034143,
-        0.00647696759551763,
-        0.00651727244257926,
-        0.00406092777848243,
-        -0.00117380358278751,
-        -0.00940555147826671
-    ],
-    "testData" : {
-        "Ydata" : [
-            [150.0, 148.0, 152.0],
-            [200.0, 198.0, 202.0],
-            [250.0, 248.0, 252.0],
-            [350.0, 348.0, 352.0],
-            [450.0, 448.0, 452.0],
-            [550.0, 548.0, 552.0],
-            [650.0, 648.0, 652.0],
-            [750.0, 748.0, 752.0],
-            [850.0, 848.0, 852.0],
-            [950.0, 948.0, 952.0],
-            [1050.0, 1048.0, 1052.0]
-        ],
-        "test-Xvals" : [
-            0.500050586546119,
-            1.00008444458554,
-            1.50008923026377,
-            2.50006143908055,
-            3.50001668919562,
-            4.49997400999207,
-            5.49994366811569,
-            6.49993211621922,
-            7.49994379302719,
-            8.49998194168741,
-            9.50004903674755
-        ],
-        "test-Xvals-Uncertainty-Lower" : [
-            0.499936310423273,
-            0.999794808816128,
-            1.49963107921017,
-            2.49927920023971,
-            3.49892261926065,
-            4.49857747071072,
-            5.4982524599721,
-            6.4979530588239,
-            7.49768303155859,
-            8.49744512880161,
-            9.49724144950174
-        ],
-        "test-Xvals-Uncertainty-Upper" : [
-            0.500160692642957,
-            1.00036584601127,
-            1.50053513648402,
-            2.5008235803856,
-            3.50108303720897,
-            4.50133543331854,
-            5.50159259771137,
-            6.50186196458511,
-            7.50214864756277,
-            8.50245638268284,
-            9.50278802032924
-        ],
-        "Xdata" : [
-            0.5,
-            1.0,
-            1.5,
-            2.5,
-            3.5,
-            4.5,
-            5.5,
-            6.5,
-            7.5,
-            8.5,
-            9.5
-        ],
-        "test-Yfit" : [
-            149.99283432168886,
-            199.98780598165467,
-            249.98704946506768,
-            349.9910371559672,
-            449.9975369446911,
-            550.0037557953037,
-            650.0081868763082,
-            750.0098833059892,
-            850.0081939375959,
-            950.002643218264,
-            1049.9928684998304
-        ],
-        "test-Yfit-Uncertainty-Lower" : [],
-        "test-Yfit-Uncertainty-Upper" : [],
-        "test-Residual" : [
-            [0.000050586546119],
-            [0.00008444458554],
-            [0.00008923026377],
-            [0.00006143908055],
-            [0.00001668919562],
-            [-0.00002599000793],
-            [-0.0000563318843],
-            [-0.00006788378077],
-            [-0.0000562069728],
-            [-0.00001805831259],
-            [0.00004903674755]
-        ]
+    "request_Url" : "/BackTesting?Key=username:password&algorithmUser=username&algorithmPass=password&algorithmName=BackTesting",
+    "request_Authorization" : "Basic dXNlcm5hbWU6cGFzc3dvcmQ=",
+    "request_Cookie" : "session_id=cmVxdWVzdF9LZXktPnVzZXJuYW1lOnBhc3N3b3Jk",
+    "time" : "2024-02-03 17:59:58.239794",
+    "Server_say" : "",
+    "error" : "",
+    "configFile" : "C:/QuantitativeTrading/QuantitativeTradingJulia/config.txt",
+    // "configFile" : "C:/QuantitativeTrading/QuantitativeTradingPython/config.txt",
+    "trading_direction" : "Long_Position_and_Short_Selling",
+    "is_Optimize" : "false",
+    "training_ticker_symbol" : ["002611", ... ],
+    "training_sequence_length" : 60,
+    "testing_ticker_symbol" : ["002611", ... ],
+    "testing_sequence_length" : 1,
+    "risk_threshold" : 0.0,
+    "MarketTiming_Pdata_0" : [3, +0.1, -0.1, 0.0],
+    "PickStock_Pdata_0" : [3, 5],
+    "SizePosition_Pdata_0" : [1.0, 1.0],
+    "return_BackTesting" : {
+        "number_PickStock" : Integer,  // 交易過股票的總隻數;
+        "number_PickStock_Long_Position" : Integer,  // 做多（Long_Position）交易過股票的總隻數;
+        "number_PickStock_Short_Selling" : Integer,  // 做空（Short_Selling）交易過股票的總隻數;
+        "number_transaction_total" : Integer,  // 交易總次數（兩次對衝交易作爲一組配對交易）（paired_transaction）;
+        "number_transaction_total_Long_Position" : Integer,  // 做多（Long_Position）交易總次數（兩次對衝交易作爲一組配對交易）（paired_transaction）;
+        "number_transaction_total_Short_Selling" : Integer,  // 做空（Short_Selling）交易總次數（兩次對衝交易作爲一組配對交易）（paired_transaction）;
+        "maximum_drawdown" : Floating-Point,  // 兩次對衝交易之間的最大回撤值，取極值統計;
+        "maximum_drawdown_Long_Position" : Floating-Point,  // 兩次對衝交易之間的最大回撤值，取極值統計;
+        "maximum_drawdown_Short_Selling" : Floating-Point,  // 兩次對衝交易之間的最大回撤值，取極值統計;
+        "profit_total" : Floating-Point,  // 每兩次對衝交易利潤 × 權重，纍加總計;
+        "Long_Position_profit_total" : Floating-Point,  // 每兩次對衝交易利潤 × 權重，纍加總計;
+        "Short_Selling_profit_total" : Floating-Point,  // 每兩次對衝交易利潤 × 權重，纍加總計;
+        "profit_Positive" : Floating-Point,  // 每兩次對衝交易收益纍加總計;
+        "profit_Negative" : Floating-Point,  // 每兩次對衝交易損失纍加總計;
+        "Long_Position_profit_Positive" : Floating-Point,  // 每兩次對衝交易收益纍加總計;
+        "Long_Position_profit_Negative" : Floating-Point,  // 每兩次對衝交易損失纍加總計;
+        "Short_Selling_profit_Positive" : Floating-Point,  // 每兩次對衝交易收益纍加總計;
+        "Short_Selling_profit_Negative" : Floating-Point,  // 每兩次對衝交易損失纍加總計;
+        "profit_Positive_probability" : Floating-Point,  // 每兩次對衝交易正利潤概率;
+        "profit_Negative_probability" : Floating-Point,  // 每兩次對衝交易負利潤概率;
+        "Long_Position_profit_Positive_probability" : Floating-Point,  // 每兩次對衝交易正利潤概率;
+        "Long_Position_profit_Negative_probability" : Floating-Point,  // 每兩次對衝交易負利潤概率;
+        "Short_Selling_profit_Positive_probability" : Floating-Point,  // 每兩次對衝交易正利潤概率;
+        "Short_Selling_profit_Negative_probability" : Floating-Point,  // 每兩次對衝交易負利潤概率;
+        "average_price_amplitude_date_transaction" : Floating-Point,  // 兩兩次對衝交易日成交價振幅平方和，均值;
+        "Long_Position_average_price_amplitude_date_transaction" : Floating-Point,  // 兩兩次對衝交易日成交價振幅平方和，均值;
+        "Short_Selling_average_price_amplitude_date_transaction" : Floating-Point,  // 兩兩次對衝交易日成交價振幅平方和，均值;
+        "average_volume_turnover_date_transaction" : Integer,  // 兩次對衝交易日成交量（換手率）均值;
+        "Long_Position_average_volume_turnover_date_transaction" : Integer,  // 兩次對衝交易日成交量（換手率）均值;
+        "Short_Selling_average_volume_turnover_date_transaction" : Integer,  // 兩次對衝交易日成交量（換手率）均值;
+        "average_date_transaction_between" : Integer,  // 兩次交易間隔日長，均值;
+        "Long_Position_average_date_transaction_between" : Integer,  // 兩次對衝交易間隔日長，均值;
+        "Short_Selling_average_date_transaction_between" : Integer  // 兩次對衝交易間隔日長，均值;
+        "PickStock" : [String, String, String, ... ],  // 向量（Array），依照選股規則計算得到每次交易的股票代碼字符串數組序列;
+        "PickStock_Long_Position" : [String, String, String, ... ],  // 向量（Array），做多（Long_Position）依照選股規則計算得到每次交易的股票代碼字符串數組序列;
+        "PickStock_Short_Selling" : [String, String, String, ... ],  // 向量（Array），做空（Short_Selling）依照選股規則計算得到每次交易的股票代碼字符串數組序列;
+        "profit_paired_transaction" : {"002611" : {}, ... },  # 字典（Dictionary），依照優化之後的擇時（MarketTiming）、選股（PickStock）、倉位（SizePosition）規則計算分割得到的每組對衝交易（paired_transaction）數據切片序列;
+        "transaction_sequence" : {},  # 字典（Dictionary），  # 向量（Array），依照傳入的參數：training_data_sequence_length 和 testing_data_sequence_length 整數長度值對原始數據集：stepping_data 字典序列分割得到的測試集（testing）數據切片序列;
+        "stepping_sequence" : [{"002611" : {}, ... }, ... ],  # 向量（Array），依照傳入的參數：training_data_sequence_length 和 testing_data_sequence_length 整數長度值對原始數據集：stepping_data 字典序列分割得到的訓練集（training）和測試集（testing）數據切片序列，用於對擇時（MarketTiming）、選股（PickStock）、倉位（SizePosition）規則優化運算以及交易測試的數據切片序列;
+
+
+
+
     }
 }
 ```
