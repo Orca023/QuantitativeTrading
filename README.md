@@ -2287,14 +2287,39 @@ http://username:password@[::1]:10001/administrator.html?Key=username:password
 http://[::1]:10001/Interpolation?Key=username:password&algorithmUser=username&algorithmPass=password&algorithmName=BSpline(Cubic)&algorithmLambda=0.0&algorithmKei=2.0&algorithmDi=1.0&algorithmEith=1.0
 ```
 
-3. 連接數量化交易運算伺服器「`QuantitativeTrading`」做 ( Client - Request ) 多項式 ( 3 階 ) 方程 ( Polynomial ( Cubic ) ) 模型擬合 ( Fit ) 計算，使用網址 ( Uniform Resource Locator , URL ) : 
+2. 連接數量化交易運算伺服器「`QuantitativeTrading`」做 ( Client - Request ) 多項式 ( 3 階 ) 方程 ( Polynomial ( Cubic ) ) 模型擬合 ( Fit ) 計算，使用網址 ( Uniform Resource Locator , URL ) : 
 ```
 http://[::1]:10001/Polynomial3Fit?Key=username:password&algorithmUser=username&algorithmPass=password&algorithmName=Polynomial3Fit
 ```
 
-5. 連接數量化交易運算伺服器「`QuantitativeTrading`」做 ( Client - Request ) 邏輯 4 , 5 參數模型 ( 4 , 5 - parameter logistic curve ) 擬合 ( Fit ) 計算，使用網址 ( Uniform Resource Locator , URL ) : 
+3. 連接數量化交易運算伺服器「`QuantitativeTrading`」做 ( Client - Request ) 邏輯 4 , 5 參數模型 ( 4 , 5 - parameter logistic curve ) 擬合 ( Fit ) 計算，使用網址 ( Uniform Resource Locator , URL ) : 
 ```
 http://[::1]:10001/LC5PFit?Key=username:password&algorithmUser=username&algorithmPass=password&algorithmName=LC5PFit
+```
+
+4. 連接數量化交易運算伺服器「`QuantitativeTrading`」做 ( Client - Request ) 邏輯 4 , 5 參數模型 ( 4 , 5 - parameter logistic curve ) 擬合 ( Fit ) 計算，使用網址 ( Uniform Resource Locator , URL ) : 
+```
+http://[::1]:10001/KLineCleaning?Key=username:password&algorithmUser=username&algorithmPass=password&algorithmName=KLineCleaning&configFile=C:/StatisticalServer/StatisticalServerJulia/config.txt&input_K_Line=C:/StatisticalServer/Data/K-Day-source/&is_save_JLD=true&output_jld_K_Line=C:/StatisticalServer/Data/steppingData.jld&is_save_csv=true&output_csv_K_Line=C:/StatisticalServer/Data/K-Day/&is_save_xlsx=false&output_xlsx_K_Line=C:/StatisticalServer/Data/K-Day/&source_data={"002611":{"date_transaction":["2019-01-02","2019-01-03","2019-01-04"],"turnover_volume":[7385675,33846475,27957054],"opening_price":[3.75,3.76,3.84],"close_price":[3.76,3.94,3.98],"low_price":[3.73,3.72,3.80],"high_price":[3.80,4.14,4.00]}}
+```
+
+5. 連接數量化交易運算伺服器「`QuantitativeTrading`」做 ( Client - Request ) 邏輯 4 , 5 參數模型 ( 4 , 5 - parameter logistic curve ) 擬合 ( Fit ) 計算，使用網址 ( Uniform Resource Locator , URL ) : 
+```
+http://[::1]:10001/MarketTiming?Key=username:password&algorithmUser=username&algorithmPass=password&algorithmName=MarketTiming&trading_direction=Long_Position_and_Short_Selling&ticker_symbol=["all"]&is_Optimize=false&MarketTiming_Pdata_0=[3,+0.1,-0.1,0.0]&MarketTiming_Plower=["-Infinity","-Infinity","-Infinity","-Infinity"]&MarketTiming_Pupper=["+Infinity","+Infinity","+Infinity","+Infinity"]&MarketTiming_weight=[]&Cleaned_K_Line=C:/StatisticalServer/Data/steppingData.jld&training_data_file=C:/StatisticalServer/Data/trainingData.jld&testing_data_file=C:/StatisticalServer/Data/testingData.jld&stepping_data_file=C:/StatisticalServer/Data/steppingData.jld
+```
+
+6. 連接數量化交易運算伺服器「`QuantitativeTrading`」做 ( Client - Request ) 邏輯 4 , 5 參數模型 ( 4 , 5 - parameter logistic curve ) 擬合 ( Fit ) 計算，使用網址 ( Uniform Resource Locator , URL ) : 
+```
+http://[::1]:10001/PickStock?Key=username:password&algorithmUser=username&algorithmPass=password&algorithmName=PickStock&trading_direction=Long_Position_and_Short_Selling&ticker_symbol=["all"]&is_Optimize=false&MarketTiming_Pdata_0=[3,+0.1,-0.1,0.0]&MarketTiming_Plower=["-Infinity","-Infinity","-Infinity","-Infinity"]&MarketTiming_Pupper=["+Infinity","+Infinity","+Infinity","+Infinity"]&MarketTiming_weight=[]&PickStock_Pdata_0=[3,5]&PickStock_Plower=["-Infinity","-Infinity"]&PickStock_Pupper=["+Infinity","+Infinity"]&PickStock_weight=[]&Cleaned_K_Line=C:/StatisticalServer/Data/steppingData.jld&training_data_file=C:/StatisticalServer/Data/trainingData.jld&testing_data_file=C:/StatisticalServer/Data/testingData.jld&stepping_data_file=C:/StatisticalServer/Data/steppingData.jld
+```
+
+7. 連接數量化交易運算伺服器「`QuantitativeTrading`」做 ( Client - Request ) 邏輯 4 , 5 參數模型 ( 4 , 5 - parameter logistic curve ) 擬合 ( Fit ) 計算，使用網址 ( Uniform Resource Locator , URL ) : 
+```
+http://[::1]:10001/SizePosition?Key=username:password&algorithmUser=username&algorithmPass=password&algorithmName=SizePosition&trading_direction=Long_Position_and_Short_Selling&ticker_symbol=["all"]&is_Optimize=false&MarketTiming_Pdata_0=[3,+0.1,-0.1,0.0]&MarketTiming_Plower=["-Infinity","-Infinity","-Infinity","-Infinity"]&MarketTiming_Pupper=["+Infinity","+Infinity","+Infinity","+Infinity"]&MarketTiming_weight=[]&PickStock_Pdata_0=[3,5]&PickStock_Plower=["-Infinity","-Infinity"]&PickStock_Pupper=["+Infinity","+Infinity"]&PickStock_weight=[]&SizePosition_Pdata_0=[1.0,"average"]&SizePosition_Plower=[0.0,0.0]&SizePosition_Pupper=[1.0,1.0]&SizePosition_weight=[]&Cleaned_K_Line=C:/StatisticalServer/Data/steppingData.jld&training_data_file=C:/StatisticalServer/Data/trainingData.jld&testing_data_file=C:/StatisticalServer/Data/testingData.jld&stepping_data_file=C:/StatisticalServer/Data/steppingData.jld
+```
+
+8. 連接數量化交易運算伺服器「`QuantitativeTrading`」做 ( Client - Request ) 邏輯 4 , 5 參數模型 ( 4 , 5 - parameter logistic curve ) 擬合 ( Fit ) 計算，使用網址 ( Uniform Resource Locator , URL ) : 
+```
+http://[::1]:10001/BackTesting?Key=username:password&algorithmUser=username&algorithmPass=password&algorithmName=BackTesting&trading_direction=Long_Position_and_Short_Selling&ticker_symbol=["all"]&is_Optimize=false&MarketTiming_Pdata_0=[3,+0.1,-0.1,0.0]&MarketTiming_Plower=["-Infinity","-Infinity","-Infinity","-Infinity"]&MarketTiming_Pupper=["+Infinity","+Infinity","+Infinity","+Infinity"]&MarketTiming_weight=[]&PickStock_Pdata_0=[3,5]&PickStock_Plower=["-Infinity","-Infinity"]&PickStock_Pupper=["+Infinity","+Infinity"]&PickStock_weight=[]&SizePosition_Pdata_0=[1.0,"average"]&SizePosition_Plower=[0.0,0.0]&SizePosition_Pupper=[1.0,1.0]&SizePosition_weight=[]&risk_threshold=0.0&training_sequence_length=60&training_ticker_symbol=["all"]&testing_sequence_length=1&testing_ticker_symbol=["all"]&Cleaned_K_Line=C:/StatisticalServer/Data/steppingData.jld&training_data_file=C:/StatisticalServer/Data/trainingData.jld&testing_data_file=C:/StatisticalServer/Data/testingData.jld&stepping_data_file=C:/StatisticalServer/Data/steppingData.jld
 ```
 
 
