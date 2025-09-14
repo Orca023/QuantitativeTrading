@@ -2656,17 +2656,18 @@ http://[::1]:10001/KLineCleaning?Key=username:password&algorithmUser=username&al
 Request - POST = 
 ```
 {
-    "configFile" : ["C:/StatisticalServer/StatisticalServerJulia/config.txt"],  // ["C:/StatisticalServer/StatisticalServerPython/config.txt"],
-    "input_K_Line" : ["C:/StatisticalServer/Data/K-Day-source/"],
+    "configFile" : ["C:/QuantitativeTrading/QuantitativeTradingJulia/config.txt"],
+    //"configFile" : ["C:/QuantitativeTrading/QuantitativeTradingPython/config.txt"],
+    "input_K_Line" : ["C:/QuantitativeTrading/Data/K-Day-source/"],
     "is_save_JLD" : ["true"],
-    "output_jld_K_Line" : ["C:/StatisticalServer/Data/steppingData.jld"],
+    "output_jld_K_Line" : ["C:/QuantitativeTrading/Data/steppingData.jld"],
     "is_save_pickle" : ["True"],
-    "output_pickle_K_Line" : ["C:/StatisticalServer/Data/steppingData.pickle"],
+    "output_pickle_K_Line" : ["C:/QuantitativeTrading/Data/steppingData.pickle"],
     "is_save_csv" : ["True"],
-    "output_csv_K_Line" : ["C:/StatisticalServer/Data/K-Day/"],
+    "output_csv_K_Line" : ["C:/QuantitativeTrading/Data/K-Day/"],
     "is_save_xlsx" : ["False"],
-    "output_xlsx_K_Line" : ["C:/StatisticalServer/Data/K-Day/"],
-    "Cleaned_K_Line" : ["C:/StatisticalServer/Data/steppingData.jld"],  // ["C:/StatisticalServer/Data/steppingData.pickle"],
+    "output_xlsx_K_Line" : ["C:/QuantitativeTrading/Data/K-Day/"],
+    "Cleaned_K_Line" : ["C:/QuantitativeTrading/Data/steppingData.jld"],  // ["C:/QuantitativeTrading/Data/steppingData.pickle"],
     "trading_direction" : ["Long_Position_and_Short_Selling"],
     "ticker_symbol" : ["all"],
     "is_Optimize" : ["false"],
@@ -2687,9 +2688,9 @@ Request - POST =
     "SizePosition_Plower" : [0.0, 0.0],
     "SizePosition_Pupper" : [1.0, 1.0],
     "SizePosition_weight" : [],
-    "training_data_file" : ["C:/StatisticalServer/Data/trainingData.jld"],  // ["C:/StatisticalServer/Data/trainingData.pickle"],
-    "testing_data_file" : ["C:/StatisticalServer/Data/testingData.jld"],  // ["C:/StatisticalServer/Data/testingData.pickle"],
-    "stepping_data_file" : ["C:/StatisticalServer/Data/steppingData.jld"],  // ["C:/StatisticalServer/Data/steppingData.pickle"],
+    "training_data_file" : ["C:/QuantitativeTrading/Data/trainingData.jld"],  // ["C:/QuantitativeTrading/Data/trainingData.pickle"],
+    "testing_data_file" : ["C:/QuantitativeTrading/Data/testingData.jld"],  // ["C:/QuantitativeTrading/Data/testingData.pickle"],
+    "stepping_data_file" : ["C:/QuantitativeTrading/Data/steppingData.jld"],  // ["C:/QuantitativeTrading/Data/steppingData.pickle"],
     "source_data" : {
         "002611" : {
             "date_transaction": [
@@ -8179,17 +8180,17 @@ http://[::1]:10001/MarketTiming?Key=username:password&algorithmUser=username&alg
 Request - POST = 
 ```
 {
-    "configFile" : ["C:/StatisticalServer/StatisticalServerJulia/config.txt"],  // ["C:/StatisticalServer/StatisticalServerPython/config.txt"],
-    "input_K_Line" : ["C:/StatisticalServer/Data/K-Day-source/"],
+    "configFile" : ["C:/QuantitativeTrading/QuantitativeTradingJulia/config.txt"],  // ["C:/QuantitativeTrading/QuantitativeTradingPython/config.txt"],
+    "input_K_Line" : ["C:/QuantitativeTrading/Data/K-Day-source/"],
     "is_save_JLD" : ["true"],
-    "output_jld_K_Line" : ["C:/StatisticalServer/Data/steppingData.jld"],
+    "output_jld_K_Line" : ["C:/QuantitativeTrading/Data/steppingData.jld"],
     "is_save_pickle" : ["True"],
-    "output_pickle_K_Line" : ["C:/StatisticalServer/Data/steppingData.pickle"],
+    "output_pickle_K_Line" : ["C:/QuantitativeTrading/Data/steppingData.pickle"],
     "is_save_csv" : ["True"],
-    "output_csv_K_Line" : ["C:/StatisticalServer/Data/K-Day/"],
+    "output_csv_K_Line" : ["C:/QuantitativeTrading/Data/K-Day/"],
     "is_save_xlsx" : ["False"],
-    "output_xlsx_K_Line" : ["C:/StatisticalServer/Data/K-Day/"],
-    "Cleaned_K_Line" : ["C:/StatisticalServer/Data/steppingData.jld"],  // ["C:/StatisticalServer/Data/steppingData.pickle"],
+    "output_xlsx_K_Line" : ["C:/QuantitativeTrading/Data/K-Day/"],
+    "Cleaned_K_Line" : ["C:/QuantitativeTrading/Data/steppingData.jld"],  // ["C:/QuantitativeTrading/Data/steppingData.pickle"],
     "trading_direction" : ["Long_Position_and_Short_Selling"],
     "ticker_symbol" : ["all"],
     "is_Optimize" : ["false"],
@@ -8210,9 +8211,9 @@ Request - POST =
     "SizePosition_Plower" : [0.0, 0.0],
     "SizePosition_Pupper" : [1.0, 1.0],
     "SizePosition_weight" : [],
-    "training_data_file" : ["C:/StatisticalServer/Data/trainingData.jld"],  // ["C:/StatisticalServer/Data/trainingData.pickle"],
-    "testing_data_file" : ["C:/StatisticalServer/Data/testingData.jld"],  // ["C:/StatisticalServer/Data/testingData.pickle"],
-    "stepping_data_file" : ["C:/StatisticalServer/Data/steppingData.jld"],  // ["C:/StatisticalServer/Data/steppingData.pickle"],
+    "training_data_file" : ["C:/QuantitativeTrading/Data/trainingData.jld"],  // ["C:/QuantitativeTrading/Data/trainingData.pickle"],
+    "testing_data_file" : ["C:/QuantitativeTrading/Data/testingData.jld"],  // ["C:/QuantitativeTrading/Data/testingData.pickle"],
+    "stepping_data_file" : ["C:/QuantitativeTrading/Data/steppingData.jld"],  // ["C:/QuantitativeTrading/Data/steppingData.pickle"],
     "source_data" : {
         "002611" : {
             "date_transaction": [
@@ -13702,17 +13703,17 @@ http://[::1]:10001/PickStock?Key=username:password&algorithmUser=username&algori
 Request - POST = 
 ```
 {
-    "configFile" : ["C:/StatisticalServer/StatisticalServerJulia/config.txt"],  // ["C:/StatisticalServer/StatisticalServerPython/config.txt"],
-    "input_K_Line" : ["C:/StatisticalServer/Data/K-Day-source/"],
+    "configFile" : ["C:/QuantitativeTrading/QuantitativeTradingJulia/config.txt"],  // ["C:/QuantitativeTrading/QuantitativeTradingPython/config.txt"],
+    "input_K_Line" : ["C:/QuantitativeTrading/Data/K-Day-source/"],
     "is_save_JLD" : ["true"],
-    "output_jld_K_Line" : ["C:/StatisticalServer/Data/steppingData.jld"],
+    "output_jld_K_Line" : ["C:/QuantitativeTrading/Data/steppingData.jld"],
     "is_save_pickle" : ["True"],
-    "output_pickle_K_Line" : ["C:/StatisticalServer/Data/steppingData.pickle"],
+    "output_pickle_K_Line" : ["C:/QuantitativeTrading/Data/steppingData.pickle"],
     "is_save_csv" : ["True"],
-    "output_csv_K_Line" : ["C:/StatisticalServer/Data/K-Day/"],
+    "output_csv_K_Line" : ["C:/QuantitativeTrading/Data/K-Day/"],
     "is_save_xlsx" : ["False"],
-    "output_xlsx_K_Line" : ["C:/StatisticalServer/Data/K-Day/"],
-    "Cleaned_K_Line" : ["C:/StatisticalServer/Data/steppingData.jld"],  // ["C:/StatisticalServer/Data/steppingData.pickle"],
+    "output_xlsx_K_Line" : ["C:/QuantitativeTrading/Data/K-Day/"],
+    "Cleaned_K_Line" : ["C:/QuantitativeTrading/Data/steppingData.jld"],  // ["C:/QuantitativeTrading/Data/steppingData.pickle"],
     "trading_direction" : ["Long_Position_and_Short_Selling"],
     "ticker_symbol" : ["all"],
     "is_Optimize" : ["false"],
@@ -13733,9 +13734,9 @@ Request - POST =
     "SizePosition_Plower" : [0.0, 0.0],
     "SizePosition_Pupper" : [1.0, 1.0],
     "SizePosition_weight" : [],
-    "training_data_file" : ["C:/StatisticalServer/Data/trainingData.jld"],  // ["C:/StatisticalServer/Data/trainingData.pickle"],
-    "testing_data_file" : ["C:/StatisticalServer/Data/testingData.jld"],  // ["C:/StatisticalServer/Data/testingData.pickle"],
-    "stepping_data_file" : ["C:/StatisticalServer/Data/steppingData.jld"],  // ["C:/StatisticalServer/Data/steppingData.pickle"],
+    "training_data_file" : ["C:/QuantitativeTrading/Data/trainingData.jld"],  // ["C:/QuantitativeTrading/Data/trainingData.pickle"],
+    "testing_data_file" : ["C:/QuantitativeTrading/Data/testingData.jld"],  // ["C:/QuantitativeTrading/Data/testingData.pickle"],
+    "stepping_data_file" : ["C:/QuantitativeTrading/Data/steppingData.jld"],  // ["C:/QuantitativeTrading/Data/steppingData.pickle"],
     "source_data" : {
         "002611" : {
             "date_transaction": [
@@ -19225,17 +19226,17 @@ http://[::1]:10001/SizePosition?Key=username:password&algorithmUser=username&alg
 Request - POST = 
 ```
 {
-    "configFile" : ["C:/StatisticalServer/StatisticalServerJulia/config.txt"],  // ["C:/StatisticalServer/StatisticalServerPython/config.txt"],
-    "input_K_Line" : ["C:/StatisticalServer/Data/K-Day-source/"],
+    "configFile" : ["C:/QuantitativeTrading/QuantitativeTradingJulia/config.txt"],  // ["C:/QuantitativeTrading/QuantitativeTradingPython/config.txt"],
+    "input_K_Line" : ["C:/QuantitativeTrading/Data/K-Day-source/"],
     "is_save_JLD" : ["true"],
-    "output_jld_K_Line" : ["C:/StatisticalServer/Data/steppingData.jld"],
+    "output_jld_K_Line" : ["C:/QuantitativeTrading/Data/steppingData.jld"],
     "is_save_pickle" : ["True"],
-    "output_pickle_K_Line" : ["C:/StatisticalServer/Data/steppingData.pickle"],
+    "output_pickle_K_Line" : ["C:/QuantitativeTrading/Data/steppingData.pickle"],
     "is_save_csv" : ["True"],
-    "output_csv_K_Line" : ["C:/StatisticalServer/Data/K-Day/"],
+    "output_csv_K_Line" : ["C:/QuantitativeTrading/Data/K-Day/"],
     "is_save_xlsx" : ["False"],
-    "output_xlsx_K_Line" : ["C:/StatisticalServer/Data/K-Day/"],
-    "Cleaned_K_Line" : ["C:/StatisticalServer/Data/steppingData.jld"],  // ["C:/StatisticalServer/Data/steppingData.pickle"],
+    "output_xlsx_K_Line" : ["C:/QuantitativeTrading/Data/K-Day/"],
+    "Cleaned_K_Line" : ["C:/QuantitativeTrading/Data/steppingData.jld"],  // ["C:/QuantitativeTrading/Data/steppingData.pickle"],
     "trading_direction" : ["Long_Position_and_Short_Selling"],
     "ticker_symbol" : ["all"],
     "is_Optimize" : ["false"],
@@ -19256,9 +19257,9 @@ Request - POST =
     "SizePosition_Plower" : [0.0, 0.0],
     "SizePosition_Pupper" : [1.0, 1.0],
     "SizePosition_weight" : [],
-    "training_data_file" : ["C:/StatisticalServer/Data/trainingData.jld"],  // ["C:/StatisticalServer/Data/trainingData.pickle"],
-    "testing_data_file" : ["C:/StatisticalServer/Data/testingData.jld"],  // ["C:/StatisticalServer/Data/testingData.pickle"],
-    "stepping_data_file" : ["C:/StatisticalServer/Data/steppingData.jld"],  // ["C:/StatisticalServer/Data/steppingData.pickle"],
+    "training_data_file" : ["C:/QuantitativeTrading/Data/trainingData.jld"],  // ["C:/QuantitativeTrading/Data/trainingData.pickle"],
+    "testing_data_file" : ["C:/QuantitativeTrading/Data/testingData.jld"],  // ["C:/QuantitativeTrading/Data/testingData.pickle"],
+    "stepping_data_file" : ["C:/QuantitativeTrading/Data/steppingData.jld"],  // ["C:/QuantitativeTrading/Data/steppingData.pickle"],
     "source_data" : {
         "002611" : {
             "date_transaction": [
@@ -24748,17 +24749,17 @@ http://[::1]:10001/BackTesting?Key=username:password&algorithmUser=username&algo
 Request - POST = 
 ```
 {
-    "configFile" : ["C:/StatisticalServer/StatisticalServerJulia/config.txt"],  // ["C:/StatisticalServer/StatisticalServerPython/config.txt"],
-    "input_K_Line" : ["C:/StatisticalServer/Data/K-Day-source/"],
+    "configFile" : ["C:/QuantitativeTrading/QuantitativeTradingJulia/config.txt"],  // ["C:/QuantitativeTrading/QuantitativeTradingPython/config.txt"],
+    "input_K_Line" : ["C:/QuantitativeTrading/Data/K-Day-source/"],
     "is_save_JLD" : ["true"],
-    "output_jld_K_Line" : ["C:/StatisticalServer/Data/steppingData.jld"],
+    "output_jld_K_Line" : ["C:/QuantitativeTrading/Data/steppingData.jld"],
     "is_save_pickle" : ["True"],
-    "output_pickle_K_Line" : ["C:/StatisticalServer/Data/steppingData.pickle"],
+    "output_pickle_K_Line" : ["C:/QuantitativeTrading/Data/steppingData.pickle"],
     "is_save_csv" : ["True"],
-    "output_csv_K_Line" : ["C:/StatisticalServer/Data/K-Day/"],
+    "output_csv_K_Line" : ["C:/QuantitativeTrading/Data/K-Day/"],
     "is_save_xlsx" : ["False"],
-    "output_xlsx_K_Line" : ["C:/StatisticalServer/Data/K-Day/"],
-    "Cleaned_K_Line" : ["C:/StatisticalServer/Data/steppingData.jld"],  // ["C:/StatisticalServer/Data/steppingData.pickle"],
+    "output_xlsx_K_Line" : ["C:/QuantitativeTrading/Data/K-Day/"],
+    "Cleaned_K_Line" : ["C:/QuantitativeTrading/Data/steppingData.jld"],  // ["C:/QuantitativeTrading/Data/steppingData.pickle"],
     "trading_direction" : ["Long_Position_and_Short_Selling"],
     "ticker_symbol" : ["all"],
     "is_Optimize" : ["false"],
@@ -24779,9 +24780,9 @@ Request - POST =
     "SizePosition_Plower" : [0.0, 0.0],
     "SizePosition_Pupper" : [1.0, 1.0],
     "SizePosition_weight" : [],
-    "training_data_file" : ["C:/StatisticalServer/Data/trainingData.jld"],  // ["C:/StatisticalServer/Data/trainingData.pickle"],
-    "testing_data_file" : ["C:/StatisticalServer/Data/testingData.jld"],  // ["C:/StatisticalServer/Data/testingData.pickle"],
-    "stepping_data_file" : ["C:/StatisticalServer/Data/steppingData.jld"],  // ["C:/StatisticalServer/Data/steppingData.pickle"],
+    "training_data_file" : ["C:/QuantitativeTrading/Data/trainingData.jld"],  // ["C:/QuantitativeTrading/Data/trainingData.pickle"],
+    "testing_data_file" : ["C:/QuantitativeTrading/Data/testingData.jld"],  // ["C:/QuantitativeTrading/Data/testingData.pickle"],
+    "stepping_data_file" : ["C:/QuantitativeTrading/Data/steppingData.jld"],  // ["C:/QuantitativeTrading/Data/steppingData.pickle"],
     "source_data" : {
         "002611" : {
             "date_transaction": [
