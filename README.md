@@ -2708,150 +2708,6 @@ https://learn.microsoft.com/zh-tw/deployoffice/office2019/overview
 
 ---
 
-開箱即用 ( out of the box ) ( portable application ) 已配置第三方擴展模組 ( third-party extensions ( libraries or modules ) ) 的程式設計語言 ( computer programming language ) : Julia 解釋器 ( Interpreter ) 和 Python 解釋器 ( Interpreter ) 運行環境的壓縮檔 ( .7z ) 的 [百度網盤(pan.baidu.com)](https://pan.baidu.com/s/1MZMNeeRz02zpEzSV0xcFBA?pwd=cy8g) 下載頁: 
-https://pan.baidu.com/s/1MZMNeeRz02zpEzSV0xcFBA?pwd=cy8g
-
-提取碼：cy8g
-
-開箱即用 ( out of the box ) ( portable application ) 檔 :
-
-1. 壓縮檔 : `Julia-1.10.10-Window10-AMD_FX8800P_x86_64.7z`
-
-壓縮檔「`Julia-1.10.10-Window10-AMD_FX8800P_x86_64.7z`」爲微軟視窗作業系統 ( Operating System: Acer-NEO-2023 Windows10 x86_64 Inter(R)-Core(TM)-m3-6Y30 ) 程式設計語言 ( Julia ) 解釋器 ( Interpreter ) 二進位可執行檔 ( julia-1.10.10-win64.exe ) 開箱即用 ( out of the box ) ( portable application ) 免安裝版，需自行下載解壓縮，將其保存至檔案夾 ( folder ) : `QuantitativeTrading/Julia/` 内，最終完整路徑應爲「`QuantitativeTrading/Julia/Julia-1.10.10/bin/julia.exe`」
-
-2. 壓縮檔 : `Python-3.11.2-Window10-AMD_FX8800P_x86_64.7z`
-
-壓縮檔「`Python-3.11.2-Window10-AMD_FX8800P_x86_64.7z`」爲微軟視窗作業系統 ( Operating System: Acer-NEO-2023 Windows10 x86_64 Inter(R)-Core(TM)-m3-6Y30 ) 程式設計語言 ( Python ) 解釋器 ( Interpreter ) 二進位可執行檔 ( python-3.11.2-amd64.exe ) 開箱即用 ( out of the box ) ( portable application ) 免安裝版，需自行下載解壓縮，將其保存至檔案夾 ( folder ) : `QuantitativeTrading/Python/` 内，最終完整路徑應爲「`QuantitativeTrading/Python/Python311/python.exe`」
-
-3. 壓縮檔 : `QuantitativeTradingJulia-Julia1.10.10-Window10-AMD_FX8800P_x86_64.7z`
-
-壓縮檔「`QuantitativeTradingJulia-Julia1.10.10-Window10-AMD_FX8800P_x86_64.7z`」爲微軟視窗作業系統 ( Operating System: Acer-NEO-2023 Windows10 x86_64 Inter(R)-Core(TM)-m3-6Y30 ) 統計運算伺服器 'QuantitativeTradingJulia' 開箱即用 ( out of the box ) ( portable application ) 版，已配置計算機程式設計語言 ( computer programming language ) : Julia 解釋器 ( Interpreter ) 運行此統計運算伺服器 'QuantitativeTradingJulia' 項目所需的第三方擴展模組 ( third-party extensions ( libraries or modules ) ) 的運行環境，可自行下載解壓縮，將其保存至檔案夾 ( folder ) : `QuantitativeTrading/QuantitativeTradingJulia/` 内，再因應協調配置壓縮檔「`Julia-1.10.10-Window10-AMD_FX8800P_x86_64.7z`」之後，即可使用如下指令啓動運行統計運算伺服器「`QuantitativeTradingJulia`」項目 : 
-```
-C:\QuantitativeTrading> C:/QuantitativeTrading/Julia/Julia-1.10.10/bin/julia.exe -p 4 --project=C:/QuantitativeTrading/QuantitativeTradingJulia/ C:/QuantitativeTrading/QuantitativeTradingJulia/src/QuantitativeTradingServer.jl configFile=C:/QuantitativeTrading/QuantitativeTradingJulia/config.txt interface_Function=http_Server webPath=C:/QuantitativeTrading/html/ host=::0 port=10001 key=username:password number_Worker_threads=1 isConcurrencyHierarchy=Tasks readtimeout=0 connecttimeout=0
-```
-
-4. 壓縮檔 : `QuantitativeTradingPython-Python3.11.2-Window10-AMD_FX8800P_x86_64.7z`
-
-壓縮檔「`QuantitativeTradingPython-Python3.11.2-Window10-AMD_FX8800P_x86_64.7z`」爲微軟視窗作業系統 ( Operating System: Acer-NEO-2023 Windows10 x86_64 Inter(R)-Core(TM)-m3-6Y30 ) 統計運算伺服器 'QuantitativeTradingPython' 開箱即用 ( out of the box ) ( portable application ) 版，已配置計算機程式設計語言 ( computer programming language ) : Python 解釋器 ( Interpreter ) 運行此統計運算伺服器 'QuantitativeTradingPython' 項目所需的第三方擴展模組 ( third-party extensions ( libraries or modules ) ) 的運行環境，可自行下載解壓縮，將其保存至檔案夾 ( folder ) : `QuantitativeTrading/QuantitativeTradingPython/` 内，再因應協調配置壓縮檔「`Python-3.11.2-Window10-AMD_FX8800P_x86_64.7z`」之後，即可使用如下指令啓動運行統計運算伺服器「'QuantitativeTradingPython`」項目 : 
-```
-C:\QuantitativeTrading> C:/QuantitativeTrading/QuantitativeTradingPython/Scripts/python.exe C:/QuantitativeTrading/QuantitativeTradingPython/src/QuantitativeTradingServer.py configFile=C:/QuantitativeTrading/QuantitativeTradingPython/config.txt interface_Function=http_Server webPath=C:/QuantitativeTrading/html/ host=::0 port=10001 Key=username:password Is_multi_thread=False number_Worker_process=0
-```
-或者 : 
-```
-C:\QuantitativeTrading> C:/QuantitativeTrading/Python/Python311/python.exe C:/QuantitativeTrading/QuantitativeTradingPython/src/QuantitativeTradingServer.py configFile=C:/QuantitativeTrading/QuantitativeTradingPython/config.txt interface_Function=http_Server webPath=C:/QuantitativeTrading/html/ host=::0 port=10001 Key=username:password Is_multi_thread=False number_Worker_process=0
-```
-
-5. 壓縮檔 : `QuantitativeTrading-Window10-AMD_FX8800P_x86_64.7z`
-
-壓縮檔「`QuantitativeTrading-Window10-AMD_FX8800P_x86_64.7z`」爲微軟視窗作業系統 ( Operating System: Acer-NEO-2023 Windows10 x86_64 Inter(R)-Core(TM)-m3-6Y30 ) 統計運算伺服器 'QuantitativeTrading' 開箱即用 ( out of the box ) ( portable application ) 版，已配置計算機程式設計語言 ( computer programming language ) : Julia 解釋器 ( Interpreter ) 和 Python 解釋器 ( Interpreter ) 運行此統計運算伺服器 'QuantitativeTrading' 項目所需的第三方擴展模組 ( third-party extensions ( libraries or modules ) ) 的運行環境，可自行下載解壓縮，將其保存至根目錄 ( Root Directory ) : `C:` 内，即可使用如下指令啓動運行統計運算伺服器「'QuantitativeTrading'」項目 : 
-
-程式設計語言 ( computer programming language ) : Julia 實現，使用如下指令:
-```
-C:\QuantitativeTrading> C:/QuantitativeTrading/Julia/Julia-1.10.10/bin/julia.exe -p 4 --project=C:/QuantitativeTrading/QuantitativeTradingJulia/ C:/QuantitativeTrading/QuantitativeTradingJulia/src/QuantitativeTradingServer.jl configFile=C:/QuantitativeTrading/QuantitativeTradingJulia/config.txt interface_Function=http_Server webPath=C:/QuantitativeTrading/html/ host=::0 port=10001 key=username:password number_Worker_threads=1 isConcurrencyHierarchy=Tasks readtimeout=0 connecttimeout=0
-```
-程式設計語言 ( computer programming language ) : Python 實現，使用如下指令:
-```
-C:\QuantitativeTrading> C:/QuantitativeTrading/QuantitativeTradingPython/Scripts/python.exe C:/QuantitativeTrading/QuantitativeTradingPython/src/QuantitativeTradingServer.py configFile=C:/QuantitativeTrading/QuantitativeTradingPython/config.txt interface_Function=http_Server webPath=C:/QuantitativeTrading/html/ host=::0 port=10001 Key=username:password Is_multi_thread=False number_Worker_process=0
-```
-或者 : 
-```
-C:\QuantitativeTrading> C:/QuantitativeTrading/Python/Python311/python.exe C:/QuantitativeTrading/QuantitativeTradingPython/src/QuantitativeTradingServer.py configFile=C:/QuantitativeTrading/QuantitativeTradingPython/config.txt interface_Function=http_Server webPath=C:/QuantitativeTrading/html/ host=::0 port=10001 Key=username:password Is_multi_thread=False number_Worker_process=0
-```
-使用批處理脚本「`startServer.bat`」啓動，使用如下指令 : 
-```
-C:\QuantitativeTrading> C:/Windows/System32/cmd.exe C:/QuantitativeTrading/startServer.bat C:/QuantitativeTrading/config.txt
-```
-使用二進位可執行檔「`QuantitativeTrading.exe`」啓動，使用如下指令 : 
-```
-C:\QuantitativeTrading> C:/QuantitativeTrading/QuantitativeTrading.exe configFile=C:/QuantitativeTrading/config.txt executableFile=C:/QuantitativeTrading/Julia/Julia-1.10.10/julia.exe interpreterFile=-p,4,--project=C:/QuantitativeTrading/QuantitativeTradingJulia/ scriptFile=C:/QuantitativeTrading/QuantitativeTradingJulia/src/QuantitativeTradingServer.jl configInstructions=configFile=/home/QuantitativeTrading/QuantitativeTradingJulia/config.txt,interface_Function=http_Server,webPath=C:/QuantitativeTrading/html/,host=::0,port=10001,key=username:password,number_Worker_threads=1,isConcurrencyHierarchy=Tasks
-```
-
-6. 壓縮檔 : `google-pixel-2_android-11_termux-0.118_arm64_ubuntu-22.04_arm64_QuantitativeTrading.tar.gz`
-
-壓縮檔「`google-pixel-2_android-11_termux-0.118_arm64_ubuntu-22.04_arm64_QuantitativeTrading.tar.gz`」爲谷歌安卓作業系統 ( Operating System: Google-Pixel-7 Android-11 Termux-0.118 Ubuntu-22.04-LTS-rootfs Arm64-aarch64 MSM8998-Snapdragon835-Qualcomm®-Kryo™-280 ) 統計運算伺服器「'QuantitativeTrading'」項目源代碼脚本，可自行下載將其移動至 Android-Termux-Ubuntu 系統的檔案夾 ( folder ) : `/home/` 内，然後再使用如下指令解壓縮 : 
-```
-root@localhost:~# tar -zxvf /home/google-pixel-2_android-11_termux-0.118_arm64_ubuntu-22.04_arm64_QuantitativeTrading.tar.gz
-```
-最終應保存爲檔案夾 ( folder ) : `/home/QuantitativeTrading/` 形式.
-
-然後，再使用如下指令修改批處理 ( Bash ) 脚本「`startServer.sh`」和二進位可執行檔「`QuantitativeTrading.exe`」的權限爲所有用戶可運行 :
-```
-root@localhost:~# chmod 777 /home/QuantitativeTrading/startServer.sh
-```
-```
-root@localhost:~# chmod 777 /home/QuantitativeTrading/QuantitativeTrading.exe
-```
-使用如下指令修改參數配置文檔「`/home/QuantitativeTrading/config.txt`」「`/home/QuantitativeTrading/QuantitativeTradingJulia/config.txt`」「`/home/QuantitativeTrading/QuantitativeTradingPython/config.txt`」和代碼脚本檔 ( Script file ) 「`/home/QuantitativeTrading/QuantitativeTradingJulia/src/Interface.jl`」「`/home/QuantitativeTrading/QuantitativeTradingJulia/src/QuantitativeTradingServer.jl`」「`/home/QuantitativeTrading/QuantitativeTradingJulia/src/Router.jl`」「`/home/QuantitativeTrading/QuantitativeTradingJulia/src/Interpolation_Fitting.jl`」「`/home/QuantitativeTrading/QuantitativeTradingPython/src/Interface.py`」「`/home/QuantitativeTrading/QuantitativeTradingPython/src/QuantitativeTradingServer.py`」「`/home/QuantitativeTrading/QuantitativeTradingPython/src/Router.py`」「`/home/QuantitativeTrading/QuantitativeTradingPython/src/Interpolation_Fitting.py`」的權限爲所有用戶可讀可寫 :
-```
-root@localhost:~# chmod 666 /home/QuantitativeTrading/config.txt
-```
-```
-root@localhost:~# chmod 666 /home/QuantitativeTrading/QuantitativeTradingJulia/config.txt
-```
-```
-root@localhost:~# chmod 666 /home/QuantitativeTrading/QuantitativeTradingPython/config.txt
-```
-```
-root@localhost:~# chmod 666 /home/QuantitativeTrading/QuantitativeTradingJulia/src/Interface.jl
-```
-```
-root@localhost:~# chmod 666 /home/QuantitativeTrading/QuantitativeTradingJulia/src/QuantitativeTradingServer.jl
-```
-```
-root@localhost:~# chmod 666 /home/QuantitativeTrading/QuantitativeTradingJulia/src/Router.jl
-```
-```
-root@localhost:~# chmod 666 /home/QuantitativeTrading/QuantitativeTradingJulia/src/Interpolation_Fitting.jl
-```
-```
-root@localhost:~# chmod 666 /home/QuantitativeTrading/QuantitativeTradingPython/src/Interface.py
-```
-```
-root@localhost:~# chmod 666 /home/QuantitativeTrading/QuantitativeTradingPython/src/QuantitativeTradingServer.py
-```
-```
-root@localhost:~# chmod 666 /home/QuantitativeTrading/QuantitativeTradingPython/src/Router.py
-```
-```
-root@localhost:~# chmod 666 /home/QuantitativeTrading/QuantitativeTradingPython/src/Interpolation_Fitting.py
-```
-然後，即可使用如下指令啓動運行統計運算伺服器「'QuantitativeTrading'」項目 : 
-
-程式設計語言 ( computer programming language ) : Julia 實現，使用如下指令:
-```
-root@localhost:~# /usr/julia/julia-1.10.10/bin/julia -p 4 --project=/home/QuantitativeTrading/QuantitativeTradingJulia/ /home/QuantitativeTrading/QuantitativeTradingJulia/src/QuantitativeTradingServer.jl configFile=/home/QuantitativeTrading/QuantitativeTradingJulia/config.txt interface_Function=http_Server webPath=/home/QuantitativeTrading/html/ host=::0 port=10001 key=username:password number_Worker_threads=1 isConcurrencyHierarchy=Tasks readtimeout=0 connecttimeout=0
-```
-程式設計語言 ( computer programming language ) : Python 實現，使用如下指令:
-```
-root@localhost:~# /usr/bin/python3 /home/QuantitativeTrading/QuantitativeTradingPython/src/QuantitativeTradingServer.py configFile=/home/QuantitativeTrading/QuantitativeTradingPython/config.txt interface_Function=http_Server webPath=/home/QuantitativeTrading/html/ host=::0 port=10001 Key=username:password Is_multi_thread=False number_Worker_process=0
-```
-使用 Shell 語言脚本「`startServer.sh`」啓動，使用如下指令 : 
-```
-root@localhost:~# /bin/bash /home/QuantitativeTrading/startServer.sh configFile=/home/QuantitativeTrading/config.txt executableFile=/bin/julia interpreterFile=-p,4,--project=/home/QuantitativeTrading/QuantitativeTradingJulia/ scriptFile=/home/QuantitativeTrading/QuantitativeTradingJulia/src/QuantitativeTradingServer.jl configInstructions=configFile=/home/QuantitativeTrading/QuantitativeTradingJulia/config.txt,interface_Function=http_Server,webPath=/home/QuantitativeTrading/html/,host=::0,port=10001,key=username:password,number_Worker_threads=1,isConcurrencyHierarchy=Tasks
-```
-使用二進位可執行檔「`QuantitativeTrading.exe`」啓動，使用如下指令 : 
-```
-root@localhost:~# /home/QuantitativeTrading/QuantitativeTrading.exe configFile=/home/QuantitativeTrading/config.txt executableFile=/bin/julia interpreterFile=-p,4,--project=/home/QuantitativeTrading/QuantitativeTradingJulia/ scriptFile=/home/QuantitativeTrading/QuantitativeTradingJulia/src/QuantitativeTradingServer.jl configInstructions=configFile=/home/QuantitativeTrading/QuantitativeTradingJulia/config.txt,interface_Function=http_Server,webPath=/home/QuantitativeTrading/html/,host=::0,port=10001,key=username:password,number_Worker_threads=1,isConcurrencyHierarchy=Tasks
-```
-
-7. 二進位可執行檔 : `QuantitativeTrading-Window10-AMD_FX8800P_x86_64.exe`
-
-二進位可執行檔「`QuantitativeTrading-Window10-AMD_FX8800P_x86_64.exe`」爲微軟視窗作業系統 ( Operating System: Acer-NEO-2023 Windows10 x86_64 Inter(R)-Core(TM)-m3-6Y30 ) 統計運算伺服器「'QuantitativeTrading'」項目内 C 語言源代碼檔「'QuantitativeTrading/c/c2exe.c'」使用 Window10 - MinGW-w64 - gcc 編譯器，編譯之後得到的二進位可執行檔，可自行下載保存至檔案夾 ( folder ) : `C:/QuantitativeTrading/` 内，使用如下指令將其重命名 :
-```
-C:\QuantitativeTrading> rename C:/QuantitativeTrading/QuantitativeTrading-Window10-AMD_FX8800P_x86_64.exe C:/QuantitativeTrading/QuantitativeTrading.exe
-```
-8. 二進位可執行檔 : `QuantitativeTrading_google-pixel-2_android-11_termux-0.118_ubuntu-22.04-LTS-rootfs_arm64.exe`
-
-二進位可執行檔「`QuantitativeTrading_google-pixel-2_android-11_termux-0.118_ubuntu-22.04-LTS-rootfs_arm64.exe`」爲谷歌安卓作業系統 ( Operating System: Google-Pixel-7 Android-11 Termux-0.118 Ubuntu-22.04-LTS-rootfs Arm64-aarch64 MSM8998-Snapdragon835-Qualcomm®-Kryo™-280 ) 統計運算伺服器「'QuantitativeTrading'」項目内 C 語言源代碼檔「'QuantitativeTrading/c/c2exe.c'」使用 Ubuntu 22.04 - gcc 編譯器，編譯之後得到的二進位可執行檔，可自行下載保存至檔案夾 ( folder ) : `/home/QuantitativeTrading/` 内，使用如下指令將其重命名 :
-```
-root@localhost:~# /home/QuantitativeTrading/QuantitativeTrading_google-pixel-2_android-11_termux-0.118_ubuntu-22.04-LTS-rootfs_arm64.exe /home/QuantitativeTrading/QuantitativeTrading.exe
-```
-再使用如下指令修改其權限爲所有用戶可運行 :
-```
-root@localhost:~# chmod 777 /home/QuantitativeTrading/QuantitativeTrading.exe
-```
-即可.
-
 
 
 
@@ -2934,7 +2790,7 @@ C:\QuantitativeTrading> C:/QuantitativeTrading/QuantitativeTrading.exe configFil
 
 6. 壓縮檔 : `google-pixel-2_android-11_termux-0.118_arm64_ubuntu-22.04_arm64_QuantitativeTrading.tar.gz`
 
-壓縮檔「`google-pixel-2_android-11_termux-0.118_arm64_ubuntu-22.04_arm64_QuantitativeTrading.tar.gz`」爲谷歌安卓作業系統 ( Operating System: Google-Pixel-7 Android-11 Termux-0.118 Ubuntu-22.04-LTS-rootfs Arm64-aarch64 MSM8998-Snapdragon835-Qualcomm®-Kryo™-280 ) 數量化交易模型「'QuantitativeTrading'」項目源代碼脚本，可自行下載將其移動至 Android-Termux-Ubuntu 系統的檔案夾 ( folder ) : `/home/` 内，然後再使用如下指令解壓縮 : 
+壓縮檔「`google-pixel-2_android-11_termux-0.118_arm64_ubuntu-22.04_arm64_QuantitativeTrading.tar.gz`」爲谷歌安卓作業系統 ( Operating System: Google-Pixel-7 Android-11 Termux-0.118 Ubuntu-22.04-LTS-rootfs Arm64-aarch64 MSM8998-Snapdragon835-Qualcomm®-Kryo™-280 ) 統計運算伺服器「'QuantitativeTrading'」項目源代碼脚本，可自行下載將其移動至 Android-Termux-Ubuntu 系統的檔案夾 ( folder ) : `/home/` 内，然後再使用如下指令解壓縮 : 
 ```
 root@localhost:~# tar -zxvf /home/google-pixel-2_android-11_termux-0.118_arm64_ubuntu-22.04_arm64_QuantitativeTrading.tar.gz
 ```
@@ -2947,7 +2803,7 @@ root@localhost:~# chmod 777 /home/QuantitativeTrading/startServer.sh
 ```
 root@localhost:~# chmod 777 /home/QuantitativeTrading/QuantitativeTrading.exe
 ```
-使用如下指令修改參數配置文檔「`/home/QuantitativeTrading/config.txt`」「`/home/QuantitativeTrading/QuantitativeTradingJulia/config.txt`」「`/home/QuantitativeTrading/QuantitativeTradingPython/config.txt`」的權限爲所有用戶可讀可寫 :
+使用如下指令修改參數配置文檔「`/home/QuantitativeTrading/config.txt`」「`/home/QuantitativeTrading/QuantitativeTradingJulia/config.txt`」「`/home/QuantitativeTrading/QuantitativeTradingPython/config.txt`」和代碼脚本檔 ( Script file ) 「`/home/QuantitativeTrading/QuantitativeTradingJulia/src/Interface.jl`」「`/home/QuantitativeTrading/QuantitativeTradingJulia/src/QuantitativeTradingServer.jl`」「`/home/QuantitativeTrading/QuantitativeTradingJulia/src/Router.jl`」「`/home/QuantitativeTrading/QuantitativeTradingJulia/src/Interpolation_Fitting.jl`」「`/home/QuantitativeTrading/QuantitativeTradingJulia/src/Quantitative_Indicators.jl`」「`/home/QuantitativeTrading/QuantitativeTradingJulia/src/Quantitative_Data_Cleaning.jl`」「`/home/QuantitativeTrading/QuantitativeTradingJulia/src/Quantitative_MarketTiming.jl`」「`/home/QuantitativeTrading/QuantitativeTradingJulia/src/Quantitative_PickStock.jl`」「`/home/QuantitativeTrading/QuantitativeTradingJulia/src/Quantitative_SizePosition.jl`」「`/home/QuantitativeTrading/QuantitativeTradingJulia/src/Quantitative_BackTesting.jl`」「`/home/QuantitativeTrading/QuantitativeTradingPython/src/Interface.py`」「`/home/QuantitativeTrading/QuantitativeTradingPython/src/QuantitativeTradingServer.py`」「`/home/QuantitativeTrading/QuantitativeTradingPython/src/Router.py`」「`/home/QuantitativeTrading/QuantitativeTradingPython/src/Interpolation_Fitting.py`」「`/home/QuantitativeTrading/QuantitativeTradingJulia/src/Quantitative_Indicators.py`」「`/home/QuantitativeTrading/QuantitativeTradingJulia/src/Quantitative_Data_Cleaning.py`」「`/home/QuantitativeTrading/QuantitativeTradingJulia/src/Quantitative_MarketTiming.py`」「`/home/QuantitativeTrading/QuantitativeTradingJulia/src/Quantitative_PickStock.py`」「`/home/QuantitativeTrading/QuantitativeTradingJulia/src/Quantitative_SizePosition.py`」「`/home/QuantitativeTrading/QuantitativeTradingJulia/src/Quantitative_BackTesting.py`」的權限爲所有用戶可讀可寫 :
 ```
 root@localhost:~# chmod 666 /home/QuantitativeTrading/config.txt
 ```
@@ -2956,5 +2812,100 @@ root@localhost:~# chmod 666 /home/QuantitativeTrading/QuantitativeTradingJulia/c
 ```
 ```
 root@localhost:~# chmod 666 /home/QuantitativeTrading/QuantitativeTradingPython/config.txt
+```
+```
+root@localhost:~# chmod 666 /home/QuantitativeTrading/QuantitativeTradingJulia/src/Interface.jl
+```
+```
+root@localhost:~# chmod 666 /home/QuantitativeTrading/QuantitativeTradingJulia/src/QuantitativeTradingServer.jl
+```
+```
+root@localhost:~# chmod 666 /home/QuantitativeTrading/QuantitativeTradingJulia/src/Router.jl
+```
+```
+root@localhost:~# chmod 666 /home/QuantitativeTrading/QuantitativeTradingJulia/src/Interpolation_Fitting.jl
+```
+```
+root@localhost:~# chmod 666 /home/QuantitativeTrading/QuantitativeTradingJulia/src/Quantitative_Indicators.jl
+```
+```
+root@localhost:~# chmod 666 /home/QuantitativeTrading/QuantitativeTradingJulia/src/Quantitative_Data_Cleaning.jl
+```
+```
+root@localhost:~# chmod 666 /home/QuantitativeTrading/QuantitativeTradingJulia/src/Quantitative_MarketTiming.jl
+```
+```
+root@localhost:~# chmod 666 /home/QuantitativeTrading/QuantitativeTradingJulia/src/Quantitative_PickStock.jl
+```
+```
+root@localhost:~# chmod 666 /home/QuantitativeTrading/QuantitativeTradingJulia/src/Quantitative_SizePosition.jl
+```
+```
+root@localhost:~# chmod 666 /home/QuantitativeTrading/QuantitativeTradingJulia/src/Quantitative_BackTesting.jl
+```
+```
+root@localhost:~# chmod 666 /home/QuantitativeTrading/QuantitativeTradingPython/src/Interface.py
+```
+```
+root@localhost:~# chmod 666 /home/QuantitativeTrading/QuantitativeTradingPython/src/QuantitativeTradingServer.py
+```
+```
+root@localhost:~# chmod 666 /home/QuantitativeTrading/QuantitativeTradingPython/src/Router.py
+```
+```
+root@localhost:~# chmod 666 /home/QuantitativeTrading/QuantitativeTradingPython/src/Interpolation_Fitting.py
+```
+```
+root@localhost:~# chmod 666 /home/QuantitativeTrading/QuantitativeTradingJulia/src/Quantitative_Indicators.py
+```
+```
+root@localhost:~# chmod 666 /home/QuantitativeTrading/QuantitativeTradingJulia/src/Quantitative_Data_Cleaning.py
+```
+```
+root@localhost:~# chmod 666 /home/QuantitativeTrading/QuantitativeTradingJulia/src/Quantitative_MarketTiming.py
+```
+```
+root@localhost:~# chmod 666 /home/QuantitativeTrading/QuantitativeTradingJulia/src/Quantitative_PickStock.py
+```
+```
+root@localhost:~# chmod 666 /home/QuantitativeTrading/QuantitativeTradingJulia/src/Quantitative_SizePosition.py
+```
+```
+root@localhost:~# chmod 666 /home/QuantitativeTrading/QuantitativeTradingJulia/src/Quantitative_BackTesting.py
+```
+然後，即可使用如下指令啓動運行統計運算伺服器「'QuantitativeTrading'」項目 : 
+
+程式設計語言 ( computer programming language ) : Julia 實現，使用如下指令:
+```
+root@localhost:~# /usr/julia/julia-1.10.10/bin/julia -p 4 --project=/home/QuantitativeTrading/QuantitativeTradingJulia/ /home/QuantitativeTrading/QuantitativeTradingJulia/src/QuantitativeTradingServer.jl configFile=/home/QuantitativeTrading/QuantitativeTradingJulia/config.txt interface_Function=http_Server webPath=/home/QuantitativeTrading/html/ host=::0 port=10001 key=username:password number_Worker_threads=1 isConcurrencyHierarchy=Tasks readtimeout=0 connecttimeout=0
+```
+程式設計語言 ( computer programming language ) : Python 實現，使用如下指令:
+```
+root@localhost:~# /usr/bin/python3 /home/QuantitativeTrading/QuantitativeTradingPython/src/QuantitativeTradingServer.py configFile=/home/QuantitativeTrading/QuantitativeTradingPython/config.txt interface_Function=http_Server webPath=/home/QuantitativeTrading/html/ host=::0 port=10001 Key=username:password Is_multi_thread=False number_Worker_process=0
+```
+使用 Shell 語言脚本「`startServer.sh`」啓動，使用如下指令 : 
+```
+root@localhost:~# /bin/bash /home/QuantitativeTrading/startServer.sh configFile=/home/QuantitativeTrading/config.txt executableFile=/bin/julia interpreterFile=-p,4,--project=/home/QuantitativeTrading/QuantitativeTradingJulia/ scriptFile=/home/QuantitativeTrading/QuantitativeTradingJulia/src/QuantitativeTradingServer.jl configInstructions=configFile=/home/QuantitativeTrading/QuantitativeTradingJulia/config.txt,interface_Function=http_Server,webPath=/home/QuantitativeTrading/html/,host=::0,port=10001,key=username:password,number_Worker_threads=1,isConcurrencyHierarchy=Tasks
+```
+使用二進位可執行檔「`QuantitativeTrading.exe`」啓動，使用如下指令 : 
+```
+root@localhost:~# /home/QuantitativeTrading/QuantitativeTrading.exe configFile=/home/QuantitativeTrading/config.txt executableFile=/bin/julia interpreterFile=-p,4,--project=/home/QuantitativeTrading/QuantitativeTradingJulia/ scriptFile=/home/QuantitativeTrading/QuantitativeTradingJulia/src/QuantitativeTradingServer.jl configInstructions=configFile=/home/QuantitativeTrading/QuantitativeTradingJulia/config.txt,interface_Function=http_Server,webPath=/home/QuantitativeTrading/html/,host=::0,port=10001,key=username:password,number_Worker_threads=1,isConcurrencyHierarchy=Tasks
+```
+
+7. 二進位可執行檔 : `QuantitativeTrading-Window10-AMD_FX8800P_x86_64.exe`
+
+二進位可執行檔「`QuantitativeTrading-Window10-AMD_FX8800P_x86_64.exe`」爲微軟視窗作業系統 ( Operating System: Acer-NEO-2023 Windows10 x86_64 Inter(R)-Core(TM)-m3-6Y30 ) 統計運算伺服器「'QuantitativeTrading'」項目内 C 語言源代碼檔「'QuantitativeTrading/c/c2exe.c'」使用 Window10 - MinGW-w64 - gcc 編譯器，編譯之後得到的二進位可執行檔，可自行下載保存至檔案夾 ( folder ) : `C:/QuantitativeTrading/` 内，使用如下指令將其重命名 :
+```
+C:\QuantitativeTrading> rename C:/QuantitativeTrading/QuantitativeTrading-Window10-AMD_FX8800P_x86_64.exe C:/QuantitativeTrading/QuantitativeTrading.exe
+```
+8. 二進位可執行檔 : `QuantitativeTrading_google-pixel-2_android-11_termux-0.118_ubuntu-22.04-LTS-rootfs_arm64.exe`
+
+二進位可執行檔「`QuantitativeTrading_google-pixel-2_android-11_termux-0.118_ubuntu-22.04-LTS-rootfs_arm64.exe`」爲谷歌安卓作業系統 ( Operating System: Google-Pixel-7 Android-11 Termux-0.118 Ubuntu-22.04-LTS-rootfs Arm64-aarch64 MSM8998-Snapdragon835-Qualcomm®-Kryo™-280 ) 統計運算伺服器「'QuantitativeTrading'」項目内 C 語言源代碼檔「'QuantitativeTrading/c/c2exe.c'」使用 Ubuntu 22.04 - gcc 編譯器，編譯之後得到的二進位可執行檔，可自行下載保存至檔案夾 ( folder ) : `/home/QuantitativeTrading/` 内，使用如下指令將其重命名 :
+```
+root@localhost:~# /home/QuantitativeTrading/QuantitativeTrading_google-pixel-2_android-11_termux-0.118_ubuntu-22.04-LTS-rootfs_arm64.exe /home/QuantitativeTrading/QuantitativeTrading.exe
+```
+再使用如下指令修改其權限爲所有用戶可運行 :
+```
+root@localhost:~# chmod 777 /home/QuantitativeTrading/QuantitativeTrading.exe
 ```
 即可 .
