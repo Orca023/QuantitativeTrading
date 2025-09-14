@@ -68,7 +68,7 @@
 
 其中, 檔 `Router.jl` 或 `Router.py` 裏的 : `do_Response` 函數 ( Function ) 是執行網路 ( web ) 用戶端鏈接器 ( `http_Client` ) 接收到從伺服器 ( `http_Server` ) 回饋的響應 ( Response ) 數據 ( 運算處理結果 ) 的分發路由 ( Router ) 功能.
 
-可自行修改行使路由 (Router) 功能的代碼脚本 ( script file ) 檔「`Router.jl`」「`Router.py`」内的 Julia 或 Python 代碼，同時需自行修改行使具體算法 ( Algorithm ) 功能的代碼脚本 ( script file ) 檔内的 Julia 或 Python 代碼，如此例的「`Interpolation_Fitting.jl`」「`Interpolation_Fitting.py`」檔，使二者相互因應協調，即可自定義擴展此統計運算伺服器「`QuantitativeTrading`」所能提供的計算方法 ( Server Respond ) 的選項.
+可自行修改行使路由 (Router) 功能的代碼脚本 ( script file ) 檔「`Router.jl`」「`Router.py`」内的 Julia 或 Python 代碼，同時需自行修改行使具體算法 ( Algorithm ) 功能的代碼脚本 ( script file ) 檔内的 Julia 或 Python 代碼，如此例的「`Interpolation_Fitting.jl`」「`Interpolation_Fitting.py`」檔，使二者相互因應協調，即可自定義擴展此數量化交易運算伺服器「`QuantitativeTrading`」所能提供的計算方法 ( Server Respond ) 的選項.
 
 三. 代碼脚本檔 ( script file ) : `QuantitativeTrading/QuantitativeTradingJulia/src/QuantitativeTradingServer.jl` , `QuantitativeTrading/QuantitativeTradingPython/src/QuantitativeTradingServer.py`
 
@@ -130,13 +130,13 @@
 
 十四. 代碼脚本檔 ( script file ) : `QuantitativeTrading/TradingAlgorithmModule.bas` , 微軟電子表格應用檔 ( Windows - Office - Excel - Visual Basic for Applications ) : `QuantitativeTrading/Client.xlsm`
 
-微軟電子表格 ( Windows - Office - Excel - Visual Basic for Applications ) 應用檔「`Client.xlsm`」可作爲用戶端 ( Client ) 連接統計運算伺服器「`QuantitativeTrading`」做 ( Client - Request ) 計算.
+微軟電子表格 ( Windows - Office - Excel - Visual Basic for Applications ) 應用檔「`Client.xlsm`」可作爲用戶端 ( Client ) 連接數量化交易運算伺服器「`QuantitativeTrading`」做 ( Client - Request ) 計算.
 
-代碼脚本檔「`TradingAlgorithmModule.bas`」是微軟電子表格 ( Windows - Office - Excel - Visual Basic for Applications ) 應用檔「`Client.xlsm`」運行時，需導入的標準模組 ( Module ) 代碼（必須），可在此代碼脚本檔内，自行修改 Visual Basic for Applications , VBA 代碼，擴展統計方法的連接 ( Client Request ) 項.
+代碼脚本檔「`TradingAlgorithmModule.bas`」是微軟電子表格 ( Windows - Office - Excel - Visual Basic for Applications ) 應用檔「`Client.xlsm`」運行時，需導入的標準模組 ( Module ) 代碼（必須），可在此代碼脚本檔内，自行修改 Visual Basic for Applications , VBA 代碼，擴展運算方法的連接 ( Client Request ) 項.
 
 十五. 檔案夾 ( folder ) : `QuantitativeTrading/html/`
 
-檔案夾 ( folder )「`QuantitativeTrading/html/`」爲使用瀏覽器 ( Browser ) 作爲用戶端 ( Client ) 時，統計運算伺服器「`QuantitativeTrading`」向用戶端瀏覽器 ( Browser ) 發送 ( Respond ) 的標準通用標記語言代碼脚本 ( .html ) 檔.
+檔案夾 ( folder )「`QuantitativeTrading/html/`」爲使用瀏覽器 ( Browser ) 作爲用戶端 ( Client ) 時，數量化交易運算伺服器「`QuantitativeTrading`」向用戶端瀏覽器 ( Browser ) 發送 ( Respond ) 的標準通用標記語言代碼脚本 ( .html ) 檔.
 
 其中 :
 
@@ -150,7 +150,7 @@
 
 4. 逗號 ( Comma ) 分隔符檔 ( .csv )「`LogisticLog5PInputData.csv`」爲待計算的原數據示例，是用戶端瀏覽器 ( Browser ) 應用交互頁面「`index.html`」待計算表格内的原數據，單擊「讀取待處理的數據文檔」按鈕 ( Button ) 後，從本地硬盤 ( Disk , Read-Only Memory ) 導入至瀏覽器 ( Browser ) 應用交互頁面「`index.html`」待計算表格内的數據文檔示例.
 
-可自行修改標準通用標記語言代碼脚本 ( .html ) 檔「`index.html`」「`SelectStatisticalAlgorithms.html`」「`InputHTML.html`」「`OutputHTML.html`」内的 HTML , JavaScript , CSS 代碼，擴展交互頁面「`index.html`」内統計方法的連接 ( Browser Client Request ) 選項.
+可自行修改標準通用標記語言代碼脚本 ( .html ) 檔「`index.html`」「`SelectStatisticalAlgorithms.html`」「`InputHTML.html`」「`OutputHTML.html`」内的 HTML , JavaScript , CSS 代碼，擴展交互頁面「`index.html`」内數量化交易方法的連接 ( Browser Client Request ) 選項.
 
 可自定義修改代碼脚本 ( Script ) 檔「`Quantitative_Indicators.jl`」或「`Quantitative_Indicators.py`」模組内函數，個性化調整擴展此量化交易模型日棒缐 ( K - Line ) 數據趨勢强度示意指標，並輔以調整代碼脚本 ( Script ) 檔「`Quantitative_MarketTiming.jl`」「`Quantitative_PickStock.jl`」「`Quantitative_SizePosition.jl`」「`Quantitative_BackTesting.jl`」或「`Quantitative_MarketTiming.py`」「`Quantitative_PickStock.py`」「`Quantitative_SizePosition.py`」「`Quantitative_BackTesting.py`」内函數 ( Function ) 因應協調，即可實現個性化擴展此量化交易模型效果 .
 
@@ -2101,7 +2101,7 @@ println("stepping sequence Array :", "\n", return_stepping_Dict["stepping_sequen
 
 ---
 
-微軟視窗系統 ( Windows10 x86_64 ) 使用 Batchfile 代碼脚本檔「startServer.bat」啓動統計運算伺服器「QuantitativeTrading」 :
+微軟視窗系統 ( Windows10 x86_64 ) 使用 Batchfile 代碼脚本檔「startServer.bat」啓動數量化交易運算伺服器「QuantitativeTrading」 :
 
 使用説明:
 
@@ -2124,7 +2124,7 @@ C:\QuantitativeTrading> C:/Windows/System32/cmd.exe C:/QuantitativeTrading/start
 
 ![]()
 
-谷歌安卓系統 之 Termux 系統 之 烏班圖系統 ( Android-11 Termux-0.118 Ubuntu-22.04-LTS-rootfs Arm64-aarch64 ) 使用 Shell 代碼脚本檔「startServer.sh」啓動統計運算伺服器「QuantitativeTrading」 :
+谷歌安卓系統 之 Termux 系統 之 烏班圖系統 ( Android-11 Termux-0.118 Ubuntu-22.04-LTS-rootfs Arm64-aarch64 ) 使用 Shell 代碼脚本檔「startServer.sh」啓動數量化交易運算伺服器「QuantitativeTrading」 :
 
 使用説明:
 
@@ -2163,7 +2163,7 @@ c2exe.c
 
 ![]()
 
-微軟視窗系統 ( Windows10 x86_64 ) 使用二進位可執行檔「QuantitativeTrading.exe」啓動統計運算伺服器「QuantitativeTrading」 :
+微軟視窗系統 ( Windows10 x86_64 ) 使用二進位可執行檔「QuantitativeTrading.exe」啓動數量化交易運算伺服器「QuantitativeTrading」 :
 
 微軟視窗系統 ( Windows10 x86_64 )
 
@@ -2188,7 +2188,7 @@ C:\QuantitativeTrading> C:/QuantitativeTrading/QuantitativeTrading.exe configFil
 
 ![]()
 
-谷歌安卓系統 之 Termux 系統 之 烏班圖系統 ( Android-11 Termux-0.118 Ubuntu-22.04-LTS-rootfs Arm64-aarch64 ) 使用二進位可執行檔「QuantitativeTrading.exe」啓動統計運算伺服器「QuantitativeTrading」 :
+谷歌安卓系統 之 Termux 系統 之 烏班圖系統 ( Android-11 Termux-0.118 Ubuntu-22.04-LTS-rootfs Arm64-aarch64 ) 使用二進位可執行檔「QuantitativeTrading.exe」啓動數量化交易運算伺服器「QuantitativeTrading」 :
 
 谷歌安卓系統 之 Termux 系統 之 烏班圖系統 ( Android-11 Termux-0.118 Ubuntu-22.04-LTS-rootfs Arm64-aarch64 )
 
@@ -2248,7 +2248,7 @@ https://sourceforge.net/projects/mingw-w64/
 
 ---
 
-一. 可使用谷歌 ( Google - Chromium ) 或火狐 ( Mozilla - Firefox ) 瀏覽器 ( Browser ) 作爲用戶端 ( Client ) 連接統計運算伺服器「QuantitativeTrading」打開交互介面.
+一. 可使用谷歌 ( Google - Chromium ) 或火狐 ( Mozilla - Firefox ) 瀏覽器 ( Browser ) 作爲用戶端 ( Client ) 連接數量化交易運算伺服器「QuantitativeTrading」打開交互介面.
 
 打開應用頁面「index.html」可在地址欄 ( Browser address bar ) 輸入網址 ( Uniform Resource Locator , URL ) : 
 ```
@@ -2264,49 +2264,55 @@ http://username:password@[::1]:10001/administrator.html?Key=username:password
 
 可自行修改標準通用標記語言代碼脚本 ( .html ) 檔「`index.html`」「`SelectStatisticalAlgorithms.html`」「`InputHTML.html`」「`OutputHTML.html`」内的 HTML , JavaScript , CSS 代碼，擴展交互頁面「`index.html`」内統計方法的連接 ( Browser Client Request ) 選項.
 
-二. 可使用項目空間内的微軟電子表格 ( Windows - Office - Excel - Visual Basic for Applications ) 應用檔「`Client.xlsm`」作爲用戶端 ( Client ) 連接統計運算伺服器「`QuantitativeTrading`」做 ( Client - Request ) 計算.
+---
 
-
-
-
-
-
-
-
-
-
-
-
-
+二. 可使用項目空間内的微軟電子表格 ( Windows - Office - Excel - Visual Basic for Applications ) 應用檔「`Client.xlsm`」作爲用戶端 ( Client ) 連接數量化交易運算伺服器「`QuantitativeTrading`」做 ( Client - Request ) 計算.
 
 微軟電子表格 ( Windows - Office - Excel - Visual Basic for Applications ) 應用檔「`Client.xlsm`」打開之後，菜單欄 ( Excel menu bar ) 之 :
 
-1. 「`加載項 ( Excel Add-in )`」 → 「`統計運算 ( Statistics )`」 → 「`人機交互介面 ( operation panel )`」，爲連接統計運算伺服器「`QuantitativeTrading`」做 ( Client - Request ) 計算的操作面板.
+1. 「`加載項 ( Excel Add-in )`」 → 「`數量化交易 ( Quantitative Trading )`」 → 「`人機交互介面 ( operation panel )`」，爲連接數量化交易運算伺服器「`QuantitativeTrading`」做 ( Client - Request ) 計算的操作面板.
 
-2. 「`加載項 ( Excel Add-in )`」 → 「`統計運算 ( Statistics )`」 → 「`統計運算 ( Statistics server )`」，爲從微軟電子表格 ( Windows - Office - Excel - Visual Basic for Applications ) 應用檔 ( `Client.xlsm` ) 内，通過創建子進程 ( Sub Process ) 調用微軟視窗系統 ( Windows10 x86_64 ) 控制臺命令列 ( `cmd.exe` ) 應用，啓動統計運算伺服器「`QuantitativeTrading`」的運行指令.
+2. 「`加載項 ( Excel Add-in )`」 → 「`數量化交易 ( Quantitative Trading )`」 → 「`數量化交易運算伺服器 ( Quantitative Trading server )`」，爲從微軟電子表格 ( Windows - Office - Excel - Visual Basic for Applications ) 應用檔 ( `Client.xlsm` ) 内，通過創建子進程 ( Sub Process ) 調用微軟視窗系統 ( Windows10 x86_64 ) 控制臺命令列 ( `cmd.exe` ) 應用，啓動數量化交易運算伺服器「`QuantitativeTrading`」的運行指令.
 
-其中，項目空間内的代碼脚本檔「`TradingAlgorithmModule.bas`」是微軟電子表格 ( Windows - Office - Excel - Visual Basic for Applications ) 應用檔「`Client.xlsm`」運行時，需導入的標準模組 ( Module ) 代碼（必須），可在此代碼脚本檔内，自行修改 Visual Basic for Applications , VBA 代碼，擴展統計方法的連接 ( Client Request ) 項.
+其中，項目空間内的代碼脚本檔「`TradingAlgorithmModule.bas`」是微軟電子表格 ( Windows - Office - Excel - Visual Basic for Applications ) 應用檔「`Client.xlsm`」運行時，需導入的標準模組 ( Module ) 代碼（必須），可在此代碼脚本檔内，自行修改 Visual Basic for Applications , VBA 代碼，擴展數量化交易方法的連接 ( Client Request ) 項.
 
 微軟電子表格 ( Windows - Office - Excel - Visual Basic for Applications ) 應用檔「Client.xlsm」轉換 JSON 字符串類型的變量 ( JSON - String Object ) 與微軟電子表格字典類型的變量 ( Windows - Office - Excel - Visual Basic for Applications - Dict Object ) 數據類型，借用微軟電子表格 ( Windows - Office - Excel - Visual Basic for Applications ) 應用的第三方擴展類模組「VBA-JSON : JsonConverter.bas」實現.
 
-三. 也可自行選擇其他程式設計語言編寫用戶端鏈接器 ( Client ) 應用，連接統計運算伺服器「`QuantitativeTrading`」做 ( Client - Request ) 計算，比如，使用 JavaScript 語言的 NW.js , Electron 解析器等製作用戶端交互介面，或使用 C 語言的 GNU Image Manipulation Program - GIMP Toolkit , GTK+ 圖形框架等製作用戶端交互介面，然後，使用 Julia 或 Python 語言的統計運算伺服器「`QuantitativeTrading`」作爲後端行使數據計算功能，這樣即可實現類似跨語言混合編程的效果.
+三. 也可自行選擇其他程式設計語言編寫用戶端鏈接器 ( Client ) 應用，連接數量化交易運算伺服器「`QuantitativeTrading`」做 ( Client - Request ) 計算，比如，使用 JavaScript 語言的 NW.js , Electron 解析器等製作用戶端交互介面，或使用 C 語言的 GNU Image Manipulation Program - GIMP Toolkit , GTK+ 圖形框架等製作用戶端交互介面，然後，使用 Julia 或 Python 語言的數量化交易運算伺服器「`QuantitativeTrading`」作爲後端行使數據計算功能，這樣即可實現類似跨語言混合編程的效果.
 
-使用自行製作的用戶端鏈接器 ( Client ) 時，連接統計運算伺服器「`QuantitativeTrading`」做 ( Client - Request ) 計算，可使用如下網址 ( Uniform Resource Locator , URL ) : 
+使用自行製作的用戶端鏈接器 ( Client ) 時，連接數量化交易運算伺服器「`QuantitativeTrading`」做 ( Client - Request ) 計算，可使用如下網址 ( Uniform Resource Locator , URL ) : 
 
-1. 連接統計運算伺服器「`QuantitativeTrading`」做 ( Client - Request ) 插值 ( Interpolation ) 計算，使用網址 ( Uniform Resource Locator , URL ) : 
+1. 連接數量化交易運算伺服器「`QuantitativeTrading`」做 ( Client - Request ) 插值 ( Interpolation ) 計算，使用網址 ( Uniform Resource Locator , URL ) : 
 ```
 http://[::1]:10001/Interpolation?Key=username:password&algorithmUser=username&algorithmPass=password&algorithmName=BSpline(Cubic)&algorithmLambda=0.0&algorithmKei=2.0&algorithmDi=1.0&algorithmEith=1.0
 ```
 
-3. 連接統計運算伺服器「`QuantitativeTrading`」做 ( Client - Request ) 多項式 ( 3 階 ) 方程 ( Polynomial ( Cubic ) ) 模型擬合 ( Fit ) 計算，使用網址 ( Uniform Resource Locator , URL ) : 
+3. 連接數量化交易運算伺服器「`QuantitativeTrading`」做 ( Client - Request ) 多項式 ( 3 階 ) 方程 ( Polynomial ( Cubic ) ) 模型擬合 ( Fit ) 計算，使用網址 ( Uniform Resource Locator , URL ) : 
 ```
 http://[::1]:10001/Polynomial3Fit?Key=username:password&algorithmUser=username&algorithmPass=password&algorithmName=Polynomial3Fit
 ```
 
-5. 連接統計運算伺服器「`QuantitativeTrading`」做 ( Client - Request ) 邏輯 4 , 5 參數模型 ( 4 , 5 - parameter logistic curve ) 擬合 ( Fit ) 計算，使用網址 ( Uniform Resource Locator , URL ) : 
+5. 連接數量化交易運算伺服器「`QuantitativeTrading`」做 ( Client - Request ) 邏輯 4 , 5 參數模型 ( 4 , 5 - parameter logistic curve ) 擬合 ( Fit ) 計算，使用網址 ( Uniform Resource Locator , URL ) : 
 ```
 http://[::1]:10001/LC5PFit?Key=username:password&algorithmUser=username&algorithmPass=password&algorithmName=LC5PFit
 ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 用戶端 ( Client - Request ) 發送 POST 請求的數據爲 JSON 字符串 ( JSON String ) 類型，數據格式可類比如下 :
 
@@ -2712,27 +2718,10 @@ https://learn.microsoft.com/zh-tw/deployoffice/office2019/overview
 
 ---
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
----
-
 [深圳市招商證券股份有限公司 ( CHINA MERCHANTS SECURITIES CO., LTD. ) 證券交易服務用戶端 ( zyyht.exe ) 官方下載頁](https://yht.cmschina.com/download.html): 
 https://yht.cmschina.com/download.html
+
+---
 
 開箱即用 ( out of the box ) ( portable application ) 已配置第三方擴展模組 ( third-party extensions ( libraries or modules ) ) 的程式設計語言 ( computer programming language ) : Julia 解釋器 ( Interpreter ) 和 Python 解釋器 ( Interpreter ) 運行環境的壓縮檔 ( .7z ) 的 [百度網盤(pan.baidu.com)](https://pan.baidu.com/s/16jdb-nX45cR5uZZKMItsjQ?pwd=kgbh) 下載頁: 
 https://pan.baidu.com/s/16jdb-nX45cR5uZZKMItsjQ?pwd=kgbh
@@ -2794,7 +2783,7 @@ C:\QuantitativeTrading> C:/QuantitativeTrading/QuantitativeTrading.exe configFil
 
 6. 壓縮檔 : `google-pixel-2_android-11_termux-0.118_arm64_ubuntu-22.04_arm64_QuantitativeTrading.tar.gz`
 
-壓縮檔「`google-pixel-2_android-11_termux-0.118_arm64_ubuntu-22.04_arm64_QuantitativeTrading.tar.gz`」爲谷歌安卓作業系統 ( Operating System: Google-Pixel-7 Android-11 Termux-0.118 Ubuntu-22.04-LTS-rootfs Arm64-aarch64 MSM8998-Snapdragon835-Qualcomm®-Kryo™-280 ) 統計運算伺服器「'QuantitativeTrading'」項目源代碼脚本，可自行下載將其移動至 Android-Termux-Ubuntu 系統的檔案夾 ( folder ) : `/home/` 内，然後再使用如下指令解壓縮 : 
+壓縮檔「`google-pixel-2_android-11_termux-0.118_arm64_ubuntu-22.04_arm64_QuantitativeTrading.tar.gz`」爲谷歌安卓作業系統 ( Operating System: Google-Pixel-7 Android-11 Termux-0.118 Ubuntu-22.04-LTS-rootfs Arm64-aarch64 MSM8998-Snapdragon835-Qualcomm®-Kryo™-280 ) 數量化交易運算伺服器「'QuantitativeTrading'」項目源代碼脚本，可自行下載將其移動至 Android-Termux-Ubuntu 系統的檔案夾 ( folder ) : `/home/` 内，然後再使用如下指令解壓縮 : 
 ```
 root@localhost:~# tar -zxvf /home/google-pixel-2_android-11_termux-0.118_arm64_ubuntu-22.04_arm64_QuantitativeTrading.tar.gz
 ```
@@ -2877,7 +2866,7 @@ root@localhost:~# chmod 666 /home/QuantitativeTrading/QuantitativeTradingJulia/s
 ```
 root@localhost:~# chmod 666 /home/QuantitativeTrading/QuantitativeTradingJulia/src/Quantitative_BackTesting.py
 ```
-然後，即可使用如下指令啓動運行統計運算伺服器「'QuantitativeTrading'」項目 : 
+然後，即可使用如下指令啓動運行數量化交易運算伺服器「'QuantitativeTrading'」項目 : 
 
 程式設計語言 ( computer programming language ) : Julia 實現，使用如下指令:
 ```
@@ -2898,13 +2887,13 @@ root@localhost:~# /home/QuantitativeTrading/QuantitativeTrading.exe configFile=/
 
 7. 二進位可執行檔 : `QuantitativeTrading-Window10-AMD_FX8800P_x86_64.exe`
 
-二進位可執行檔「`QuantitativeTrading-Window10-AMD_FX8800P_x86_64.exe`」爲微軟視窗作業系統 ( Operating System: Acer-NEO-2023 Windows10 x86_64 Inter(R)-Core(TM)-m3-6Y30 ) 統計運算伺服器「'QuantitativeTrading'」項目内 C 語言源代碼檔「'QuantitativeTrading/c/c2exe.c'」使用 Window10 - MinGW-w64 - gcc 編譯器，編譯之後得到的二進位可執行檔，可自行下載保存至檔案夾 ( folder ) : `C:/QuantitativeTrading/` 内，使用如下指令將其重命名 :
+二進位可執行檔「`QuantitativeTrading-Window10-AMD_FX8800P_x86_64.exe`」爲微軟視窗作業系統 ( Operating System: Acer-NEO-2023 Windows10 x86_64 Inter(R)-Core(TM)-m3-6Y30 ) 數量化交易運算伺服器「'QuantitativeTrading'」項目内 C 語言源代碼檔「'QuantitativeTrading/c/c2exe.c'」使用 Window10 - MinGW-w64 - gcc 編譯器，編譯之後得到的二進位可執行檔，可自行下載保存至檔案夾 ( folder ) : `C:/QuantitativeTrading/` 内，使用如下指令將其重命名 :
 ```
 C:\QuantitativeTrading> rename C:/QuantitativeTrading/QuantitativeTrading-Window10-AMD_FX8800P_x86_64.exe C:/QuantitativeTrading/QuantitativeTrading.exe
 ```
 8. 二進位可執行檔 : `QuantitativeTrading_google-pixel-2_android-11_termux-0.118_ubuntu-22.04-LTS-rootfs_arm64.exe`
 
-二進位可執行檔「`QuantitativeTrading_google-pixel-2_android-11_termux-0.118_ubuntu-22.04-LTS-rootfs_arm64.exe`」爲谷歌安卓作業系統 ( Operating System: Google-Pixel-7 Android-11 Termux-0.118 Ubuntu-22.04-LTS-rootfs Arm64-aarch64 MSM8998-Snapdragon835-Qualcomm®-Kryo™-280 ) 統計運算伺服器「'QuantitativeTrading'」項目内 C 語言源代碼檔「'QuantitativeTrading/c/c2exe.c'」使用 Ubuntu 22.04 - gcc 編譯器，編譯之後得到的二進位可執行檔，可自行下載保存至檔案夾 ( folder ) : `/home/QuantitativeTrading/` 内，使用如下指令將其重命名 :
+二進位可執行檔「`QuantitativeTrading_google-pixel-2_android-11_termux-0.118_ubuntu-22.04-LTS-rootfs_arm64.exe`」爲谷歌安卓作業系統 ( Operating System: Google-Pixel-7 Android-11 Termux-0.118 Ubuntu-22.04-LTS-rootfs Arm64-aarch64 MSM8998-Snapdragon835-Qualcomm®-Kryo™-280 ) 數量化交易運算伺服器「'QuantitativeTrading'」項目内 C 語言源代碼檔「'QuantitativeTrading/c/c2exe.c'」使用 Ubuntu 22.04 - gcc 編譯器，編譯之後得到的二進位可執行檔，可自行下載保存至檔案夾 ( folder ) : `/home/QuantitativeTrading/` 内，使用如下指令將其重命名 :
 ```
 root@localhost:~# /home/QuantitativeTrading/QuantitativeTrading_google-pixel-2_android-11_termux-0.118_ubuntu-22.04-LTS-rootfs_arm64.exe /home/QuantitativeTrading/QuantitativeTrading.exe
 ```
