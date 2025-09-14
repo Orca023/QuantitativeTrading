@@ -7688,13 +7688,47 @@ Respond - body =
         "PickStock" : [String, String, String, ... ],  // 向量（Array），依照選股規則計算得到每次交易的股票代碼字符串數組序列;
         "PickStock_Long_Position" : [String, String, String, ... ],  // 向量（Array），做多（Long_Position）依照選股規則計算得到每次交易的股票代碼字符串數組序列;
         "PickStock_Short_Selling" : [String, String, String, ... ],  // 向量（Array），做空（Short_Selling）依照選股規則計算得到每次交易的股票代碼字符串數組序列;
-        "profit_paired_transaction" : {"002611" : {}, ... },  # 字典（Dictionary），依照優化之後的擇時（MarketTiming）、選股（PickStock）、倉位（SizePosition）規則計算分割得到的每組對衝交易（paired_transaction）數據切片序列;
-        "transaction_sequence" : {},  # 字典（Dictionary），  # 向量（Array），依照傳入的參數：training_data_sequence_length 和 testing_data_sequence_length 整數長度值對原始數據集：stepping_data 字典序列分割得到的測試集（testing）數據切片序列;
-        "stepping_sequence" : [{"002611" : {}, ... }, ... ],  # 向量（Array），依照傳入的參數：training_data_sequence_length 和 testing_data_sequence_length 整數長度值對原始數據集：stepping_data 字典序列分割得到的訓練集（training）和測試集（testing）數據切片序列，用於對擇時（MarketTiming）、選股（PickStock）、倉位（SizePosition）規則優化運算以及交易測試的數據切片序列;
-
-
-
-
+        "transaction_sequence" : {
+            "002611" : {
+                "Long_Position" : {
+                    "index" : [Integer, ... ],  // transaction index，依照交易規則執行交易的序號;
+                    "date_transaction" : [String, ... ],  // 類似：datetime.date("2019-01-11") 類型，依照交易規則選取的交易日期;
+                    "direction" : ["sell" or "buy", ... ],  // transaction direction，依照交易規則選取的交易方向（買入或賣出）;
+                    "price" : [Floating-Point, ... ],  // transaction price，依照交易規則選取的成交價;
+                    "SizePosition" : [Floating-Point, ... ],  // transaction size position，依照交易規則選取的交易比例;
+                    "focus" : [Floating-Point, ... ],  // K-Line focus;
+                    "amplitude" : [Floating-Point, ... ],  // K-Line amplitude;
+                    "turnover_volume" : [Integer, ... ],  // K-Line turnover volume，當日總成交量（turnover volume）;
+                    "opening_price" : [Floating-Point, ... ],  // K-Line opening price，當日開盤（opening）成交價;
+                    "close_price" : [Floating-Point, ... ],  // K-Line close price，當日收盤（closing）成交價;
+                    "low_price" : [Floating-Point, ... ],  // K-Line low price，當日最低（low）成交價;
+                    "high_price" : [Floating-Point, ... ],  // K-Line high price，當日最高（high）成交價;
+                    "MarketTiming_Parameter" : [[Integer, Floating-Point, Floating-Point, Floating-Point], ... ],
+                    "PickStock_Parameter" : [[Integer, Integer], ... ],
+                    "SizePosition_Parameter" : [[Floating-Point, Floating-Point], ... ]
+                },
+                "Short_Selling" : {
+                    "index" : [Integer, ... ],  // transaction index，依照交易規則執行交易的序號;
+                    "date_transaction" : [String, ... ],  // 類似：datetime.date("2019-01-11") 類型，依照交易規則選取的交易日期;
+                    "direction" : ["sell" or "buy", ... ],  // transaction direction，依照交易規則選取的交易方向（買入或賣出）;
+                    "price" : [Floating-Point, ... ],  // transaction price，依照交易規則選取的成交價;
+                    "SizePosition" : [Floating-Point, ... ],  // transaction size position，依照交易規則選取的交易比例;
+                    "focus" : [Floating-Point, ... ],  // K-Line focus;
+                    "amplitude" : [Floating-Point, ... ],  // K-Line amplitude;
+                    "turnover_volume" : [Integer, ... ],  // K-Line turnover volume，當日總成交量（turnover volume）;
+                    "opening_price" : [Floating-Point, ... ],  // K-Line opening price，當日開盤（opening）成交價;
+                    "close_price" : [Floating-Point, ... ],  // K-Line close price，當日收盤（closing）成交價;
+                    "low_price" : [Floating-Point, ... ],  // K-Line low price，當日最低（low）成交價;
+                    "high_price" : [Floating-Point, ... ],  // K-Line high price，當日最高（high）成交價;
+                    "MarketTiming_Parameter" : [[Integer, Floating-Point, Floating-Point, Floating-Point], ... ],
+                    "PickStock_Parameter" : [[Integer, Integer], ... ],
+                    "SizePosition_Parameter" : [[Floating-Point, Floating-Point], ... ]
+                }
+            },
+            ...
+        },  // 字典（Dictionary）， 向量（Array），依照傳入的參數：training_data_sequence_length 和 testing_data_sequence_length 整數長度值對原始數據集：stepping_data 字典序列分割得到的測試集（testing）數據切片序列;
+        // "profit_paired_transaction" : {},  // 字典（Dictionary），依照優化之後的擇時（MarketTiming）、選股（PickStock）、倉位（SizePosition）規則計算分割得到的每組對衝交易（paired_transaction）數據切片序列;
+        // "stepping_sequence" : [{"002611" : {}, ... }, ... ],  // 向量（Array），依照傳入的參數：training_data_sequence_length 和 testing_data_sequence_length 整數長度值對原始數據集：stepping_data 字典序列分割得到的訓練集（training）和測試集（testing）數據切片序列，用於對擇時（MarketTiming）、選股（PickStock）、倉位（SizePosition）規則優化運算以及交易測試的數據切片序列;
     }
 }
 ```
