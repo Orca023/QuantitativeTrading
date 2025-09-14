@@ -2099,15 +2099,6 @@ println("transaction sequence Dict :", "\n", return_stepping_Dict["transaction_s
 println("stepping sequence Array :", "\n", return_stepping_Dict["stepping_sequence"]);
 ```
 
-
-
-
-
-
-
-
-
-
 ---
 
 微軟視窗系統 ( Windows10 x86_64 ) 使用 Batchfile 代碼脚本檔「startServer.bat」啓動統計運算伺服器「QuantitativeTrading」 :
@@ -2274,6 +2265,19 @@ http://username:password@[::1]:10001/administrator.html?Key=username:password
 可自行修改標準通用標記語言代碼脚本 ( .html ) 檔「`index.html`」「`SelectStatisticalAlgorithms.html`」「`InputHTML.html`」「`OutputHTML.html`」内的 HTML , JavaScript , CSS 代碼，擴展交互頁面「`index.html`」内統計方法的連接 ( Browser Client Request ) 選項.
 
 二. 可使用項目空間内的微軟電子表格 ( Windows - Office - Excel - Visual Basic for Applications ) 應用檔「`Client.xlsm`」作爲用戶端 ( Client ) 連接統計運算伺服器「`QuantitativeTrading`」做 ( Client - Request ) 計算.
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 微軟電子表格 ( Windows - Office - Excel - Visual Basic for Applications ) 應用檔「`Client.xlsm`」打開之後，菜單欄 ( Excel menu bar ) 之 :
 
