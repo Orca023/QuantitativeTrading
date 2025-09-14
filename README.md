@@ -58,452 +58,9 @@
 
 
 
----
 
-Python3 Explain : Interface.py , QuantitativeTradingServer.py , Router.py , Interpolation_Fitting.py
 
-計算機程式設計語言 ( Python ) 解釋器 ( Interpreter ) 與作業系統 ( Operating System ) 環境配置釋明 :
 
-Operating System: Acer-NEO-2023 Windows10 x86_64 Inter(R)-Core(TM)-m3-6Y30
-
-Interpreter: python-3.11.2-amd64.exe
-
-Interpreter: Python-3.12.4-tar.xz
-
-Operating System: Google-Pixel-7 Android-11 Termux-0.118 Ubuntu-22.04-LTS-rootfs Arm64-aarch64 MSM8998-Snapdragon835-Qualcomm®-Kryo™-280
-
-Interpreter: Python-3.12.4-tar.xz
-
-![]()
-
-Interpreter :
-
-python - 3.12.4
-
-[程式設計 Python 語言解釋器 ( Interpreter ) 官方網站](https://www.python.org/): 
-https://www.python.org/
-
-[程式設計 Python 語言解釋器 ( Interpreter ) 官方下載頁](https://www.python.org/downloads/): 
-https://www.python.org/downloads/
-
-[程式設計 Python 語言解釋器 ( Interpreter ) 官方 GitHub 網站賬戶](https://github.com/python): 
-https://github.com/python
-
-[程式設計 Python 語言解釋器 ( Interpreter ) 官方 GitHub 網站倉庫頁](https://github.com/python/cpython): 
-https://github.com/python/cpython.git
-
-![]()
-
-程式設計 Python 語言統計算法 ( algorithm ) 借用第三方擴展模組 ( third-party extensions ( libraries or modules ) ) 説明 :
-
-[Python - numpy 官方網站](https://numpy.org/): 
-https://numpy.org/
-
-[Python - numpy 官方手冊](https://numpy.org/doc/stable/): 
-https://numpy.org/doc/stable/
-
-[Python - numpy 官方 GitHub 網站倉庫頁](https://github.com/numpy/numpy): 
-https://github.com/numpy/numpy.git
-
-[Python - scipy 官方網站](https://scipy.org/): 
-https://scipy.org/
-
-[Python - scipy 官方手冊](https://docs.scipy.org/doc/scipy/): 
-https://docs.scipy.org/doc/scipy/
-
-[Python - scipy 官方 GitHub 網站倉庫頁](https://github.com/scipy/scipy): 
-https://github.com/scipy/scipy.git
-
-[Python - pandas 官方網站](https://pandas.pydata.org/): 
-https://pandas.pydata.org/
-
-[Python - pandas 官方手冊](https://pandas.pydata.org/docs/): 
-https://pandas.pydata.org/docs/
-
-[Python - pandas 官方 GitHub 網站倉庫頁](https://github.com/pandas-dev/pandas): 
-https://github.com/pandas-dev/pandas.git
-
-[Python - openpyxl 官方網站](https://www.python-excel.org/): 
-https://www.python-excel.org/
-
-[Python - openpyxl 官方手冊](https://openpyxl.readthedocs.io/en/stable/): 
-https://openpyxl.readthedocs.io/en/stable/
-
-[Python - openpyxl 官方 PyPi 組織倉庫頁](https://pypi.org/project/openpyxl/): 
-https://pypi.org/project/openpyxl/
-
-[Python - openpyxl 發佈頁](https://foss.heptapod.net/openpyxl/openpyxl): 
-https://foss.heptapod.net/openpyxl/openpyxl
-
-[Python - xlrd 官方手冊](https://xlrd.readthedocs.io/en/latest/?badge=latest): 
-https://xlrd.readthedocs.io/en/latest/?badge=latest
-
-[Python - xlrd 官方 GitHub 網站倉庫頁](https://github.com/python-excel/xlrd): 
-https://github.com/python-excel/xlrd.git
-
-[Python - pillow 官方手冊](https://pillow.readthedocs.io/en/stable/?badge=latest): 
-https://pillow.readthedocs.io/en/stable/?badge=latest
-
-[Python - pillow 官方 PyPi 組織倉庫頁](https://pypi.org/project/pillow/): 
-https://pypi.org/project/pillow/
-
-[Python - pillow 官方 GitHub 網站倉庫頁](https://github.com/python-pillow/Pillow): 
-https://github.com/python-pillow/Pillow.git
-
-[Python - pyarrow 官方手冊](https://arrow.apache.org/docs/3.0/_modules/pyarrow.html): 
-https://arrow.apache.org/docs/3.0/_modules/pyarrow.html
-
-[Python - pyarrow 官方 PyPi 組織倉庫頁](https://pypi.org/project/pyarrow/): 
-https://pypi.org/project/pyarrow/
-
-[Python - matplotlib 官方網站](https://matplotlib.org/): 
-https://matplotlib.org/
-
-[Python - matplotlib 官方手冊](https://matplotlib.org/stable/): 
-https://matplotlib.org/stable/
-
-[Python - matplotlib 官方 GitHub 網站倉庫頁](https://github.com/matplotlib/matplotlib): 
-https://github.com/matplotlib/matplotlib.git
-
-[Python - statsmodels 官方手冊](https://www.statsmodels.org/stable/index.html): 
-https://www.statsmodels.org/stable/index.html
-
-[Python - statsmodels 官方 GitHub 網站倉庫頁](https://github.com/statsmodels/statsmodels): 
-https://github.com/statsmodels/statsmodels.git
-
-[Python - sklearn 官方網站](https://scikit-learn.org/stable/): 
-https://scikit-learn.org/stable/
-
-[Python - sklearn 官方手冊](https://scikit-learn.org/stable/user_guide.html): 
-https://scikit-learn.org/stable/user_guide.html
-
-[Python - sklearn 官方 GitHub 網站倉庫頁](https://github.com/scikit-learn/scikit-learn): 
-https://github.com/scikit-learn/scikit-learn.git
-
-[Python - sympy 官方網站](https://www.sympy.org/en/index.html): 
-https://www.sympy.org/en/index.html
-
-[Python - sympy 官方手冊](https://docs.sympy.org/latest/index.html): 
-https://docs.sympy.org/latest/index.html
-
-[Python - sympy 官方 GitHub 網站倉庫頁](https://github.com/sympy/sympy): 
-https://github.com/sympy/sympy.git
-
-![]()
-
-使用説明:
-
-谷歌安卓系統 之 Termux 系統 之 烏班圖系統 ( Android-11 Termux-0.118 Ubuntu-22.04-LTS-rootfs Arm64-aarch64 )
-
-控制臺命令列 ( bash ) 運行啓動指令 :
-```
-root@localhost:~# /usr/bin/python3 /home/QuantitativeTrading/QuantitativeTradingPython/src/QuantitativeTradingServer.py configFile=/home/QuantitativeTrading/QuantitativeTradingPython/config.txt interface_Function=http_Server webPath=/home/QuantitativeTrading/html/ host=::0 port=10001 Key=username:password Is_multi_thread=False number_Worker_process=0
-```
-
-微軟視窗系統 ( Window10 x86_64 )
-
-控制臺命令列 ( cmd ) 運行啓動指令 :
-```
-C:\QuantitativeTrading> C:/QuantitativeTrading/Python/Python311/python.exe C:/QuantitativeTrading/QuantitativeTradingPython/src/QuantitativeTradingServer.py configFile=C:/QuantitativeTrading/QuantitativeTradingPython/config.txt interface_Function=http_Server webPath=C:/QuantitativeTrading/html/ host=::0 port=10001 Key=username:password Is_multi_thread=False number_Worker_process=0
-```
-
-控制臺啓動傳參釋意, 各參數之間以一個空格字符 ( `SPACE` ) ( `00100000` ) 分隔, 鍵(Key) ~ 值(Value) 之間以一個等號字符 ( `=` ) 連接, 即類比 `Key=Value` 的形式 :
-
-1. (必), (自定義), 安裝配置的程式設計語言 ( Python ) 解釋器 ( Interpreter ) 環境的二進制可執行檔啓動存儲路徑全名, 預設值爲 :  `C:/QuantitativeTrading/Python/Python311/python.exe`
-
-2. (必), (自定義), 語言 ( Python ) 程式代碼脚本 ( Script ) 檔 ( `QuantitativeTradingServer.py` ) 的存儲路徑全名, 預設值爲 :  `C:/QuantitativeTrading/QuantitativeTradingPython/src/QuantitativeTradingServer.py`
-
-   注意, 因爲「`QuantitativeTradingServer.py`」檔中脚本代碼需要加載引入「`Interface.py`」檔, 所以需要保持「`QuantitativeTradingServer.py`」檔與「`Interface.py`」檔在相同目錄下, 不然就需要手動修改「`QuantitativeTradingServer.py`」檔中有關引用「`Interface.py`」檔的加載路徑代碼, 以確保能正確引入「`Interface.py`」檔.
-
-3. (選), (鍵 `configFile` 固定, 值 `C:/QuantitativeTrading/QuantitativeTradingPython/config.txt` 自定義), 用於傳入配置文檔的保存路徑全名, 預設值爲 :  `configFile=C:/QuantitativeTrading/QuantitativeTradingPython/config.txt`
-
-4. (選), (鍵 `interface_Function` 固定, 值 `file_Monitor` 自定義, [ `file_Monitor`, `http_Server`, `http_Client` ] 取其一), 用於傳入選擇啓動哪一種接口服務, 外設硬盤 ( Hard Disk ) 文檔 ( File ) 作橋, 外設網卡 ( Network Interface Card ) 埠 ( Port ) 作橋, 預設值爲 :  `interface_Function=file_Monitor`
-
-以下是當參數 : `interface_Function` 取 : `http_Server` 值時, 可在控制臺命令列傳入的參數 :
-
-14. (選), (鍵 `host` 固定, 值 `::0` 自定義, 例如 [ `::0`, `::1`, `0.0.0.0`, `127.0.0.1` ] 取其一), 用於傳入伺服器 ( `http_Server` ) 監聽的外設網卡 ( Network Interface Card ) 地址 ( IPv6 , IPv4 ) 或域名, 預設值爲 :  `host=::0`
-
-15. (選), (鍵 `port` 固定, 值 `10001` 自定義), 用於傳入伺服器 ( `http_Server` ) 監聽的外設網卡 ( Network Interface Card ) 自定義設定的埠號 ( `1 ~ 65535` ), 預設值爲 :  `port=10001`
-
-16. (選), (鍵 `Key` 固定, 賬號密碼連接符 `:` 固定, 值 `username` 和 `password` 自定義), 用於傳入自定義的訪問網站驗證 ( `Authorization` ) 用戶名和密碼, 預設值爲 :  `Key=username:password`
-
-17. (選), (鍵 `Is_multi_thread` 固定, 值 `False` 自定義, 例如 [ `True`, `False` ] 取其一), 用於判斷是否開啓多缐程 ( Threading ) 並發, 預設值爲 :  `Is_multi_thread=False`
-
-18. (選), (鍵 `number_Worker_process` 固定, 值 `0` 自定義), 用於傳入創建並發數目, 子進程 ( Sub Process ) 並發, 或者, 子缐程 ( Sub Threading ) 並發, 即, 可以設爲等於物理中央處理器 ( Central Processing Unit ) 的數目, 取 0 值表示不開啓並發架構, 預設值爲 :  `number_Worker_process=0`
-
-19. (選), (鍵 `webPath` 固定, 值 `C:/QuantitativeTrading/html/` 自定義), 用於傳入伺服器 ( `http_Server` ) 啓動運行的自定義的根目錄 (項目空間) 路徑全名, 預設值爲 :  `webPath=C:/QuantitativeTrading/html/`
-
-以下是當參數 : `interface_Function` 取 : `http_Client` 值時, 可在控制臺命令列傳入的參數 :
-
-14. (選), (鍵 `host` 固定, 值 `::1` 自定義, 例如 [ `::1`, `127.0.0.1`, `localhost` ] 取其一), 用於傳入用戶端連接器 ( `http_Client` ) 向外設網卡 ( Network Interface Card ) 發送請求的地址 ( IPv6 , IPv4 ) 或域名, 預設值爲 :  `host=::1`
-
-15. (選), (鍵 `port` 固定, 值 `10001` 自定義), 用於傳入用戶端連接器 ( `http_Client` ) 向外設網卡 ( Network Interface Card ) 發送請求的埠號 ( `1 ~ 65535` ), 預設值爲 :  `port=10001`
-
-20. (選), (鍵 `URL` 固定, 值 `/` 自定義, 例如配置爲 `http://[::1]:10001/index.html` 值), 用於傳入用戶端連接器 ( `http_Client` ) 向外設網卡 ( Network Interface Card ) 發送請求的地址, 萬維網統一資源定位系統 ( Uniform Resource Locator ) 地址字符串, 預設值爲 :  `URL=/`
-
-21. (選), (鍵 `Method` 固定, 值 `POST` 自定義, 例如 [ `POST`, `GET` ] 取其一), 用戶端連接器 ( `http_Client` ) 向外設網卡 ( Network Interface Card ) 發送請求的類型, 預設值爲 :  `Method=POST`
-
-22. (選), (鍵 `time_out` 固定, 值 `0.5` 自定義), 用於傳入設置鏈接超時自動中斷的時長，單位 ( Unit ) 爲秒 ( Second ), 預設值爲 :  `time_out=0.5`
-
-23. (選), (鍵 `request_Auth` 固定, 賬號密碼連接符 `:` 固定, 值 `username` 和 `password` 自定義), 用於傳入用戶端連接器 ( `http_Client` ) 向外設網卡 ( Network Interface Card ) 發送請求的驗證 ( Authorization ) 的賬號密碼字符串, 預設值爲 :  `request_Auth=username:password`
-
-24. (選), (鍵 `request_Cookie` 固定, 其中 `Cookie` 名稱 `Session_ID` 可以設計爲固定, `Cookie` 值 `request_Key->username:password` 可以設計爲自定義), 用於傳入用戶端連接器 ( `http_Client` ) 向外設網卡 ( Network Interface Card ) 發送請求的 `Cookies` 值字符串, 預設值爲 :  `request_Cookie=Session_ID=request_Key->username:password`
-
----
-
-Julia Explain : Interface.jl , QuantitativeTradingServer.jl , Router.jl , Interpolation_Fitting.jl
-
-計算機程式設計語言 ( Julia ) 解釋器 ( Interpreter ) 與作業系統 ( Operating System ) 環境配置釋明 :
-
-Operating System: Acer-NEO-2023 Windows10 x86_64 Inter(R)-Core(TM)-m3-6Y30
-
-Interpreter: julia-1.10.10-win64.exe
-
-Interpreter: julia-1.10.10-linux-x86_64.tar.gz
-
-Operating System: Google-Pixel-7 Android-11 Termux-0.118 Ubuntu-22.04-LTS-rootfs Arm64-aarch64 MSM8998-Snapdragon835-Qualcomm®-Kryo™-280
-
-Interpreter: julia-1.10.10-linux-aarch64.tar.gz
-
-注意,
-
-程式代碼脚本檔 `Interface.jl` 裏, 函數 `http_Server`, `http_Client` 使用了第三方模組 `HTTP.jl` , `JSON.jl` 擴展包 ( packages ) ,
-
-程式代碼脚本檔 `QuantitativeTradingServer.jl` 和 `Router.jl` 裏, 函數 `do_data`, `do_Request`, `do_Response` 使用了第三方模組 `JSON.jl` 擴展包 ( packages ) ,
-
-所以, 需事先安裝配置成功, 加載導入之後, 才能正常運行.
-
-首先在作業系統 ( Operating System ) 控制臺命令列窗口 ( bash, cmd ) 啓動程式設計語言 ( Julia ) 解釋器 ( Interpreter ) 進入語言 ( Julia ) 的運行環境 :
-
-谷歌安卓系統 之 Termux 系統 之 烏班圖系統 ( Android-11 Termux-0.118 Ubuntu-22.04-LTS-rootfs Arm64-aarch64 ) 控制臺命令列 ( bash ) 運行啓動指令 :
-```
-root@localhost:~# /usr/julia/julia-1.10.10/bin/julia --project=/home/QuantitativeTrading/QuantitativeTradingJulia/
-```
-
-微軟視窗系統 ( Window10 x86_64 ) 控制臺命令列 ( cmd ) 運行啓動指令 :
-```
-C:\QuantitativeTrading> C:/QuantitativeTrading/Julia/Julia-1.10.10/bin/julia.exe --project=C:/QuantitativeTrading/QuantitativeTradingJulia/
-```
-
-然後, 在程式設計語言 ( Julia ) 解釋器 ( Interpreter ) 運行環境下, 安裝配置第三方擴展包 ( packages ) :
-
-程式設計語言 ( Julia ) 的第三方擴展模組 HTTP.jl 安裝配置説明 :
-```
-julia> using Pkg
-julia> Pkg.add("HTTP")
-```
-程式設計語言 ( Julia ) 的第三方擴展模組 HTTP.jl 加載導入説明 :
-```
-julia> using HTTP
-```
-程式設計語言 ( Julia ) 的第三方擴展模組 JSON.jl 安裝配置説明 :
-```
-julia> using Pkg
-julia> Pkg.add("JSON")
-```
-程式設計語言 ( Julia ) 的第三方擴展模組 JSON.jl 加載導入説明 :
-```
-julia> using JSON
-```
-
-![]()
-
-Interpreter :
-
-Julia - 1.10.10
-
-[程式設計 Julia 語言解釋器 ( Interpreter ) 官方網站](https://julialang.org/): 
-https://julialang.org/
-
-[程式設計 Julia 語言解釋器 ( Interpreter ) 官方下載頁](https://julialang.org/downloads/): 
-https://julialang.org/downloads/
-
-[程式設計 Julia 語言解釋器 ( Interpreter ) 官方 GitHub 網站賬戶](https://github.com/JuliaLang): 
-https://github.com/JuliaLang
-
-[程式設計 Julia 語言解釋器 ( Interpreter ) 官方 GitHub 網站倉庫頁](https://github.com/JuliaLang/julia): 
-https://github.com/JuliaLang/julia.git
-
-[程式設計 Julia 語言解釋器 ( Interpreter ) 第三方擴展模組 ( module ) ( packages ) 托管網站官方手冊](https://julialang.org/packages/): 
-https://julialang.org/packages/
-
-[程式設計 Julia 語言解釋器 ( Interpreter ) 官方 General.jl 模組 GitHub 網站倉庫頁](https://github.com/JuliaRegistries/General): 
-https://github.com/JuliaRegistries/General.git
-
-![]()
-
-程式設計 Julia 語言統計算法 ( algorithm ) 借用第三方擴展模組 ( third-party extensions ( libraries or modules ) ) 説明 :
-
-[Julia - HTTP 官方 GitHub 網站倉庫頁](https://github.com/JuliaWeb/HTTP.jl): 
-https://github.com/JuliaWeb/HTTP.jl.git
-
-[Julia - JSON 官方 GitHub 網站倉庫頁](https://github.com/JuliaIO/JSON.jl): 
-https://github.com/JuliaIO/JSON.jl.git
-
-[Julia - LsqFit 官方手冊](https://julianlsolvers.github.io/LsqFit.jl/latest/): 
-https://julianlsolvers.github.io/LsqFit.jl/latest/
-
-[Julia - LsqFit 官方 GitHub 網站倉庫頁](https://github.com/JuliaNLSolvers/LsqFit.jl): 
-https://github.com/JuliaNLSolvers/LsqFit.jl.git
-
-[Julia - Interpolations 官方手冊](https://juliamath.github.io/Interpolations.jl/stable/): 
-https://juliamath.github.io/Interpolations.jl/stable/
-
-[Julia - Interpolations 官方 GitHub 網站倉庫頁](https://github.com/JuliaMath/Interpolations.jl): 
-https://github.com/JuliaMath/Interpolations.jl.git
-
-[Julia - DataInterpolations 官方手冊](https://docs.sciml.ai/DataInterpolations/stable/): 
-https://docs.sciml.ai/DataInterpolations/stable/
-
-[Julia - DataInterpolations 官方 GitHub 網站倉庫頁](https://github.com/SciML/DataInterpolations.jl): 
-https://github.com/SciML/DataInterpolations.jl.git
-
-[Julia - Roots 官方手冊](https://juliamath.github.io/Roots.jl/stable/): 
-https://juliamath.github.io/Roots.jl/stable/
-
-[Julia - Roots 官方 GitHub 網站倉庫頁](https://github.com/JuliaMath/Roots.jl): 
-https://github.com/JuliaMath/Roots.jl.git
-
-[Julia - ForwardDiff 官方手冊](https://juliadiff.org/ForwardDiff.jl/stable/): 
-https://juliadiff.org/ForwardDiff.jl/stable/
-
-[Julia - ForwardDiff 官方 GitHub 網站倉庫頁](https://github.com/JuliaDiff/ForwardDiff.jl): 
-https://github.com/JuliaDiff/ForwardDiff.jl.git
-
-[Julia - Optim 官方手冊](https://julianlsolvers.github.io/Optim.jl/stable/): 
-https://julianlsolvers.github.io/Optim.jl/stable/
-
-[Julia - Optim 官方 GitHub 網站倉庫頁](https://github.com/JuliaNLSolvers/Optim.jl.git): 
-https://github.com/JuliaNLSolvers/Optim.jl
-
-[Julia - JuMP 官方網站](https://jump.dev/): 
-https://jump.dev/
-
-[Julia - JuMP 官方手冊](https://jump.dev/JuMP.jl/stable/): 
-https://jump.dev/JuMP.jl/stable/
-
-[Julia - JuMP 官方 GitHub 網站倉庫頁](https://github.com/jump-dev/JuMP.jl): 
-https://github.com/jump-dev/JuMP.jl.git
-
-[Julia - Symbolics 官方手冊](https://docs.sciml.ai/Symbolics/stable/): 
-https://docs.sciml.ai/Symbolics/stable/
-
-[Julia - Symbolics 官方 GitHub 網站倉庫頁](https://github.com/JuliaSymbolics/Symbolics.jl): 
-https://github.com/JuliaSymbolics/Symbolics.jl.git
-
-[Julia - Gadfly 官方手冊](https://gadflyjl.org/stable/): 
-https://gadflyjl.org/stable/
-
-[Julia - Gadfly 官方 GitHub 網站倉庫頁](https://github.com/GiovineItalia/Gadfly.jl): 
-https://github.com/GiovineItalia/Gadfly.jl.git
-
-[Julia - Plots 官方手冊](https://docs.juliaplots.org/stable/): 
-https://docs.juliaplots.org/stable/
-
-[Julia - Plots 官方 GitHub 網站倉庫頁](https://github.com/JuliaPlots/Plots.jl): 
-https://github.com/JuliaPlots/Plots.jl.git
-
-[程式設計 Julia 語言第三方擴展模組 ( third-party extensions ( libraries or modules ) ) : 「JuliaIO」項目官方 GitHub 網站賬戶](https://github.com/JuliaIO): 
-https://github.com/JuliaIO
-
-[程式設計 Julia 語言第三方擴展模組 ( third-party extensions ( libraries or modules ) ) : 「JuliaWeb」項目官方 GitHub 網站賬戶](https://github.com/JuliaWeb): 
-https://github.com/JuliaWeb
-
-[程式設計 Julia 語言第三方擴展模組 ( third-party extensions ( libraries or modules ) ) : 「JuliaData」項目官方 GitHub 網站賬戶](https://github.com/JuliaData): 
-https://github.com/JuliaData
-
-[程式設計 Julia 語言第三方擴展模組 ( third-party extensions ( libraries or modules ) ) : 「JuliaPlots」項目官方 GitHub 網站賬戶](https://github.com/JuliaPlots): 
-https://github.com/JuliaPlots
-
-[程式設計 Julia 語言第三方擴展模組 ( third-party extensions ( libraries or modules ) ) : 「GiovineItalia」項目官方 GitHub 網站賬戶](https://github.com/GiovineItalia): 
-https://github.com/GiovineItalia
-
-[程式設計 Julia 語言第三方擴展模組 ( third-party extensions ( libraries or modules ) ) : 「JuliaMath」項目官方 GitHub 網站賬戶](https://github.com/JuliaMath): 
-https://github.com/JuliaMath
-
-[程式設計 Julia 語言第三方擴展模組 ( third-party extensions ( libraries or modules ) ) : 「JuliaNLSolvers」項目官方 GitHub 網站賬戶](https://github.com/JuliaNLSolvers): 
-https://github.com/JuliaNLSolvers
-
-[程式設計 Julia 語言第三方擴展模組 ( third-party extensions ( libraries or modules ) ) : 「SciML」項目官方 GitHub 網站賬戶](https://github.com/SciML): 
-https://github.com/SciML
-
-[程式設計 Julia 語言第三方擴展模組 ( third-party extensions ( libraries or modules ) ) : 「JuliaDiff」項目官方 GitHub 網站賬戶](https://github.com/JuliaDiff): 
-https://github.com/JuliaDiff
-
-[程式設計 Julia 語言第三方擴展模組 ( third-party extensions ( libraries or modules ) ) : 「JuMP」項目官方 GitHub 網站賬戶](https://github.com/jump-dev): 
-https://github.com/jump-dev
-
-[程式設計 Julia 語言第三方擴展模組 ( third-party extensions ( libraries or modules ) ) : 「JuliaSymbolics」項目官方 GitHub 網站賬戶](https://github.com/JuliaSymbolics): 
-https://github.com/JuliaSymbolics
-
-[程式設計 Julia 語言第三方擴展模組 ( third-party extensions ( libraries or modules ) ) : 「JuliaHub」項目官方 GitHub 網站賬戶](https://juliahub.com/): 
-https://juliahub.com/
-
-![]()
-
-使用説明:
-
-谷歌安卓系統 之 Termux 系統 之 烏班圖系統 ( Android-11 Termux-0.118 Ubuntu-22.04-LTS-rootfs Arm64-aarch64 )
-
-控制臺命令列 ( bash ) 運行啓動指令 :
-```
-root@localhost:~# /usr/julia/julia-1.10.10/bin/julia -p 4 --project=/home/QuantitativeTrading/QuantitativeTradingJulia/ /home/QuantitativeTrading/QuantitativeTradingJulia/src/QuantitativeTradingServer.jl configFile=/home/QuantitativeTrading/QuantitativeTradingJulia/config.txt interface_Function=http_Server webPath=/home/QuantitativeTrading/html/ host=::0 port=10001 key=username:password number_Worker_threads=1 isConcurrencyHierarchy=Tasks readtimeout=0 connecttimeout=0
-```
-
-微軟視窗系統 ( Window10 x86_64 )
-
-控制臺命令列 ( cmd ) 運行啓動指令 :
-```
-C:\QuantitativeTrading> C:/QuantitativeTrading/Julia/Julia-1.10.10/bin/julia.exe -p 4 --project=C:/QuantitativeTrading/QuantitativeTradingJulia/ C:/QuantitativeTrading/QuantitativeTradingJulia/src/QuantitativeTradingServer.jl configFile=C:/QuantitativeTrading/QuantitativeTradingJulia/config.txt interface_Function=http_Server webPath=C:/QuantitativeTrading/html/ host=::0 port=10001 key=username:password number_Worker_threads=1 isConcurrencyHierarchy=Tasks readtimeout=0 connecttimeout=0
-```
-
-控制臺啓動傳參釋意, 各參數之間以一個空格字符 ( `SPACE` ) ( `00100000` ) 分隔, 鍵(Key) ~ 值(Value) 之間以一個等號字符 ( `=` ) 連接, 即類比 `Key=Value` 的形式 :
-
-1. (必), (自定義), 安裝配置的程式設計語言 ( Julia ) 解釋器 ( Interpreter ) 環境的二進制可執行檔啓動存儲路徑全名, 預設值爲 :  `C:/QuantitativeTrading/Julia/Julia-1.10.10/bin/julia.exe`
-
-2. (必), (自定義), 語言 ( Julia ) 程式代碼脚本 ( Script ) 檔 ( `QuantitativeTradingServer.jl` ) 的存儲路徑全名, 預設值爲 :  `C:/QuantitativeTrading/QuantitativeTradingJulia/src/QuantitativeTradingServer.jl`
-
-   注意, 因爲「`QuantitativeTradingServer.jl`」檔中脚本代碼需要加載引入「`Interface.jl`」檔, 所以需要保持「`QuantitativeTradingServer.jl`」檔與「`Interface.jl`」檔在相同目錄下, 不然就需要手動修改「`QuantitativeTradingServer.jl`」檔中有關引用「`Interface.jl`」檔的加載路徑代碼, 以確保能正確引入「`Interface.jl`」檔.
-
-3. (選), (鍵 `configFile` 固定, 值 `C:/QuantitativeTrading/QuantitativeTradingJulia/config.txt` 自定義), 用於傳入配置文檔的保存路徑全名, 預設值爲 :  `configFile=C:/QuantitativeTrading/QuantitativeTradingJulia/config.txt`
-
-4. (選), (鍵 `interface_Function` 固定, 值 `file_Monitor` 自定義, [ `file_Monitor`, `http_Server`, `http_Client` ] 取其一), 用於傳入選擇啓動哪一種接口服務, 外設硬盤 ( Hard Disk ) 文檔 ( File ) 作橋, 外設網卡 ( Network Interface Card ) 埠 ( Port ) 作橋, 預設值爲 :  `interface_Function=file_Monitor`
-
-以下是當參數 : `interface_Function` 取 : `http_Server` 值時, 可在控制臺命令列傳入的參數 :
-
-7. (選), (鍵 `number_Worker_threads` 固定, 值 `0` 自定義), 用於傳入創建並發數目, 子進程 ( Sub Process ) 並發, 或者, 子缐程 ( Sub Threading ) 並發, 即, 可以設爲等於物理中央處理器 ( Central Processing Unit ) 的數目, 取 `0` 值表示不開啓並發架構, 預設值爲 :  `number_Worker_threads=0`
-
-15. (選), (鍵 `host` 固定, 值 `::0` 自定義, 例如 [ `::0`, `::1`, `0.0.0.0`, `127.0.0.1`, `localhost` ] 取其一), 用於傳入伺服器 ( `http_Server` ) 監聽的外設網卡 ( Network Interface Card ) 地址 ( IPv6 , IPv4 ) 或域名, 預設值爲 :  `host=::0`
-
-16. (選), (鍵 `port` 固定, 值 `10001` 自定義), 用於傳入伺服器 ( `http_Server` ) 監聽的外設網卡 ( Network Interface Card ) 自定義設定的埠號 ( `1 ~ 65535` ), 預設值爲 :  `port=10001`
-
-17. (選), (鍵 `key` 固定, 賬號密碼連接符 `:` 固定, 值 `username` 和 `password` 自定義), 用於傳入自定義的訪問網站驗證 ( `Authorization` ) 用戶名和密碼, 預設值爲 :  `key=username:password`
-
-18. (選), (鍵 `isConcurrencyHierarchy` 固定, 值 `Tasks` 自定義, 例如 [ `Tasks`, `Multi-Threading`, `Multi-Processes` ] 取其一), 用於選擇並發種類, 多進程 ( Process ) 並發, 或者, 多缐程 ( Threading ) 並發, 或者, 多協程 ( Tasks ) 並發, 當取值為多缐程 `Multi-Threading` 時，必須在啓動 Julia 解釋器之前，在控制臺命令行修改環境變量 : `export JULIA_NUM_THREADS=4(Linux OSX)` 或 `set JULIA_NUM_THREADS=4(Windows)` 來設置預創建多個缐程, 預設值爲 :  `isConcurrencyHierarchy=Tasks`
-
-19. (選), (鍵 `webPath` 固定, 值 `C:/QuantitativeTrading/html/` 自定義), 用於傳入伺服器 ( `http_Server` ) 啓動運行的自定義的根目錄 (項目空間) 路徑全名, 預設值爲 :  `webPath=C:/QuantitativeTrading/html/`
-
-20. (選), (鍵 `readtimeout` 固定, 值 `0` 自定義), 用於傳入客戶端請求數據讀取超時中止時長，單位 ( Unit ) 爲秒 ( Second ), 取 `0` 值表示不做判斷是否超時, 預設值爲 :  `readtimeout=0`
-
-以下是當參數 : `interface_Function` 取 : `http_Client` 值時, 可在控制臺命令列傳入的參數 :
-
-15. (選), (鍵 `host` 固定, 值 `::1` 自定義, 例如 [ `::1`, `127.0.0.1`, `localhost` ] 取其一), 用於傳入用戶端連接器 ( `http_Client` ) 向外設網卡 ( Network Interface Card ) 發送請求的地址 ( IPv6 , IPv4 ) 或域名, 預設值爲 :  `host=::1`
-
-16. (選), (鍵 `port` 固定, 值 `10001` 自定義), 用於傳入用戶端連接器 ( `http_Client` ) 向外設網卡 ( Network Interface Card ) 發送請求的埠號 ( `1 ~ 65535` ), 預設值爲 :  `port=10001`
-
-21. (選), (鍵 `URL` 固定, 取值自定義, 例如配置爲 `http://[::1]:10001/index.html` 值), 用於傳入用戶端連接器 ( `http_Client` ) 向外設網卡 ( Network Interface Card ) 發送請求的地址, 萬維網統一資源定位系統 ( Uniform Resource Locator ) 地址字符串, 預設值爲 :  `URL=""`
-
-22. (選), (鍵 `proxy` 固定, 取值自定義, 例如配置爲 `http://[::1]:10001/index.html` 值), 當用戶端連接器 ( `http_Client` ) 向外設網卡 ( Network Interface Card ) 發送請求時, 若需要代理轉發, 用於傳入轉發代理服務器的地址, 萬維網統一資源定位系統 ( Uniform Resource Locator ) 地址字符串, 預設值爲 :  `proxy=""`
-
-23. (選), (鍵 `requestMethod` 固定, 值 `POST` 自定義, 例如 [ `POST`, `GET` ] 取其一), 用戶端連接器 ( `http_Client` ) 向外設網卡 ( Network Interface Card ) 發送請求的類型, 預設值爲 :  `requestMethod=POST`
-
-20. (選), (鍵 `readtimeout` 固定, 值 `0` 自定義), 用於傳入服務端響應數據讀取超時中止時長，單位 ( Unit ) 爲秒 ( Second ), 取 `0` 值表示不做判斷是否超時, 預設值爲 :  `readtimeout=0`
-
-24. (選), (鍵 `connecttimeout` 固定, 值 `0` 自定義), 用於傳入客戶端請求鏈接超時中止時長，單位 ( Unit ) 爲秒 ( Second ), 取 `0` 值表示不做判斷是否超時, 預設值爲 :  `connecttimeout=0`
-
-25. (選), (鍵 `Authorization` 固定, 賬號密碼連接符 `:` 固定, 值 `username` 和 `password` 自定義), 用於傳入用戶端連接器 ( `http_Client` ) 向外設網卡 ( Network Interface Card ) 發送請求的驗證 ( Authorization ) 的賬號密碼字符串, 預設值爲 :  `Authorization=username:password`
-
-26. (選), (鍵 `Cookie` 固定, 其中 `Cookie` 名稱 `Session_ID` 可以設計爲固定, `Cookie` 值 `request_Key->username:password` 可以設計爲自定義), 用於傳入用戶端連接器 ( `http_Client` ) 向外設網卡 ( Network Interface Card ) 發送請求的 `Cookies` 值字符串, 預設值爲 :  `Cookie=Session_ID=request_Key->username:password`
 
 ---
 
@@ -1351,15 +908,15 @@ root@localhost:~# chmod 777 /home/QuantitativeTrading/QuantitativeTrading.exe
 
 其中 :
 
-代碼脚本檔「`index.html`」爲應用交互頁面，因應網址 ( Uniform Resource Locator , URL ) 爲 : 
+1. 代碼脚本檔「`index.html`」爲應用交互頁面，因應網址 ( Uniform Resource Locator , URL ) 爲 : 
 `http://[::1]:10001/index.html`
 
-代碼脚本檔「`administrator.html`」爲管理頁面，因應網址 ( Uniform Resource Locator , URL ) 爲 : 
+2. 代碼脚本檔「`administrator.html`」爲管理頁面，因應網址 ( Uniform Resource Locator , URL ) 爲 : 
 `http://[::1]:10001/administrator.html`
 
-逗號 ( Comma ) 分隔符檔 ( .csv )「`calculated.csv`」爲計算結果數據示例，是用戶端瀏覽器 ( Browser ) 應用交互頁面「`index.html`」計算結果表格内數據，單擊「保存運算結果數據文檔」按鈕 ( Button ) 後，從瀏覽器 ( Browser ) 應用交互頁面「`index.html`」計算結果表格内導出至本地硬盤 ( Disk , Read-Only Memory ) 存儲的數據文檔示例.
+3. 逗號 ( Comma ) 分隔符檔 ( .csv )「`calculated.csv`」爲計算結果數據示例，是用戶端瀏覽器 ( Browser ) 應用交互頁面「`index.html`」計算結果表格内數據，單擊「保存運算結果數據文檔」按鈕 ( Button ) 後，從瀏覽器 ( Browser ) 應用交互頁面「`index.html`」計算結果表格内導出至本地硬盤 ( Disk , Read-Only Memory ) 存儲的數據文檔示例.
 
-逗號 ( Comma ) 分隔符檔 ( .csv )「`LogisticLog5PInputData.csv`」爲待計算的原數據示例，是用戶端瀏覽器 ( Browser ) 應用交互頁面「`index.html`」待計算表格内的原數據，單擊「讀取待處理的數據文檔」按鈕 ( Button ) 後，從本地硬盤 ( Disk , Read-Only Memory ) 導入至瀏覽器 ( Browser ) 應用交互頁面「`index.html`」待計算表格内的數據文檔示例.
+4. 逗號 ( Comma ) 分隔符檔 ( .csv )「`LogisticLog5PInputData.csv`」爲待計算的原數據示例，是用戶端瀏覽器 ( Browser ) 應用交互頁面「`index.html`」待計算表格内的原數據，單擊「讀取待處理的數據文檔」按鈕 ( Button ) 後，從本地硬盤 ( Disk , Read-Only Memory ) 導入至瀏覽器 ( Browser ) 應用交互頁面「`index.html`」待計算表格内的數據文檔示例.
 
 可自行修改標準通用標記語言代碼脚本 ( .html ) 檔「`index.html`」「`SelectStatisticalAlgorithms.html`」「`InputHTML.html`」「`OutputHTML.html`」内的 HTML , JavaScript , CSS 代碼，擴展交互頁面「`index.html`」内統計方法的連接 ( Browser Client Request ) 選項.
 
@@ -1375,8 +932,464 @@ root@localhost:~# chmod 777 /home/QuantitativeTrading/QuantitativeTrading.exe
 
 **2. 量化交易模型「`QuantitativeTradingJulia`」「`QuantitativeTradingPython`」參數優化器 ( optimization ) 選用未做計算效率考量，尚不具備實用性，需酌情調整，可自行選用更換第三方優化器 ( optimization ) 提升計算效率，使之具有實用性 .**
 
+
+
+
+
+
+
+
+
+
+
+
+
 ---
 
+Python3 Explain : Interface.py , QuantitativeTradingServer.py , Router.py , Interpolation_Fitting.py
+
+計算機程式設計語言 ( Python ) 解釋器 ( Interpreter ) 與作業系統 ( Operating System ) 環境配置釋明 :
+
+Operating System: Acer-NEO-2023 Windows10 x86_64 Inter(R)-Core(TM)-m3-6Y30
+
+Interpreter: python-3.11.2-amd64.exe
+
+Interpreter: Python-3.12.4-tar.xz
+
+Operating System: Google-Pixel-7 Android-11 Termux-0.118 Ubuntu-22.04-LTS-rootfs Arm64-aarch64 MSM8998-Snapdragon835-Qualcomm®-Kryo™-280
+
+Interpreter: Python-3.12.4-tar.xz
+
+![]()
+
+Interpreter :
+
+python - 3.12.4
+
+[程式設計 Python 語言解釋器 ( Interpreter ) 官方網站](https://www.python.org/): 
+https://www.python.org/
+
+[程式設計 Python 語言解釋器 ( Interpreter ) 官方下載頁](https://www.python.org/downloads/): 
+https://www.python.org/downloads/
+
+[程式設計 Python 語言解釋器 ( Interpreter ) 官方 GitHub 網站賬戶](https://github.com/python): 
+https://github.com/python
+
+[程式設計 Python 語言解釋器 ( Interpreter ) 官方 GitHub 網站倉庫頁](https://github.com/python/cpython): 
+https://github.com/python/cpython.git
+
+![]()
+
+程式設計 Python 語言統計算法 ( algorithm ) 借用第三方擴展模組 ( third-party extensions ( libraries or modules ) ) 説明 :
+
+[Python - numpy 官方網站](https://numpy.org/): 
+https://numpy.org/
+
+[Python - numpy 官方手冊](https://numpy.org/doc/stable/): 
+https://numpy.org/doc/stable/
+
+[Python - numpy 官方 GitHub 網站倉庫頁](https://github.com/numpy/numpy): 
+https://github.com/numpy/numpy.git
+
+[Python - scipy 官方網站](https://scipy.org/): 
+https://scipy.org/
+
+[Python - scipy 官方手冊](https://docs.scipy.org/doc/scipy/): 
+https://docs.scipy.org/doc/scipy/
+
+[Python - scipy 官方 GitHub 網站倉庫頁](https://github.com/scipy/scipy): 
+https://github.com/scipy/scipy.git
+
+[Python - pandas 官方網站](https://pandas.pydata.org/): 
+https://pandas.pydata.org/
+
+[Python - pandas 官方手冊](https://pandas.pydata.org/docs/): 
+https://pandas.pydata.org/docs/
+
+[Python - pandas 官方 GitHub 網站倉庫頁](https://github.com/pandas-dev/pandas): 
+https://github.com/pandas-dev/pandas.git
+
+[Python - openpyxl 官方網站](https://www.python-excel.org/): 
+https://www.python-excel.org/
+
+[Python - openpyxl 官方手冊](https://openpyxl.readthedocs.io/en/stable/): 
+https://openpyxl.readthedocs.io/en/stable/
+
+[Python - openpyxl 官方 PyPi 組織倉庫頁](https://pypi.org/project/openpyxl/): 
+https://pypi.org/project/openpyxl/
+
+[Python - openpyxl 發佈頁](https://foss.heptapod.net/openpyxl/openpyxl): 
+https://foss.heptapod.net/openpyxl/openpyxl
+
+[Python - xlrd 官方手冊](https://xlrd.readthedocs.io/en/latest/?badge=latest): 
+https://xlrd.readthedocs.io/en/latest/?badge=latest
+
+[Python - xlrd 官方 GitHub 網站倉庫頁](https://github.com/python-excel/xlrd): 
+https://github.com/python-excel/xlrd.git
+
+[Python - pillow 官方手冊](https://pillow.readthedocs.io/en/stable/?badge=latest): 
+https://pillow.readthedocs.io/en/stable/?badge=latest
+
+[Python - pillow 官方 PyPi 組織倉庫頁](https://pypi.org/project/pillow/): 
+https://pypi.org/project/pillow/
+
+[Python - pillow 官方 GitHub 網站倉庫頁](https://github.com/python-pillow/Pillow): 
+https://github.com/python-pillow/Pillow.git
+
+[Python - pyarrow 官方手冊](https://arrow.apache.org/docs/3.0/_modules/pyarrow.html): 
+https://arrow.apache.org/docs/3.0/_modules/pyarrow.html
+
+[Python - pyarrow 官方 PyPi 組織倉庫頁](https://pypi.org/project/pyarrow/): 
+https://pypi.org/project/pyarrow/
+
+[Python - matplotlib 官方網站](https://matplotlib.org/): 
+https://matplotlib.org/
+
+[Python - matplotlib 官方手冊](https://matplotlib.org/stable/): 
+https://matplotlib.org/stable/
+
+[Python - matplotlib 官方 GitHub 網站倉庫頁](https://github.com/matplotlib/matplotlib): 
+https://github.com/matplotlib/matplotlib.git
+
+[Python - statsmodels 官方手冊](https://www.statsmodels.org/stable/index.html): 
+https://www.statsmodels.org/stable/index.html
+
+[Python - statsmodels 官方 GitHub 網站倉庫頁](https://github.com/statsmodels/statsmodels): 
+https://github.com/statsmodels/statsmodels.git
+
+[Python - sklearn 官方網站](https://scikit-learn.org/stable/): 
+https://scikit-learn.org/stable/
+
+[Python - sklearn 官方手冊](https://scikit-learn.org/stable/user_guide.html): 
+https://scikit-learn.org/stable/user_guide.html
+
+[Python - sklearn 官方 GitHub 網站倉庫頁](https://github.com/scikit-learn/scikit-learn): 
+https://github.com/scikit-learn/scikit-learn.git
+
+[Python - sympy 官方網站](https://www.sympy.org/en/index.html): 
+https://www.sympy.org/en/index.html
+
+[Python - sympy 官方手冊](https://docs.sympy.org/latest/index.html): 
+https://docs.sympy.org/latest/index.html
+
+[Python - sympy 官方 GitHub 網站倉庫頁](https://github.com/sympy/sympy): 
+https://github.com/sympy/sympy.git
+
+![]()
+
+使用説明:
+
+谷歌安卓系統 之 Termux 系統 之 烏班圖系統 ( Android-11 Termux-0.118 Ubuntu-22.04-LTS-rootfs Arm64-aarch64 )
+
+控制臺命令列 ( bash ) 運行啓動指令 :
+```
+root@localhost:~# /usr/bin/python3 /home/QuantitativeTrading/QuantitativeTradingPython/src/QuantitativeTradingServer.py configFile=/home/QuantitativeTrading/QuantitativeTradingPython/config.txt interface_Function=http_Server webPath=/home/QuantitativeTrading/html/ host=::0 port=10001 Key=username:password Is_multi_thread=False number_Worker_process=0
+```
+
+微軟視窗系統 ( Window10 x86_64 )
+
+控制臺命令列 ( cmd ) 運行啓動指令 :
+```
+C:\QuantitativeTrading> C:/QuantitativeTrading/Python/Python311/python.exe C:/QuantitativeTrading/QuantitativeTradingPython/src/QuantitativeTradingServer.py configFile=C:/QuantitativeTrading/QuantitativeTradingPython/config.txt interface_Function=http_Server webPath=C:/QuantitativeTrading/html/ host=::0 port=10001 Key=username:password Is_multi_thread=False number_Worker_process=0
+```
+
+控制臺啓動傳參釋意, 各參數之間以一個空格字符 ( `SPACE` ) ( `00100000` ) 分隔, 鍵(Key) ~ 值(Value) 之間以一個等號字符 ( `=` ) 連接, 即類比 `Key=Value` 的形式 :
+
+1. (必), (自定義), 安裝配置的程式設計語言 ( Python ) 解釋器 ( Interpreter ) 環境的二進制可執行檔啓動存儲路徑全名, 預設值爲 :  `C:/QuantitativeTrading/Python/Python311/python.exe`
+
+2. (必), (自定義), 語言 ( Python ) 程式代碼脚本 ( Script ) 檔 ( `QuantitativeTradingServer.py` ) 的存儲路徑全名, 預設值爲 :  `C:/QuantitativeTrading/QuantitativeTradingPython/src/QuantitativeTradingServer.py`
+
+   注意, 因爲「`QuantitativeTradingServer.py`」檔中脚本代碼需要加載引入「`Interface.py`」檔, 所以需要保持「`QuantitativeTradingServer.py`」檔與「`Interface.py`」檔在相同目錄下, 不然就需要手動修改「`QuantitativeTradingServer.py`」檔中有關引用「`Interface.py`」檔的加載路徑代碼, 以確保能正確引入「`Interface.py`」檔.
+
+3. (選), (鍵 `configFile` 固定, 值 `C:/QuantitativeTrading/QuantitativeTradingPython/config.txt` 自定義), 用於傳入配置文檔的保存路徑全名, 預設值爲 :  `configFile=C:/QuantitativeTrading/QuantitativeTradingPython/config.txt`
+
+4. (選), (鍵 `interface_Function` 固定, 值 `file_Monitor` 自定義, [ `file_Monitor`, `http_Server`, `http_Client` ] 取其一), 用於傳入選擇啓動哪一種接口服務, 外設硬盤 ( Hard Disk ) 文檔 ( File ) 作橋, 外設網卡 ( Network Interface Card ) 埠 ( Port ) 作橋, 預設值爲 :  `interface_Function=file_Monitor`
+
+以下是當參數 : `interface_Function` 取 : `http_Server` 值時, 可在控制臺命令列傳入的參數 :
+
+14. (選), (鍵 `host` 固定, 值 `::0` 自定義, 例如 [ `::0`, `::1`, `0.0.0.0`, `127.0.0.1` ] 取其一), 用於傳入伺服器 ( `http_Server` ) 監聽的外設網卡 ( Network Interface Card ) 地址 ( IPv6 , IPv4 ) 或域名, 預設值爲 :  `host=::0`
+
+15. (選), (鍵 `port` 固定, 值 `10001` 自定義), 用於傳入伺服器 ( `http_Server` ) 監聽的外設網卡 ( Network Interface Card ) 自定義設定的埠號 ( `1 ~ 65535` ), 預設值爲 :  `port=10001`
+
+16. (選), (鍵 `Key` 固定, 賬號密碼連接符 `:` 固定, 值 `username` 和 `password` 自定義), 用於傳入自定義的訪問網站驗證 ( `Authorization` ) 用戶名和密碼, 預設值爲 :  `Key=username:password`
+
+17. (選), (鍵 `Is_multi_thread` 固定, 值 `False` 自定義, 例如 [ `True`, `False` ] 取其一), 用於判斷是否開啓多缐程 ( Threading ) 並發, 預設值爲 :  `Is_multi_thread=False`
+
+18. (選), (鍵 `number_Worker_process` 固定, 值 `0` 自定義), 用於傳入創建並發數目, 子進程 ( Sub Process ) 並發, 或者, 子缐程 ( Sub Threading ) 並發, 即, 可以設爲等於物理中央處理器 ( Central Processing Unit ) 的數目, 取 0 值表示不開啓並發架構, 預設值爲 :  `number_Worker_process=0`
+
+19. (選), (鍵 `webPath` 固定, 值 `C:/QuantitativeTrading/html/` 自定義), 用於傳入伺服器 ( `http_Server` ) 啓動運行的自定義的根目錄 (項目空間) 路徑全名, 預設值爲 :  `webPath=C:/QuantitativeTrading/html/`
+
+以下是當參數 : `interface_Function` 取 : `http_Client` 值時, 可在控制臺命令列傳入的參數 :
+
+14. (選), (鍵 `host` 固定, 值 `::1` 自定義, 例如 [ `::1`, `127.0.0.1`, `localhost` ] 取其一), 用於傳入用戶端連接器 ( `http_Client` ) 向外設網卡 ( Network Interface Card ) 發送請求的地址 ( IPv6 , IPv4 ) 或域名, 預設值爲 :  `host=::1`
+
+15. (選), (鍵 `port` 固定, 值 `10001` 自定義), 用於傳入用戶端連接器 ( `http_Client` ) 向外設網卡 ( Network Interface Card ) 發送請求的埠號 ( `1 ~ 65535` ), 預設值爲 :  `port=10001`
+
+20. (選), (鍵 `URL` 固定, 值 `/` 自定義, 例如配置爲 `http://[::1]:10001/index.html` 值), 用於傳入用戶端連接器 ( `http_Client` ) 向外設網卡 ( Network Interface Card ) 發送請求的地址, 萬維網統一資源定位系統 ( Uniform Resource Locator ) 地址字符串, 預設值爲 :  `URL=/`
+
+21. (選), (鍵 `Method` 固定, 值 `POST` 自定義, 例如 [ `POST`, `GET` ] 取其一), 用戶端連接器 ( `http_Client` ) 向外設網卡 ( Network Interface Card ) 發送請求的類型, 預設值爲 :  `Method=POST`
+
+22. (選), (鍵 `time_out` 固定, 值 `0.5` 自定義), 用於傳入設置鏈接超時自動中斷的時長，單位 ( Unit ) 爲秒 ( Second ), 預設值爲 :  `time_out=0.5`
+
+23. (選), (鍵 `request_Auth` 固定, 賬號密碼連接符 `:` 固定, 值 `username` 和 `password` 自定義), 用於傳入用戶端連接器 ( `http_Client` ) 向外設網卡 ( Network Interface Card ) 發送請求的驗證 ( Authorization ) 的賬號密碼字符串, 預設值爲 :  `request_Auth=username:password`
+
+24. (選), (鍵 `request_Cookie` 固定, 其中 `Cookie` 名稱 `Session_ID` 可以設計爲固定, `Cookie` 值 `request_Key->username:password` 可以設計爲自定義), 用於傳入用戶端連接器 ( `http_Client` ) 向外設網卡 ( Network Interface Card ) 發送請求的 `Cookies` 值字符串, 預設值爲 :  `request_Cookie=Session_ID=request_Key->username:password`
+
+---
+
+Julia Explain : Interface.jl , QuantitativeTradingServer.jl , Router.jl , Interpolation_Fitting.jl
+
+計算機程式設計語言 ( Julia ) 解釋器 ( Interpreter ) 與作業系統 ( Operating System ) 環境配置釋明 :
+
+Operating System: Acer-NEO-2023 Windows10 x86_64 Inter(R)-Core(TM)-m3-6Y30
+
+Interpreter: julia-1.10.10-win64.exe
+
+Interpreter: julia-1.10.10-linux-x86_64.tar.gz
+
+Operating System: Google-Pixel-7 Android-11 Termux-0.118 Ubuntu-22.04-LTS-rootfs Arm64-aarch64 MSM8998-Snapdragon835-Qualcomm®-Kryo™-280
+
+Interpreter: julia-1.10.10-linux-aarch64.tar.gz
+
+注意,
+
+程式代碼脚本檔 `Interface.jl` 裏, 函數 `http_Server`, `http_Client` 使用了第三方模組 `HTTP.jl` , `JSON.jl` 擴展包 ( packages ) ,
+
+程式代碼脚本檔 `QuantitativeTradingServer.jl` 和 `Router.jl` 裏, 函數 `do_data`, `do_Request`, `do_Response` 使用了第三方模組 `JSON.jl` 擴展包 ( packages ) ,
+
+所以, 需事先安裝配置成功, 加載導入之後, 才能正常運行.
+
+首先在作業系統 ( Operating System ) 控制臺命令列窗口 ( bash, cmd ) 啓動程式設計語言 ( Julia ) 解釋器 ( Interpreter ) 進入語言 ( Julia ) 的運行環境 :
+
+谷歌安卓系統 之 Termux 系統 之 烏班圖系統 ( Android-11 Termux-0.118 Ubuntu-22.04-LTS-rootfs Arm64-aarch64 ) 控制臺命令列 ( bash ) 運行啓動指令 :
+```
+root@localhost:~# /usr/julia/julia-1.10.10/bin/julia --project=/home/QuantitativeTrading/QuantitativeTradingJulia/
+```
+
+微軟視窗系統 ( Window10 x86_64 ) 控制臺命令列 ( cmd ) 運行啓動指令 :
+```
+C:\QuantitativeTrading> C:/QuantitativeTrading/Julia/Julia-1.10.10/bin/julia.exe --project=C:/QuantitativeTrading/QuantitativeTradingJulia/
+```
+
+然後, 在程式設計語言 ( Julia ) 解釋器 ( Interpreter ) 運行環境下, 安裝配置第三方擴展包 ( packages ) :
+
+程式設計語言 ( Julia ) 的第三方擴展模組 HTTP.jl 安裝配置説明 :
+```
+julia> using Pkg
+julia> Pkg.add("HTTP")
+```
+程式設計語言 ( Julia ) 的第三方擴展模組 HTTP.jl 加載導入説明 :
+```
+julia> using HTTP
+```
+程式設計語言 ( Julia ) 的第三方擴展模組 JSON.jl 安裝配置説明 :
+```
+julia> using Pkg
+julia> Pkg.add("JSON")
+```
+程式設計語言 ( Julia ) 的第三方擴展模組 JSON.jl 加載導入説明 :
+```
+julia> using JSON
+```
+
+![]()
+
+Interpreter :
+
+Julia - 1.10.10
+
+[程式設計 Julia 語言解釋器 ( Interpreter ) 官方網站](https://julialang.org/): 
+https://julialang.org/
+
+[程式設計 Julia 語言解釋器 ( Interpreter ) 官方下載頁](https://julialang.org/downloads/): 
+https://julialang.org/downloads/
+
+[程式設計 Julia 語言解釋器 ( Interpreter ) 官方 GitHub 網站賬戶](https://github.com/JuliaLang): 
+https://github.com/JuliaLang
+
+[程式設計 Julia 語言解釋器 ( Interpreter ) 官方 GitHub 網站倉庫頁](https://github.com/JuliaLang/julia): 
+https://github.com/JuliaLang/julia.git
+
+[程式設計 Julia 語言解釋器 ( Interpreter ) 第三方擴展模組 ( module ) ( packages ) 托管網站官方手冊](https://julialang.org/packages/): 
+https://julialang.org/packages/
+
+[程式設計 Julia 語言解釋器 ( Interpreter ) 官方 General.jl 模組 GitHub 網站倉庫頁](https://github.com/JuliaRegistries/General): 
+https://github.com/JuliaRegistries/General.git
+
+![]()
+
+程式設計 Julia 語言統計算法 ( algorithm ) 借用第三方擴展模組 ( third-party extensions ( libraries or modules ) ) 説明 :
+
+[Julia - HTTP 官方 GitHub 網站倉庫頁](https://github.com/JuliaWeb/HTTP.jl): 
+https://github.com/JuliaWeb/HTTP.jl.git
+
+[Julia - JSON 官方 GitHub 網站倉庫頁](https://github.com/JuliaIO/JSON.jl): 
+https://github.com/JuliaIO/JSON.jl.git
+
+[Julia - LsqFit 官方手冊](https://julianlsolvers.github.io/LsqFit.jl/latest/): 
+https://julianlsolvers.github.io/LsqFit.jl/latest/
+
+[Julia - LsqFit 官方 GitHub 網站倉庫頁](https://github.com/JuliaNLSolvers/LsqFit.jl): 
+https://github.com/JuliaNLSolvers/LsqFit.jl.git
+
+[Julia - Interpolations 官方手冊](https://juliamath.github.io/Interpolations.jl/stable/): 
+https://juliamath.github.io/Interpolations.jl/stable/
+
+[Julia - Interpolations 官方 GitHub 網站倉庫頁](https://github.com/JuliaMath/Interpolations.jl): 
+https://github.com/JuliaMath/Interpolations.jl.git
+
+[Julia - DataInterpolations 官方手冊](https://docs.sciml.ai/DataInterpolations/stable/): 
+https://docs.sciml.ai/DataInterpolations/stable/
+
+[Julia - DataInterpolations 官方 GitHub 網站倉庫頁](https://github.com/SciML/DataInterpolations.jl): 
+https://github.com/SciML/DataInterpolations.jl.git
+
+[Julia - Roots 官方手冊](https://juliamath.github.io/Roots.jl/stable/): 
+https://juliamath.github.io/Roots.jl/stable/
+
+[Julia - Roots 官方 GitHub 網站倉庫頁](https://github.com/JuliaMath/Roots.jl): 
+https://github.com/JuliaMath/Roots.jl.git
+
+[Julia - ForwardDiff 官方手冊](https://juliadiff.org/ForwardDiff.jl/stable/): 
+https://juliadiff.org/ForwardDiff.jl/stable/
+
+[Julia - ForwardDiff 官方 GitHub 網站倉庫頁](https://github.com/JuliaDiff/ForwardDiff.jl): 
+https://github.com/JuliaDiff/ForwardDiff.jl.git
+
+[Julia - Optim 官方手冊](https://julianlsolvers.github.io/Optim.jl/stable/): 
+https://julianlsolvers.github.io/Optim.jl/stable/
+
+[Julia - Optim 官方 GitHub 網站倉庫頁](https://github.com/JuliaNLSolvers/Optim.jl.git): 
+https://github.com/JuliaNLSolvers/Optim.jl
+
+[Julia - JuMP 官方網站](https://jump.dev/): 
+https://jump.dev/
+
+[Julia - JuMP 官方手冊](https://jump.dev/JuMP.jl/stable/): 
+https://jump.dev/JuMP.jl/stable/
+
+[Julia - JuMP 官方 GitHub 網站倉庫頁](https://github.com/jump-dev/JuMP.jl): 
+https://github.com/jump-dev/JuMP.jl.git
+
+[Julia - Symbolics 官方手冊](https://docs.sciml.ai/Symbolics/stable/): 
+https://docs.sciml.ai/Symbolics/stable/
+
+[Julia - Symbolics 官方 GitHub 網站倉庫頁](https://github.com/JuliaSymbolics/Symbolics.jl): 
+https://github.com/JuliaSymbolics/Symbolics.jl.git
+
+[Julia - Gadfly 官方手冊](https://gadflyjl.org/stable/): 
+https://gadflyjl.org/stable/
+
+[Julia - Gadfly 官方 GitHub 網站倉庫頁](https://github.com/GiovineItalia/Gadfly.jl): 
+https://github.com/GiovineItalia/Gadfly.jl.git
+
+[Julia - Plots 官方手冊](https://docs.juliaplots.org/stable/): 
+https://docs.juliaplots.org/stable/
+
+[Julia - Plots 官方 GitHub 網站倉庫頁](https://github.com/JuliaPlots/Plots.jl): 
+https://github.com/JuliaPlots/Plots.jl.git
+
+[程式設計 Julia 語言第三方擴展模組 ( third-party extensions ( libraries or modules ) ) : 「JuliaIO」項目官方 GitHub 網站賬戶](https://github.com/JuliaIO): 
+https://github.com/JuliaIO
+
+[程式設計 Julia 語言第三方擴展模組 ( third-party extensions ( libraries or modules ) ) : 「JuliaWeb」項目官方 GitHub 網站賬戶](https://github.com/JuliaWeb): 
+https://github.com/JuliaWeb
+
+[程式設計 Julia 語言第三方擴展模組 ( third-party extensions ( libraries or modules ) ) : 「JuliaData」項目官方 GitHub 網站賬戶](https://github.com/JuliaData): 
+https://github.com/JuliaData
+
+[程式設計 Julia 語言第三方擴展模組 ( third-party extensions ( libraries or modules ) ) : 「JuliaPlots」項目官方 GitHub 網站賬戶](https://github.com/JuliaPlots): 
+https://github.com/JuliaPlots
+
+[程式設計 Julia 語言第三方擴展模組 ( third-party extensions ( libraries or modules ) ) : 「GiovineItalia」項目官方 GitHub 網站賬戶](https://github.com/GiovineItalia): 
+https://github.com/GiovineItalia
+
+[程式設計 Julia 語言第三方擴展模組 ( third-party extensions ( libraries or modules ) ) : 「JuliaMath」項目官方 GitHub 網站賬戶](https://github.com/JuliaMath): 
+https://github.com/JuliaMath
+
+[程式設計 Julia 語言第三方擴展模組 ( third-party extensions ( libraries or modules ) ) : 「JuliaNLSolvers」項目官方 GitHub 網站賬戶](https://github.com/JuliaNLSolvers): 
+https://github.com/JuliaNLSolvers
+
+[程式設計 Julia 語言第三方擴展模組 ( third-party extensions ( libraries or modules ) ) : 「SciML」項目官方 GitHub 網站賬戶](https://github.com/SciML): 
+https://github.com/SciML
+
+[程式設計 Julia 語言第三方擴展模組 ( third-party extensions ( libraries or modules ) ) : 「JuliaDiff」項目官方 GitHub 網站賬戶](https://github.com/JuliaDiff): 
+https://github.com/JuliaDiff
+
+[程式設計 Julia 語言第三方擴展模組 ( third-party extensions ( libraries or modules ) ) : 「JuMP」項目官方 GitHub 網站賬戶](https://github.com/jump-dev): 
+https://github.com/jump-dev
+
+[程式設計 Julia 語言第三方擴展模組 ( third-party extensions ( libraries or modules ) ) : 「JuliaSymbolics」項目官方 GitHub 網站賬戶](https://github.com/JuliaSymbolics): 
+https://github.com/JuliaSymbolics
+
+[程式設計 Julia 語言第三方擴展模組 ( third-party extensions ( libraries or modules ) ) : 「JuliaHub」項目官方 GitHub 網站賬戶](https://juliahub.com/): 
+https://juliahub.com/
+
+![]()
+
+使用説明:
+
+谷歌安卓系統 之 Termux 系統 之 烏班圖系統 ( Android-11 Termux-0.118 Ubuntu-22.04-LTS-rootfs Arm64-aarch64 )
+
+控制臺命令列 ( bash ) 運行啓動指令 :
+```
+root@localhost:~# /usr/julia/julia-1.10.10/bin/julia -p 4 --project=/home/QuantitativeTrading/QuantitativeTradingJulia/ /home/QuantitativeTrading/QuantitativeTradingJulia/src/QuantitativeTradingServer.jl configFile=/home/QuantitativeTrading/QuantitativeTradingJulia/config.txt interface_Function=http_Server webPath=/home/QuantitativeTrading/html/ host=::0 port=10001 key=username:password number_Worker_threads=1 isConcurrencyHierarchy=Tasks readtimeout=0 connecttimeout=0
+```
+
+微軟視窗系統 ( Window10 x86_64 )
+
+控制臺命令列 ( cmd ) 運行啓動指令 :
+```
+C:\QuantitativeTrading> C:/QuantitativeTrading/Julia/Julia-1.10.10/bin/julia.exe -p 4 --project=C:/QuantitativeTrading/QuantitativeTradingJulia/ C:/QuantitativeTrading/QuantitativeTradingJulia/src/QuantitativeTradingServer.jl configFile=C:/QuantitativeTrading/QuantitativeTradingJulia/config.txt interface_Function=http_Server webPath=C:/QuantitativeTrading/html/ host=::0 port=10001 key=username:password number_Worker_threads=1 isConcurrencyHierarchy=Tasks readtimeout=0 connecttimeout=0
+```
+
+控制臺啓動傳參釋意, 各參數之間以一個空格字符 ( `SPACE` ) ( `00100000` ) 分隔, 鍵(Key) ~ 值(Value) 之間以一個等號字符 ( `=` ) 連接, 即類比 `Key=Value` 的形式 :
+
+1. (必), (自定義), 安裝配置的程式設計語言 ( Julia ) 解釋器 ( Interpreter ) 環境的二進制可執行檔啓動存儲路徑全名, 預設值爲 :  `C:/QuantitativeTrading/Julia/Julia-1.10.10/bin/julia.exe`
+
+2. (必), (自定義), 語言 ( Julia ) 程式代碼脚本 ( Script ) 檔 ( `QuantitativeTradingServer.jl` ) 的存儲路徑全名, 預設值爲 :  `C:/QuantitativeTrading/QuantitativeTradingJulia/src/QuantitativeTradingServer.jl`
+
+   注意, 因爲「`QuantitativeTradingServer.jl`」檔中脚本代碼需要加載引入「`Interface.jl`」檔, 所以需要保持「`QuantitativeTradingServer.jl`」檔與「`Interface.jl`」檔在相同目錄下, 不然就需要手動修改「`QuantitativeTradingServer.jl`」檔中有關引用「`Interface.jl`」檔的加載路徑代碼, 以確保能正確引入「`Interface.jl`」檔.
+
+3. (選), (鍵 `configFile` 固定, 值 `C:/QuantitativeTrading/QuantitativeTradingJulia/config.txt` 自定義), 用於傳入配置文檔的保存路徑全名, 預設值爲 :  `configFile=C:/QuantitativeTrading/QuantitativeTradingJulia/config.txt`
+
+4. (選), (鍵 `interface_Function` 固定, 值 `file_Monitor` 自定義, [ `file_Monitor`, `http_Server`, `http_Client` ] 取其一), 用於傳入選擇啓動哪一種接口服務, 外設硬盤 ( Hard Disk ) 文檔 ( File ) 作橋, 外設網卡 ( Network Interface Card ) 埠 ( Port ) 作橋, 預設值爲 :  `interface_Function=file_Monitor`
+
+以下是當參數 : `interface_Function` 取 : `http_Server` 值時, 可在控制臺命令列傳入的參數 :
+
+7. (選), (鍵 `number_Worker_threads` 固定, 值 `0` 自定義), 用於傳入創建並發數目, 子進程 ( Sub Process ) 並發, 或者, 子缐程 ( Sub Threading ) 並發, 即, 可以設爲等於物理中央處理器 ( Central Processing Unit ) 的數目, 取 `0` 值表示不開啓並發架構, 預設值爲 :  `number_Worker_threads=0`
+
+15. (選), (鍵 `host` 固定, 值 `::0` 自定義, 例如 [ `::0`, `::1`, `0.0.0.0`, `127.0.0.1`, `localhost` ] 取其一), 用於傳入伺服器 ( `http_Server` ) 監聽的外設網卡 ( Network Interface Card ) 地址 ( IPv6 , IPv4 ) 或域名, 預設值爲 :  `host=::0`
+
+16. (選), (鍵 `port` 固定, 值 `10001` 自定義), 用於傳入伺服器 ( `http_Server` ) 監聽的外設網卡 ( Network Interface Card ) 自定義設定的埠號 ( `1 ~ 65535` ), 預設值爲 :  `port=10001`
+
+17. (選), (鍵 `key` 固定, 賬號密碼連接符 `:` 固定, 值 `username` 和 `password` 自定義), 用於傳入自定義的訪問網站驗證 ( `Authorization` ) 用戶名和密碼, 預設值爲 :  `key=username:password`
+
+18. (選), (鍵 `isConcurrencyHierarchy` 固定, 值 `Tasks` 自定義, 例如 [ `Tasks`, `Multi-Threading`, `Multi-Processes` ] 取其一), 用於選擇並發種類, 多進程 ( Process ) 並發, 或者, 多缐程 ( Threading ) 並發, 或者, 多協程 ( Tasks ) 並發, 當取值為多缐程 `Multi-Threading` 時，必須在啓動 Julia 解釋器之前，在控制臺命令行修改環境變量 : `export JULIA_NUM_THREADS=4(Linux OSX)` 或 `set JULIA_NUM_THREADS=4(Windows)` 來設置預創建多個缐程, 預設值爲 :  `isConcurrencyHierarchy=Tasks`
+
+19. (選), (鍵 `webPath` 固定, 值 `C:/QuantitativeTrading/html/` 自定義), 用於傳入伺服器 ( `http_Server` ) 啓動運行的自定義的根目錄 (項目空間) 路徑全名, 預設值爲 :  `webPath=C:/QuantitativeTrading/html/`
+
+20. (選), (鍵 `readtimeout` 固定, 值 `0` 自定義), 用於傳入客戶端請求數據讀取超時中止時長，單位 ( Unit ) 爲秒 ( Second ), 取 `0` 值表示不做判斷是否超時, 預設值爲 :  `readtimeout=0`
+
+以下是當參數 : `interface_Function` 取 : `http_Client` 值時, 可在控制臺命令列傳入的參數 :
+
+15. (選), (鍵 `host` 固定, 值 `::1` 自定義, 例如 [ `::1`, `127.0.0.1`, `localhost` ] 取其一), 用於傳入用戶端連接器 ( `http_Client` ) 向外設網卡 ( Network Interface Card ) 發送請求的地址 ( IPv6 , IPv4 ) 或域名, 預設值爲 :  `host=::1`
+
+16. (選), (鍵 `port` 固定, 值 `10001` 自定義), 用於傳入用戶端連接器 ( `http_Client` ) 向外設網卡 ( Network Interface Card ) 發送請求的埠號 ( `1 ~ 65535` ), 預設值爲 :  `port=10001`
+
+21. (選), (鍵 `URL` 固定, 取值自定義, 例如配置爲 `http://[::1]:10001/index.html` 值), 用於傳入用戶端連接器 ( `http_Client` ) 向外設網卡 ( Network Interface Card ) 發送請求的地址, 萬維網統一資源定位系統 ( Uniform Resource Locator ) 地址字符串, 預設值爲 :  `URL=""`
+
+22. (選), (鍵 `proxy` 固定, 取值自定義, 例如配置爲 `http://[::1]:10001/index.html` 值), 當用戶端連接器 ( `http_Client` ) 向外設網卡 ( Network Interface Card ) 發送請求時, 若需要代理轉發, 用於傳入轉發代理服務器的地址, 萬維網統一資源定位系統 ( Uniform Resource Locator ) 地址字符串, 預設值爲 :  `proxy=""`
+
+23. (選), (鍵 `requestMethod` 固定, 值 `POST` 自定義, 例如 [ `POST`, `GET` ] 取其一), 用戶端連接器 ( `http_Client` ) 向外設網卡 ( Network Interface Card ) 發送請求的類型, 預設值爲 :  `requestMethod=POST`
+
+20. (選), (鍵 `readtimeout` 固定, 值 `0` 自定義), 用於傳入服務端響應數據讀取超時中止時長，單位 ( Unit ) 爲秒 ( Second ), 取 `0` 值表示不做判斷是否超時, 預設值爲 :  `readtimeout=0`
+
+24. (選), (鍵 `connecttimeout` 固定, 值 `0` 自定義), 用於傳入客戶端請求鏈接超時中止時長，單位 ( Unit ) 爲秒 ( Second ), 取 `0` 值表示不做判斷是否超時, 預設值爲 :  `connecttimeout=0`
+
+25. (選), (鍵 `Authorization` 固定, 賬號密碼連接符 `:` 固定, 值 `username` 和 `password` 自定義), 用於傳入用戶端連接器 ( `http_Client` ) 向外設網卡 ( Network Interface Card ) 發送請求的驗證 ( Authorization ) 的賬號密碼字符串, 預設值爲 :  `Authorization=username:password`
+
+26. (選), (鍵 `Cookie` 固定, 其中 `Cookie` 名稱 `Session_ID` 可以設計爲固定, `Cookie` 值 `request_Key->username:password` 可以設計爲自定義), 用於傳入用戶端連接器 ( `http_Client` ) 向外設網卡 ( Network Interface Card ) 發送請求的 `Cookies` 值字符串, 預設值爲 :  `Cookie=Session_ID=request_Key->username:password`
 
 
 
@@ -1385,13 +1398,7 @@ root@localhost:~# chmod 777 /home/QuantitativeTrading/QuantitativeTrading.exe
 
 
 
-
-
-
-
-
-
-
+---
 
 Python3 Explain : Quantitative_Indicators.py , Quantitative_Data_Cleaning.py , Quantitative_MarketTiming.py , Quantitative_PickStock.py , Quantitative_SizePosition.py , Quantitative_BackTesting.py
 
