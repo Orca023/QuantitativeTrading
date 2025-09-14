@@ -4570,7 +4570,7 @@ Respond - body =
             "Long_Position_date_transaction" : [[], ... ],  // 按規則執行交易的日期，向量，"Long_Position_date_transaction" : [[datetime.date("2019-01-11"), "sell", 13.23, "null", 1, 8, datetime.date("2019-01-11"), 5220707, 13.23, 13.35, 13.12, 13.5, "null", "null", "null", "null"], ... ] 形式，其中：[0]：交易規則自動選取的交易日期，[1]：交易規則自動選取的買入或賣出，[2]：交易規則自動選取的成交價，[3]：交易規則自動選取的成交量，[4]：交易規則自動選取的成交次數記錄，[5]：交易規則自動選取的交易日期的序列號，用於繪圖可視化，[6]：交易日（datetime.date 類型），[7]：當日總成交量（turnover volume），[8]：當日開盤（opening）成交價，[9]：當日收盤（closing）成交價，[10]：當日最低（low）成交價，[11]：當日最高（high）成交價，[12]：當日總成交金額（turnover amount），[13]：當日成交量（turnover volume）換手率（turnover rate），[14]：當日每股收益（price earnings），[15]：當日每股净值（book value per share）;
             "Short_Selling_date_transaction" : [[], ... ],  // 按規則執行交易的日期，向量，"Short_Selling_date_transaction" : [[datetime.date("2019-01-11"), "sell", 13.23, "null", 1, 8, datetime.date("2019-01-11"), 5220707, 13.23, 13.35, 13.12, 13.5, "null", "null", "null", "null"], ... ] 形式，其中：[0]：交易規則自動選取的交易日期，[1]：交易規則自動選取的買入或賣出，[2]：交易規則自動選取的成交價，[3]：交易規則自動選取的成交量，[4]：交易規則自動選取的成交次數記錄，[5]：交易規則自動選取的交易日期的序列號，用於繪圖可視化，[6]：交易日（datetime.date 類型），[7]：當日總成交量（turnover volume），[8]：當日開盤（opening）成交價，[9]：當日收盤（closing）成交價，[10]：當日最低（low）成交價，[11]：當日最高（high）成交價，[12]：當日總成交金額（turnover amount），[13]：當日成交量（turnover volume）換手率（turnover rate），[14]：當日每股收益（price earnings），[15]：當日每股净值（book value per share）;
             "weight_MarketTiming" : {"Long_Position" : Floating-Point, "Short_Selling" : Floating-Point},  // 擇時權重，每兩次對衝交易的盈利概率占比，字典，"weight_MarketTiming" : {"Long_Position" : 1.0, "Short_Selling" : 1.0} 形式;
-            "P1_Array" : [String, Floating-Point, ... ],  // 依照擇時規則計算得到參數 P1 值的序列存儲數組，向量，"P1_Array" : ["null", "null", 0.9332452609585046, 0.9332856821310028, 0.1475284599924739, 0.6184992214383872, -0.17453764187799792, 0.47304631351003185, -0.28660163038115866, 1.1508082895918543, 0.10944654380269705] 形式;
+            "P1_Array" : ["null" or Floating-Point, ... ],  // 依照擇時規則計算得到參數 P1 值的序列存儲數組，向量，"P1_Array" : ["null", "null", 0.9332452609585046, 0.9332856821310028, 0.1475284599924739, 0.6184992214383872, -0.17453764187799792, 0.47304631351003185, -0.28660163038115866, 1.1508082895918543, 0.10944654380269705] 形式;
         },
         ...
     }
@@ -4594,7 +4594,6 @@ Request - POST =
     "trading_direction" : ["Long_Position_and_Short_Selling"],
     "ticker_symbol" : ["all"],
     "is_Optimize" : ["false"],
-    "risk_threshold" : [0.0],
     "MarketTiming_Pdata_0" : [3, +0.1, -0.1, 0.0],
     "MarketTiming_Plower" : ["-Infinity", "-Infinity", "-Infinity", "-Infinity"],
     "MarketTiming_Pupper" : ["+Infinity", "+Infinity", "+Infinity", "+Infinity"],
@@ -4870,7 +4869,7 @@ Request - POST =
                 0.037037037
             ],
             "sum_2_turnover_volume_growth_rate": [
-                null,
+                "null",
                 1.791359625,
                 0.808677828,
                 -0.167702083,
@@ -4883,7 +4882,7 @@ Request - POST =
                 0.411425283
             ],
             "sum_2_opening_price_growth_rate": [
-                null,
+                "null",
                 0.001333333,
                 0.022609929,
                 0.049700798,
@@ -4896,7 +4895,7 @@ Request - POST =
                 0.027410085
             ],
             "sum_2_closing_price_growth_rate": [
-                null,
+                "null",
                 0.02393617,
                 0.034088454,
                 0.022664082,
@@ -4909,7 +4908,7 @@ Request - POST =
                 0.035738343
             ],
             "sum_2_closing_minus_opening_price_growth_rate": [
-                null,
+                "null",
                 0.049205674,
                 0.060394504,
                 0.033266761,
@@ -4922,7 +4921,7 @@ Request - POST =
                 0.045233758
             ],
             "sum_2_high_price_proportion": [
-                null,
+                "null",
                 1.446427663,
                 1.470845411,
                 1.492585995,
@@ -4935,7 +4934,7 @@ Request - POST =
                 1.457021197
             ],
             "sum_2_low_price_proportion": [
-                null,
+                "null",
                 1.486695035,
                 1.484264184,
                 1.477247807,
@@ -4948,7 +4947,7 @@ Request - POST =
                 1.489542675
             ],
             "sum_2_KLine_Intuitive_Momentum": [
-                null,
+                "null",
                 1.794033435,
                 0.816153433,
                 -0.162394081,
@@ -4961,8 +4960,8 @@ Request - POST =
                 0.417624603
             ],
             "sum_3_turnover_volume_growth_rate": [
-                null,
-                null,
+                "null",
+                "null",
                 0.73815851,
                 0.266944754,
                 0.327240342,
@@ -4974,8 +4973,8 @@ Request - POST =
                 1.039529723
             ],
             "sum_3_opening_price_growth_rate": [
-                null,
-                null,
+                "null",
+                "null",
                 0.015369582,
                 0.054135786,
                 0.045665194,
@@ -4987,8 +4986,8 @@ Request - POST =
                 0.033450682
             ],
             "sum_3_closing_price_growth_rate": [
-                null,
-                null,
+                "null",
+                "null",
                 0.028044785,
                 0.040313576,
                 0.069430376,
@@ -5000,8 +4999,8 @@ Request - POST =
                 0.051426281
             ],
             "sum_3_closing_minus_opening_price_growth_rate": [
-                null,
-                null,
+                "null",
+                "null",
                 0.069262116,
                 0.055300596,
                 0.079108534,
@@ -5013,8 +5012,8 @@ Request - POST =
                 0.061653599
             ],
             "sum_3_high_price_proportion": [
-                null,
-                null,
+                "null",
+                "null",
                 1.959285109,
                 1.975649602,
                 1.952456433,
@@ -5026,8 +5025,8 @@ Request - POST =
                 1.94576978
             ],
             "sum_3_low_price_proportion": [
-                null,
-                null,
+                "null",
+                "null",
                 1.980713357,
                 1.971965597,
                 1.969980386,
@@ -5039,8 +5038,8 @@ Request - POST =
                 1.986761409
             ],
             "sum_3_KLine_Intuitive_Momentum": [
-                null,
-                null,
+                "null",
+                "null",
                 0.74982791,
                 0.287293521,
                 0.362261072,
@@ -5052,10 +5051,10 @@ Request - POST =
                 1.059759237
             ],
             "sum_5_turnover_volume_growth_rate": [
-                null,
-                null,
-                null,
-                null,
+                "null",
+                "null",
+                "null",
+                "null",
                 0.987779617,
                 0.424219288,
                 -0.461007301,
@@ -5065,10 +5064,10 @@ Request - POST =
                 0.585057271
             ],
             "sum_5_opening_price_growth_rate": [
-                null,
-                null,
-                null,
-                null,
+                "null",
+                "null",
+                "null",
+                "null",
                 0.046091162,
                 0.092011485,
                 0.047942084,
@@ -5078,10 +5077,10 @@ Request - POST =
                 0.030271151
             ],
             "sum_5_closing_price_growth_rate": [
-                null,
-                null,
-                null,
-                null,
+                "null",
+                "null",
+                "null",
+                "null",
                 0.074905317,
                 0.049900492,
                 0.014422453,
@@ -5091,10 +5090,10 @@ Request - POST =
                 0.037233955
             ],
             "sum_5_closing_minus_opening_price_growth_rate": [
-                null,
-                null,
-                null,
-                null,
+                "null",
+                "null",
+                "null",
+                "null",
                 0.110518038,
                 0.060149741,
                 0.03959144,
@@ -5104,10 +5103,10 @@ Request - POST =
                 0.060608277
             ],
             "sum_5_high_price_proportion": [
-                null,
-                null,
-                null,
-                null,
+                "null",
+                "null",
+                "null",
+                "null",
                 2.929038965,
                 2.923786108,
                 2.932828433,
@@ -5117,10 +5116,10 @@ Request - POST =
                 2.9296063
             ],
             "sum_5_low_price_proportion": [
-                null,
-                null,
-                null,
-                null,
+                "null",
+                "null",
+                "null",
+                "null",
                 2.959541441,
                 2.966513481,
                 2.975733296,
@@ -5130,10 +5129,10 @@ Request - POST =
                 2.980176867
             ],
             "sum_5_KLine_Intuitive_Momentum": [
-                null,
-                null,
-                null,
-                null,
+                "null",
+                "null",
+                "null",
+                "null",
                 1.103698843,
                 0.498255593,
                 -0.439458671,
@@ -5434,7 +5433,7 @@ Request - POST =
                 0.037037037
             ],
             "sum_2_turnover_volume_growth_rate": [
-                null,
+                "null",
                 1.791359625,
                 0.808677828,
                 -0.167702083,
@@ -5447,7 +5446,7 @@ Request - POST =
                 0.411425283
             ],
             "sum_2_opening_price_growth_rate": [
-                null,
+                "null",
                 0.001333333,
                 0.022609929,
                 0.049700798,
@@ -5460,7 +5459,7 @@ Request - POST =
                 0.027410085
             ],
             "sum_2_closing_price_growth_rate": [
-                null,
+                "null",
                 0.02393617,
                 0.034088454,
                 0.022664082,
@@ -5473,7 +5472,7 @@ Request - POST =
                 0.035738343
             ],
             "sum_2_closing_minus_opening_price_growth_rate": [
-                null,
+                "null",
                 0.049205674,
                 0.060394504,
                 0.033266761,
@@ -5486,7 +5485,7 @@ Request - POST =
                 0.045233758
             ],
             "sum_2_high_price_proportion": [
-                null,
+                "null",
                 1.446427663,
                 1.470845411,
                 1.492585995,
@@ -5499,7 +5498,7 @@ Request - POST =
                 1.457021197
             ],
             "sum_2_low_price_proportion": [
-                null,
+                "null",
                 1.486695035,
                 1.484264184,
                 1.477247807,
@@ -5512,7 +5511,7 @@ Request - POST =
                 1.489542675
             ],
             "sum_2_KLine_Intuitive_Momentum": [
-                null,
+                "null",
                 1.794033435,
                 0.816153433,
                 -0.162394081,
@@ -5525,8 +5524,8 @@ Request - POST =
                 0.417624603
             ],
             "sum_3_turnover_volume_growth_rate": [
-                null,
-                null,
+                "null",
+                "null",
                 0.73815851,
                 0.266944754,
                 0.327240342,
@@ -5538,8 +5537,8 @@ Request - POST =
                 1.039529723
             ],
             "sum_3_opening_price_growth_rate": [
-                null,
-                null,
+                "null",
+                "null",
                 0.015369582,
                 0.054135786,
                 0.045665194,
@@ -5551,8 +5550,8 @@ Request - POST =
                 0.033450682
             ],
             "sum_3_closing_price_growth_rate": [
-                null,
-                null,
+                "null",
+                "null",
                 0.028044785,
                 0.040313576,
                 0.069430376,
@@ -5564,8 +5563,8 @@ Request - POST =
                 0.051426281
             ],
             "sum_3_closing_minus_opening_price_growth_rate": [
-                null,
-                null,
+                "null",
+                "null",
                 0.069262116,
                 0.055300596,
                 0.079108534,
@@ -5577,8 +5576,8 @@ Request - POST =
                 0.061653599
             ],
             "sum_3_high_price_proportion": [
-                null,
-                null,
+                "null",
+                "null",
                 1.959285109,
                 1.975649602,
                 1.952456433,
@@ -5590,8 +5589,8 @@ Request - POST =
                 1.94576978
             ],
             "sum_3_low_price_proportion": [
-                null,
-                null,
+                "null",
+                "null",
                 1.980713357,
                 1.971965597,
                 1.969980386,
@@ -5603,8 +5602,8 @@ Request - POST =
                 1.986761409
             ],
             "sum_3_KLine_Intuitive_Momentum": [
-                null,
-                null,
+                "null",
+                "null",
                 0.74982791,
                 0.287293521,
                 0.362261072,
@@ -5616,10 +5615,10 @@ Request - POST =
                 1.059759237
             ],
             "sum_5_turnover_volume_growth_rate": [
-                null,
-                null,
-                null,
-                null,
+                "null",
+                "null",
+                "null",
+                "null",
                 0.987779617,
                 0.424219288,
                 -0.461007301,
@@ -5629,10 +5628,10 @@ Request - POST =
                 0.585057271
             ],
             "sum_5_opening_price_growth_rate": [
-                null,
-                null,
-                null,
-                null,
+                "null",
+                "null",
+                "null",
+                "null",
                 0.046091162,
                 0.092011485,
                 0.047942084,
@@ -5642,10 +5641,10 @@ Request - POST =
                 0.030271151
             ],
             "sum_5_closing_price_growth_rate": [
-                null,
-                null,
-                null,
-                null,
+                "null",
+                "null",
+                "null",
+                "null",
                 0.074905317,
                 0.049900492,
                 0.014422453,
@@ -5655,10 +5654,10 @@ Request - POST =
                 0.037233955
             ],
             "sum_5_closing_minus_opening_price_growth_rate": [
-                null,
-                null,
-                null,
-                null,
+                "null",
+                "null",
+                "null",
+                "null",
                 0.110518038,
                 0.060149741,
                 0.03959144,
@@ -5668,10 +5667,10 @@ Request - POST =
                 0.060608277
             ],
             "sum_5_high_price_proportion": [
-                null,
-                null,
-                null,
-                null,
+                "null",
+                "null",
+                "null",
+                "null",
                 2.929038965,
                 2.923786108,
                 2.932828433,
@@ -5681,10 +5680,10 @@ Request - POST =
                 2.9296063
             ],
             "sum_5_low_price_proportion": [
-                null,
-                null,
-                null,
-                null,
+                "null",
+                "null",
+                "null",
+                "null",
                 2.959541441,
                 2.966513481,
                 2.975733296,
@@ -5694,10 +5693,10 @@ Request - POST =
                 2.980176867
             ],
             "sum_5_KLine_Intuitive_Momentum": [
-                null,
-                null,
-                null,
-                null,
+                "null",
+                "null",
+                "null",
+                "null",
                 1.103698843,
                 0.498255593,
                 -0.439458671,
@@ -5743,176 +5742,57 @@ Request - POST =
 Respond - body = 
 ```
 {
-    "Coefficient" : [
-        100.007982422761,
-        42148.4577551448,
-        1.0001564001486,
-        4221377.92224082
-    ],
-    "Coefficient-StandardDeviation" : [
-        0.00781790123184812,
-        2104.76673086505,
-        0.0000237490808220821,
-        210359.023599377
-    ],
-    "Coefficient-Confidence-Lower-95%" : [
-        99.9908250045862,
-        37529.2688077105,
-        1.0001042796499,
-        3759717.22485611
-    ],
-    "Coefficient-Confidence-Upper-95%" : [
-        100.025139840936,
-        46767.6467025791,
-        1.00020852064729,
-        4683038.61962554
-    ],
-    "Yfit" : [
-        100.008980483748,
-        199.99155580718,
-        299.992070696316,
-        399.99603100866,
-        500.000567344017,
-        600.00431688223,
-        700.006476967595,
-        800.006517272442,
-        900.004060927778,
-        999.998826196417,
-        1099.99059444852
-    ],
-    "Yfit-Uncertainty-Lower" : [
-        99.0089499294379,
-        198.991136273453,
-        298.990136898385,
-        398.991624763274,
-        498.99282487668,
-        598.992447662226,
-        698.989753032473,
-        798.984266632803,
-        898.975662941844,
-        998.963708008532,
-        1098.94822805642
-    ],
-    "Yfit-Uncertainty-Upper" : [
-        101.00901103813,
-        200.991951293373,
-        300.993902825086,
-        401.000210884195,
-        501.007916682505,
-        601.015588680788,
-        701.022365894672,
-        801.027666045591,
-        901.031064750697,
-        1001.0322361364,
-        1101.0309201882
-    ],
-    "Residual" : [
-        0.00898048374801874,
-        -0.00844419281929731,
-        -0.00792930368334055,
-        -0.00396899133920669,
-        0.000567344017326831,
-        0.00431688223034143,
-        0.00647696759551763,
-        0.00651727244257926,
-        0.00406092777848243,
-        -0.00117380358278751,
-        -0.00940555147826671
-    ],
-    "testData" : {
-        "Ydata" : [
-            [150.0, 148.0, 152.0],
-            [200.0, 198.0, 202.0],
-            [250.0, 248.0, 252.0],
-            [350.0, 348.0, 352.0],
-            [450.0, 448.0, 452.0],
-            [550.0, 548.0, 552.0],
-            [650.0, 648.0, 652.0],
-            [750.0, 748.0, 752.0],
-            [850.0, 848.0, 852.0],
-            [950.0, 948.0, 952.0],
-            [1050.0, 1048.0, 1052.0]
-        ],
-        "test-Xvals" : [
-            0.500050586546119,
-            1.00008444458554,
-            1.50008923026377,
-            2.50006143908055,
-            3.50001668919562,
-            4.49997400999207,
-            5.49994366811569,
-            6.49993211621922,
-            7.49994379302719,
-            8.49998194168741,
-            9.50004903674755
-        ],
-        "test-Xvals-Uncertainty-Lower" : [
-            0.499936310423273,
-            0.999794808816128,
-            1.49963107921017,
-            2.49927920023971,
-            3.49892261926065,
-            4.49857747071072,
-            5.4982524599721,
-            6.4979530588239,
-            7.49768303155859,
-            8.49744512880161,
-            9.49724144950174
-        ],
-        "test-Xvals-Uncertainty-Upper" : [
-            0.500160692642957,
-            1.00036584601127,
-            1.50053513648402,
-            2.5008235803856,
-            3.50108303720897,
-            4.50133543331854,
-            5.50159259771137,
-            6.50186196458511,
-            7.50214864756277,
-            8.50245638268284,
-            9.50278802032924
-        ],
-        "Xdata" : [
-            0.5,
-            1.0,
-            1.5,
-            2.5,
-            3.5,
-            4.5,
-            5.5,
-            6.5,
-            7.5,
-            8.5,
-            9.5
-        ],
-        "test-Yfit" : [
-            149.99283432168886,
-            199.98780598165467,
-            249.98704946506768,
-            349.9910371559672,
-            449.9975369446911,
-            550.0037557953037,
-            650.0081868763082,
-            750.0098833059892,
-            850.0081939375959,
-            950.002643218264,
-            1049.9928684998304
-        ],
-        "test-Yfit-Uncertainty-Lower" : [],
-        "test-Yfit-Uncertainty-Upper" : [],
-        "test-Residual" : [
-            [0.000050586546119],
-            [0.00008444458554],
-            [0.00008923026377],
-            [0.00006143908055],
-            [0.00001668919562],
-            [-0.00002599000793],
-            [-0.0000563318843],
-            [-0.00006788378077],
-            [-0.0000562069728],
-            [-0.00001805831259],
-            [0.00004903674755]
-        ]
+    "request_Url" : "/PickStock?Key=username:password&algorithmUser=username&algorithmPass=password&algorithmName=PickStock",
+    "request_Authorization" : "Basic dXNlcm5hbWU6cGFzc3dvcmQ=",
+    "request_Cookie" : "session_id=cmVxdWVzdF9LZXktPnVzZXJuYW1lOnBhc3N3b3Jk",
+    "time" : "2024-02-03 17:59:58.239794",
+    "Server_say" : "",
+    "error" : "",
+    "configFile" : "C:/QuantitativeTrading/QuantitativeTradingJulia/config.txt",
+    // "configFile" : "C:/QuantitativeTrading/QuantitativeTradingPython/config.txt",
+    "trading_direction" : "Long_Position_and_Short_Selling",
+    "ticker_symbol" : ["002611", ... ],
+    "is_Optimize" : "false",
+    "MarketTiming_Pdata_0" : [3, +0.1, -0.1, 0.0],
+    "PickStock_Pdata_0" : [3, 5],
+    "return_PickStock" : {
+        "Coefficient" : {"Long_Position" : [Integer, Integer], "Short_Selling" : [Integer, Integer]},
+        "PickStock_sort_ticker" : ["null" or [String, ... ], ... ],  // 依照選股規則排序篩選出的股票代碼字符串存儲數組;
+        "PickStock_sort_score" : ["null" or [Floating-Point, ... ], ... ],  // 依照選股規則排序篩選出的股票代碼字符串存儲數組;
+        "number_PickStock_transaction" : Integer,
+        "y_profit" : Floating-Point,  // 每兩次對衝交易利潤 × 權重，加權纍加總計;
+        "y_Long_Position_profit" : Floating-Point,  // 每兩次對衝交易利潤 × 權重，加權纍加總計;
+        "y_Short_Selling_profit" : Floating-Point,  // 每兩次對衝交易利潤 × 權重，加權纍加總計;
+        "y_loss" : Floating-Point,  // 每兩次對衝交易最大回撤 × 權重，加權取極值總計;
+        "y_Long_Position_loss" : Floating-Point,  // 每兩次對衝交易最大回撤 × 權重，加權取極值總計;
+        "y_Short_Selling_loss" : Floating-Point,  // 每兩次對衝交易最大回撤 × 權重，加權取極值總計;
+        "maximum_drawdown" : Floating-Point,  // 兩次對衝交易之間的最大回撤值，取極值統計;
+        "maximum_drawdown_Long_Position" : Floating-Point,  // 兩次對衝交易之間的最大回撤值，取極值統計;
+        "maximum_drawdown_Short_Selling" : Floating-Point,  // 兩次對衝交易之間的最大回撤值，取極值統計;
+        "profit_total" : Floating-Point,  // 每兩次對衝交易利潤 × 權重，纍加總計;
+        "Long_Position_profit_total" : Floating-Point,  // 每兩次對衝交易利潤 × 權重，纍加總計;
+        "Short_Selling_profit_total" : Floating-Point,  // 每兩次對衝交易利潤 × 權重，纍加總計;
+        "profit_Positive" : Floating-Point,  // 每兩次對衝交易收益纍加總計;
+        "profit_Negative" : Floating-Point,  // 每兩次對衝交易損失纍加總計;
+        "Long_Position_profit_Positive" : Floating-Point,  // 每兩次對衝交易收益纍加總計;
+        "Long_Position_profit_Negative" : Floating-Point,  // 每兩次對衝交易損失纍加總計;
+        "Short_Selling_profit_Positive" : Floating-Point,  // 每兩次對衝交易收益纍加總計;
+        "Short_Selling_profit_Negative" : Floating-Point,  // 每兩次對衝交易損失纍加總計;
+        "profit_Positive_probability" : Floating-Point,  // 每兩次對衝交易正利潤概率;
+        "profit_Negative_probability" : Floating-Point,  // 每兩次對衝交易負利潤概率;
+        "Long_Position_profit_Positive_probability" : Floating-Point,  // 每兩次對衝交易正利潤概率;
+        "Long_Position_profit_Negative_probability" : Floating-Point,  // 每兩次對衝交易負利潤概率;
+        "Short_Selling_profit_Positive_probability" : Floating-Point,  // 每兩次對衝交易正利潤概率;
+        "Short_Selling_profit_Negative_probability" : Floating-Point,  // 每兩次對衝交易負利潤概率;
+        "average_price_amplitude_date_transaction" : Floating-Point,  // 兩兩次對衝交易日成交價振幅平方和，均值;
+        "Long_Position_average_price_amplitude_date_transaction" : Floating-Point,  // 兩兩次對衝交易日成交價振幅平方和，均值;
+        "Short_Selling_average_price_amplitude_date_transaction" : Floating-Point,  // 兩兩次對衝交易日成交價振幅平方和，均值;
+        "average_volume_turnover_date_transaction" : Integer,  // 兩次對衝交易日成交量（換手率）均值;
+        "Long_Position_average_volume_turnover_date_transaction" : Integer,  // 兩次對衝交易日成交量（換手率）均值;
+        "Short_Selling_average_volume_turnover_date_transaction" : Integer,  // 兩次對衝交易日成交量（換手率）均值;
+        "average_date_transaction_between" : Integer,  // 兩次交易間隔日長，均值;
+        "Long_Position_average_date_transaction_between" : Integer,  // 兩次對衝交易間隔日長，均值;
+        "Short_Selling_average_date_transaction_between" : Integer  // 兩次對衝交易間隔日長，均值;
     }
 }
 ```
@@ -5934,7 +5814,6 @@ Request - POST =
     "trading_direction" : ["Long_Position_and_Short_Selling"],
     "ticker_symbol" : ["all"],
     "is_Optimize" : ["false"],
-    "risk_threshold" : [0.0],
     "MarketTiming_Pdata_0" : [3, +0.1, -0.1, 0.0],
     "MarketTiming_Plower" : ["-Infinity", "-Infinity", "-Infinity", "-Infinity"],
     "MarketTiming_Pupper" : ["+Infinity", "+Infinity", "+Infinity", "+Infinity"],
@@ -6214,7 +6093,7 @@ Request - POST =
                 0.037037037
             ],
             "sum_2_turnover_volume_growth_rate": [
-                null,
+                "null",
                 1.791359625,
                 0.808677828,
                 -0.167702083,
@@ -6227,7 +6106,7 @@ Request - POST =
                 0.411425283
             ],
             "sum_2_opening_price_growth_rate": [
-                null,
+                "null",
                 0.001333333,
                 0.022609929,
                 0.049700798,
@@ -6240,7 +6119,7 @@ Request - POST =
                 0.027410085
             ],
             "sum_2_closing_price_growth_rate": [
-                null,
+                "null",
                 0.02393617,
                 0.034088454,
                 0.022664082,
@@ -6253,7 +6132,7 @@ Request - POST =
                 0.035738343
             ],
             "sum_2_closing_minus_opening_price_growth_rate": [
-                null,
+                "null",
                 0.049205674,
                 0.060394504,
                 0.033266761,
@@ -6266,7 +6145,7 @@ Request - POST =
                 0.045233758
             ],
             "sum_2_high_price_proportion": [
-                null,
+                "null",
                 1.446427663,
                 1.470845411,
                 1.492585995,
@@ -6279,7 +6158,7 @@ Request - POST =
                 1.457021197
             ],
             "sum_2_low_price_proportion": [
-                null,
+                "null",
                 1.486695035,
                 1.484264184,
                 1.477247807,
@@ -6292,7 +6171,7 @@ Request - POST =
                 1.489542675
             ],
             "sum_2_KLine_Intuitive_Momentum": [
-                null,
+                "null",
                 1.794033435,
                 0.816153433,
                 -0.162394081,
@@ -6305,8 +6184,8 @@ Request - POST =
                 0.417624603
             ],
             "sum_3_turnover_volume_growth_rate": [
-                null,
-                null,
+                "null",
+                "null",
                 0.73815851,
                 0.266944754,
                 0.327240342,
@@ -6318,8 +6197,8 @@ Request - POST =
                 1.039529723
             ],
             "sum_3_opening_price_growth_rate": [
-                null,
-                null,
+                "null",
+                "null",
                 0.015369582,
                 0.054135786,
                 0.045665194,
@@ -6331,8 +6210,8 @@ Request - POST =
                 0.033450682
             ],
             "sum_3_closing_price_growth_rate": [
-                null,
-                null,
+                "null",
+                "null",
                 0.028044785,
                 0.040313576,
                 0.069430376,
@@ -6344,8 +6223,8 @@ Request - POST =
                 0.051426281
             ],
             "sum_3_closing_minus_opening_price_growth_rate": [
-                null,
-                null,
+                "null",
+                "null",
                 0.069262116,
                 0.055300596,
                 0.079108534,
@@ -6357,8 +6236,8 @@ Request - POST =
                 0.061653599
             ],
             "sum_3_high_price_proportion": [
-                null,
-                null,
+                "null",
+                "null",
                 1.959285109,
                 1.975649602,
                 1.952456433,
@@ -6370,8 +6249,8 @@ Request - POST =
                 1.94576978
             ],
             "sum_3_low_price_proportion": [
-                null,
-                null,
+                "null",
+                "null",
                 1.980713357,
                 1.971965597,
                 1.969980386,
@@ -6383,8 +6262,8 @@ Request - POST =
                 1.986761409
             ],
             "sum_3_KLine_Intuitive_Momentum": [
-                null,
-                null,
+                "null",
+                "null",
                 0.74982791,
                 0.287293521,
                 0.362261072,
@@ -6396,10 +6275,10 @@ Request - POST =
                 1.059759237
             ],
             "sum_5_turnover_volume_growth_rate": [
-                null,
-                null,
-                null,
-                null,
+                "null",
+                "null",
+                "null",
+                "null",
                 0.987779617,
                 0.424219288,
                 -0.461007301,
@@ -6409,10 +6288,10 @@ Request - POST =
                 0.585057271
             ],
             "sum_5_opening_price_growth_rate": [
-                null,
-                null,
-                null,
-                null,
+                "null",
+                "null",
+                "null",
+                "null",
                 0.046091162,
                 0.092011485,
                 0.047942084,
@@ -6422,10 +6301,10 @@ Request - POST =
                 0.030271151
             ],
             "sum_5_closing_price_growth_rate": [
-                null,
-                null,
-                null,
-                null,
+                "null",
+                "null",
+                "null",
+                "null",
                 0.074905317,
                 0.049900492,
                 0.014422453,
@@ -6435,10 +6314,10 @@ Request - POST =
                 0.037233955
             ],
             "sum_5_closing_minus_opening_price_growth_rate": [
-                null,
-                null,
-                null,
-                null,
+                "null",
+                "null",
+                "null",
+                "null",
                 0.110518038,
                 0.060149741,
                 0.03959144,
@@ -6448,10 +6327,10 @@ Request - POST =
                 0.060608277
             ],
             "sum_5_high_price_proportion": [
-                null,
-                null,
-                null,
-                null,
+                "null",
+                "null",
+                "null",
+                "null",
                 2.929038965,
                 2.923786108,
                 2.932828433,
@@ -6461,10 +6340,10 @@ Request - POST =
                 2.9296063
             ],
             "sum_5_low_price_proportion": [
-                null,
-                null,
-                null,
-                null,
+                "null",
+                "null",
+                "null",
+                "null",
                 2.959541441,
                 2.966513481,
                 2.975733296,
@@ -6474,10 +6353,10 @@ Request - POST =
                 2.980176867
             ],
             "sum_5_KLine_Intuitive_Momentum": [
-                null,
-                null,
-                null,
-                null,
+                "null",
+                "null",
+                "null",
+                "null",
                 1.103698843,
                 0.498255593,
                 -0.439458671,
@@ -6778,7 +6657,7 @@ Request - POST =
                 0.037037037
             ],
             "sum_2_turnover_volume_growth_rate": [
-                null,
+                "null",
                 1.791359625,
                 0.808677828,
                 -0.167702083,
@@ -6791,7 +6670,7 @@ Request - POST =
                 0.411425283
             ],
             "sum_2_opening_price_growth_rate": [
-                null,
+                "null",
                 0.001333333,
                 0.022609929,
                 0.049700798,
@@ -6804,7 +6683,7 @@ Request - POST =
                 0.027410085
             ],
             "sum_2_closing_price_growth_rate": [
-                null,
+                "null",
                 0.02393617,
                 0.034088454,
                 0.022664082,
@@ -6817,7 +6696,7 @@ Request - POST =
                 0.035738343
             ],
             "sum_2_closing_minus_opening_price_growth_rate": [
-                null,
+                "null",
                 0.049205674,
                 0.060394504,
                 0.033266761,
@@ -6830,7 +6709,7 @@ Request - POST =
                 0.045233758
             ],
             "sum_2_high_price_proportion": [
-                null,
+                "null",
                 1.446427663,
                 1.470845411,
                 1.492585995,
@@ -6843,7 +6722,7 @@ Request - POST =
                 1.457021197
             ],
             "sum_2_low_price_proportion": [
-                null,
+                "null",
                 1.486695035,
                 1.484264184,
                 1.477247807,
@@ -6856,7 +6735,7 @@ Request - POST =
                 1.489542675
             ],
             "sum_2_KLine_Intuitive_Momentum": [
-                null,
+                "null",
                 1.794033435,
                 0.816153433,
                 -0.162394081,
@@ -6869,8 +6748,8 @@ Request - POST =
                 0.417624603
             ],
             "sum_3_turnover_volume_growth_rate": [
-                null,
-                null,
+                "null",
+                "null",
                 0.73815851,
                 0.266944754,
                 0.327240342,
@@ -6882,8 +6761,8 @@ Request - POST =
                 1.039529723
             ],
             "sum_3_opening_price_growth_rate": [
-                null,
-                null,
+                "null",
+                "null",
                 0.015369582,
                 0.054135786,
                 0.045665194,
@@ -6895,8 +6774,8 @@ Request - POST =
                 0.033450682
             ],
             "sum_3_closing_price_growth_rate": [
-                null,
-                null,
+                "null",
+                "null",
                 0.028044785,
                 0.040313576,
                 0.069430376,
@@ -6908,8 +6787,8 @@ Request - POST =
                 0.051426281
             ],
             "sum_3_closing_minus_opening_price_growth_rate": [
-                null,
-                null,
+                "null",
+                "null",
                 0.069262116,
                 0.055300596,
                 0.079108534,
@@ -6921,8 +6800,8 @@ Request - POST =
                 0.061653599
             ],
             "sum_3_high_price_proportion": [
-                null,
-                null,
+                "null",
+                "null",
                 1.959285109,
                 1.975649602,
                 1.952456433,
@@ -6934,8 +6813,8 @@ Request - POST =
                 1.94576978
             ],
             "sum_3_low_price_proportion": [
-                null,
-                null,
+                "null",
+                "null",
                 1.980713357,
                 1.971965597,
                 1.969980386,
@@ -6947,8 +6826,8 @@ Request - POST =
                 1.986761409
             ],
             "sum_3_KLine_Intuitive_Momentum": [
-                null,
-                null,
+                "null",
+                "null",
                 0.74982791,
                 0.287293521,
                 0.362261072,
@@ -6960,10 +6839,10 @@ Request - POST =
                 1.059759237
             ],
             "sum_5_turnover_volume_growth_rate": [
-                null,
-                null,
-                null,
-                null,
+                "null",
+                "null",
+                "null",
+                "null",
                 0.987779617,
                 0.424219288,
                 -0.461007301,
@@ -6973,10 +6852,10 @@ Request - POST =
                 0.585057271
             ],
             "sum_5_opening_price_growth_rate": [
-                null,
-                null,
-                null,
-                null,
+                "null",
+                "null",
+                "null",
+                "null",
                 0.046091162,
                 0.092011485,
                 0.047942084,
@@ -6986,10 +6865,10 @@ Request - POST =
                 0.030271151
             ],
             "sum_5_closing_price_growth_rate": [
-                null,
-                null,
-                null,
-                null,
+                "null",
+                "null",
+                "null",
+                "null",
                 0.074905317,
                 0.049900492,
                 0.014422453,
@@ -6999,10 +6878,10 @@ Request - POST =
                 0.037233955
             ],
             "sum_5_closing_minus_opening_price_growth_rate": [
-                null,
-                null,
-                null,
-                null,
+                "null",
+                "null",
+                "null",
+                "null",
                 0.110518038,
                 0.060149741,
                 0.03959144,
@@ -7012,10 +6891,10 @@ Request - POST =
                 0.060608277
             ],
             "sum_5_high_price_proportion": [
-                null,
-                null,
-                null,
-                null,
+                "null",
+                "null",
+                "null",
+                "null",
                 2.929038965,
                 2.923786108,
                 2.932828433,
@@ -7025,10 +6904,10 @@ Request - POST =
                 2.9296063
             ],
             "sum_5_low_price_proportion": [
-                null,
-                null,
-                null,
-                null,
+                "null",
+                "null",
+                "null",
+                "null",
                 2.959541441,
                 2.966513481,
                 2.975733296,
@@ -7038,10 +6917,10 @@ Request - POST =
                 2.980176867
             ],
             "sum_5_KLine_Intuitive_Momentum": [
-                null,
-                null,
-                null,
-                null,
+                "null",
+                "null",
+                "null",
+                "null",
                 1.103698843,
                 0.498255593,
                 -0.439458671,
@@ -7559,7 +7438,7 @@ Request - POST =
                 0.037037037
             ],
             "sum_2_turnover_volume_growth_rate": [
-                null,
+                "null",
                 1.791359625,
                 0.808677828,
                 -0.167702083,
@@ -7572,7 +7451,7 @@ Request - POST =
                 0.411425283
             ],
             "sum_2_opening_price_growth_rate": [
-                null,
+                "null",
                 0.001333333,
                 0.022609929,
                 0.049700798,
@@ -7585,7 +7464,7 @@ Request - POST =
                 0.027410085
             ],
             "sum_2_closing_price_growth_rate": [
-                null,
+                "null",
                 0.02393617,
                 0.034088454,
                 0.022664082,
@@ -7598,7 +7477,7 @@ Request - POST =
                 0.035738343
             ],
             "sum_2_closing_minus_opening_price_growth_rate": [
-                null,
+                "null",
                 0.049205674,
                 0.060394504,
                 0.033266761,
@@ -7611,7 +7490,7 @@ Request - POST =
                 0.045233758
             ],
             "sum_2_high_price_proportion": [
-                null,
+                "null",
                 1.446427663,
                 1.470845411,
                 1.492585995,
@@ -7624,7 +7503,7 @@ Request - POST =
                 1.457021197
             ],
             "sum_2_low_price_proportion": [
-                null,
+                "null",
                 1.486695035,
                 1.484264184,
                 1.477247807,
@@ -7637,7 +7516,7 @@ Request - POST =
                 1.489542675
             ],
             "sum_2_KLine_Intuitive_Momentum": [
-                null,
+                "null",
                 1.794033435,
                 0.816153433,
                 -0.162394081,
@@ -7650,8 +7529,8 @@ Request - POST =
                 0.417624603
             ],
             "sum_3_turnover_volume_growth_rate": [
-                null,
-                null,
+                "null",
+                "null",
                 0.73815851,
                 0.266944754,
                 0.327240342,
@@ -7663,8 +7542,8 @@ Request - POST =
                 1.039529723
             ],
             "sum_3_opening_price_growth_rate": [
-                null,
-                null,
+                "null",
+                "null",
                 0.015369582,
                 0.054135786,
                 0.045665194,
@@ -7676,8 +7555,8 @@ Request - POST =
                 0.033450682
             ],
             "sum_3_closing_price_growth_rate": [
-                null,
-                null,
+                "null",
+                "null",
                 0.028044785,
                 0.040313576,
                 0.069430376,
@@ -7689,8 +7568,8 @@ Request - POST =
                 0.051426281
             ],
             "sum_3_closing_minus_opening_price_growth_rate": [
-                null,
-                null,
+                "null",
+                "null",
                 0.069262116,
                 0.055300596,
                 0.079108534,
@@ -7702,8 +7581,8 @@ Request - POST =
                 0.061653599
             ],
             "sum_3_high_price_proportion": [
-                null,
-                null,
+                "null",
+                "null",
                 1.959285109,
                 1.975649602,
                 1.952456433,
@@ -7715,8 +7594,8 @@ Request - POST =
                 1.94576978
             ],
             "sum_3_low_price_proportion": [
-                null,
-                null,
+                "null",
+                "null",
                 1.980713357,
                 1.971965597,
                 1.969980386,
@@ -7728,8 +7607,8 @@ Request - POST =
                 1.986761409
             ],
             "sum_3_KLine_Intuitive_Momentum": [
-                null,
-                null,
+                "null",
+                "null",
                 0.74982791,
                 0.287293521,
                 0.362261072,
@@ -7741,10 +7620,10 @@ Request - POST =
                 1.059759237
             ],
             "sum_5_turnover_volume_growth_rate": [
-                null,
-                null,
-                null,
-                null,
+                "null",
+                "null",
+                "null",
+                "null",
                 0.987779617,
                 0.424219288,
                 -0.461007301,
@@ -7754,10 +7633,10 @@ Request - POST =
                 0.585057271
             ],
             "sum_5_opening_price_growth_rate": [
-                null,
-                null,
-                null,
-                null,
+                "null",
+                "null",
+                "null",
+                "null",
                 0.046091162,
                 0.092011485,
                 0.047942084,
@@ -7767,10 +7646,10 @@ Request - POST =
                 0.030271151
             ],
             "sum_5_closing_price_growth_rate": [
-                null,
-                null,
-                null,
-                null,
+                "null",
+                "null",
+                "null",
+                "null",
                 0.074905317,
                 0.049900492,
                 0.014422453,
@@ -7780,10 +7659,10 @@ Request - POST =
                 0.037233955
             ],
             "sum_5_closing_minus_opening_price_growth_rate": [
-                null,
-                null,
-                null,
-                null,
+                "null",
+                "null",
+                "null",
+                "null",
                 0.110518038,
                 0.060149741,
                 0.03959144,
@@ -7793,10 +7672,10 @@ Request - POST =
                 0.060608277
             ],
             "sum_5_high_price_proportion": [
-                null,
-                null,
-                null,
-                null,
+                "null",
+                "null",
+                "null",
+                "null",
                 2.929038965,
                 2.923786108,
                 2.932828433,
@@ -7806,10 +7685,10 @@ Request - POST =
                 2.9296063
             ],
             "sum_5_low_price_proportion": [
-                null,
-                null,
-                null,
-                null,
+                "null",
+                "null",
+                "null",
+                "null",
                 2.959541441,
                 2.966513481,
                 2.975733296,
@@ -7819,10 +7698,10 @@ Request - POST =
                 2.980176867
             ],
             "sum_5_KLine_Intuitive_Momentum": [
-                null,
-                null,
-                null,
-                null,
+                "null",
+                "null",
+                "null",
+                "null",
                 1.103698843,
                 0.498255593,
                 -0.439458671,
