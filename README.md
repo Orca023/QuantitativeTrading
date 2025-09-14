@@ -54,774 +54,6 @@
 
 ---
 
-
-
-
-
-
-
-
-
----
-
-微軟視窗系統 ( Windows10 x86_64 ) 使用 Batchfile 代碼脚本檔「startServer.bat」啓動統計運算伺服器「QuantitativeTrading」 :
-
-使用説明:
-
-Window-cmd : startServer.bat
-
-微軟視窗系統 ( Windows10 x86_64 )
-
-控制臺命令列 ( cmd ) 運行啓動指令 :
-```
-C:\QuantitativeTrading> C:/Windows/System32/cmd.exe C:/QuantitativeTrading/startServer.bat C:/QuantitativeTrading/config.txt
-```
-
-控制臺啓動傳參釋意 :
-
-1. (必), (固定), 微軟視窗作業系統 ( Window10 x86_64 ) 控制臺命令列窗口的二進制可執行檔 ( `cmd.exe` ) 啓動存儲路徑全名, 作業系統 ( Window10 x86_64 ) 固定存儲在路徑爲 :  `C:/Windows/System32/cmd.exe`
-
-2. (必), (自定義), 微軟視窗系統 ( Windows10 x86_64 ) 批處理程式代碼脚本 ( .bat ) 檔 ( `startServer.bat` ) 的存儲路徑全名, 預設值爲 :  `C:/QuantitativeTrading/startServer.bat`
-
-3. (選) (值 `C:/QuantitativeTrading/config.txt` 自定義), 用於傳入配置文檔的保存路徑全名, 配置文檔裏的橫向列首可用一個井號字符 ( `#` ) 注釋掉, 使用井號字符 ( `#` ) 注釋掉之後，該橫向列的參數即不會傳入從而失效, 若需啓用可刪除橫向列首的井號字符 ( `#` ) 即可, 注意橫向列首的空格也要刪除, 每一個橫向列的參數必須頂格書寫, 預設值爲 :  `C:/QuantitativeTrading/config.txt`
-
-![]()
-
-谷歌安卓系統 之 Termux 系統 之 烏班圖系統 ( Android-11 Termux-0.118 Ubuntu-22.04-LTS-rootfs Arm64-aarch64 ) 使用 Shell 代碼脚本檔「startServer.sh」啓動統計運算伺服器「QuantitativeTrading」 :
-
-使用説明:
-
-Android-Termux-Ubuntu-bash : startServer.sh
-
-谷歌安卓系統 之 Termux 系統 之 烏班圖系統 ( Android-11 Termux-0.118 Ubuntu-22.04-LTS-rootfs Arm64-aarch64 )
-
-控制臺命令列 ( bash ) 運行啓動指令 :
-```
-root@localhost:~# /bin/bash /home/QuantitativeTrading/startServer.sh configFile=/home/QuantitativeTrading/config.txt executableFile=/bin/julia interpreterFile=-p,4,--project=/home/QuantitativeTrading/QuantitativeTradingJulia/ scriptFile=/home/QuantitativeTrading/QuantitativeTradingJulia/src/QuantitativeTradingServer.jl configInstructions=configFile=/home/QuantitativeTrading/QuantitativeTradingJulia/config.txt,interface_Function=http_Server,webPath=/home/QuantitativeTrading/html/,host=::0,port=10001,key=username:password,number_Worker_threads=1,isConcurrencyHierarchy=Tasks
-```
-
-控制臺啓動傳參釋意, 各參數之間以一個逗號 ( Comma ) 字符 ( `,` ) 分隔, 鍵(Key) ~ 值(Value) 之間以一個等號字符 ( `=` ) 連接, 即類比 `Key=Value` 的形式 :
-
-1. (必), (固定), 谷歌安卓系統 之 Termux 系統 之 烏班圖系統 ( Android-11 Termux-0.118 Ubuntu-22.04-LTS-rootfs Arm64-aarch64 ) 控制臺命令列窗口的二進制可執行檔 ( `bash` ) 啓動存儲路徑全名, 作業系統 ( Android-11 Termux-0.118 Ubuntu-22.04-LTS-rootfs Arm64-aarch64 ) 固定存儲在路徑爲 :  `/bin/bash`
-
-2. (必), (自定義), 谷歌安卓系統 之 Termux 系統 之 烏班圖系統 ( Android-11 Termux-0.118 Ubuntu-22.04-LTS-rootfs Arm64-aarch64 ) 批處理程式代碼脚本 ( .sh ) 檔 ( `startServer.sh` ) 的存儲路徑全名, 預設值爲 :  `C:/QuantitativeTrading/startServer.sh`
-
-3. (選), (鍵 `configFile` 固定, 值 `/home/QuantitativeTrading/config.txt` 自定義), 用於傳入配置文檔的保存路徑全名, 配置文檔裏的橫向列首可用一個井號字符 ( `#` ) 注釋掉, 使用井號字符 ( `#` ) 注釋掉之後，該橫向列的參數即不會傳入從而失效, 若需啓用可刪除橫向列首的井號字符 ( `#` ) 即可, 注意橫向列首的空格也要刪除, 每一個橫向列的參數必須頂格書寫, 預設值爲 :  `configFile=/home/QuantitativeTrading/config.txt`
-
-4. (選), (鍵 `executableFile` 固定, 值 `/bin/julia` 自定義, 例如 [ `/bin/julia`, `/bin/python3` ] 可自定義取其一配置), 用於傳入選擇啓動哪一種程式語言編寫的接口服務, 計算機 ( Computer ) 程式 ( Programming ) 設計 Julia 語言, 計算機 ( Computer ) 程式 ( Programming ) 設計 Python 語言, 預設值爲 :  `executableFile=/bin/julia`
-
-5. (選), (鍵 `interpreterFile` 固定, 值 `-p,4,--project=/home/QuantitativeTrading/QuantitativeTradingJulia/` 自定義, 且可爲空, 即取 `interpreterFile=` 的形式, 亦可不傳入該參數), 用於傳入程式設計語言 ( Julia, Python3 ) 解釋器 ( Interpreter ) 環境的二進制可執行檔, 於作業系統控制臺命令列 ( Operating System Console Command ) 使用指令啓動時傳入的運行參數, 若爲多參數, 則各參數之間用一個逗號 ( Comma ) 字符 ( `,` ) 連接, 批處理程式脚本 `startServer.sh` 已設計爲可自動將逗號 ( Comma ) 字符 ( `,` ) 替換爲空格字符 ( `SPACE` ) ( `00100000` ), 然後再傳入程式設計語言 ( Julia, Python3 ) 解釋器 ( Interpreter ) 的運行環境, 預設值爲 :  `interpreterFile=-p,4,--project=/home/QuantitativeTrading/QuantitativeTradingJulia/`
-
-6. (選), (鍵 `scriptFile` 固定, 值 `/home/QuantitativeTrading/QuantitativeTradingJulia/src/QuantitativeTradingServer.jl` 自定義, 例如 [ `/home/QuantitativeTrading/QuantitativeTradingJulia/src/QuantitativeTradingServer.jl`, `/home/QuantitativeTrading/QuantitativeTradingPython/src/QuantitativeTradingServer.py` ] 可自定義取其一配置), 用於傳入程式 ( Programming ) 設計語言 ( Julia, Python3 ) 代碼脚本 ( Script ) 檔 ( `QuantitativeTradingServer.jl`, `QuantitativeTradingServer.py` ) 的存儲路徑全名, 預設值爲 :  `scriptFile=/home/QuantitativeTrading/QuantitativeTradingJulia/src/QuantitativeTradingServer.jl`
-
-7. (選), (鍵 `configInstructions` 固定, 取值自定義, 且可爲空, 即取 `configInstructions=` 的形式, 亦可不傳入該參數), 用於傳入程式 ( Programming ) 設計語言 ( Julia, Python3 ) 代碼脚本 ( Script ) 檔 ( `QuantitativeTradingServer.jl`, `QuantitativeTradingServer.py` ) 的運行參數, 若爲多參數, 則各參數之間用一個逗號 ( Comma ) 字符 ( `,` ) 連接, 批處理程式脚本 `startServer.sh` 已設計爲可自動將逗號 ( Comma ) 字符 ( `,` ) 替換爲空格字符 ( `SPACE` ) ( `00100000` ), 然後再傳入代碼脚本 ( Script ) 檔 ( `QuantitativeTradingServer.jl`, `QuantitativeTradingServer.py` ) 的運行環境, 預設值爲 :  `configInstructions=configFile=/home/QuantitativeTrading/QuantitativeTradingJulia/config.txt,interface_Function=http_Server,webPath=/home/QuantitativeTrading/html/,host=::0,port=10001,key=username:password,number_Worker_threads=1,isConcurrencyHierarchy=Tasks`
-
----
-
-c2exe.c
-
-程式設計 C 語言, 使用 FILE *fstream = popen("shell Code Script", "r") 函數, 創建子進程 ( Sub Process ), 並在子進程 ( Sub Process ) 運行外部二進制可執行檔 ( julia.exe, python.exe, ), 功能與批處理檔 startServer.sh 類似.
-
-使用説明:
-
-![]()
-
-微軟視窗系統 ( Windows10 x86_64 ) 使用二進位可執行檔「QuantitativeTrading.exe」啓動統計運算伺服器「QuantitativeTrading」 :
-
-微軟視窗系統 ( Windows10 x86_64 )
-
-Windows10 x86_64 Compiler :
-
-Minimalist GNU on Windows ( MinGW-w64 ) mingw64-8.1.0-release-posix-seh-rt_v6-rev0
-
-控制臺命令列 ( cmd ) 運行編譯指令 :
-```
-C:\QuantitativeTrading> C:\MinGW64\bin\gcc.exe C:/QuantitativeTrading/c/c2exe.c -o C:/QuantitativeTrading/QuantitativeTrading.exe
-```
-
-控制臺命令列 ( cmd ) 運行顯示中文字符指令 :
-```
-C:\QuantitativeTrading> chcp 65001
-```
-
-控制臺命令列 ( cmd ) 運行啓動指令 :
-```
-C:\QuantitativeTrading> C:/QuantitativeTrading/QuantitativeTrading.exe configFile=C:/QuantitativeTrading/config.txt executableFile=C:/QuantitativeTrading/Julia/Julia-1.10.10/julia.exe interpreterFile=-p,4,--project=C:/QuantitativeTrading/QuantitativeTradingJulia/ scriptFile=C:/QuantitativeTrading/QuantitativeTradingJulia/src/QuantitativeTradingServer.jl configInstructions=configFile=/home/QuantitativeTrading/QuantitativeTradingJulia/config.txt,interface_Function=http_Server,webPath=C:/QuantitativeTrading/html/,host=::0,port=10001,key=username:password,number_Worker_threads=1,isConcurrencyHierarchy=Tasks
-```
-
-![]()
-
-谷歌安卓系統 之 Termux 系統 之 烏班圖系統 ( Android-11 Termux-0.118 Ubuntu-22.04-LTS-rootfs Arm64-aarch64 ) 使用二進位可執行檔「QuantitativeTrading.exe」啓動統計運算伺服器「QuantitativeTrading」 :
-
-谷歌安卓系統 之 Termux 系統 之 烏班圖系統 ( Android-11 Termux-0.118 Ubuntu-22.04-LTS-rootfs Arm64-aarch64 )
-
-Android-11 Termux-0.118 Ubuntu-22.04 Arm64-aarch64 Compiler :
-
-gcc v9.3.0 , g++ v9.3.0
-
-控制臺命令列 ( bash ) 運行編譯指令 :
-```
-root@localhost:~# /bin/gcc /home/QuantitativeTrading/c/c2exe.c -o /home/QuantitativeTrading/QuantitativeTrading.exe
-```
-
-控制臺命令列 ( bash ) 運行啓動指令 :
-```
-root@localhost:~# /home/QuantitativeTrading/QuantitativeTrading.exe configFile=/home/QuantitativeTrading/config.txt executableFile=/bin/julia interpreterFile=-p,4,--project=/home/QuantitativeTrading/QuantitativeTradingJulia/ scriptFile=/home/QuantitativeTrading/QuantitativeTradingJulia/src/QuantitativeTradingServer.jl configInstructions=configFile=/home/QuantitativeTrading/QuantitativeTradingJulia/config.txt,interface_Function=http_Server,webPath=/home/QuantitativeTrading/html/,host=::0,port=10001,key=username:password,number_Worker_threads=1,isConcurrencyHierarchy=Tasks
-```
-
-![]()
-
-控制臺啓動傳參釋意, 各參數之間以一個逗號 ( Comma ) 字符 ( `,` ) 分隔, 鍵(Key) ~ 值(Value) 之間以一個等號字符 ( `=` ) 連接, 即類比 `Key=Value` 的形式 :
-
-1. (必), (自定義), 計算機 C 語言 ( Computer Programming C Language ) 程式設計 ( Programming ) 代碼檔 ( `c2exe.c` ), 使用編譯器 ( Compiler ), 經過編譯之後, 轉換爲二進制可執行檔 ( .exe ), 啓動運行指令存儲路徑全名, 例如可自定義配置爲 :  `C:/QuantitativeTrading/QuantitativeTrading.exe`
-
-2. (選) (值 `C:/QuantitativeTrading/config.txt` 自定義), 用於傳入配置文檔的保存路徑全名, 配置文檔裏的橫向列首可用一個井號字符 ( `#` ) 注釋掉, 使用井號字符 ( `#` ) 注釋掉之後，該橫向列的參數即不會傳入從而失效, 若需啓用可刪除橫向列首的井號字符 ( `#` ) 即可, 注意橫向列首的空格也要刪除, 每一個橫向列的參數必須頂格書寫, 預設值爲 :  `C:/QuantitativeTrading/config.txt`
-
-3. (選), (鍵 `executableFile` 固定, 值 `/bin/julia` 自定義, 例如 [ `/bin/julia`, `/bin/python3` ] 可自定義取其一配置), 用於傳入選擇啓動哪一種程式語言編寫的接口服務, 計算機 ( Computer ) 程式 ( Programming ) 設計 Julia 語言, 計算機 ( Computer ) 程式 ( Programming ) 設計 Python 語言, 預設值爲 :  `executableFile=/bin/julia`
-
-4. (選), (鍵 `interpreterFile` 固定, 值 `-p,4,--project=/home/QuantitativeTrading/QuantitativeTradingJulia/` 自定義, 且可爲空, 即取 `interpreterFile=` 的形式, 亦可不傳入該參數), 用於傳入程式設計語言 ( Julia, Python3 ) 解釋器 ( Interpreter ) 環境的二進制可執行檔, 於作業系統控制臺命令列 ( Operating System Console Command ) 使用指令啓動時傳入的運行參數, 若爲多參數, 則各參數之間用一個逗號 ( Comma ) 字符 ( `,` ) 連接, 代碼文檔 `c2exe.c` 已設計爲可自動將逗號 ( Comma ) 字符 ( `,` ) 替換爲空格字符 ( `SPACE` ) ( `00100000` ), 然後再傳入程式設計語言 ( Julia, Python3 ) 解釋器 ( Interpreter ) 的運行環境, 預設值爲 :  `interpreterFile=-p,4,--project=/home/QuantitativeTrading/QuantitativeTradingJulia/`
-
-5. (選), (鍵 `scriptFile` 固定, 值 `/home/QuantitativeTrading/QuantitativeTradingJulia/src/QuantitativeTradingServer.jl` 自定義, 例如 [ `/home/QuantitativeTrading/QuantitativeTradingJulia/src/QuantitativeTradingServer.jl`, `/home/QuantitativeTrading/QuantitativeTradingPython/src/QuantitativeTradingServer.py` ] 可自定義取其一配置), 用於傳入程式 ( Programming ) 設計語言 ( Julia, Python3 ) 代碼脚本 ( Script ) 檔 ( `QuantitativeTradingServer.jl`, `QuantitativeTradingServer.py` ) 的存儲路徑全名, 預設值爲 :  `scriptFile=/home/QuantitativeTrading/QuantitativeTradingJulia/src/QuantitativeTradingServer.jl`
-
-6. (選), (鍵 `configInstructions` 固定, 取值自定義, 且可爲空, 即取 `configInstructions=` 的形式, 亦可不傳入該參數), 用於傳入程式 ( Programming ) 設計語言 ( Julia, Python3 ) 代碼脚本 ( Script ) 檔 ( `QuantitativeTradingServer.jl`, `QuantitativeTradingServer.py` ) 的運行參數, 若爲多參數, 則各參數之間用一個逗號 ( Comma ) 字符 ( `,` ) 連接, 代碼文檔 `c2exe.c` 已設計爲可自動將逗號 ( Comma ) 字符 ( `,` ) 替換爲空格字符 ( `SPACE` ) ( `00100000` ), 然後再傳入代碼脚本 ( Script ) 檔 ( `QuantitativeTradingServer.jl`, `QuantitativeTradingServer.py` ) 的運行環境, 預設值爲 :  `configInstructions=configFile=/home/QuantitativeTrading/QuantitativeTradingJulia/config.txt,interface_Function=http_Server,webPath=/home/QuantitativeTrading/html/,host=::0,port=10001,key=username:password,number_Worker_threads=1,isConcurrencyHierarchy=Tasks`
-
-![]()
-
-Compiler :
-
-Minimalist GNU on Windows ( MinGW-w64 ) :  mingw64-8.1.0-release-posix-seh-rt_v6-rev0
-
-[程式設計 C 語言 gcc, g++ 編譯器 ( Compiler ) 之 MinGW-w64 官方網站](https://www.mingw-w64.org/): 
-https://www.mingw-w64.org/
-
-[程式設計 C 語言 gcc, g++ 編譯器 ( Compiler ) 之 MinGW-w64 官方下載頁](https://www.mingw-w64.org/downloads/): 
-https://www.mingw-w64.org/downloads/
-
-[程式設計 C 語言 gcc, g++ 編譯器 ( Compiler ) 之 MinGW-w64 作者官方 GitHub 網站賬戶](https://github.com/niXman): 
-https://github.com/niXman
-
-[程式設計 C 語言 gcc, g++ 編譯器 ( Compiler ) 之 MinGW-w64 官方 GitHub 網站倉庫](https://github.com/nixman/mingw-builds): 
-https://github.com/nixman/mingw-builds.git
-
-[程式設計 C 語言 gcc, g++ 編譯器 ( Compiler ) 之 MinGW-w64 官方 GitHub 網站倉庫預編譯二進制檔下載頁](https://github.com/niXman/mingw-builds-binaries/releases): 
-https://github.com/niXman/mingw-builds-binaries/releases
-
-[程式設計 C 語言 gcc, g++ 編譯器 ( Compiler ) 之 MinGW-w64 預編譯二進制檔下載頁](https://sourceforge.net/projects/mingw-w64/): 
-https://sourceforge.net/projects/mingw-w64/
-
----
-
-一. 可使用谷歌 ( Google - Chromium ) 或火狐 ( Mozilla - Firefox ) 瀏覽器 ( Browser ) 作爲用戶端 ( Client ) 連接統計運算伺服器「QuantitativeTrading」打開交互介面.
-
-打開應用頁面「index.html」可在地址欄 ( Browser address bar ) 輸入網址 ( Uniform Resource Locator , URL ) : 
-```
-http://username:password@[::1]:10001/index.html?Key=username:password
-```
-
-打開管理頁面「administrator.html」可在地址欄 ( Browser address bar ) 輸入網址 ( Uniform Resource Locator , URL ) : 
-```
-http://username:password@[::1]:10001/administrator.html?Key=username:password
-```
-
-交互頁面「`index.html`」可視化數據圖表，使用第三方擴展包，百度 ( Baidu ) 公司開發的基於 JavaScript 程式設計語言的開源可視化圖表庫「Apache - ECharts」實現.
-
-可自行修改標準通用標記語言代碼脚本 ( .html ) 檔「`index.html`」「`SelectStatisticalAlgorithms.html`」「`InputHTML.html`」「`OutputHTML.html`」内的 HTML , JavaScript , CSS 代碼，擴展交互頁面「`index.html`」内統計方法的連接 ( Browser Client Request ) 選項.
-
-二. 可使用項目空間内的微軟電子表格 ( Windows - Office - Excel - Visual Basic for Applications ) 應用檔「`Client.xlsm`」作爲用戶端 ( Client ) 連接統計運算伺服器「`QuantitativeTrading`」做 ( Client - Request ) 計算.
-
-微軟電子表格 ( Windows - Office - Excel - Visual Basic for Applications ) 應用檔「`Client.xlsm`」打開之後，菜單欄 ( Excel menu bar ) 之 :
-
-1. 「`加載項 ( Excel Add-in )`」 → 「`統計運算 ( Statistics )`」 → 「`人機交互介面 ( operation panel )`」，爲連接統計運算伺服器「`QuantitativeTrading`」做 ( Client - Request ) 計算的操作面板.
-
-2. 「`加載項 ( Excel Add-in )`」 → 「`統計運算 ( Statistics )`」 → 「`統計運算 ( Statistics server )`」，爲從微軟電子表格 ( Windows - Office - Excel - Visual Basic for Applications ) 應用檔 ( `Client.xlsm` ) 内，通過創建子進程 ( Sub Process ) 調用微軟視窗系統 ( Windows10 x86_64 ) 控制臺命令列 ( `cmd.exe` ) 應用，啓動統計運算伺服器「`QuantitativeTrading`」的運行指令.
-
-其中，項目空間内的代碼脚本檔「`TradingAlgorithmModule.bas`」是微軟電子表格 ( Windows - Office - Excel - Visual Basic for Applications ) 應用檔「`Client.xlsm`」運行時，需導入的標準模組 ( Module ) 代碼（必須），可在此代碼脚本檔内，自行修改 Visual Basic for Applications , VBA 代碼，擴展統計方法的連接 ( Client Request ) 項.
-
-微軟電子表格 ( Windows - Office - Excel - Visual Basic for Applications ) 應用檔「Client.xlsm」轉換 JSON 字符串類型的變量 ( JSON - String Object ) 與微軟電子表格字典類型的變量 ( Windows - Office - Excel - Visual Basic for Applications - Dict Object ) 數據類型，借用微軟電子表格 ( Windows - Office - Excel - Visual Basic for Applications ) 應用的第三方擴展類模組「VBA-JSON : JsonConverter.bas」實現.
-
-三. 也可自行選擇其他程式設計語言編寫用戶端鏈接器 ( Client ) 應用，連接統計運算伺服器「`QuantitativeTrading`」做 ( Client - Request ) 計算，比如，使用 JavaScript 語言的 NW.js , Electron 解析器等製作用戶端交互介面，或使用 C 語言的 GNU Image Manipulation Program - GIMP Toolkit , GTK+ 圖形框架等製作用戶端交互介面，然後，使用 Julia 或 Python 語言的統計運算伺服器「`QuantitativeTrading`」作爲後端行使數據計算功能，這樣即可實現類似跨語言混合編程的效果.
-
-使用自行製作的用戶端鏈接器 ( Client ) 時，連接統計運算伺服器「`QuantitativeTrading`」做 ( Client - Request ) 計算，可使用如下網址 ( Uniform Resource Locator , URL ) : 
-
-1. 連接統計運算伺服器「`QuantitativeTrading`」做 ( Client - Request ) 插值 ( Interpolation ) 計算，使用網址 ( Uniform Resource Locator , URL ) : 
-```
-http://[::1]:10001/Interpolation?Key=username:password&algorithmUser=username&algorithmPass=password&algorithmName=BSpline(Cubic)&algorithmLambda=0.0&algorithmKei=2.0&algorithmDi=1.0&algorithmEith=1.0
-```
-
-3. 連接統計運算伺服器「`QuantitativeTrading`」做 ( Client - Request ) 多項式 ( 3 階 ) 方程 ( Polynomial ( Cubic ) ) 模型擬合 ( Fit ) 計算，使用網址 ( Uniform Resource Locator , URL ) : 
-```
-http://[::1]:10001/Polynomial3Fit?Key=username:password&algorithmUser=username&algorithmPass=password&algorithmName=Polynomial3Fit
-```
-
-5. 連接統計運算伺服器「`QuantitativeTrading`」做 ( Client - Request ) 邏輯 4 , 5 參數模型 ( 4 , 5 - parameter logistic curve ) 擬合 ( Fit ) 計算，使用網址 ( Uniform Resource Locator , URL ) : 
-```
-http://[::1]:10001/LC5PFit?Key=username:password&algorithmUser=username&algorithmPass=password&algorithmName=LC5PFit
-```
-
-用戶端 ( Client - Request ) 發送 POST 請求的數據爲 JSON 字符串 ( JSON String ) 類型，數據格式可類比如下 :
-
-Request - POST = 
-```
-{
-    "trainXdata" : [
-        0.0,
-        1.0,
-        2.0,
-        3.0,
-        4.0,
-        5.0,
-        6.0,
-        7.0,
-        8.0,
-        9.0,
-        10.0,
-    ],
-    "trainYdata_1" : [
-        100.0,
-        200.0,
-        300.0,
-        400.0,
-        500.0,
-        600.0,
-        700.0,
-        800.0,
-        900.0,
-        1000.0,
-        1100.0
-    ],
-    "trainYdata_2" : [
-        98.0,
-        198.0,
-        298.0,
-        398.0,
-        498.0,
-        598.0,
-        698.0,
-        798.0,
-        898.0,
-        998.0,
-        1098.0
-    ],
-    "trainYdata_3" : [
-        102.0,
-        202.0,
-        302.0,
-        402.0,
-        502.0,
-        602.0,
-        702.0,
-        802.0,
-        902.0,
-        1002.0,
-        1102.0
-    ],
-    "weight" : [
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0
-    ],
-    "Pdata_0" : [
-        90.0,
-        4.0,
-        1.0,
-        1210.0,
-        1.0
-    ],
-    "Plower" : [
-        "-Infinity",
-        "-Infinity",
-        "-Infinity",
-        "-Infinity",
-        "-Infinity"
-    ],
-    "Pupper" : [
-        "+Infinity",
-        "+Infinity",
-        "+Infinity",
-        "+Infinity",
-        "+Infinity"
-    ],
-    "testYdata_1" : [
-        150.0,
-        200.0,
-        250.0,
-        350.0,
-        450.0,
-        550.0,
-        650.0,
-        750.0,
-        850.0,
-        950.0,
-        1050.0
-    ],
-    "testYdata_2" : [
-        148.0,
-        198.0,
-        248.0,
-        348.0,
-        448.0,
-        548.0,
-        648.0,
-        748.0,
-        848.0,
-        948.0,
-        1048.0
-    ],
-    "testYdata_3" : [
-        152.0,
-        202.0,
-        252.0,
-        352.0,
-        452.0,
-        552.0,
-        652.0,
-        752.0,
-        852.0,
-        952.0,
-        1052.0
-    ],
-    "testXdata" : [
-        0.5,
-        1.0,
-        1.5,
-        2.5,
-        3.5,
-        4.5,
-        5.5,
-        6.5,
-        7.5,
-        8.5,
-        9.5
-    ],
-    "trainYdata" : [
-        [100.0, 98.0, 102.0],
-        [200.0, 198.0, 202.0],
-        [300.0, 298.0, 302.0],
-        [400.0, 398.0, 402.0],
-        [500.0, 498.0, 502.0],
-        [600.0, 598.0, 602.0],
-        [700.0, 698.0, 702.0],
-        [800.0, 798.0, 802.0],
-        [900.0, 898.0, 902.0],
-        [1000.0, 998.0, 1002.0],
-        [1100.0, 1098.0, 1102.0]
-    ],
-    "testYdata" : [
-        [150.0, 148.0, 152.0],
-        [200.0, 198.0, 202.0],
-        [250.0, 248.0, 252.0],
-        [350.0, 348.0, 352.0],
-        [450.0, 448.0, 452.0],
-        [550.0, 548.0, 552.0],
-        [650.0, 648.0, 652.0],
-        [750.0, 748.0, 752.0],
-        [850.0, 848.0, 852.0],
-        [950.0, 948.0, 952.0],
-        [1050.0, 1048.0, 1052.0]
-    ]
-}
-```
-
-伺服器 ( Server - Respond ) 響應 POST 請求的數據格式爲 JSON 字符串 ( JSON String ) 類型，數據格式可類比如下 :
-
-Respond - body = 
-```
-{
-    "Coefficient" : [
-        100.007982422761,
-        42148.4577551448,
-        1.0001564001486,
-        4221377.92224082
-    ],
-    "Coefficient-StandardDeviation" : [
-        0.00781790123184812,
-        2104.76673086505,
-        0.0000237490808220821,
-        210359.023599377
-    ],
-    "Coefficient-Confidence-Lower-95%" : [
-        99.9908250045862,
-        37529.2688077105,
-        1.0001042796499,
-        3759717.22485611
-    ],
-    "Coefficient-Confidence-Upper-95%" : [
-        100.025139840936,
-        46767.6467025791,
-        1.00020852064729,
-        4683038.61962554
-    ],
-    "Yfit" : [
-        100.008980483748,
-        199.99155580718,
-        299.992070696316,
-        399.99603100866,
-        500.000567344017,
-        600.00431688223,
-        700.006476967595,
-        800.006517272442,
-        900.004060927778,
-        999.998826196417,
-        1099.99059444852
-    ],
-    "Yfit-Uncertainty-Lower" : [
-        99.0089499294379,
-        198.991136273453,
-        298.990136898385,
-        398.991624763274,
-        498.99282487668,
-        598.992447662226,
-        698.989753032473,
-        798.984266632803,
-        898.975662941844,
-        998.963708008532,
-        1098.94822805642
-    ],
-    "Yfit-Uncertainty-Upper" : [
-        101.00901103813,
-        200.991951293373,
-        300.993902825086,
-        401.000210884195,
-        501.007916682505,
-        601.015588680788,
-        701.022365894672,
-        801.027666045591,
-        901.031064750697,
-        1001.0322361364,
-        1101.0309201882
-    ],
-    "Residual" : [
-        0.00898048374801874,
-        -0.00844419281929731,
-        -0.00792930368334055,
-        -0.00396899133920669,
-        0.000567344017326831,
-        0.00431688223034143,
-        0.00647696759551763,
-        0.00651727244257926,
-        0.00406092777848243,
-        -0.00117380358278751,
-        -0.00940555147826671
-    ],
-    "testData" : {
-        "Ydata" : [
-            [150.0, 148.0, 152.0],
-            [200.0, 198.0, 202.0],
-            [250.0, 248.0, 252.0],
-            [350.0, 348.0, 352.0],
-            [450.0, 448.0, 452.0],
-            [550.0, 548.0, 552.0],
-            [650.0, 648.0, 652.0],
-            [750.0, 748.0, 752.0],
-            [850.0, 848.0, 852.0],
-            [950.0, 948.0, 952.0],
-            [1050.0, 1048.0, 1052.0]
-        ],
-        "test-Xvals" : [
-            0.500050586546119,
-            1.00008444458554,
-            1.50008923026377,
-            2.50006143908055,
-            3.50001668919562,
-            4.49997400999207,
-            5.49994366811569,
-            6.49993211621922,
-            7.49994379302719,
-            8.49998194168741,
-            9.50004903674755
-        ],
-        "test-Xvals-Uncertainty-Lower" : [
-            0.499936310423273,
-            0.999794808816128,
-            1.49963107921017,
-            2.49927920023971,
-            3.49892261926065,
-            4.49857747071072,
-            5.4982524599721,
-            6.4979530588239,
-            7.49768303155859,
-            8.49744512880161,
-            9.49724144950174
-        ],
-        "test-Xvals-Uncertainty-Upper" : [
-            0.500160692642957,
-            1.00036584601127,
-            1.50053513648402,
-            2.5008235803856,
-            3.50108303720897,
-            4.50133543331854,
-            5.50159259771137,
-            6.50186196458511,
-            7.50214864756277,
-            8.50245638268284,
-            9.50278802032924
-        ],
-        "Xdata" : [
-            0.5,
-            1.0,
-            1.5,
-            2.5,
-            3.5,
-            4.5,
-            5.5,
-            6.5,
-            7.5,
-            8.5,
-            9.5
-        ],
-        "test-Yfit" : [
-            149.99283432168886,
-            199.98780598165467,
-            249.98704946506768,
-            349.9910371559672,
-            449.9975369446911,
-            550.0037557953037,
-            650.0081868763082,
-            750.0098833059892,
-            850.0081939375959,
-            950.002643218264,
-            1049.9928684998304
-        ],
-        "test-Yfit-Uncertainty-Lower" : [],
-        "test-Yfit-Uncertainty-Upper" : [],
-        "test-Residual" : [
-            [0.000050586546119],
-            [0.00008444458554],
-            [0.00008923026377],
-            [0.00006143908055],
-            [0.00001668919562],
-            [-0.00002599000793],
-            [-0.0000563318843],
-            [-0.00006788378077],
-            [-0.0000562069728],
-            [-0.00001805831259],
-            [0.00004903674755]
-        ]
-    }
-}
-```
-
-![]()
-
-微軟電子表格 ( Windows - Office - Excel - Visual Basic for Applications ) 應用，轉換 JSON 字符串類型的變量 ( JSON - String Object ) 與微軟電子表格字典類型的變量 ( Windows - Office - Excel - Visual Basic for Applications - Dict Object ) 時，使用的第三方擴展類模組「VBA-JSON」説明 :
-
-[微軟電子表格 ( Windows - Office - Excel - Visual Basic for Applications ) 應用第三方擴展類模組 VBA-JSON 官方 GitHub 網站倉庫](https://github.com/VBA-tools/VBA-JSON): 
-https://github.com/VBA-tools/VBA-JSON.git
-
-百度 ( Baidu ) 公司開發的基於 JavaScript 程式設計語言的開源可視化圖表庫「Apache - ECharts」説明 :
-
-[基於 JavaScript 程式設計語言的開源可視化圖表庫「Apache - ECharts」官方網站](https://echarts.apache.org/zh/index.html): 
-https://echarts.apache.org/zh/index.html
-
-[基於 JavaScript 程式設計語言的開源可視化圖表庫「Apache - ECharts」官方手冊](https://echarts.apache.org/handbook/zh/get-started/): 
-https://echarts.apache.org/handbook/zh/get-started/
-
-[基於 JavaScript 程式設計語言的開源可視化圖表庫「Apache - ECharts」官方 GitHub 網站倉庫頁](https://github.com/apache/echarts): 
-https://github.com/apache/echarts.git
-
-計算機程式設計 C 語言「GIMP Toolkit , GTK+」圖形框架説明 :
-
-[計算機程式設計 C 語言「GIMP Toolkit , GTK+」圖形框架官方網站](https://www.gtk.org/): 
-https://www.gtk.org/
-
-[計算機程式設計 C 語言「GIMP Toolkit , GTK+」圖形框架官方手冊](https://www.gtk.org/docs/): 
-https://www.gtk.org/docs/
-
-谷歌 ( Google - Chromium ) 或火狐 ( Mozilla - Firefox ) 瀏覽器 ( Browser ) 的官方網站 ( Uniform Resource Locator , URL ) 鏈接 :
-
-[火狐 ( Mozilla - Gecko - Firefox ) 瀏覽器官方網站](https://www.mozilla.org/zh-TW/): 
-https://www.mozilla.org/zh-TW/
-
-[火狐 ( Mozilla - Gecko - Firefox ) 瀏覽器官方手冊](https://firefox-source-docs.mozilla.org/setup/windows_wsl_build.html): 
-https://firefox-source-docs.mozilla.org/setup/windows_wsl_build.html
-
-[火狐 ( Mozilla - Gecko - Firefox ) 瀏覽器官方 GitHub 網站倉庫頁](https://github.com/mozilla/gecko-dev): 
-https://github.com/mozilla/gecko-dev.git
-
-[谷歌 ( Google - Chromium ) 瀏覽器官方 GitHub 網站倉庫頁](https://github.com/chromium/chromium): 
-https://github.com/chromium/chromium.git
-
-微軟電子表格 ( Windows - Office - Excel - Visual Basic for Applications ) 應用 Microsoft Office Excel Professional 2019 的官方網站 ( Uniform Resource Locator , URL ) 鏈接 :
-
-[作業系統 ( Operating system ) 之 Microsoft Windows 官方網站](https://www.microsoft.com/zh-tw/windows): 
-https://www.microsoft.com/zh-tw/windows
-
-[電子表格應用 Microsoft Office Excel 官方下載頁](https://www.microsoft.com/zh-tw/download/office): 
-https://www.microsoft.com/zh-tw/download/office
-
-[電子表格應用 Microsoft Office Excel 2019 官方説明頁](https://learn.microsoft.com/zh-tw/deployoffice/office2019/overview): 
-https://learn.microsoft.com/zh-tw/deployoffice/office2019/overview
-
----
-
-開箱即用 ( out of the box ) ( portable application ) 已配置第三方擴展模組 ( third-party extensions ( libraries or modules ) ) 的程式設計語言 ( computer programming language ) : Julia 解釋器 ( Interpreter ) 和 Python 解釋器 ( Interpreter ) 運行環境的壓縮檔 ( .7z ) 的 [百度網盤(pan.baidu.com)](https://pan.baidu.com/s/1MZMNeeRz02zpEzSV0xcFBA?pwd=cy8g) 下載頁: 
-https://pan.baidu.com/s/1MZMNeeRz02zpEzSV0xcFBA?pwd=cy8g
-
-提取碼：cy8g
-
-開箱即用 ( out of the box ) ( portable application ) 檔 :
-
-1. 壓縮檔 : `Julia-1.10.10-Window10-AMD_FX8800P_x86_64.7z`
-
-壓縮檔「`Julia-1.10.10-Window10-AMD_FX8800P_x86_64.7z`」爲微軟視窗作業系統 ( Operating System: Acer-NEO-2023 Windows10 x86_64 Inter(R)-Core(TM)-m3-6Y30 ) 程式設計語言 ( Julia ) 解釋器 ( Interpreter ) 二進位可執行檔 ( julia-1.10.10-win64.exe ) 開箱即用 ( out of the box ) ( portable application ) 免安裝版，需自行下載解壓縮，將其保存至檔案夾 ( folder ) : `QuantitativeTrading/Julia/` 内，最終完整路徑應爲「`QuantitativeTrading/Julia/Julia-1.10.10/bin/julia.exe`」
-
-2. 壓縮檔 : `Python-3.11.2-Window10-AMD_FX8800P_x86_64.7z`
-
-壓縮檔「`Python-3.11.2-Window10-AMD_FX8800P_x86_64.7z`」爲微軟視窗作業系統 ( Operating System: Acer-NEO-2023 Windows10 x86_64 Inter(R)-Core(TM)-m3-6Y30 ) 程式設計語言 ( Python ) 解釋器 ( Interpreter ) 二進位可執行檔 ( python-3.11.2-amd64.exe ) 開箱即用 ( out of the box ) ( portable application ) 免安裝版，需自行下載解壓縮，將其保存至檔案夾 ( folder ) : `QuantitativeTrading/Python/` 内，最終完整路徑應爲「`QuantitativeTrading/Python/Python311/python.exe`」
-
-3. 壓縮檔 : `QuantitativeTradingJulia-Julia1.10.10-Window10-AMD_FX8800P_x86_64.7z`
-
-壓縮檔「`QuantitativeTradingJulia-Julia1.10.10-Window10-AMD_FX8800P_x86_64.7z`」爲微軟視窗作業系統 ( Operating System: Acer-NEO-2023 Windows10 x86_64 Inter(R)-Core(TM)-m3-6Y30 ) 統計運算伺服器 'QuantitativeTradingJulia' 開箱即用 ( out of the box ) ( portable application ) 版，已配置計算機程式設計語言 ( computer programming language ) : Julia 解釋器 ( Interpreter ) 運行此統計運算伺服器 'QuantitativeTradingJulia' 項目所需的第三方擴展模組 ( third-party extensions ( libraries or modules ) ) 的運行環境，可自行下載解壓縮，將其保存至檔案夾 ( folder ) : `QuantitativeTrading/QuantitativeTradingJulia/` 内，再因應協調配置壓縮檔「`Julia-1.10.10-Window10-AMD_FX8800P_x86_64.7z`」之後，即可使用如下指令啓動運行統計運算伺服器「`QuantitativeTradingJulia`」項目 : 
-```
-C:\QuantitativeTrading> C:/QuantitativeTrading/Julia/Julia-1.10.10/bin/julia.exe -p 4 --project=C:/QuantitativeTrading/QuantitativeTradingJulia/ C:/QuantitativeTrading/QuantitativeTradingJulia/src/QuantitativeTradingServer.jl configFile=C:/QuantitativeTrading/QuantitativeTradingJulia/config.txt interface_Function=http_Server webPath=C:/QuantitativeTrading/html/ host=::0 port=10001 key=username:password number_Worker_threads=1 isConcurrencyHierarchy=Tasks readtimeout=0 connecttimeout=0
-```
-
-4. 壓縮檔 : `QuantitativeTradingPython-Python3.11.2-Window10-AMD_FX8800P_x86_64.7z`
-
-壓縮檔「`QuantitativeTradingPython-Python3.11.2-Window10-AMD_FX8800P_x86_64.7z`」爲微軟視窗作業系統 ( Operating System: Acer-NEO-2023 Windows10 x86_64 Inter(R)-Core(TM)-m3-6Y30 ) 統計運算伺服器 'QuantitativeTradingPython' 開箱即用 ( out of the box ) ( portable application ) 版，已配置計算機程式設計語言 ( computer programming language ) : Python 解釋器 ( Interpreter ) 運行此統計運算伺服器 'QuantitativeTradingPython' 項目所需的第三方擴展模組 ( third-party extensions ( libraries or modules ) ) 的運行環境，可自行下載解壓縮，將其保存至檔案夾 ( folder ) : `QuantitativeTrading/QuantitativeTradingPython/` 内，再因應協調配置壓縮檔「`Python-3.11.2-Window10-AMD_FX8800P_x86_64.7z`」之後，即可使用如下指令啓動運行統計運算伺服器「'QuantitativeTradingPython`」項目 : 
-```
-C:\QuantitativeTrading> C:/QuantitativeTrading/QuantitativeTradingPython/Scripts/python.exe C:/QuantitativeTrading/QuantitativeTradingPython/src/QuantitativeTradingServer.py configFile=C:/QuantitativeTrading/QuantitativeTradingPython/config.txt interface_Function=http_Server webPath=C:/QuantitativeTrading/html/ host=::0 port=10001 Key=username:password Is_multi_thread=False number_Worker_process=0
-```
-或者 : 
-```
-C:\QuantitativeTrading> C:/QuantitativeTrading/Python/Python311/python.exe C:/QuantitativeTrading/QuantitativeTradingPython/src/QuantitativeTradingServer.py configFile=C:/QuantitativeTrading/QuantitativeTradingPython/config.txt interface_Function=http_Server webPath=C:/QuantitativeTrading/html/ host=::0 port=10001 Key=username:password Is_multi_thread=False number_Worker_process=0
-```
-
-5. 壓縮檔 : `QuantitativeTrading-Window10-AMD_FX8800P_x86_64.7z`
-
-壓縮檔「`QuantitativeTrading-Window10-AMD_FX8800P_x86_64.7z`」爲微軟視窗作業系統 ( Operating System: Acer-NEO-2023 Windows10 x86_64 Inter(R)-Core(TM)-m3-6Y30 ) 統計運算伺服器 'QuantitativeTrading' 開箱即用 ( out of the box ) ( portable application ) 版，已配置計算機程式設計語言 ( computer programming language ) : Julia 解釋器 ( Interpreter ) 和 Python 解釋器 ( Interpreter ) 運行此統計運算伺服器 'QuantitativeTrading' 項目所需的第三方擴展模組 ( third-party extensions ( libraries or modules ) ) 的運行環境，可自行下載解壓縮，將其保存至根目錄 ( Root Directory ) : `C:` 内，即可使用如下指令啓動運行統計運算伺服器「'QuantitativeTrading'」項目 : 
-
-程式設計語言 ( computer programming language ) : Julia 實現，使用如下指令:
-```
-C:\QuantitativeTrading> C:/QuantitativeTrading/Julia/Julia-1.10.10/bin/julia.exe -p 4 --project=C:/QuantitativeTrading/QuantitativeTradingJulia/ C:/QuantitativeTrading/QuantitativeTradingJulia/src/QuantitativeTradingServer.jl configFile=C:/QuantitativeTrading/QuantitativeTradingJulia/config.txt interface_Function=http_Server webPath=C:/QuantitativeTrading/html/ host=::0 port=10001 key=username:password number_Worker_threads=1 isConcurrencyHierarchy=Tasks readtimeout=0 connecttimeout=0
-```
-程式設計語言 ( computer programming language ) : Python 實現，使用如下指令:
-```
-C:\QuantitativeTrading> C:/QuantitativeTrading/QuantitativeTradingPython/Scripts/python.exe C:/QuantitativeTrading/QuantitativeTradingPython/src/QuantitativeTradingServer.py configFile=C:/QuantitativeTrading/QuantitativeTradingPython/config.txt interface_Function=http_Server webPath=C:/QuantitativeTrading/html/ host=::0 port=10001 Key=username:password Is_multi_thread=False number_Worker_process=0
-```
-或者 : 
-```
-C:\QuantitativeTrading> C:/QuantitativeTrading/Python/Python311/python.exe C:/QuantitativeTrading/QuantitativeTradingPython/src/QuantitativeTradingServer.py configFile=C:/QuantitativeTrading/QuantitativeTradingPython/config.txt interface_Function=http_Server webPath=C:/QuantitativeTrading/html/ host=::0 port=10001 Key=username:password Is_multi_thread=False number_Worker_process=0
-```
-使用批處理脚本「`startServer.bat`」啓動，使用如下指令 : 
-```
-C:\QuantitativeTrading> C:/Windows/System32/cmd.exe C:/QuantitativeTrading/startServer.bat C:/QuantitativeTrading/config.txt
-```
-使用二進位可執行檔「`QuantitativeTrading.exe`」啓動，使用如下指令 : 
-```
-C:\QuantitativeTrading> C:/QuantitativeTrading/QuantitativeTrading.exe configFile=C:/QuantitativeTrading/config.txt executableFile=C:/QuantitativeTrading/Julia/Julia-1.10.10/julia.exe interpreterFile=-p,4,--project=C:/QuantitativeTrading/QuantitativeTradingJulia/ scriptFile=C:/QuantitativeTrading/QuantitativeTradingJulia/src/QuantitativeTradingServer.jl configInstructions=configFile=/home/QuantitativeTrading/QuantitativeTradingJulia/config.txt,interface_Function=http_Server,webPath=C:/QuantitativeTrading/html/,host=::0,port=10001,key=username:password,number_Worker_threads=1,isConcurrencyHierarchy=Tasks
-```
-
-6. 壓縮檔 : `google-pixel-2_android-11_termux-0.118_arm64_ubuntu-22.04_arm64_QuantitativeTrading.tar.gz`
-
-壓縮檔「`google-pixel-2_android-11_termux-0.118_arm64_ubuntu-22.04_arm64_QuantitativeTrading.tar.gz`」爲谷歌安卓作業系統 ( Operating System: Google-Pixel-7 Android-11 Termux-0.118 Ubuntu-22.04-LTS-rootfs Arm64-aarch64 MSM8998-Snapdragon835-Qualcomm®-Kryo™-280 ) 統計運算伺服器「'QuantitativeTrading'」項目源代碼脚本，可自行下載將其移動至 Android-Termux-Ubuntu 系統的檔案夾 ( folder ) : `/home/` 内，然後再使用如下指令解壓縮 : 
-```
-root@localhost:~# tar -zxvf /home/google-pixel-2_android-11_termux-0.118_arm64_ubuntu-22.04_arm64_QuantitativeTrading.tar.gz
-```
-最終應保存爲檔案夾 ( folder ) : `/home/QuantitativeTrading/` 形式.
-
-然後，再使用如下指令修改批處理 ( Bash ) 脚本「`startServer.sh`」和二進位可執行檔「`QuantitativeTrading.exe`」的權限爲所有用戶可運行 :
-```
-root@localhost:~# chmod 777 /home/QuantitativeTrading/startServer.sh
-```
-```
-root@localhost:~# chmod 777 /home/QuantitativeTrading/QuantitativeTrading.exe
-```
-使用如下指令修改參數配置文檔「`/home/QuantitativeTrading/config.txt`」「`/home/QuantitativeTrading/QuantitativeTradingJulia/config.txt`」「`/home/QuantitativeTrading/QuantitativeTradingPython/config.txt`」和代碼脚本檔 ( Script file ) 「`/home/QuantitativeTrading/QuantitativeTradingJulia/src/Interface.jl`」「`/home/QuantitativeTrading/QuantitativeTradingJulia/src/QuantitativeTradingServer.jl`」「`/home/QuantitativeTrading/QuantitativeTradingJulia/src/Router.jl`」「`/home/QuantitativeTrading/QuantitativeTradingJulia/src/Interpolation_Fitting.jl`」「`/home/QuantitativeTrading/QuantitativeTradingPython/src/Interface.py`」「`/home/QuantitativeTrading/QuantitativeTradingPython/src/QuantitativeTradingServer.py`」「`/home/QuantitativeTrading/QuantitativeTradingPython/src/Router.py`」「`/home/QuantitativeTrading/QuantitativeTradingPython/src/Interpolation_Fitting.py`」的權限爲所有用戶可讀可寫 :
-```
-root@localhost:~# chmod 666 /home/QuantitativeTrading/config.txt
-```
-```
-root@localhost:~# chmod 666 /home/QuantitativeTrading/QuantitativeTradingJulia/config.txt
-```
-```
-root@localhost:~# chmod 666 /home/QuantitativeTrading/QuantitativeTradingPython/config.txt
-```
-```
-root@localhost:~# chmod 666 /home/QuantitativeTrading/QuantitativeTradingJulia/src/Interface.jl
-```
-```
-root@localhost:~# chmod 666 /home/QuantitativeTrading/QuantitativeTradingJulia/src/QuantitativeTradingServer.jl
-```
-```
-root@localhost:~# chmod 666 /home/QuantitativeTrading/QuantitativeTradingJulia/src/Router.jl
-```
-```
-root@localhost:~# chmod 666 /home/QuantitativeTrading/QuantitativeTradingJulia/src/Interpolation_Fitting.jl
-```
-```
-root@localhost:~# chmod 666 /home/QuantitativeTrading/QuantitativeTradingPython/src/Interface.py
-```
-```
-root@localhost:~# chmod 666 /home/QuantitativeTrading/QuantitativeTradingPython/src/QuantitativeTradingServer.py
-```
-```
-root@localhost:~# chmod 666 /home/QuantitativeTrading/QuantitativeTradingPython/src/Router.py
-```
-```
-root@localhost:~# chmod 666 /home/QuantitativeTrading/QuantitativeTradingPython/src/Interpolation_Fitting.py
-```
-然後，即可使用如下指令啓動運行統計運算伺服器「'QuantitativeTrading'」項目 : 
-
-程式設計語言 ( computer programming language ) : Julia 實現，使用如下指令:
-```
-root@localhost:~# /usr/julia/julia-1.10.10/bin/julia -p 4 --project=/home/QuantitativeTrading/QuantitativeTradingJulia/ /home/QuantitativeTrading/QuantitativeTradingJulia/src/QuantitativeTradingServer.jl configFile=/home/QuantitativeTrading/QuantitativeTradingJulia/config.txt interface_Function=http_Server webPath=/home/QuantitativeTrading/html/ host=::0 port=10001 key=username:password number_Worker_threads=1 isConcurrencyHierarchy=Tasks readtimeout=0 connecttimeout=0
-```
-程式設計語言 ( computer programming language ) : Python 實現，使用如下指令:
-```
-root@localhost:~# /usr/bin/python3 /home/QuantitativeTrading/QuantitativeTradingPython/src/QuantitativeTradingServer.py configFile=/home/QuantitativeTrading/QuantitativeTradingPython/config.txt interface_Function=http_Server webPath=/home/QuantitativeTrading/html/ host=::0 port=10001 Key=username:password Is_multi_thread=False number_Worker_process=0
-```
-使用 Shell 語言脚本「`startServer.sh`」啓動，使用如下指令 : 
-```
-root@localhost:~# /bin/bash /home/QuantitativeTrading/startServer.sh configFile=/home/QuantitativeTrading/config.txt executableFile=/bin/julia interpreterFile=-p,4,--project=/home/QuantitativeTrading/QuantitativeTradingJulia/ scriptFile=/home/QuantitativeTrading/QuantitativeTradingJulia/src/QuantitativeTradingServer.jl configInstructions=configFile=/home/QuantitativeTrading/QuantitativeTradingJulia/config.txt,interface_Function=http_Server,webPath=/home/QuantitativeTrading/html/,host=::0,port=10001,key=username:password,number_Worker_threads=1,isConcurrencyHierarchy=Tasks
-```
-使用二進位可執行檔「`QuantitativeTrading.exe`」啓動，使用如下指令 : 
-```
-root@localhost:~# /home/QuantitativeTrading/QuantitativeTrading.exe configFile=/home/QuantitativeTrading/config.txt executableFile=/bin/julia interpreterFile=-p,4,--project=/home/QuantitativeTrading/QuantitativeTradingJulia/ scriptFile=/home/QuantitativeTrading/QuantitativeTradingJulia/src/QuantitativeTradingServer.jl configInstructions=configFile=/home/QuantitativeTrading/QuantitativeTradingJulia/config.txt,interface_Function=http_Server,webPath=/home/QuantitativeTrading/html/,host=::0,port=10001,key=username:password,number_Worker_threads=1,isConcurrencyHierarchy=Tasks
-```
-
-7. 二進位可執行檔 : `QuantitativeTrading-Window10-AMD_FX8800P_x86_64.exe`
-
-二進位可執行檔「`QuantitativeTrading-Window10-AMD_FX8800P_x86_64.exe`」爲微軟視窗作業系統 ( Operating System: Acer-NEO-2023 Windows10 x86_64 Inter(R)-Core(TM)-m3-6Y30 ) 統計運算伺服器「'QuantitativeTrading'」項目内 C 語言源代碼檔「'QuantitativeTrading/c/c2exe.c'」使用 Window10 - MinGW-w64 - gcc 編譯器，編譯之後得到的二進位可執行檔，可自行下載保存至檔案夾 ( folder ) : `C:/QuantitativeTrading/` 内，使用如下指令將其重命名 :
-```
-C:\QuantitativeTrading> rename C:/QuantitativeTrading/QuantitativeTrading-Window10-AMD_FX8800P_x86_64.exe C:/QuantitativeTrading/QuantitativeTrading.exe
-```
-8. 二進位可執行檔 : `QuantitativeTrading_google-pixel-2_android-11_termux-0.118_ubuntu-22.04-LTS-rootfs_arm64.exe`
-
-二進位可執行檔「`QuantitativeTrading_google-pixel-2_android-11_termux-0.118_ubuntu-22.04-LTS-rootfs_arm64.exe`」爲谷歌安卓作業系統 ( Operating System: Google-Pixel-7 Android-11 Termux-0.118 Ubuntu-22.04-LTS-rootfs Arm64-aarch64 MSM8998-Snapdragon835-Qualcomm®-Kryo™-280 ) 統計運算伺服器「'QuantitativeTrading'」項目内 C 語言源代碼檔「'QuantitativeTrading/c/c2exe.c'」使用 Ubuntu 22.04 - gcc 編譯器，編譯之後得到的二進位可執行檔，可自行下載保存至檔案夾 ( folder ) : `/home/QuantitativeTrading/` 内，使用如下指令將其重命名 :
-```
-root@localhost:~# /home/QuantitativeTrading/QuantitativeTrading_google-pixel-2_android-11_termux-0.118_ubuntu-22.04-LTS-rootfs_arm64.exe /home/QuantitativeTrading/QuantitativeTrading.exe
-```
-再使用如下指令修改其權限爲所有用戶可運行 :
-```
-root@localhost:~# chmod 777 /home/QuantitativeTrading/QuantitativeTrading.exe
-```
-即可.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
----
-
 一. 代碼脚本檔 ( script file ) : `QuantitativeTrading/QuantitativeTradingJulia/src/Interface.jl` , `QuantitativeTrading/QuantitativeTradingPython/src/Interface.py`
 
 代碼脚本 ( Script ) 檔 : `Interface.jl` 或 `Interface.py` 是伺服器 ( Server ) 函數 ( Function ) , 具體功能是實現: 讀入 ( read ) 數據, 寫出 ( write ) 結果.
@@ -1189,8 +421,6 @@ C:\QuantitativeTrading> C:/QuantitativeTrading/Python/Python311/python.exe C:/Qu
 23. (選), (鍵 `request_Auth` 固定, 賬號密碼連接符 `:` 固定, 值 `username` 和 `password` 自定義), 用於傳入用戶端連接器 ( `http_Client` ) 向外設網卡 ( Network Interface Card ) 發送請求的驗證 ( Authorization ) 的賬號密碼字符串, 預設值爲 :  `request_Auth=username:password`
 
 24. (選), (鍵 `request_Cookie` 固定, 其中 `Cookie` 名稱 `Session_ID` 可以設計爲固定, `Cookie` 值 `request_Key->username:password` 可以設計爲自定義), 用於傳入用戶端連接器 ( `http_Client` ) 向外設網卡 ( Network Interface Card ) 發送請求的 `Cookies` 值字符串, 預設值爲 :  `request_Cookie=Session_ID=request_Key->username:password`
-
-![]()
 
 量化交易運算模組説明 :
 
@@ -2208,8 +1438,6 @@ C:\QuantitativeTrading> C:/QuantitativeTrading/Julia/Julia-1.10.10/bin/julia.exe
 
 26. (選), (鍵 `Cookie` 固定, 其中 `Cookie` 名稱 `Session_ID` 可以設計爲固定, `Cookie` 值 `request_Key->username:password` 可以設計爲自定義), 用於傳入用戶端連接器 ( `http_Client` ) 向外設網卡 ( Network Interface Card ) 發送請求的 `Cookies` 值字符串, 預設值爲 :  `Cookie=Session_ID=request_Key->username:password`
 
-![]()
-
 量化交易運算模組説明 :
 
 1. 代碼脚本檔 ( script file ) 「`QuantitativeTrading/QuantitativeTradingJulia/src/Quantitative_Data_Cleaning.jl`」運行示例 :
@@ -2870,6 +2098,761 @@ println("profit paired transaction Dict :", "\n", return_stepping_Dict["profit_p
 println("transaction sequence Dict :", "\n", return_stepping_Dict["transaction_sequence"]);
 println("stepping sequence Array :", "\n", return_stepping_Dict["stepping_sequence"]);
 ```
+
+
+
+
+
+
+
+
+
+
+---
+
+微軟視窗系統 ( Windows10 x86_64 ) 使用 Batchfile 代碼脚本檔「startServer.bat」啓動統計運算伺服器「QuantitativeTrading」 :
+
+使用説明:
+
+Window-cmd : startServer.bat
+
+微軟視窗系統 ( Windows10 x86_64 )
+
+控制臺命令列 ( cmd ) 運行啓動指令 :
+```
+C:\QuantitativeTrading> C:/Windows/System32/cmd.exe C:/QuantitativeTrading/startServer.bat C:/QuantitativeTrading/config.txt
+```
+
+控制臺啓動傳參釋意 :
+
+1. (必), (固定), 微軟視窗作業系統 ( Window10 x86_64 ) 控制臺命令列窗口的二進制可執行檔 ( `cmd.exe` ) 啓動存儲路徑全名, 作業系統 ( Window10 x86_64 ) 固定存儲在路徑爲 :  `C:/Windows/System32/cmd.exe`
+
+2. (必), (自定義), 微軟視窗系統 ( Windows10 x86_64 ) 批處理程式代碼脚本 ( .bat ) 檔 ( `startServer.bat` ) 的存儲路徑全名, 預設值爲 :  `C:/QuantitativeTrading/startServer.bat`
+
+3. (選) (值 `C:/QuantitativeTrading/config.txt` 自定義), 用於傳入配置文檔的保存路徑全名, 配置文檔裏的橫向列首可用一個井號字符 ( `#` ) 注釋掉, 使用井號字符 ( `#` ) 注釋掉之後，該橫向列的參數即不會傳入從而失效, 若需啓用可刪除橫向列首的井號字符 ( `#` ) 即可, 注意橫向列首的空格也要刪除, 每一個橫向列的參數必須頂格書寫, 預設值爲 :  `C:/QuantitativeTrading/config.txt`
+
+![]()
+
+谷歌安卓系統 之 Termux 系統 之 烏班圖系統 ( Android-11 Termux-0.118 Ubuntu-22.04-LTS-rootfs Arm64-aarch64 ) 使用 Shell 代碼脚本檔「startServer.sh」啓動統計運算伺服器「QuantitativeTrading」 :
+
+使用説明:
+
+Android-Termux-Ubuntu-bash : startServer.sh
+
+谷歌安卓系統 之 Termux 系統 之 烏班圖系統 ( Android-11 Termux-0.118 Ubuntu-22.04-LTS-rootfs Arm64-aarch64 )
+
+控制臺命令列 ( bash ) 運行啓動指令 :
+```
+root@localhost:~# /bin/bash /home/QuantitativeTrading/startServer.sh configFile=/home/QuantitativeTrading/config.txt executableFile=/bin/julia interpreterFile=-p,4,--project=/home/QuantitativeTrading/QuantitativeTradingJulia/ scriptFile=/home/QuantitativeTrading/QuantitativeTradingJulia/src/QuantitativeTradingServer.jl configInstructions=configFile=/home/QuantitativeTrading/QuantitativeTradingJulia/config.txt,interface_Function=http_Server,webPath=/home/QuantitativeTrading/html/,host=::0,port=10001,key=username:password,number_Worker_threads=1,isConcurrencyHierarchy=Tasks
+```
+
+控制臺啓動傳參釋意, 各參數之間以一個逗號 ( Comma ) 字符 ( `,` ) 分隔, 鍵(Key) ~ 值(Value) 之間以一個等號字符 ( `=` ) 連接, 即類比 `Key=Value` 的形式 :
+
+1. (必), (固定), 谷歌安卓系統 之 Termux 系統 之 烏班圖系統 ( Android-11 Termux-0.118 Ubuntu-22.04-LTS-rootfs Arm64-aarch64 ) 控制臺命令列窗口的二進制可執行檔 ( `bash` ) 啓動存儲路徑全名, 作業系統 ( Android-11 Termux-0.118 Ubuntu-22.04-LTS-rootfs Arm64-aarch64 ) 固定存儲在路徑爲 :  `/bin/bash`
+
+2. (必), (自定義), 谷歌安卓系統 之 Termux 系統 之 烏班圖系統 ( Android-11 Termux-0.118 Ubuntu-22.04-LTS-rootfs Arm64-aarch64 ) 批處理程式代碼脚本 ( .sh ) 檔 ( `startServer.sh` ) 的存儲路徑全名, 預設值爲 :  `C:/QuantitativeTrading/startServer.sh`
+
+3. (選), (鍵 `configFile` 固定, 值 `/home/QuantitativeTrading/config.txt` 自定義), 用於傳入配置文檔的保存路徑全名, 配置文檔裏的橫向列首可用一個井號字符 ( `#` ) 注釋掉, 使用井號字符 ( `#` ) 注釋掉之後，該橫向列的參數即不會傳入從而失效, 若需啓用可刪除橫向列首的井號字符 ( `#` ) 即可, 注意橫向列首的空格也要刪除, 每一個橫向列的參數必須頂格書寫, 預設值爲 :  `configFile=/home/QuantitativeTrading/config.txt`
+
+4. (選), (鍵 `executableFile` 固定, 值 `/bin/julia` 自定義, 例如 [ `/bin/julia`, `/bin/python3` ] 可自定義取其一配置), 用於傳入選擇啓動哪一種程式語言編寫的接口服務, 計算機 ( Computer ) 程式 ( Programming ) 設計 Julia 語言, 計算機 ( Computer ) 程式 ( Programming ) 設計 Python 語言, 預設值爲 :  `executableFile=/bin/julia`
+
+5. (選), (鍵 `interpreterFile` 固定, 值 `-p,4,--project=/home/QuantitativeTrading/QuantitativeTradingJulia/` 自定義, 且可爲空, 即取 `interpreterFile=` 的形式, 亦可不傳入該參數), 用於傳入程式設計語言 ( Julia, Python3 ) 解釋器 ( Interpreter ) 環境的二進制可執行檔, 於作業系統控制臺命令列 ( Operating System Console Command ) 使用指令啓動時傳入的運行參數, 若爲多參數, 則各參數之間用一個逗號 ( Comma ) 字符 ( `,` ) 連接, 批處理程式脚本 `startServer.sh` 已設計爲可自動將逗號 ( Comma ) 字符 ( `,` ) 替換爲空格字符 ( `SPACE` ) ( `00100000` ), 然後再傳入程式設計語言 ( Julia, Python3 ) 解釋器 ( Interpreter ) 的運行環境, 預設值爲 :  `interpreterFile=-p,4,--project=/home/QuantitativeTrading/QuantitativeTradingJulia/`
+
+6. (選), (鍵 `scriptFile` 固定, 值 `/home/QuantitativeTrading/QuantitativeTradingJulia/src/QuantitativeTradingServer.jl` 自定義, 例如 [ `/home/QuantitativeTrading/QuantitativeTradingJulia/src/QuantitativeTradingServer.jl`, `/home/QuantitativeTrading/QuantitativeTradingPython/src/QuantitativeTradingServer.py` ] 可自定義取其一配置), 用於傳入程式 ( Programming ) 設計語言 ( Julia, Python3 ) 代碼脚本 ( Script ) 檔 ( `QuantitativeTradingServer.jl`, `QuantitativeTradingServer.py` ) 的存儲路徑全名, 預設值爲 :  `scriptFile=/home/QuantitativeTrading/QuantitativeTradingJulia/src/QuantitativeTradingServer.jl`
+
+7. (選), (鍵 `configInstructions` 固定, 取值自定義, 且可爲空, 即取 `configInstructions=` 的形式, 亦可不傳入該參數), 用於傳入程式 ( Programming ) 設計語言 ( Julia, Python3 ) 代碼脚本 ( Script ) 檔 ( `QuantitativeTradingServer.jl`, `QuantitativeTradingServer.py` ) 的運行參數, 若爲多參數, 則各參數之間用一個逗號 ( Comma ) 字符 ( `,` ) 連接, 批處理程式脚本 `startServer.sh` 已設計爲可自動將逗號 ( Comma ) 字符 ( `,` ) 替換爲空格字符 ( `SPACE` ) ( `00100000` ), 然後再傳入代碼脚本 ( Script ) 檔 ( `QuantitativeTradingServer.jl`, `QuantitativeTradingServer.py` ) 的運行環境, 預設值爲 :  `configInstructions=configFile=/home/QuantitativeTrading/QuantitativeTradingJulia/config.txt,interface_Function=http_Server,webPath=/home/QuantitativeTrading/html/,host=::0,port=10001,key=username:password,number_Worker_threads=1,isConcurrencyHierarchy=Tasks`
+
+---
+
+c2exe.c
+
+程式設計 C 語言, 使用 FILE *fstream = popen("shell Code Script", "r") 函數, 創建子進程 ( Sub Process ), 並在子進程 ( Sub Process ) 運行外部二進制可執行檔 ( julia.exe, python.exe, ), 功能與批處理檔 startServer.sh 類似.
+
+使用説明:
+
+![]()
+
+微軟視窗系統 ( Windows10 x86_64 ) 使用二進位可執行檔「QuantitativeTrading.exe」啓動統計運算伺服器「QuantitativeTrading」 :
+
+微軟視窗系統 ( Windows10 x86_64 )
+
+Windows10 x86_64 Compiler :
+
+Minimalist GNU on Windows ( MinGW-w64 ) mingw64-8.1.0-release-posix-seh-rt_v6-rev0
+
+控制臺命令列 ( cmd ) 運行編譯指令 :
+```
+C:\QuantitativeTrading> C:\MinGW64\bin\gcc.exe C:/QuantitativeTrading/c/c2exe.c -o C:/QuantitativeTrading/QuantitativeTrading.exe
+```
+
+控制臺命令列 ( cmd ) 運行顯示中文字符指令 :
+```
+C:\QuantitativeTrading> chcp 65001
+```
+
+控制臺命令列 ( cmd ) 運行啓動指令 :
+```
+C:\QuantitativeTrading> C:/QuantitativeTrading/QuantitativeTrading.exe configFile=C:/QuantitativeTrading/config.txt executableFile=C:/QuantitativeTrading/Julia/Julia-1.10.10/julia.exe interpreterFile=-p,4,--project=C:/QuantitativeTrading/QuantitativeTradingJulia/ scriptFile=C:/QuantitativeTrading/QuantitativeTradingJulia/src/QuantitativeTradingServer.jl configInstructions=configFile=/home/QuantitativeTrading/QuantitativeTradingJulia/config.txt,interface_Function=http_Server,webPath=C:/QuantitativeTrading/html/,host=::0,port=10001,key=username:password,number_Worker_threads=1,isConcurrencyHierarchy=Tasks
+```
+
+![]()
+
+谷歌安卓系統 之 Termux 系統 之 烏班圖系統 ( Android-11 Termux-0.118 Ubuntu-22.04-LTS-rootfs Arm64-aarch64 ) 使用二進位可執行檔「QuantitativeTrading.exe」啓動統計運算伺服器「QuantitativeTrading」 :
+
+谷歌安卓系統 之 Termux 系統 之 烏班圖系統 ( Android-11 Termux-0.118 Ubuntu-22.04-LTS-rootfs Arm64-aarch64 )
+
+Android-11 Termux-0.118 Ubuntu-22.04 Arm64-aarch64 Compiler :
+
+gcc v9.3.0 , g++ v9.3.0
+
+控制臺命令列 ( bash ) 運行編譯指令 :
+```
+root@localhost:~# /bin/gcc /home/QuantitativeTrading/c/c2exe.c -o /home/QuantitativeTrading/QuantitativeTrading.exe
+```
+
+控制臺命令列 ( bash ) 運行啓動指令 :
+```
+root@localhost:~# /home/QuantitativeTrading/QuantitativeTrading.exe configFile=/home/QuantitativeTrading/config.txt executableFile=/bin/julia interpreterFile=-p,4,--project=/home/QuantitativeTrading/QuantitativeTradingJulia/ scriptFile=/home/QuantitativeTrading/QuantitativeTradingJulia/src/QuantitativeTradingServer.jl configInstructions=configFile=/home/QuantitativeTrading/QuantitativeTradingJulia/config.txt,interface_Function=http_Server,webPath=/home/QuantitativeTrading/html/,host=::0,port=10001,key=username:password,number_Worker_threads=1,isConcurrencyHierarchy=Tasks
+```
+
+![]()
+
+控制臺啓動傳參釋意, 各參數之間以一個逗號 ( Comma ) 字符 ( `,` ) 分隔, 鍵(Key) ~ 值(Value) 之間以一個等號字符 ( `=` ) 連接, 即類比 `Key=Value` 的形式 :
+
+1. (必), (自定義), 計算機 C 語言 ( Computer Programming C Language ) 程式設計 ( Programming ) 代碼檔 ( `c2exe.c` ), 使用編譯器 ( Compiler ), 經過編譯之後, 轉換爲二進制可執行檔 ( .exe ), 啓動運行指令存儲路徑全名, 例如可自定義配置爲 :  `C:/QuantitativeTrading/QuantitativeTrading.exe`
+
+2. (選) (值 `C:/QuantitativeTrading/config.txt` 自定義), 用於傳入配置文檔的保存路徑全名, 配置文檔裏的橫向列首可用一個井號字符 ( `#` ) 注釋掉, 使用井號字符 ( `#` ) 注釋掉之後，該橫向列的參數即不會傳入從而失效, 若需啓用可刪除橫向列首的井號字符 ( `#` ) 即可, 注意橫向列首的空格也要刪除, 每一個橫向列的參數必須頂格書寫, 預設值爲 :  `C:/QuantitativeTrading/config.txt`
+
+3. (選), (鍵 `executableFile` 固定, 值 `/bin/julia` 自定義, 例如 [ `/bin/julia`, `/bin/python3` ] 可自定義取其一配置), 用於傳入選擇啓動哪一種程式語言編寫的接口服務, 計算機 ( Computer ) 程式 ( Programming ) 設計 Julia 語言, 計算機 ( Computer ) 程式 ( Programming ) 設計 Python 語言, 預設值爲 :  `executableFile=/bin/julia`
+
+4. (選), (鍵 `interpreterFile` 固定, 值 `-p,4,--project=/home/QuantitativeTrading/QuantitativeTradingJulia/` 自定義, 且可爲空, 即取 `interpreterFile=` 的形式, 亦可不傳入該參數), 用於傳入程式設計語言 ( Julia, Python3 ) 解釋器 ( Interpreter ) 環境的二進制可執行檔, 於作業系統控制臺命令列 ( Operating System Console Command ) 使用指令啓動時傳入的運行參數, 若爲多參數, 則各參數之間用一個逗號 ( Comma ) 字符 ( `,` ) 連接, 代碼文檔 `c2exe.c` 已設計爲可自動將逗號 ( Comma ) 字符 ( `,` ) 替換爲空格字符 ( `SPACE` ) ( `00100000` ), 然後再傳入程式設計語言 ( Julia, Python3 ) 解釋器 ( Interpreter ) 的運行環境, 預設值爲 :  `interpreterFile=-p,4,--project=/home/QuantitativeTrading/QuantitativeTradingJulia/`
+
+5. (選), (鍵 `scriptFile` 固定, 值 `/home/QuantitativeTrading/QuantitativeTradingJulia/src/QuantitativeTradingServer.jl` 自定義, 例如 [ `/home/QuantitativeTrading/QuantitativeTradingJulia/src/QuantitativeTradingServer.jl`, `/home/QuantitativeTrading/QuantitativeTradingPython/src/QuantitativeTradingServer.py` ] 可自定義取其一配置), 用於傳入程式 ( Programming ) 設計語言 ( Julia, Python3 ) 代碼脚本 ( Script ) 檔 ( `QuantitativeTradingServer.jl`, `QuantitativeTradingServer.py` ) 的存儲路徑全名, 預設值爲 :  `scriptFile=/home/QuantitativeTrading/QuantitativeTradingJulia/src/QuantitativeTradingServer.jl`
+
+6. (選), (鍵 `configInstructions` 固定, 取值自定義, 且可爲空, 即取 `configInstructions=` 的形式, 亦可不傳入該參數), 用於傳入程式 ( Programming ) 設計語言 ( Julia, Python3 ) 代碼脚本 ( Script ) 檔 ( `QuantitativeTradingServer.jl`, `QuantitativeTradingServer.py` ) 的運行參數, 若爲多參數, 則各參數之間用一個逗號 ( Comma ) 字符 ( `,` ) 連接, 代碼文檔 `c2exe.c` 已設計爲可自動將逗號 ( Comma ) 字符 ( `,` ) 替換爲空格字符 ( `SPACE` ) ( `00100000` ), 然後再傳入代碼脚本 ( Script ) 檔 ( `QuantitativeTradingServer.jl`, `QuantitativeTradingServer.py` ) 的運行環境, 預設值爲 :  `configInstructions=configFile=/home/QuantitativeTrading/QuantitativeTradingJulia/config.txt,interface_Function=http_Server,webPath=/home/QuantitativeTrading/html/,host=::0,port=10001,key=username:password,number_Worker_threads=1,isConcurrencyHierarchy=Tasks`
+
+![]()
+
+Compiler :
+
+Minimalist GNU on Windows ( MinGW-w64 ) :  mingw64-8.1.0-release-posix-seh-rt_v6-rev0
+
+[程式設計 C 語言 gcc, g++ 編譯器 ( Compiler ) 之 MinGW-w64 官方網站](https://www.mingw-w64.org/): 
+https://www.mingw-w64.org/
+
+[程式設計 C 語言 gcc, g++ 編譯器 ( Compiler ) 之 MinGW-w64 官方下載頁](https://www.mingw-w64.org/downloads/): 
+https://www.mingw-w64.org/downloads/
+
+[程式設計 C 語言 gcc, g++ 編譯器 ( Compiler ) 之 MinGW-w64 作者官方 GitHub 網站賬戶](https://github.com/niXman): 
+https://github.com/niXman
+
+[程式設計 C 語言 gcc, g++ 編譯器 ( Compiler ) 之 MinGW-w64 官方 GitHub 網站倉庫](https://github.com/nixman/mingw-builds): 
+https://github.com/nixman/mingw-builds.git
+
+[程式設計 C 語言 gcc, g++ 編譯器 ( Compiler ) 之 MinGW-w64 官方 GitHub 網站倉庫預編譯二進制檔下載頁](https://github.com/niXman/mingw-builds-binaries/releases): 
+https://github.com/niXman/mingw-builds-binaries/releases
+
+[程式設計 C 語言 gcc, g++ 編譯器 ( Compiler ) 之 MinGW-w64 預編譯二進制檔下載頁](https://sourceforge.net/projects/mingw-w64/): 
+https://sourceforge.net/projects/mingw-w64/
+
+---
+
+一. 可使用谷歌 ( Google - Chromium ) 或火狐 ( Mozilla - Firefox ) 瀏覽器 ( Browser ) 作爲用戶端 ( Client ) 連接統計運算伺服器「QuantitativeTrading」打開交互介面.
+
+打開應用頁面「index.html」可在地址欄 ( Browser address bar ) 輸入網址 ( Uniform Resource Locator , URL ) : 
+```
+http://username:password@[::1]:10001/index.html?Key=username:password
+```
+
+打開管理頁面「administrator.html」可在地址欄 ( Browser address bar ) 輸入網址 ( Uniform Resource Locator , URL ) : 
+```
+http://username:password@[::1]:10001/administrator.html?Key=username:password
+```
+
+交互頁面「`index.html`」可視化數據圖表，使用第三方擴展包，百度 ( Baidu ) 公司開發的基於 JavaScript 程式設計語言的開源可視化圖表庫「Apache - ECharts」實現.
+
+可自行修改標準通用標記語言代碼脚本 ( .html ) 檔「`index.html`」「`SelectStatisticalAlgorithms.html`」「`InputHTML.html`」「`OutputHTML.html`」内的 HTML , JavaScript , CSS 代碼，擴展交互頁面「`index.html`」内統計方法的連接 ( Browser Client Request ) 選項.
+
+二. 可使用項目空間内的微軟電子表格 ( Windows - Office - Excel - Visual Basic for Applications ) 應用檔「`Client.xlsm`」作爲用戶端 ( Client ) 連接統計運算伺服器「`QuantitativeTrading`」做 ( Client - Request ) 計算.
+
+微軟電子表格 ( Windows - Office - Excel - Visual Basic for Applications ) 應用檔「`Client.xlsm`」打開之後，菜單欄 ( Excel menu bar ) 之 :
+
+1. 「`加載項 ( Excel Add-in )`」 → 「`統計運算 ( Statistics )`」 → 「`人機交互介面 ( operation panel )`」，爲連接統計運算伺服器「`QuantitativeTrading`」做 ( Client - Request ) 計算的操作面板.
+
+2. 「`加載項 ( Excel Add-in )`」 → 「`統計運算 ( Statistics )`」 → 「`統計運算 ( Statistics server )`」，爲從微軟電子表格 ( Windows - Office - Excel - Visual Basic for Applications ) 應用檔 ( `Client.xlsm` ) 内，通過創建子進程 ( Sub Process ) 調用微軟視窗系統 ( Windows10 x86_64 ) 控制臺命令列 ( `cmd.exe` ) 應用，啓動統計運算伺服器「`QuantitativeTrading`」的運行指令.
+
+其中，項目空間内的代碼脚本檔「`TradingAlgorithmModule.bas`」是微軟電子表格 ( Windows - Office - Excel - Visual Basic for Applications ) 應用檔「`Client.xlsm`」運行時，需導入的標準模組 ( Module ) 代碼（必須），可在此代碼脚本檔内，自行修改 Visual Basic for Applications , VBA 代碼，擴展統計方法的連接 ( Client Request ) 項.
+
+微軟電子表格 ( Windows - Office - Excel - Visual Basic for Applications ) 應用檔「Client.xlsm」轉換 JSON 字符串類型的變量 ( JSON - String Object ) 與微軟電子表格字典類型的變量 ( Windows - Office - Excel - Visual Basic for Applications - Dict Object ) 數據類型，借用微軟電子表格 ( Windows - Office - Excel - Visual Basic for Applications ) 應用的第三方擴展類模組「VBA-JSON : JsonConverter.bas」實現.
+
+三. 也可自行選擇其他程式設計語言編寫用戶端鏈接器 ( Client ) 應用，連接統計運算伺服器「`QuantitativeTrading`」做 ( Client - Request ) 計算，比如，使用 JavaScript 語言的 NW.js , Electron 解析器等製作用戶端交互介面，或使用 C 語言的 GNU Image Manipulation Program - GIMP Toolkit , GTK+ 圖形框架等製作用戶端交互介面，然後，使用 Julia 或 Python 語言的統計運算伺服器「`QuantitativeTrading`」作爲後端行使數據計算功能，這樣即可實現類似跨語言混合編程的效果.
+
+使用自行製作的用戶端鏈接器 ( Client ) 時，連接統計運算伺服器「`QuantitativeTrading`」做 ( Client - Request ) 計算，可使用如下網址 ( Uniform Resource Locator , URL ) : 
+
+1. 連接統計運算伺服器「`QuantitativeTrading`」做 ( Client - Request ) 插值 ( Interpolation ) 計算，使用網址 ( Uniform Resource Locator , URL ) : 
+```
+http://[::1]:10001/Interpolation?Key=username:password&algorithmUser=username&algorithmPass=password&algorithmName=BSpline(Cubic)&algorithmLambda=0.0&algorithmKei=2.0&algorithmDi=1.0&algorithmEith=1.0
+```
+
+3. 連接統計運算伺服器「`QuantitativeTrading`」做 ( Client - Request ) 多項式 ( 3 階 ) 方程 ( Polynomial ( Cubic ) ) 模型擬合 ( Fit ) 計算，使用網址 ( Uniform Resource Locator , URL ) : 
+```
+http://[::1]:10001/Polynomial3Fit?Key=username:password&algorithmUser=username&algorithmPass=password&algorithmName=Polynomial3Fit
+```
+
+5. 連接統計運算伺服器「`QuantitativeTrading`」做 ( Client - Request ) 邏輯 4 , 5 參數模型 ( 4 , 5 - parameter logistic curve ) 擬合 ( Fit ) 計算，使用網址 ( Uniform Resource Locator , URL ) : 
+```
+http://[::1]:10001/LC5PFit?Key=username:password&algorithmUser=username&algorithmPass=password&algorithmName=LC5PFit
+```
+
+用戶端 ( Client - Request ) 發送 POST 請求的數據爲 JSON 字符串 ( JSON String ) 類型，數據格式可類比如下 :
+
+Request - POST = 
+```
+{
+    "trainXdata" : [
+        0.0,
+        1.0,
+        2.0,
+        3.0,
+        4.0,
+        5.0,
+        6.0,
+        7.0,
+        8.0,
+        9.0,
+        10.0,
+    ],
+    "trainYdata_1" : [
+        100.0,
+        200.0,
+        300.0,
+        400.0,
+        500.0,
+        600.0,
+        700.0,
+        800.0,
+        900.0,
+        1000.0,
+        1100.0
+    ],
+    "trainYdata_2" : [
+        98.0,
+        198.0,
+        298.0,
+        398.0,
+        498.0,
+        598.0,
+        698.0,
+        798.0,
+        898.0,
+        998.0,
+        1098.0
+    ],
+    "trainYdata_3" : [
+        102.0,
+        202.0,
+        302.0,
+        402.0,
+        502.0,
+        602.0,
+        702.0,
+        802.0,
+        902.0,
+        1002.0,
+        1102.0
+    ],
+    "weight" : [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+    ],
+    "Pdata_0" : [
+        90.0,
+        4.0,
+        1.0,
+        1210.0,
+        1.0
+    ],
+    "Plower" : [
+        "-Infinity",
+        "-Infinity",
+        "-Infinity",
+        "-Infinity",
+        "-Infinity"
+    ],
+    "Pupper" : [
+        "+Infinity",
+        "+Infinity",
+        "+Infinity",
+        "+Infinity",
+        "+Infinity"
+    ],
+    "testYdata_1" : [
+        150.0,
+        200.0,
+        250.0,
+        350.0,
+        450.0,
+        550.0,
+        650.0,
+        750.0,
+        850.0,
+        950.0,
+        1050.0
+    ],
+    "testYdata_2" : [
+        148.0,
+        198.0,
+        248.0,
+        348.0,
+        448.0,
+        548.0,
+        648.0,
+        748.0,
+        848.0,
+        948.0,
+        1048.0
+    ],
+    "testYdata_3" : [
+        152.0,
+        202.0,
+        252.0,
+        352.0,
+        452.0,
+        552.0,
+        652.0,
+        752.0,
+        852.0,
+        952.0,
+        1052.0
+    ],
+    "testXdata" : [
+        0.5,
+        1.0,
+        1.5,
+        2.5,
+        3.5,
+        4.5,
+        5.5,
+        6.5,
+        7.5,
+        8.5,
+        9.5
+    ],
+    "trainYdata" : [
+        [100.0, 98.0, 102.0],
+        [200.0, 198.0, 202.0],
+        [300.0, 298.0, 302.0],
+        [400.0, 398.0, 402.0],
+        [500.0, 498.0, 502.0],
+        [600.0, 598.0, 602.0],
+        [700.0, 698.0, 702.0],
+        [800.0, 798.0, 802.0],
+        [900.0, 898.0, 902.0],
+        [1000.0, 998.0, 1002.0],
+        [1100.0, 1098.0, 1102.0]
+    ],
+    "testYdata" : [
+        [150.0, 148.0, 152.0],
+        [200.0, 198.0, 202.0],
+        [250.0, 248.0, 252.0],
+        [350.0, 348.0, 352.0],
+        [450.0, 448.0, 452.0],
+        [550.0, 548.0, 552.0],
+        [650.0, 648.0, 652.0],
+        [750.0, 748.0, 752.0],
+        [850.0, 848.0, 852.0],
+        [950.0, 948.0, 952.0],
+        [1050.0, 1048.0, 1052.0]
+    ]
+}
+```
+
+伺服器 ( Server - Respond ) 響應 POST 請求的數據格式爲 JSON 字符串 ( JSON String ) 類型，數據格式可類比如下 :
+
+Respond - body = 
+```
+{
+    "Coefficient" : [
+        100.007982422761,
+        42148.4577551448,
+        1.0001564001486,
+        4221377.92224082
+    ],
+    "Coefficient-StandardDeviation" : [
+        0.00781790123184812,
+        2104.76673086505,
+        0.0000237490808220821,
+        210359.023599377
+    ],
+    "Coefficient-Confidence-Lower-95%" : [
+        99.9908250045862,
+        37529.2688077105,
+        1.0001042796499,
+        3759717.22485611
+    ],
+    "Coefficient-Confidence-Upper-95%" : [
+        100.025139840936,
+        46767.6467025791,
+        1.00020852064729,
+        4683038.61962554
+    ],
+    "Yfit" : [
+        100.008980483748,
+        199.99155580718,
+        299.992070696316,
+        399.99603100866,
+        500.000567344017,
+        600.00431688223,
+        700.006476967595,
+        800.006517272442,
+        900.004060927778,
+        999.998826196417,
+        1099.99059444852
+    ],
+    "Yfit-Uncertainty-Lower" : [
+        99.0089499294379,
+        198.991136273453,
+        298.990136898385,
+        398.991624763274,
+        498.99282487668,
+        598.992447662226,
+        698.989753032473,
+        798.984266632803,
+        898.975662941844,
+        998.963708008532,
+        1098.94822805642
+    ],
+    "Yfit-Uncertainty-Upper" : [
+        101.00901103813,
+        200.991951293373,
+        300.993902825086,
+        401.000210884195,
+        501.007916682505,
+        601.015588680788,
+        701.022365894672,
+        801.027666045591,
+        901.031064750697,
+        1001.0322361364,
+        1101.0309201882
+    ],
+    "Residual" : [
+        0.00898048374801874,
+        -0.00844419281929731,
+        -0.00792930368334055,
+        -0.00396899133920669,
+        0.000567344017326831,
+        0.00431688223034143,
+        0.00647696759551763,
+        0.00651727244257926,
+        0.00406092777848243,
+        -0.00117380358278751,
+        -0.00940555147826671
+    ],
+    "testData" : {
+        "Ydata" : [
+            [150.0, 148.0, 152.0],
+            [200.0, 198.0, 202.0],
+            [250.0, 248.0, 252.0],
+            [350.0, 348.0, 352.0],
+            [450.0, 448.0, 452.0],
+            [550.0, 548.0, 552.0],
+            [650.0, 648.0, 652.0],
+            [750.0, 748.0, 752.0],
+            [850.0, 848.0, 852.0],
+            [950.0, 948.0, 952.0],
+            [1050.0, 1048.0, 1052.0]
+        ],
+        "test-Xvals" : [
+            0.500050586546119,
+            1.00008444458554,
+            1.50008923026377,
+            2.50006143908055,
+            3.50001668919562,
+            4.49997400999207,
+            5.49994366811569,
+            6.49993211621922,
+            7.49994379302719,
+            8.49998194168741,
+            9.50004903674755
+        ],
+        "test-Xvals-Uncertainty-Lower" : [
+            0.499936310423273,
+            0.999794808816128,
+            1.49963107921017,
+            2.49927920023971,
+            3.49892261926065,
+            4.49857747071072,
+            5.4982524599721,
+            6.4979530588239,
+            7.49768303155859,
+            8.49744512880161,
+            9.49724144950174
+        ],
+        "test-Xvals-Uncertainty-Upper" : [
+            0.500160692642957,
+            1.00036584601127,
+            1.50053513648402,
+            2.5008235803856,
+            3.50108303720897,
+            4.50133543331854,
+            5.50159259771137,
+            6.50186196458511,
+            7.50214864756277,
+            8.50245638268284,
+            9.50278802032924
+        ],
+        "Xdata" : [
+            0.5,
+            1.0,
+            1.5,
+            2.5,
+            3.5,
+            4.5,
+            5.5,
+            6.5,
+            7.5,
+            8.5,
+            9.5
+        ],
+        "test-Yfit" : [
+            149.99283432168886,
+            199.98780598165467,
+            249.98704946506768,
+            349.9910371559672,
+            449.9975369446911,
+            550.0037557953037,
+            650.0081868763082,
+            750.0098833059892,
+            850.0081939375959,
+            950.002643218264,
+            1049.9928684998304
+        ],
+        "test-Yfit-Uncertainty-Lower" : [],
+        "test-Yfit-Uncertainty-Upper" : [],
+        "test-Residual" : [
+            [0.000050586546119],
+            [0.00008444458554],
+            [0.00008923026377],
+            [0.00006143908055],
+            [0.00001668919562],
+            [-0.00002599000793],
+            [-0.0000563318843],
+            [-0.00006788378077],
+            [-0.0000562069728],
+            [-0.00001805831259],
+            [0.00004903674755]
+        ]
+    }
+}
+```
+
+![]()
+
+微軟電子表格 ( Windows - Office - Excel - Visual Basic for Applications ) 應用，轉換 JSON 字符串類型的變量 ( JSON - String Object ) 與微軟電子表格字典類型的變量 ( Windows - Office - Excel - Visual Basic for Applications - Dict Object ) 時，使用的第三方擴展類模組「VBA-JSON」説明 :
+
+[微軟電子表格 ( Windows - Office - Excel - Visual Basic for Applications ) 應用第三方擴展類模組 VBA-JSON 官方 GitHub 網站倉庫](https://github.com/VBA-tools/VBA-JSON): 
+https://github.com/VBA-tools/VBA-JSON.git
+
+百度 ( Baidu ) 公司開發的基於 JavaScript 程式設計語言的開源可視化圖表庫「Apache - ECharts」説明 :
+
+[基於 JavaScript 程式設計語言的開源可視化圖表庫「Apache - ECharts」官方網站](https://echarts.apache.org/zh/index.html): 
+https://echarts.apache.org/zh/index.html
+
+[基於 JavaScript 程式設計語言的開源可視化圖表庫「Apache - ECharts」官方手冊](https://echarts.apache.org/handbook/zh/get-started/): 
+https://echarts.apache.org/handbook/zh/get-started/
+
+[基於 JavaScript 程式設計語言的開源可視化圖表庫「Apache - ECharts」官方 GitHub 網站倉庫頁](https://github.com/apache/echarts): 
+https://github.com/apache/echarts.git
+
+計算機程式設計 C 語言「GIMP Toolkit , GTK+」圖形框架説明 :
+
+[計算機程式設計 C 語言「GIMP Toolkit , GTK+」圖形框架官方網站](https://www.gtk.org/): 
+https://www.gtk.org/
+
+[計算機程式設計 C 語言「GIMP Toolkit , GTK+」圖形框架官方手冊](https://www.gtk.org/docs/): 
+https://www.gtk.org/docs/
+
+谷歌 ( Google - Chromium ) 或火狐 ( Mozilla - Firefox ) 瀏覽器 ( Browser ) 的官方網站 ( Uniform Resource Locator , URL ) 鏈接 :
+
+[火狐 ( Mozilla - Gecko - Firefox ) 瀏覽器官方網站](https://www.mozilla.org/zh-TW/): 
+https://www.mozilla.org/zh-TW/
+
+[火狐 ( Mozilla - Gecko - Firefox ) 瀏覽器官方手冊](https://firefox-source-docs.mozilla.org/setup/windows_wsl_build.html): 
+https://firefox-source-docs.mozilla.org/setup/windows_wsl_build.html
+
+[火狐 ( Mozilla - Gecko - Firefox ) 瀏覽器官方 GitHub 網站倉庫頁](https://github.com/mozilla/gecko-dev): 
+https://github.com/mozilla/gecko-dev.git
+
+[谷歌 ( Google - Chromium ) 瀏覽器官方 GitHub 網站倉庫頁](https://github.com/chromium/chromium): 
+https://github.com/chromium/chromium.git
+
+微軟電子表格 ( Windows - Office - Excel - Visual Basic for Applications ) 應用 Microsoft Office Excel Professional 2019 的官方網站 ( Uniform Resource Locator , URL ) 鏈接 :
+
+[作業系統 ( Operating system ) 之 Microsoft Windows 官方網站](https://www.microsoft.com/zh-tw/windows): 
+https://www.microsoft.com/zh-tw/windows
+
+[電子表格應用 Microsoft Office Excel 官方下載頁](https://www.microsoft.com/zh-tw/download/office): 
+https://www.microsoft.com/zh-tw/download/office
+
+[電子表格應用 Microsoft Office Excel 2019 官方説明頁](https://learn.microsoft.com/zh-tw/deployoffice/office2019/overview): 
+https://learn.microsoft.com/zh-tw/deployoffice/office2019/overview
+
+---
+
+開箱即用 ( out of the box ) ( portable application ) 已配置第三方擴展模組 ( third-party extensions ( libraries or modules ) ) 的程式設計語言 ( computer programming language ) : Julia 解釋器 ( Interpreter ) 和 Python 解釋器 ( Interpreter ) 運行環境的壓縮檔 ( .7z ) 的 [百度網盤(pan.baidu.com)](https://pan.baidu.com/s/1MZMNeeRz02zpEzSV0xcFBA?pwd=cy8g) 下載頁: 
+https://pan.baidu.com/s/1MZMNeeRz02zpEzSV0xcFBA?pwd=cy8g
+
+提取碼：cy8g
+
+開箱即用 ( out of the box ) ( portable application ) 檔 :
+
+1. 壓縮檔 : `Julia-1.10.10-Window10-AMD_FX8800P_x86_64.7z`
+
+壓縮檔「`Julia-1.10.10-Window10-AMD_FX8800P_x86_64.7z`」爲微軟視窗作業系統 ( Operating System: Acer-NEO-2023 Windows10 x86_64 Inter(R)-Core(TM)-m3-6Y30 ) 程式設計語言 ( Julia ) 解釋器 ( Interpreter ) 二進位可執行檔 ( julia-1.10.10-win64.exe ) 開箱即用 ( out of the box ) ( portable application ) 免安裝版，需自行下載解壓縮，將其保存至檔案夾 ( folder ) : `QuantitativeTrading/Julia/` 内，最終完整路徑應爲「`QuantitativeTrading/Julia/Julia-1.10.10/bin/julia.exe`」
+
+2. 壓縮檔 : `Python-3.11.2-Window10-AMD_FX8800P_x86_64.7z`
+
+壓縮檔「`Python-3.11.2-Window10-AMD_FX8800P_x86_64.7z`」爲微軟視窗作業系統 ( Operating System: Acer-NEO-2023 Windows10 x86_64 Inter(R)-Core(TM)-m3-6Y30 ) 程式設計語言 ( Python ) 解釋器 ( Interpreter ) 二進位可執行檔 ( python-3.11.2-amd64.exe ) 開箱即用 ( out of the box ) ( portable application ) 免安裝版，需自行下載解壓縮，將其保存至檔案夾 ( folder ) : `QuantitativeTrading/Python/` 内，最終完整路徑應爲「`QuantitativeTrading/Python/Python311/python.exe`」
+
+3. 壓縮檔 : `QuantitativeTradingJulia-Julia1.10.10-Window10-AMD_FX8800P_x86_64.7z`
+
+壓縮檔「`QuantitativeTradingJulia-Julia1.10.10-Window10-AMD_FX8800P_x86_64.7z`」爲微軟視窗作業系統 ( Operating System: Acer-NEO-2023 Windows10 x86_64 Inter(R)-Core(TM)-m3-6Y30 ) 統計運算伺服器 'QuantitativeTradingJulia' 開箱即用 ( out of the box ) ( portable application ) 版，已配置計算機程式設計語言 ( computer programming language ) : Julia 解釋器 ( Interpreter ) 運行此統計運算伺服器 'QuantitativeTradingJulia' 項目所需的第三方擴展模組 ( third-party extensions ( libraries or modules ) ) 的運行環境，可自行下載解壓縮，將其保存至檔案夾 ( folder ) : `QuantitativeTrading/QuantitativeTradingJulia/` 内，再因應協調配置壓縮檔「`Julia-1.10.10-Window10-AMD_FX8800P_x86_64.7z`」之後，即可使用如下指令啓動運行統計運算伺服器「`QuantitativeTradingJulia`」項目 : 
+```
+C:\QuantitativeTrading> C:/QuantitativeTrading/Julia/Julia-1.10.10/bin/julia.exe -p 4 --project=C:/QuantitativeTrading/QuantitativeTradingJulia/ C:/QuantitativeTrading/QuantitativeTradingJulia/src/QuantitativeTradingServer.jl configFile=C:/QuantitativeTrading/QuantitativeTradingJulia/config.txt interface_Function=http_Server webPath=C:/QuantitativeTrading/html/ host=::0 port=10001 key=username:password number_Worker_threads=1 isConcurrencyHierarchy=Tasks readtimeout=0 connecttimeout=0
+```
+
+4. 壓縮檔 : `QuantitativeTradingPython-Python3.11.2-Window10-AMD_FX8800P_x86_64.7z`
+
+壓縮檔「`QuantitativeTradingPython-Python3.11.2-Window10-AMD_FX8800P_x86_64.7z`」爲微軟視窗作業系統 ( Operating System: Acer-NEO-2023 Windows10 x86_64 Inter(R)-Core(TM)-m3-6Y30 ) 統計運算伺服器 'QuantitativeTradingPython' 開箱即用 ( out of the box ) ( portable application ) 版，已配置計算機程式設計語言 ( computer programming language ) : Python 解釋器 ( Interpreter ) 運行此統計運算伺服器 'QuantitativeTradingPython' 項目所需的第三方擴展模組 ( third-party extensions ( libraries or modules ) ) 的運行環境，可自行下載解壓縮，將其保存至檔案夾 ( folder ) : `QuantitativeTrading/QuantitativeTradingPython/` 内，再因應協調配置壓縮檔「`Python-3.11.2-Window10-AMD_FX8800P_x86_64.7z`」之後，即可使用如下指令啓動運行統計運算伺服器「'QuantitativeTradingPython`」項目 : 
+```
+C:\QuantitativeTrading> C:/QuantitativeTrading/QuantitativeTradingPython/Scripts/python.exe C:/QuantitativeTrading/QuantitativeTradingPython/src/QuantitativeTradingServer.py configFile=C:/QuantitativeTrading/QuantitativeTradingPython/config.txt interface_Function=http_Server webPath=C:/QuantitativeTrading/html/ host=::0 port=10001 Key=username:password Is_multi_thread=False number_Worker_process=0
+```
+或者 : 
+```
+C:\QuantitativeTrading> C:/QuantitativeTrading/Python/Python311/python.exe C:/QuantitativeTrading/QuantitativeTradingPython/src/QuantitativeTradingServer.py configFile=C:/QuantitativeTrading/QuantitativeTradingPython/config.txt interface_Function=http_Server webPath=C:/QuantitativeTrading/html/ host=::0 port=10001 Key=username:password Is_multi_thread=False number_Worker_process=0
+```
+
+5. 壓縮檔 : `QuantitativeTrading-Window10-AMD_FX8800P_x86_64.7z`
+
+壓縮檔「`QuantitativeTrading-Window10-AMD_FX8800P_x86_64.7z`」爲微軟視窗作業系統 ( Operating System: Acer-NEO-2023 Windows10 x86_64 Inter(R)-Core(TM)-m3-6Y30 ) 統計運算伺服器 'QuantitativeTrading' 開箱即用 ( out of the box ) ( portable application ) 版，已配置計算機程式設計語言 ( computer programming language ) : Julia 解釋器 ( Interpreter ) 和 Python 解釋器 ( Interpreter ) 運行此統計運算伺服器 'QuantitativeTrading' 項目所需的第三方擴展模組 ( third-party extensions ( libraries or modules ) ) 的運行環境，可自行下載解壓縮，將其保存至根目錄 ( Root Directory ) : `C:` 内，即可使用如下指令啓動運行統計運算伺服器「'QuantitativeTrading'」項目 : 
+
+程式設計語言 ( computer programming language ) : Julia 實現，使用如下指令:
+```
+C:\QuantitativeTrading> C:/QuantitativeTrading/Julia/Julia-1.10.10/bin/julia.exe -p 4 --project=C:/QuantitativeTrading/QuantitativeTradingJulia/ C:/QuantitativeTrading/QuantitativeTradingJulia/src/QuantitativeTradingServer.jl configFile=C:/QuantitativeTrading/QuantitativeTradingJulia/config.txt interface_Function=http_Server webPath=C:/QuantitativeTrading/html/ host=::0 port=10001 key=username:password number_Worker_threads=1 isConcurrencyHierarchy=Tasks readtimeout=0 connecttimeout=0
+```
+程式設計語言 ( computer programming language ) : Python 實現，使用如下指令:
+```
+C:\QuantitativeTrading> C:/QuantitativeTrading/QuantitativeTradingPython/Scripts/python.exe C:/QuantitativeTrading/QuantitativeTradingPython/src/QuantitativeTradingServer.py configFile=C:/QuantitativeTrading/QuantitativeTradingPython/config.txt interface_Function=http_Server webPath=C:/QuantitativeTrading/html/ host=::0 port=10001 Key=username:password Is_multi_thread=False number_Worker_process=0
+```
+或者 : 
+```
+C:\QuantitativeTrading> C:/QuantitativeTrading/Python/Python311/python.exe C:/QuantitativeTrading/QuantitativeTradingPython/src/QuantitativeTradingServer.py configFile=C:/QuantitativeTrading/QuantitativeTradingPython/config.txt interface_Function=http_Server webPath=C:/QuantitativeTrading/html/ host=::0 port=10001 Key=username:password Is_multi_thread=False number_Worker_process=0
+```
+使用批處理脚本「`startServer.bat`」啓動，使用如下指令 : 
+```
+C:\QuantitativeTrading> C:/Windows/System32/cmd.exe C:/QuantitativeTrading/startServer.bat C:/QuantitativeTrading/config.txt
+```
+使用二進位可執行檔「`QuantitativeTrading.exe`」啓動，使用如下指令 : 
+```
+C:\QuantitativeTrading> C:/QuantitativeTrading/QuantitativeTrading.exe configFile=C:/QuantitativeTrading/config.txt executableFile=C:/QuantitativeTrading/Julia/Julia-1.10.10/julia.exe interpreterFile=-p,4,--project=C:/QuantitativeTrading/QuantitativeTradingJulia/ scriptFile=C:/QuantitativeTrading/QuantitativeTradingJulia/src/QuantitativeTradingServer.jl configInstructions=configFile=/home/QuantitativeTrading/QuantitativeTradingJulia/config.txt,interface_Function=http_Server,webPath=C:/QuantitativeTrading/html/,host=::0,port=10001,key=username:password,number_Worker_threads=1,isConcurrencyHierarchy=Tasks
+```
+
+6. 壓縮檔 : `google-pixel-2_android-11_termux-0.118_arm64_ubuntu-22.04_arm64_QuantitativeTrading.tar.gz`
+
+壓縮檔「`google-pixel-2_android-11_termux-0.118_arm64_ubuntu-22.04_arm64_QuantitativeTrading.tar.gz`」爲谷歌安卓作業系統 ( Operating System: Google-Pixel-7 Android-11 Termux-0.118 Ubuntu-22.04-LTS-rootfs Arm64-aarch64 MSM8998-Snapdragon835-Qualcomm®-Kryo™-280 ) 統計運算伺服器「'QuantitativeTrading'」項目源代碼脚本，可自行下載將其移動至 Android-Termux-Ubuntu 系統的檔案夾 ( folder ) : `/home/` 内，然後再使用如下指令解壓縮 : 
+```
+root@localhost:~# tar -zxvf /home/google-pixel-2_android-11_termux-0.118_arm64_ubuntu-22.04_arm64_QuantitativeTrading.tar.gz
+```
+最終應保存爲檔案夾 ( folder ) : `/home/QuantitativeTrading/` 形式.
+
+然後，再使用如下指令修改批處理 ( Bash ) 脚本「`startServer.sh`」和二進位可執行檔「`QuantitativeTrading.exe`」的權限爲所有用戶可運行 :
+```
+root@localhost:~# chmod 777 /home/QuantitativeTrading/startServer.sh
+```
+```
+root@localhost:~# chmod 777 /home/QuantitativeTrading/QuantitativeTrading.exe
+```
+使用如下指令修改參數配置文檔「`/home/QuantitativeTrading/config.txt`」「`/home/QuantitativeTrading/QuantitativeTradingJulia/config.txt`」「`/home/QuantitativeTrading/QuantitativeTradingPython/config.txt`」和代碼脚本檔 ( Script file ) 「`/home/QuantitativeTrading/QuantitativeTradingJulia/src/Interface.jl`」「`/home/QuantitativeTrading/QuantitativeTradingJulia/src/QuantitativeTradingServer.jl`」「`/home/QuantitativeTrading/QuantitativeTradingJulia/src/Router.jl`」「`/home/QuantitativeTrading/QuantitativeTradingJulia/src/Interpolation_Fitting.jl`」「`/home/QuantitativeTrading/QuantitativeTradingPython/src/Interface.py`」「`/home/QuantitativeTrading/QuantitativeTradingPython/src/QuantitativeTradingServer.py`」「`/home/QuantitativeTrading/QuantitativeTradingPython/src/Router.py`」「`/home/QuantitativeTrading/QuantitativeTradingPython/src/Interpolation_Fitting.py`」的權限爲所有用戶可讀可寫 :
+```
+root@localhost:~# chmod 666 /home/QuantitativeTrading/config.txt
+```
+```
+root@localhost:~# chmod 666 /home/QuantitativeTrading/QuantitativeTradingJulia/config.txt
+```
+```
+root@localhost:~# chmod 666 /home/QuantitativeTrading/QuantitativeTradingPython/config.txt
+```
+```
+root@localhost:~# chmod 666 /home/QuantitativeTrading/QuantitativeTradingJulia/src/Interface.jl
+```
+```
+root@localhost:~# chmod 666 /home/QuantitativeTrading/QuantitativeTradingJulia/src/QuantitativeTradingServer.jl
+```
+```
+root@localhost:~# chmod 666 /home/QuantitativeTrading/QuantitativeTradingJulia/src/Router.jl
+```
+```
+root@localhost:~# chmod 666 /home/QuantitativeTrading/QuantitativeTradingJulia/src/Interpolation_Fitting.jl
+```
+```
+root@localhost:~# chmod 666 /home/QuantitativeTrading/QuantitativeTradingPython/src/Interface.py
+```
+```
+root@localhost:~# chmod 666 /home/QuantitativeTrading/QuantitativeTradingPython/src/QuantitativeTradingServer.py
+```
+```
+root@localhost:~# chmod 666 /home/QuantitativeTrading/QuantitativeTradingPython/src/Router.py
+```
+```
+root@localhost:~# chmod 666 /home/QuantitativeTrading/QuantitativeTradingPython/src/Interpolation_Fitting.py
+```
+然後，即可使用如下指令啓動運行統計運算伺服器「'QuantitativeTrading'」項目 : 
+
+程式設計語言 ( computer programming language ) : Julia 實現，使用如下指令:
+```
+root@localhost:~# /usr/julia/julia-1.10.10/bin/julia -p 4 --project=/home/QuantitativeTrading/QuantitativeTradingJulia/ /home/QuantitativeTrading/QuantitativeTradingJulia/src/QuantitativeTradingServer.jl configFile=/home/QuantitativeTrading/QuantitativeTradingJulia/config.txt interface_Function=http_Server webPath=/home/QuantitativeTrading/html/ host=::0 port=10001 key=username:password number_Worker_threads=1 isConcurrencyHierarchy=Tasks readtimeout=0 connecttimeout=0
+```
+程式設計語言 ( computer programming language ) : Python 實現，使用如下指令:
+```
+root@localhost:~# /usr/bin/python3 /home/QuantitativeTrading/QuantitativeTradingPython/src/QuantitativeTradingServer.py configFile=/home/QuantitativeTrading/QuantitativeTradingPython/config.txt interface_Function=http_Server webPath=/home/QuantitativeTrading/html/ host=::0 port=10001 Key=username:password Is_multi_thread=False number_Worker_process=0
+```
+使用 Shell 語言脚本「`startServer.sh`」啓動，使用如下指令 : 
+```
+root@localhost:~# /bin/bash /home/QuantitativeTrading/startServer.sh configFile=/home/QuantitativeTrading/config.txt executableFile=/bin/julia interpreterFile=-p,4,--project=/home/QuantitativeTrading/QuantitativeTradingJulia/ scriptFile=/home/QuantitativeTrading/QuantitativeTradingJulia/src/QuantitativeTradingServer.jl configInstructions=configFile=/home/QuantitativeTrading/QuantitativeTradingJulia/config.txt,interface_Function=http_Server,webPath=/home/QuantitativeTrading/html/,host=::0,port=10001,key=username:password,number_Worker_threads=1,isConcurrencyHierarchy=Tasks
+```
+使用二進位可執行檔「`QuantitativeTrading.exe`」啓動，使用如下指令 : 
+```
+root@localhost:~# /home/QuantitativeTrading/QuantitativeTrading.exe configFile=/home/QuantitativeTrading/config.txt executableFile=/bin/julia interpreterFile=-p,4,--project=/home/QuantitativeTrading/QuantitativeTradingJulia/ scriptFile=/home/QuantitativeTrading/QuantitativeTradingJulia/src/QuantitativeTradingServer.jl configInstructions=configFile=/home/QuantitativeTrading/QuantitativeTradingJulia/config.txt,interface_Function=http_Server,webPath=/home/QuantitativeTrading/html/,host=::0,port=10001,key=username:password,number_Worker_threads=1,isConcurrencyHierarchy=Tasks
+```
+
+7. 二進位可執行檔 : `QuantitativeTrading-Window10-AMD_FX8800P_x86_64.exe`
+
+二進位可執行檔「`QuantitativeTrading-Window10-AMD_FX8800P_x86_64.exe`」爲微軟視窗作業系統 ( Operating System: Acer-NEO-2023 Windows10 x86_64 Inter(R)-Core(TM)-m3-6Y30 ) 統計運算伺服器「'QuantitativeTrading'」項目内 C 語言源代碼檔「'QuantitativeTrading/c/c2exe.c'」使用 Window10 - MinGW-w64 - gcc 編譯器，編譯之後得到的二進位可執行檔，可自行下載保存至檔案夾 ( folder ) : `C:/QuantitativeTrading/` 内，使用如下指令將其重命名 :
+```
+C:\QuantitativeTrading> rename C:/QuantitativeTrading/QuantitativeTrading-Window10-AMD_FX8800P_x86_64.exe C:/QuantitativeTrading/QuantitativeTrading.exe
+```
+8. 二進位可執行檔 : `QuantitativeTrading_google-pixel-2_android-11_termux-0.118_ubuntu-22.04-LTS-rootfs_arm64.exe`
+
+二進位可執行檔「`QuantitativeTrading_google-pixel-2_android-11_termux-0.118_ubuntu-22.04-LTS-rootfs_arm64.exe`」爲谷歌安卓作業系統 ( Operating System: Google-Pixel-7 Android-11 Termux-0.118 Ubuntu-22.04-LTS-rootfs Arm64-aarch64 MSM8998-Snapdragon835-Qualcomm®-Kryo™-280 ) 統計運算伺服器「'QuantitativeTrading'」項目内 C 語言源代碼檔「'QuantitativeTrading/c/c2exe.c'」使用 Ubuntu 22.04 - gcc 編譯器，編譯之後得到的二進位可執行檔，可自行下載保存至檔案夾 ( folder ) : `/home/QuantitativeTrading/` 内，使用如下指令將其重命名 :
+```
+root@localhost:~# /home/QuantitativeTrading/QuantitativeTrading_google-pixel-2_android-11_termux-0.118_ubuntu-22.04-LTS-rootfs_arm64.exe /home/QuantitativeTrading/QuantitativeTrading.exe
+```
+再使用如下指令修改其權限爲所有用戶可運行 :
+```
+root@localhost:~# chmod 777 /home/QuantitativeTrading/QuantitativeTrading.exe
+```
+即可.
+
+
 
 
 
