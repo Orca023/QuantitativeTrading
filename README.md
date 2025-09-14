@@ -58,61 +58,6 @@
 
 
 
-
-一. 代碼脚本檔 ( script file ) : `QuantitativeTrading/QuantitativeTradingJulia/src/Interface.jl` , `QuantitativeTrading/QuantitativeTradingPython/src/Interface.py`
-
-代碼脚本 ( Script ) 檔 : `Interface.jl` 或 `Interface.py` 是伺服器 ( Server ) 函數 ( Function ) , 具體功能是實現: 讀入 ( read ) 數據, 寫出 ( write ) 結果.
-
-二. 代碼脚本檔 ( script file ) : `QuantitativeTrading/QuantitativeTradingJulia/src/Interpolation_Fitting.jl` , `QuantitativeTrading/QuantitativeTradingPython/src/Interpolation_Fitting.py`
-
-代碼脚本 ( Script ) 檔 : `Interpolation_Fitting.jl` 和 `Interpolation_Fitting.py` 裏，可創建執行自定義運算規則的函數 ( Function )，用以執行讀入 ( read ) 數據具體的運算處理 ( calculator ) 功能, 即本例擬合（Fit）運算、插值（Interpolation）運算等，並返回 ( return ) 處理結果至檔 Router 的路由函數.
-
-三. 代碼脚本檔 ( script file ) : `QuantitativeTrading/QuantitativeTradingJulia/src/Router.jl` , `QuantitativeTrading/QuantitativeTradingPython/src/Router.py`
-
-代碼脚本 ( Script ) 檔 : `Router.jl` 或 `Router.py` 引用 ( Import ) 檔 `Interpolation_Fitting.jl` 或 `Interpolation_Fitting.py` 裏的執行自定義運算規則的函數 ( Function )，並將計算結果返回 ( return ) 至檔 `Interface` 的伺服器 ( Server ) 函數. 
-
-其中, 檔 `Router.jl` 或 `Router.py` 裏的 : `do_data` 函數 ( Function ) 是執行文檔 ( file ) 監聽伺服器 ( `file_Monitor` ) 讀入的數據分發路由 ( Router ) 功能.
-
-其中, 檔 `Router.jl` 或 `Router.py` 裏的 : `do_Request` 函數 ( Function ) 是執行網路 ( web ) 伺服器 ( `http_Server` ) 讀入的從用戶端 ( `http_Client` ) 發送的請求 ( Request ) 數據的分發路由 ( Router ) 功能.
-
-其中, 檔 `Router.jl` 或 `Router.py` 裏的 : `do_Response` 函數 ( Function ) 是執行網路 ( web ) 用戶端鏈接器 ( `http_Client` ) 接收到從伺服器 ( `http_Server` ) 回饋的響應 ( Response ) 數據 ( 運算處理結果 ) 的分發路由 ( Router ) 功能.
-
-可自行修改行使路由 (Router) 功能的代碼脚本 ( script file ) 檔「`Router.jl`」「`Router.py`」内的 Julia 或 Python 代碼，同時需自行修改行使具體算法 ( Algorithm ) 功能的代碼脚本 ( script file ) 檔内的 Julia 或 Python 代碼，如此例的「`Interpolation_Fitting.jl`」「`Interpolation_Fitting.py`」檔，使二者相互因應協調，即可自定義擴展此統計運算伺服器「`QuantitativeTrading`」所能提供的計算方法 ( Server Respond ) 的選項.
-
-四. 代碼脚本檔 ( script file ) : `QuantitativeTrading/QuantitativeTradingJulia/src/QuantitativeTradingServer.jl` , `QuantitativeTrading/QuantitativeTradingPython/src/QuantitativeTradingServer.py`
-
-代碼脚本 ( Script ) 檔 : `QuantitativeTradingServer.jl` 或 `QuantitativeTradingServer.py` 是伺服器（Server）啓動入口，引用 ( Import ) 檔 `Interface.jl` 或 `Interface.py` 裏的伺服器 ( Server ) 讀入 ( read ) 待處理的原始數據, 然後, 實現數據分發路由 ( Router ) 功能, 可通過修改代碼脚本 ( Script ) 檔 : `Router.jl` 或 `Router.py` 裏的 : `do_data` 和 `do_Request` 兩個函數 ( Function ) , 實現自定義規則的數據分發運算處理並返回 ( return ) 運算結果, 然後再將運算結果, 通過引用 ( Import ) 檔 `Interface.jl` 或 `Interface.py` 裏的伺服器 ( Server ) 回饋寫出 ( write ) 結果返回 ( return ) 至用戶端 ( Client ) .
-
-五. 檔案夾 ( folder ) : `QuantitativeTrading/Julia/` , `QuantitativeTrading/Python/`
-
-檔案夾 ( folder )「`QuantitativeTrading/Julia/`」爲微軟視窗系統 ( Windows10 x86_64 ) 程式設計語言 ( Julia ) 解釋器 ( Interpreter ) 二進位可執行檔 ( julia.exe ) 的儲存位置，需自行下載後，將其解壓縮，保存至「`C:/QuantitativeTrading/Julia/Julia-1.10.10/bin/julia.exe`」路徑.
-
-檔案夾 ( folder )「`QuantitativeTrading/Python/`」爲微軟視窗系統 ( Windows10 x86_64 ) 程式設計語言 ( Python3 ) 解釋器 ( Interpreter ) 二進位可執行檔 ( python.exe ) 的儲存位置，需自行下載後，將其解壓縮，保存至「`C:/QuantitativeTrading/Python/Python311/python.exe`」路徑.
-
-六. 檔案夾 ( folder ) : `QuantitativeTrading/html/`
-
-檔案夾 ( folder )「`QuantitativeTrading/html/`」爲使用瀏覽器 ( Browser ) 作爲用戶端 ( Client ) 時，統計運算伺服器「`QuantitativeTrading`」向用戶端瀏覽器 ( Browser ) 發送 ( Respond ) 的標準通用標記語言代碼脚本 ( .html ) 檔.
-
-其中 :
-
-代碼脚本檔「`index.html`」爲應用交互頁面，因應網址 ( Uniform Resource Locator , URL ) 爲 : 
-`http://[::1]:10001/index.html`
-
-代碼脚本檔「`administrator.html`」爲管理頁面，因應網址 ( Uniform Resource Locator , URL ) 爲 : 
-`http://[::1]:10001/administrator.html`
-
-逗號 ( Comma ) 分隔符檔 ( .csv )「`calculated.csv`」爲計算結果數據示例，是用戶端瀏覽器 ( Browser ) 應用交互頁面「`index.html`」計算結果表格内數據，單擊「保存運算結果數據文檔」按鈕 ( Button ) 後，從瀏覽器 ( Browser ) 應用交互頁面「`index.html`」計算結果表格内導出至本地硬盤 ( Disk , Read-Only Memory ) 存儲的數據文檔示例.
-
-逗號 ( Comma ) 分隔符檔 ( .csv )「`LogisticLog5PInputData.csv`」爲待計算的原數據示例，是用戶端瀏覽器 ( Browser ) 應用交互頁面「`index.html`」待計算表格内的原數據，單擊「讀取待處理的數據文檔」按鈕 ( Button ) 後，從本地硬盤 ( Disk , Read-Only Memory ) 導入至瀏覽器 ( Browser ) 應用交互頁面「`index.html`」待計算表格内的數據文檔示例.
-
-可自行修改標準通用標記語言代碼脚本 ( .html ) 檔「`index.html`」「`SelectStatisticalAlgorithms.html`」「`InputHTML.html`」「`OutputHTML.html`」内的 HTML , JavaScript , CSS 代碼，擴展交互頁面「`index.html`」内統計方法的連接 ( Browser Client Request ) 選項.
-
-七. 代碼脚本檔 ( script file ) : `QuantitativeTrading/StatisticsAlgorithmModule.bas` , 微軟電子表格應用檔 ( Windows - Office - Excel - Visual Basic for Applications ) : `QuantitativeTrading/Client.xlsm`
-
-微軟電子表格 ( Windows - Office - Excel - Visual Basic for Applications ) 應用檔「`Client.xlsm`」可作爲用戶端 ( Client ) 連接統計運算伺服器「`QuantitativeTrading`」做 ( Client - Request ) 計算.
-
-代碼脚本檔「`StatisticsAlgorithmModule.bas`」是微軟電子表格 ( Windows - Office - Excel - Visual Basic for Applications ) 應用檔「`Client.xlsm`」運行時，需導入的標準模組 ( Module ) 代碼（必須），可在此代碼脚本檔内，自行修改 Visual Basic for Applications , VBA 代碼，擴展統計方法的連接 ( Client Request ) 項.
-
 ---
 
 Python3 Explain : Interface.py , QuantitativeTradingServer.py , Router.py , Interpolation_Fitting.py
@@ -733,7 +678,7 @@ http://username:password@[::1]:10001/administrator.html?Key=username:password
 
 2. 「`加載項 ( Excel Add-in )`」 → 「`統計運算 ( Statistics )`」 → 「`統計運算 ( Statistics server )`」，爲從微軟電子表格 ( Windows - Office - Excel - Visual Basic for Applications ) 應用檔 ( `Client.xlsm` ) 内，通過創建子進程 ( Sub Process ) 調用微軟視窗系統 ( Windows10 x86_64 ) 控制臺命令列 ( `cmd.exe` ) 應用，啓動統計運算伺服器「`QuantitativeTrading`」的運行指令.
 
-其中，項目空間内的代碼脚本檔「`StatisticsAlgorithmModule.bas`」是微軟電子表格 ( Windows - Office - Excel - Visual Basic for Applications ) 應用檔「`Client.xlsm`」運行時，需導入的標準模組 ( Module ) 代碼（必須），可在此代碼脚本檔内，自行修改 Visual Basic for Applications , VBA 代碼，擴展統計方法的連接 ( Client Request ) 項.
+其中，項目空間内的代碼脚本檔「`TradingAlgorithmModule.bas`」是微軟電子表格 ( Windows - Office - Excel - Visual Basic for Applications ) 應用檔「`Client.xlsm`」運行時，需導入的標準模組 ( Module ) 代碼（必須），可在此代碼脚本檔内，自行修改 Visual Basic for Applications , VBA 代碼，擴展統計方法的連接 ( Client Request ) 項.
 
 微軟電子表格 ( Windows - Office - Excel - Visual Basic for Applications ) 應用檔「Client.xlsm」轉換 JSON 字符串類型的變量 ( JSON - String Object ) 與微軟電子表格字典類型的變量 ( Windows - Office - Excel - Visual Basic for Applications - Dict Object ) 數據類型，借用微軟電子表格 ( Windows - Office - Excel - Visual Basic for Applications ) 應用的第三方擴展類模組「VBA-JSON : JsonConverter.bas」實現.
 
@@ -1320,37 +1265,65 @@ root@localhost:~# chmod 777 /home/QuantitativeTrading/QuantitativeTrading.exe
 
 ---
 
+一. 代碼脚本檔 ( script file ) : `QuantitativeTrading/QuantitativeTradingJulia/src/Interface.jl` , `QuantitativeTrading/QuantitativeTradingPython/src/Interface.py`
 
+代碼脚本 ( Script ) 檔 : `Interface.jl` 或 `Interface.py` 是伺服器 ( Server ) 函數 ( Function ) , 具體功能是實現: 讀入 ( read ) 數據, 寫出 ( write ) 結果.
 
-一. 代碼脚本檔 ( script file ) : `QuantitativeTrading/QuantitativeTradingJulia/src/Quantitative_Indicators.jl` , `QuantitativeTrading/QuantitativeTradingPython/src/Quantitative_Indicators.py`
+二. 代碼脚本檔 ( script file ) : `QuantitativeTrading/QuantitativeTradingJulia/src/Router.jl` , `QuantitativeTrading/QuantitativeTradingPython/src/Router.py`
+
+代碼脚本 ( Script ) 檔 : `Router.jl` 或 `Router.py` 引用 ( Import ) 檔 `Interpolation_Fitting.jl` 或 `Interpolation_Fitting.py` 裏的執行自定義運算規則的函數 ( Function )，並將計算結果返回 ( return ) 至檔 `Interface` 的伺服器 ( Server ) 函數. 
+
+其中, 檔 `Router.jl` 或 `Router.py` 裏的 : `do_data` 函數 ( Function ) 是執行文檔 ( file ) 監聽伺服器 ( `file_Monitor` ) 讀入的數據分發路由 ( Router ) 功能.
+
+其中, 檔 `Router.jl` 或 `Router.py` 裏的 : `do_Request` 函數 ( Function ) 是執行網路 ( web ) 伺服器 ( `http_Server` ) 讀入的從用戶端 ( `http_Client` ) 發送的請求 ( Request ) 數據的分發路由 ( Router ) 功能.
+
+其中, 檔 `Router.jl` 或 `Router.py` 裏的 : `do_Response` 函數 ( Function ) 是執行網路 ( web ) 用戶端鏈接器 ( `http_Client` ) 接收到從伺服器 ( `http_Server` ) 回饋的響應 ( Response ) 數據 ( 運算處理結果 ) 的分發路由 ( Router ) 功能.
+
+可自行修改行使路由 (Router) 功能的代碼脚本 ( script file ) 檔「`Router.jl`」「`Router.py`」内的 Julia 或 Python 代碼，同時需自行修改行使具體算法 ( Algorithm ) 功能的代碼脚本 ( script file ) 檔内的 Julia 或 Python 代碼，如此例的「`Interpolation_Fitting.jl`」「`Interpolation_Fitting.py`」檔，使二者相互因應協調，即可自定義擴展此統計運算伺服器「`QuantitativeTrading`」所能提供的計算方法 ( Server Respond ) 的選項.
+
+三. 代碼脚本檔 ( script file ) : `QuantitativeTrading/QuantitativeTradingJulia/src/QuantitativeTradingServer.jl` , `QuantitativeTrading/QuantitativeTradingPython/src/QuantitativeTradingServer.py`
+
+代碼脚本 ( Script ) 檔 : `QuantitativeTradingServer.jl` 或 `QuantitativeTradingServer.py` 是伺服器（Server）啓動入口，引用 ( Import ) 檔 `Interface.jl` 或 `Interface.py` 裏的伺服器 ( Server ) 讀入 ( read ) 待處理的原始數據, 然後, 實現數據分發路由 ( Router ) 功能, 可通過修改代碼脚本 ( Script ) 檔 : `Router.jl` 或 `Router.py` 裏的 : `do_data` 和 `do_Request` 兩個函數 ( Function ) , 實現自定義規則的數據分發運算處理並返回 ( return ) 運算結果, 然後再將運算結果, 通過引用 ( Import ) 檔 `Interface.jl` 或 `Interface.py` 裏的伺服器 ( Server ) 回饋寫出 ( write ) 結果返回 ( return ) 至用戶端 ( Client ) .
+
+四. 代碼脚本檔 ( script file ) : `QuantitativeTrading/QuantitativeTradingJulia/src/Interpolation_Fitting.jl` , `QuantitativeTrading/QuantitativeTradingPython/src/Interpolation_Fitting.py`
+
+代碼脚本 ( Script ) 檔 : `Interpolation_Fitting.jl` 和 `Interpolation_Fitting.py` 裏，可創建執行自定義運算規則的函數 ( Function )，用以執行讀入 ( read ) 數據具體的運算處理 ( calculator ) 功能, 即本例擬合（Fit）運算、插值（Interpolation）運算等，並返回 ( return ) 處理結果至檔 Router 的路由函數.
+
+五. 代碼脚本檔 ( script file ) : `QuantitativeTrading/QuantitativeTradingJulia/src/Quantitative_Indicators.jl` , `QuantitativeTrading/QuantitativeTradingPython/src/Quantitative_Indicators.py`
 
 代碼脚本 ( Script ) 檔 : `Quantitative_Indicators.jl` 或 `Quantitative_Indicators.py` 是此「`QuantitativeTrading`」數量化交易模型的指標模組，計算日棒缐 ( K - Line ) 數據趨勢强度自定義示意指標的模組，實現從日棒缐 ( K - Line ) 原始數據計算抽象獲取自定義示意指標值的功能 .
 
-二. 代碼脚本檔 ( script file ) : `QuantitativeTrading/QuantitativeTradingJulia/src/Quantitative_Data_Cleaning.jl` , `QuantitativeTrading/QuantitativeTradingPython/src/Quantitative_Data_Cleaning.py`
+六. 代碼脚本檔 ( script file ) : `QuantitativeTrading/QuantitativeTradingJulia/src/Quantitative_Data_Cleaning.jl` , `QuantitativeTrading/QuantitativeTradingPython/src/Quantitative_Data_Cleaning.py`
 
 代碼脚本 ( Script ) 檔 : `Quantitative_Data_Cleaning.jl` 或 `Quantitative_Data_Cleaning.py` 是此「`QuantitativeTrading`」數量化交易模型的數據初加工模組，初步清理日棒缐 ( K - Line ) 原始數據，並引用「`Quantitative_Indicators.jl`」或「`Quantitative_Indicators.py`」模組，計算趨勢强度自定義示意指標，然後使計算結果標準化日棒缐 ( K - Line ) 數據，輸出至字典類型 ( Julia - Base.Dict 或 Python - dict ) 數據變量「`stepping_data`」存儲，可進一步寫入自定義本地檔 ( .jld 或 .pickle , .csv , .xlsx ) 持久化存儲 .
 
-三. 代碼脚本檔 ( script file ) : `QuantitativeTrading/QuantitativeTradingJulia/src/Quantitative_MarketTiming.jl` , `QuantitativeTrading/QuantitativeTradingPython/src/Quantitative_MarketTiming.py`
+七. 代碼脚本檔 ( script file ) : `QuantitativeTrading/QuantitativeTradingJulia/src/Quantitative_MarketTiming.jl` , `QuantitativeTrading/QuantitativeTradingPython/src/Quantitative_MarketTiming.py`
 
 代碼脚本 ( Script ) 檔 : `Quantitative_MarketTiming.jl` 或 `Quantitative_MarketTiming.py` 是此「`QuantitativeTrading`」數量化交易模型擇時 ( market timing ) 規則模組，使用「`Quantitative_Data_Cleaning.jl`」或「`Quantitative_Data_Cleaning.py`」模組初步清理日棒缐 ( K - Line ) 原始數據獲得標準化日棒缐 ( K - Line ) 數據，引用「`Quantitative_Indicators.jl`」或「`Quantitative_Indicators.py`」模組計算趨勢强度自定義示意指標，然後操作標準化日棒缐 ( K - Line ) 數據，計算擇時 ( market timing ) 判斷及優化 ( optimization ) 擇時 ( market timing ) 規則參數 ( parameters ) 依據，函數計算結果返回字典類型 ( Julia - Base.Dict 或 Python - dict ) 數據變量存儲 .
 
-四. 代碼脚本檔 ( script file ) : `QuantitativeTrading/QuantitativeTradingJulia/src/Quantitative_PickStock.jl` , `QuantitativeTrading/QuantitativeTradingPython/src/Quantitative_PickStock.py`
+八. 代碼脚本檔 ( script file ) : `QuantitativeTrading/QuantitativeTradingJulia/src/Quantitative_PickStock.jl` , `QuantitativeTrading/QuantitativeTradingPython/src/Quantitative_PickStock.py`
 
 代碼脚本 ( Script ) 檔 : `Quantitative_PickStock.jl` 或 `Quantitative_PickStock.py` 是此「`QuantitativeTrading`」數量化交易模型選股 ( pick stock ) 規則模組，使用「`Quantitative_Data_Cleaning.jl`」或「`Quantitative_Data_Cleaning.py`」模組初步清理日棒缐 ( K - Line ) 原始數據獲得標準化日棒缐 ( K - Line ) 數據，引用「`Quantitative_Indicators.jl`」或「`Quantitative_Indicators.py`」模組計算趨勢强度自定義示意指標，操作標準化日棒缐 ( K - Line ) 數據，引用「`Quantitative_MarketTiming.jl`」或「`Quantitative_MarketTiming.py`」模組計算擇時 ( market timing ) 操作，再計算選股 ( pick stock ) 判斷及優化 ( optimization ) 選股 ( pick stock ) 規則參數 ( parameters ) 依據，函數計算結果返回字典類型 ( Julia - Base.Dict 或 Python - dict ) 數據變量存儲 .
 
-五. 代碼脚本檔 ( script file ) : `QuantitativeTrading/QuantitativeTradingJulia/src/Quantitative_SizePosition.jl` , `QuantitativeTrading/QuantitativeTradingPython/src/Quantitative_SizePosition.py`
+九. 代碼脚本檔 ( script file ) : `QuantitativeTrading/QuantitativeTradingJulia/src/Quantitative_SizePosition.jl` , `QuantitativeTrading/QuantitativeTradingPython/src/Quantitative_SizePosition.py`
 
 代碼脚本 ( Script ) 檔 : `Quantitative_SizePosition.jl` 或 `Quantitative_SizePosition.py` 是此「`QuantitativeTrading`」數量化交易模型倉位 ( size position ) 規則模組，使用「`Quantitative_Data_Cleaning.jl`」或「`Quantitative_Data_Cleaning.py`」模組初步清理日棒缐 ( K - Line ) 原始數據獲得標準化日棒缐 ( K - Line ) 數據，引用「`Quantitative_Indicators.jl`」或「`Quantitative_Indicators.py`」模組計算趨勢强度自定義示意指標，操作標準化日棒缐 ( K - Line ) 數據，引用「`Quantitative_MarketTiming.jl`」或「`Quantitative_MarketTiming.py`」模組計算擇時 ( market timing ) 操作，引用「`Quantitative_PickStock.jl`」或「`Quantitative_PickStock.py`」模組計算選股 ( pick stock ) 操作，再計算倉位 ( size position ) 判斷及優化 ( optimization ) 倉位 ( size position ) 規則參數 ( parameters ) 依據，函數計算結果返回字典類型 ( Julia - Base.Dict 或 Python - dict ) 數據變量存儲 .
 
-六. 代碼脚本檔 ( script file ) : `QuantitativeTrading/QuantitativeTradingJulia/src/Quantitative_BackTesting.jl` , `QuantitativeTrading/QuantitativeTradingPython/src/Quantitative_BackTesting.py`
+十. 代碼脚本檔 ( script file ) : `QuantitativeTrading/QuantitativeTradingJulia/src/Quantitative_BackTesting.jl` , `QuantitativeTrading/QuantitativeTradingPython/src/Quantitative_BackTesting.py`
 
 代碼脚本 ( Script ) 檔 : `Quantitative_BackTesting.jl` 或 `Quantitative_BackTesting.py` 是此「`QuantitativeTrading`」數量化交易模型回測 ( back testing ) 模組，採取推進分析 ( stepper movement ) ( propulsion analysis ) 的方法，使用「`Quantitative_Data_Cleaning.jl`」或「`Quantitative_Data_Cleaning.py`」模組初步清理日棒缐 ( K - Line ) 原始數據獲得標準化日棒缐 ( K - Line ) 數據，引用「`Quantitative_Indicators.jl`」或「`Quantitative_Indicators.py`」模組計算趨勢强度自定義示意指標，操作標準化日棒缐 ( K - Line ) 數據，引用「`Quantitative_MarketTiming.jl`」或「`Quantitative_MarketTiming.py`」模組計算擇時 ( market timing ) 操作，引用「`Quantitative_PickStock.jl`」或「`Quantitative_PickStock.py`」模組計算選股 ( pick stock ) 操作，引用「`Quantitative_SizePosition.jl`」或「`Quantitative_SizePosition.py`」模組計算倉位 ( size position ) 操作，推進分析 ( stepper movement ) ( propulsion analysis ) 遍歷數據序列計算纍計盈虧額，函數計算結果返回字典類型 ( Julia - Base.Dict 或 Python - dict ) 數據變量存儲 .
 
-七. 純文本文檔 ( .txt ) : `QuantitativeTrading/QuantitativeTradingJulia/config.txt` , `QuantitativeTrading/QuantitativeTradingPython/config.txt`
+十一. 純文本文檔 ( .txt ) : `QuantitativeTrading/QuantitativeTradingJulia/config.txt` , `QuantitativeTrading/QuantitativeTradingPython/config.txt`
 
 純文本文檔 ( .txt ) : `QuantitativeTrading/QuantitativeTradingJulia/config.txt` , `QuantitativeTrading/QuantitativeTradingPython/config.txt` 是「`QuantitativeTradingJulia`」和「`QuantitativeTradingPython`」數量化交易模型的參數配置文檔 ( config file ) 行使運行參數傳入職能 .
 
-八. 檔案夾 ( folder ) : `QuantitativeTrading/Data/`
+十二. 檔案夾 ( folder ) : `QuantitativeTrading/Julia/` , `QuantitativeTrading/Python/`
+
+檔案夾 ( folder )「`QuantitativeTrading/Julia/`」爲微軟視窗系統 ( Windows10 x86_64 ) 程式設計語言 ( Julia ) 解釋器 ( Interpreter ) 二進位可執行檔 ( julia.exe ) 的儲存位置，需自行下載後，將其解壓縮，保存至「`C:/QuantitativeTrading/Julia/Julia-1.10.10/bin/julia.exe`」路徑.
+
+檔案夾 ( folder )「`QuantitativeTrading/Python/`」爲微軟視窗系統 ( Windows10 x86_64 ) 程式設計語言 ( Python3 ) 解釋器 ( Interpreter ) 二進位可執行檔 ( python.exe ) 的儲存位置，需自行下載後，將其解壓縮，保存至「`C:/QuantitativeTrading/Python/Python311/python.exe`」路徑.
+
+十三. 檔案夾 ( folder ) : `QuantitativeTrading/Data/`
 
 檔案夾 ( folder )「`QuantitativeTrading/Data/`」爲日棒缐 ( K - Line ) 數據檔的保存位置 .
 
@@ -1366,6 +1339,30 @@ root@localhost:~# chmod 777 /home/QuantitativeTrading/QuantitativeTrading.exe
 
 5. 微軟電子表格 ( Windows - Office - Excel ) 檔 ( .xlsx ) 「`QuantitativeTrading/Data/SZ#002611.xlsx`」是使用「`Quantitative_Data_Cleaning.jl`」或「`Quantitative_Data_Cleaning.py`」模組初步清理日棒缐 ( K - Line ) 原始數據獲得標準化日棒缐 ( K - Line ) 數據持久化存儲爲本地微軟電子表格 ( Windows - Office - Excel ) 檔 ( .xlsx ) 示例 .
 
+十四. 代碼脚本檔 ( script file ) : `QuantitativeTrading/TradingAlgorithmModule.bas` , 微軟電子表格應用檔 ( Windows - Office - Excel - Visual Basic for Applications ) : `QuantitativeTrading/Client.xlsm`
+
+微軟電子表格 ( Windows - Office - Excel - Visual Basic for Applications ) 應用檔「`Client.xlsm`」可作爲用戶端 ( Client ) 連接統計運算伺服器「`QuantitativeTrading`」做 ( Client - Request ) 計算.
+
+代碼脚本檔「`TradingAlgorithmModule.bas`」是微軟電子表格 ( Windows - Office - Excel - Visual Basic for Applications ) 應用檔「`Client.xlsm`」運行時，需導入的標準模組 ( Module ) 代碼（必須），可在此代碼脚本檔内，自行修改 Visual Basic for Applications , VBA 代碼，擴展統計方法的連接 ( Client Request ) 項.
+
+十五. 檔案夾 ( folder ) : `QuantitativeTrading/html/`
+
+檔案夾 ( folder )「`QuantitativeTrading/html/`」爲使用瀏覽器 ( Browser ) 作爲用戶端 ( Client ) 時，統計運算伺服器「`QuantitativeTrading`」向用戶端瀏覽器 ( Browser ) 發送 ( Respond ) 的標準通用標記語言代碼脚本 ( .html ) 檔.
+
+其中 :
+
+代碼脚本檔「`index.html`」爲應用交互頁面，因應網址 ( Uniform Resource Locator , URL ) 爲 : 
+`http://[::1]:10001/index.html`
+
+代碼脚本檔「`administrator.html`」爲管理頁面，因應網址 ( Uniform Resource Locator , URL ) 爲 : 
+`http://[::1]:10001/administrator.html`
+
+逗號 ( Comma ) 分隔符檔 ( .csv )「`calculated.csv`」爲計算結果數據示例，是用戶端瀏覽器 ( Browser ) 應用交互頁面「`index.html`」計算結果表格内數據，單擊「保存運算結果數據文檔」按鈕 ( Button ) 後，從瀏覽器 ( Browser ) 應用交互頁面「`index.html`」計算結果表格内導出至本地硬盤 ( Disk , Read-Only Memory ) 存儲的數據文檔示例.
+
+逗號 ( Comma ) 分隔符檔 ( .csv )「`LogisticLog5PInputData.csv`」爲待計算的原數據示例，是用戶端瀏覽器 ( Browser ) 應用交互頁面「`index.html`」待計算表格内的原數據，單擊「讀取待處理的數據文檔」按鈕 ( Button ) 後，從本地硬盤 ( Disk , Read-Only Memory ) 導入至瀏覽器 ( Browser ) 應用交互頁面「`index.html`」待計算表格内的數據文檔示例.
+
+可自行修改標準通用標記語言代碼脚本 ( .html ) 檔「`index.html`」「`SelectStatisticalAlgorithms.html`」「`InputHTML.html`」「`OutputHTML.html`」内的 HTML , JavaScript , CSS 代碼，擴展交互頁面「`index.html`」内統計方法的連接 ( Browser Client Request ) 選項.
+
 可自定義修改代碼脚本 ( Script ) 檔「`Quantitative_Indicators.jl`」或「`Quantitative_Indicators.py`」模組内函數，個性化調整擴展此量化交易模型日棒缐 ( K - Line ) 數據趨勢强度示意指標，並輔以調整代碼脚本 ( Script ) 檔「`Quantitative_MarketTiming.jl`」「`Quantitative_PickStock.jl`」「`Quantitative_SizePosition.jl`」「`Quantitative_BackTesting.jl`」或「`Quantitative_MarketTiming.py`」「`Quantitative_PickStock.py`」「`Quantitative_SizePosition.py`」「`Quantitative_BackTesting.py`」内函數 ( Function ) 因應協調，即可實現個性化擴展此量化交易模型效果 .
 
 此量化交易模型「`QuantitativeTradingJulia`」的優化器 ( optimization ) 借用程式設計語言 ( computer programming language ) : Julia 第三方擴展模組 ( third-party extensions ( libraries or modules ) ) : 「`Optim`」模組的「`optimize`」函數 ( Function ) 實現，未做計算效率優化，可自行變更調整優化器，並自行調整代碼脚本 ( Script ) 檔「`Quantitative_MarketTiming.jl`」「`Quantitative_PickStock.jl`」「`Quantitative_SizePosition.jl`」内函數 ( Function ) 因應協調，可實現優化效率提速 .
@@ -1379,6 +1376,22 @@ root@localhost:~# chmod 777 /home/QuantitativeTrading/QuantitativeTrading.exe
 **2. 量化交易模型「`QuantitativeTradingJulia`」「`QuantitativeTradingPython`」參數優化器 ( optimization ) 選用未做計算效率考量，尚不具備實用性，需酌情調整，可自行選用更換第三方優化器 ( optimization ) 提升計算效率，使之具有實用性 .**
 
 ---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 Python3 Explain : Quantitative_Indicators.py , Quantitative_Data_Cleaning.py , Quantitative_MarketTiming.py , Quantitative_PickStock.py , Quantitative_SizePosition.py , Quantitative_BackTesting.py
 
