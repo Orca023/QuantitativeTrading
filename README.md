@@ -7028,7 +7028,7 @@ Respond - body =
 
 8. 連接數量化交易運算伺服器「`QuantitativeTrading`」做 ( Client - Request ) 回測 ( back testing ) 如：步進分析 ( stepper movement , propulsion analysis ) 運算，使用網址 ( Uniform Resource Locator , URL ) : 
 ```
-http://[::1]:10001/BackTesting?Key=username:password&algorithmUser=username&algorithmPass=password&algorithmName=BackTesting&trading_direction=Long_Position_and_Short_Selling&ticker_symbol=["all"]&is_Optimize=false&MarketTiming_Pdata_0=[3,+0.1,-0.1,0.0]&MarketTiming_Plower=["-Infinity","-Infinity","-Infinity","-Infinity"]&MarketTiming_Pupper=["+Infinity","+Infinity","+Infinity","+Infinity"]&MarketTiming_weight=[]&PickStock_Pdata_0=[3,5]&PickStock_Plower=["-Infinity","-Infinity"]&PickStock_Pupper=["+Infinity","+Infinity"]&PickStock_weight=[]&SizePosition_Pdata_0=[1.0,"average"]&SizePosition_Plower=[0.0,0.0]&SizePosition_Pupper=[1.0,1.0]&SizePosition_weight=[]&risk_threshold=0.0&training_sequence_length=60&training_ticker_symbol=["all"]&testing_sequence_length=1&testing_ticker_symbol=["all"]&Cleaned_K_Line=C:/QuantitativeTrading/Data/steppingData.jld&training_data_file=C:/QuantitativeTrading/Data/trainingData.jld&testing_data_file=C:/QuantitativeTrading/Data/testingData.jld&stepping_data_file=C:/QuantitativeTrading/Data/steppingData.jld
+http://[::1]:10001/BackTesting?Key=username:password&algorithmUser=username&algorithmPass=password&algorithmName=BackTesting&trading_direction=Long_Position_and_Short_Selling&ticker_symbol=["all"]&is_Optimize=true&MarketTiming_Pdata_0=[3,+0.1,-0.1,0.0]&MarketTiming_Plower=["-Infinity","-Infinity","-Infinity","-Infinity"]&MarketTiming_Pupper=["+Infinity","+Infinity","+Infinity","+Infinity"]&MarketTiming_weight=[]&PickStock_Pdata_0=[3,5]&PickStock_Plower=["-Infinity","-Infinity"]&PickStock_Pupper=["+Infinity","+Infinity"]&PickStock_weight=[]&SizePosition_Pdata_0=[1.0,"average"]&SizePosition_Plower=[0.0,0.0]&SizePosition_Pupper=[1.0,1.0]&SizePosition_weight=[]&risk_threshold=0.0&training_sequence_length=60&training_ticker_symbol=["all"]&testing_sequence_length=1&testing_ticker_symbol=["all"]&Cleaned_K_Line=C:/QuantitativeTrading/Data/steppingData.jld&training_data_file=C:/QuantitativeTrading/Data/trainingData.jld&testing_data_file=C:/QuantitativeTrading/Data/testingData.jld&stepping_data_file=C:/QuantitativeTrading/Data/steppingData.jld
 ```
 
 用戶端 ( Client - Request ) 發送 POST 請求的數據爲 JSON 字符串 ( JSON String ) 類型，數據格式可類比如下 :
@@ -7041,7 +7041,7 @@ Request - POST =
     "Cleaned_K_Line" : ["C:/QuantitativeTrading/Data/steppingData.jld"],
     // "Cleaned_K_Line" : ["C:/QuantitativeTrading/Data/steppingData.pickle"],
     "trading_direction" : ["Long_Position_and_Short_Selling"],
-    "is_Optimize" : ["false"],
+    "is_Optimize" : ["true"],
     "risk_threshold" : [0.0],
     "training_ticker_symbol" : ["all"],
     "training_sequence_length" : [60],
