@@ -4523,7 +4523,10 @@ Respond - body =
     "MarketTiming_Pdata_0" : [3, +0.1, -0.1, 0.0],
     "return_MarketTiming" : {
         "002611" : {
-            "Coefficient" : {"Long_Position" : [Integer, Floating-Point, Floating-Point, Floating-Point], "Short_Selling" : [Integer, Floating-Point, Floating-Point, Floating-Point]},
+            "Coefficient" : {
+                "Long_Position" : [Integer, Floating-Point, Floating-Point, Floating-Point],
+                "Short_Selling" : [Integer, Floating-Point, Floating-Point, Floating-Point]
+            },
             "y_profit" : Floating-Point,  // 每兩次對衝交易利潤 × 權重，加權纍加總計;
             "y_Long_Position_profit" : Floating-Point,  // 每兩次對衝交易利潤 × 權重，加權纍加總計;
             "y_Short_Selling_profit" : Floating-Point,  // 每兩次對衝交易利潤 × 權重，加權纍加總計;
@@ -4567,10 +4570,56 @@ Respond - body =
             "Short_Selling_volume_turnover_date_transaction" : [Floating-Point, Floating-Point, Floating-Point, ... ],  // 兩次對衝交易日成交量（換手率）向量;
             "Long_Position_date_transaction_between" : [Floating-Point, Floating-Point, Floating-Point, ... ],  // 兩次對衝交易間隔日長，向量;
             "Short_Selling_date_transaction_between" : [Floating-Point, Floating-Point, Floating-Point, ... ],  // 兩次對衝交易間隔日長，向量;
-            "Long_Position_date_transaction" : [[], ... ],  // 按規則執行交易的日期，向量，"Long_Position_date_transaction" : [[datetime.date("2019-01-11"), "sell", 13.23, "null", 1, 8, datetime.date("2019-01-11"), 5220707, 13.23, 13.35, 13.12, 13.5, "null", "null", "null", "null"], ... ] 形式，其中：[0]：交易規則自動選取的交易日期，[1]：交易規則自動選取的買入或賣出，[2]：交易規則自動選取的成交價，[3]：交易規則自動選取的成交量，[4]：交易規則自動選取的成交次數記錄，[5]：交易規則自動選取的交易日期的序列號，用於繪圖可視化，[6]：交易日（datetime.date 類型），[7]：當日總成交量（turnover volume），[8]：當日開盤（opening）成交價，[9]：當日收盤（closing）成交價，[10]：當日最低（low）成交價，[11]：當日最高（high）成交價，[12]：當日總成交金額（turnover amount），[13]：當日成交量（turnover volume）換手率（turnover rate），[14]：當日每股收益（price earnings），[15]：當日每股净值（book value per share）;
-            "Short_Selling_date_transaction" : [[], ... ],  // 按規則執行交易的日期，向量，"Short_Selling_date_transaction" : [[datetime.date("2019-01-11"), "sell", 13.23, "null", 1, 8, datetime.date("2019-01-11"), 5220707, 13.23, 13.35, 13.12, 13.5, "null", "null", "null", "null"], ... ] 形式，其中：[0]：交易規則自動選取的交易日期，[1]：交易規則自動選取的買入或賣出，[2]：交易規則自動選取的成交價，[3]：交易規則自動選取的成交量，[4]：交易規則自動選取的成交次數記錄，[5]：交易規則自動選取的交易日期的序列號，用於繪圖可視化，[6]：交易日（datetime.date 類型），[7]：當日總成交量（turnover volume），[8]：當日開盤（opening）成交價，[9]：當日收盤（closing）成交價，[10]：當日最低（low）成交價，[11]：當日最高（high）成交價，[12]：當日總成交金額（turnover amount），[13]：當日成交量（turnover volume）換手率（turnover rate），[14]：當日每股收益（price earnings），[15]：當日每股净值（book value per share）;
-            "weight_MarketTiming" : {"Long_Position" : Floating-Point, "Short_Selling" : Floating-Point},  // 擇時權重，每兩次對衝交易的盈利概率占比，字典，"weight_MarketTiming" : {"Long_Position" : 1.0, "Short_Selling" : 1.0} 形式;
-            "P1_Array" : ["null" or Floating-Point, ... ],  // 依照擇時規則計算得到參數 P1 值的序列存儲數組，向量，"P1_Array" : ["null", "null", 0.9332452609585046, 0.9332856821310028, 0.1475284599924739, 0.6184992214383872, -0.17453764187799792, 0.47304631351003185, -0.28660163038115866, 1.1508082895918543, 0.10944654380269705] 形式;
+            "Long_Position_date_transaction" : [
+                [
+                    "2019-01-11",  // 依照擇時交易規則選取的交易日期;
+                    "sell" or "buy",  // 依照擇時交易規則選取的交易方向（買入或賣出）標示字符串;
+                    Floating-Point,  // 依照擇時交易規則選取的交易價格;
+                    "null" or Integer or Floating-Point,  // 依照擇時交易規則選取的交易量配置;
+                    Integer,  // 記錄依照擇時交易規則選取的每組對衝交易 ( paired transaction ) 的序號;
+                    Integer,  // 記錄依照擇時交易規則選取的交易日期的序列號，用於繪圖可視化;
+                    "2019-01-11",  // K-Line day，當日棒缐的日期;
+                    Integer,  // K-Line turnover volume，當日棒缐的總成交量;
+                    Floating-Point,  // K-Line opening price，當日棒缐的開盤成交價格;
+                    Floating-Point,  // K-Line closed price，當日棒缐的收盤成交價格;
+                    Floating-Point,  // K-Line low price，當日棒缐的最低成交價格;
+                    Floating-Point,  // K-Line high price，當日棒缐的最高成交價格;
+                    "null" or Floating-Point,  // K-Line turnover amount，當日棒缐的總成交金額;
+                    "null" or Floating-Point,  // K-Line turnover rate，當日棒缐的成交換手率;
+                    "null" or Floating-Point,  // K-Line price earnings，當日棒缐的每股收益;
+                    "null" or Floating-Point,  // K-Line book value per share，當日棒缐的每股票净值;
+                ],
+                ...
+            ],  // 按擇時規則選取執行的每組對衝交易 ( paired transaction ) 信息記錄，向量;
+            "Short_Selling_date_transaction" : [
+                [
+                    "2019-01-11",  // 依照擇時交易規則選取的交易日期;
+                    "sell" or "buy",  // 依照擇時交易規則選取的交易方向（買入或賣出）標示字符串;
+                    Floating-Point,  // 依照擇時交易規則選取的交易價格;
+                    "null" or Integer or Floating-Point,  // 依照擇時交易規則選取的交易量配置;
+                    Integer,  // 記錄依照擇時交易規則選取的每組對衝交易 ( paired transaction ) 的序號;
+                    Integer,  // 記錄依照擇時交易規則選取的交易日期的序列號，用於繪圖可視化;
+                    "2019-01-11",  // K-Line day，當日棒缐的日期;
+                    Integer,  // K-Line turnover volume，當日棒缐的總成交量;
+                    Floating-Point,  // K-Line opening price，當日棒缐的開盤成交價格;
+                    Floating-Point,  // K-Line closed price，當日棒缐的收盤成交價格;
+                    Floating-Point,  // K-Line low price，當日棒缐的最低成交價格;
+                    Floating-Point,  // K-Line high price，當日棒缐的最高成交價格;
+                    "null" or Floating-Point,  // K-Line turnover amount，當日棒缐的總成交金額;
+                    "null" or Floating-Point,  // K-Line turnover rate，當日棒缐的成交換手率;
+                    "null" or Floating-Point,  // K-Line price earnings，當日棒缐的每股收益;
+                    "null" or Floating-Point,  // K-Line book value per share，當日棒缐的每股票净值;
+                ],
+                ...
+            ],  // 按擇時規則選取執行的每組對衝交易 ( paired transaction ) 信息記錄，向量;
+            "weight_MarketTiming" : {
+                "Long_Position" : Floating-Point,
+                "Short_Selling" : Floating-Point
+            },  // 擇時權重，每兩次對衝交易的盈利概率占比，字典，"weight_MarketTiming" : {"Long_Position" : 1.0, "Short_Selling" : 1.0} 形式;
+            "P1_Array" : [
+                "null" or Floating-Point,  // 照擇時規則計算得到標示分值;
+                ...
+            ],  // 依照擇時規則計算得到參數 P1 標示分值序列的存儲數組，向量;
         },
         ...
     }
@@ -5756,10 +5805,10 @@ Respond - body =
     "MarketTiming_Pdata_0" : [3, +0.1, -0.1, 0.0],
     "PickStock_Pdata_0" : [3, 5],
     "return_PickStock" : {
-        "Coefficient" : {"Long_Position" : [Integer, Integer], "Short_Selling" : [Integer, Integer]},
-        "PickStock_sort_ticker" : ["null" or [String, ... ], ... ],  // 依照選股規則排序篩選出的股票代碼字符串存儲數組;
-        "PickStock_sort_score" : ["null" or [Floating-Point, ... ], ... ],  // 依照選股規則排序篩選出的股票代碼字符串存儲數組;
-        "number_PickStock_transaction" : Integer,
+        "Coefficient" : {
+            "Long_Position" : [Integer, Integer],
+            "Short_Selling" : [Integer, Integer]
+        },
         "y_profit" : Floating-Point,  // 每兩次對衝交易利潤 × 權重，加權纍加總計;
         "y_Long_Position_profit" : Floating-Point,  // 每兩次對衝交易利潤 × 權重，加權纍加總計;
         "y_Short_Selling_profit" : Floating-Point,  // 每兩次對衝交易利潤 × 權重，加權纍加總計;
@@ -5792,7 +5841,16 @@ Respond - body =
         "Short_Selling_average_volume_turnover_date_transaction" : Integer,  // 兩次對衝交易日成交量（換手率）均值;
         "average_date_transaction_between" : Integer,  // 兩次交易間隔日長，均值;
         "Long_Position_average_date_transaction_between" : Integer,  // 兩次對衝交易間隔日長，均值;
-        "Short_Selling_average_date_transaction_between" : Integer  // 兩次對衝交易間隔日長，均值;
+        "Short_Selling_average_date_transaction_between" : Integer,  // 兩次對衝交易間隔日長，均值;
+        "number_PickStock_transaction" : Integer,
+        "PickStock_sort_ticker" : [
+            "null" or [String, ... ],  // 每個交易日依照選股規則篩選出的股票代碼字符串按標示分值排序數組;
+            ...
+        ],  // 依照選股規則排序篩選出的股票代碼字符串存儲數組;
+        "PickStock_sort_score" : [
+            "null" or [Floating-Point, ... ],  // 每個交易日依照選股規則篩選出的標示分值排序數組;
+            ...
+        ]  // 依照選股規則排序篩選出的股票代碼字符串存儲數組;
     }
 }
 ```
@@ -6988,7 +7046,6 @@ Respond - body =
             },
             ...
         },
-        "number_PickStock_transaction" : Integer,
         "y_profit" : Floating-Point,  // 每兩次對衝交易利潤 × 權重，加權纍加總計;
         "y_Long_Position_profit" : Floating-Point,  // 每兩次對衝交易利潤 × 權重，加權纍加總計;
         "y_Short_Selling_profit" : Floating-Point,  // 每兩次對衝交易利潤 × 權重，加權纍加總計;
@@ -7021,7 +7078,8 @@ Respond - body =
         "Short_Selling_average_volume_turnover_date_transaction" : Integer,  // 兩次對衝交易日成交量（換手率）均值;
         "average_date_transaction_between" : Integer,  // 兩次交易間隔日長，均值;
         "Long_Position_average_date_transaction_between" : Integer,  // 兩次對衝交易間隔日長，均值;
-        "Short_Selling_average_date_transaction_between" : Integer  // 兩次對衝交易間隔日長，均值;
+        "Short_Selling_average_date_transaction_between" : Integer,  // 兩次對衝交易間隔日長，均值;
+        "number_PickStock_transaction" : Integer
     }
 }
 ```
@@ -7692,7 +7750,7 @@ Respond - body =
             "002611" : {
                 "Long_Position" : {
                     "index" : [Integer, ... ],  // transaction index，依照交易規則執行交易的序號;
-                    "date_transaction" : [String, ... ],  // 類似：datetime.date("2019-01-11") 類型，依照交易規則選取的交易日期;
+                    "date_transaction" : ["2019-01-11", ... ],  // 依照交易規則選取的交易日期;
                     "direction" : ["sell" or "buy", ... ],  // transaction direction，依照交易規則選取的交易方向（買入或賣出）;
                     "price" : [Floating-Point, ... ],  // transaction price，依照交易規則選取的成交價;
                     "SizePosition" : [Floating-Point, ... ],  // transaction size position，依照交易規則選取的交易比例;
@@ -7709,7 +7767,7 @@ Respond - body =
                 },
                 "Short_Selling" : {
                     "index" : [Integer, ... ],  // transaction index，依照交易規則執行交易的序號;
-                    "date_transaction" : [String, ... ],  // 類似：datetime.date("2019-01-11") 類型，依照交易規則選取的交易日期;
+                    "date_transaction" : ["2019-01-11", ... ],  // 依照交易規則選取的交易日期;
                     "direction" : ["sell" or "buy", ... ],  // transaction direction，依照交易規則選取的交易方向（買入或賣出）;
                     "price" : [Floating-Point, ... ],  // transaction price，依照交易規則選取的成交價;
                     "SizePosition" : [Floating-Point, ... ],  // transaction size position，依照交易規則選取的交易比例;
