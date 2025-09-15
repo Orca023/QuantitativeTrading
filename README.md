@@ -7642,7 +7642,7 @@ Respond - body =
     "configFile" : "C:/QuantitativeTrading/QuantitativeTradingJulia/config.txt",
     // "configFile" : "C:/QuantitativeTrading/QuantitativeTradingPython/config.txt",
     "trading_direction" : "Long_Position_and_Short_Selling",
-    "is_Optimize" : "false",
+    "is_Optimize" : "true",
     "training_ticker_symbol" : ["002611", ... ],
     "training_sequence_length" : 60,
     "testing_ticker_symbol" : ["002611", ... ],
