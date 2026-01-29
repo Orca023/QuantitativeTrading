@@ -7864,14 +7864,18 @@ https://pan.baidu.com/s/16jdb-nX45cR5uZZKMItsjQ?pwd=kgbh
 
 壓縮檔「`Python-3.11.2-Window10-AMD_FX8800P_x86_64.7z`」爲微軟視窗作業系統 ( Operating System: Acer-NEO-2023 Windows10 x86_64 Inter(R)-Core(TM)-m3-6Y30 ) 程式設計語言 ( Python ) 解釋器 ( Interpreter ) 二進位可執行檔 ( python-3.11.2-amd64.exe ) 開箱即用 ( out of the box ) ( portable application ) 免安裝版，需自行下載解壓縮，將其保存至檔案夾 ( folder ) : `QuantitativeTrading/Python/` 内，最終完整路徑應爲「`QuantitativeTrading/Python/Python311/python.exe`」
 
-3. 壓縮檔 : `QuantitativeTradingJulia-Julia1.10.10-Window10-AMD_FX8800P_x86_64.7z`
+3. 壓縮檔 : `Nodejs-22.20.0-Window10-AMD_FX8800P_x86_64.7z`
+
+壓縮檔「`Nodejs-22.20.0-Window10-AMD_FX8800P_x86_64.7z`」爲微軟視窗作業系統 ( Operating System: Acer-NEO-2023 Windows10 x86_64 Inter(R)-Core(TM)-m3-6Y30 ) 程式設計語言 ( JavaScript ) 解釋器 ( Interpreter ) 二進位可執行檔 ( node-v22.20.0-x64.msi ) 開箱即用 ( out of the box ) ( portable application ) 免安裝版，需自行下載解壓縮，將其保存至檔案夾 ( folder ) : `QuantitativeTrading/Nodejs/` 内，最終完整路徑應爲「`QuantitativeTrading/Nodejs/Nodejs-22.20.0/node.exe`」
+
+4. 壓縮檔 : `QuantitativeTradingJulia-Julia1.10.10-Window10-AMD_FX8800P_x86_64.7z`
 
 壓縮檔「`QuantitativeTradingJulia-Julia1.10.10-Window10-AMD_FX8800P_x86_64.7z`」爲微軟視窗作業系統 ( Operating System: Acer-NEO-2023 Windows10 x86_64 Inter(R)-Core(TM)-m3-6Y30 ) 數量化交易模型 'QuantitativeTradingJulia' 開箱即用 ( out of the box ) ( portable application ) 版，已配置計算機程式設計語言 ( computer programming language ) : Julia 解釋器 ( Interpreter ) 運行此數量化交易模型 'QuantitativeTradingJulia' 項目所需的第三方擴展模組 ( third-party extensions ( libraries or modules ) ) 的運行環境，可自行下載解壓縮，將其保存至檔案夾 ( folder ) : `QuantitativeTrading/QuantitativeTradingJulia/` 内，再因應協調配置壓縮檔「`Julia-1.10.10-Window10-AMD_FX8800P_x86_64.7z`」之後，即可使用如下指令啓動運行數量化交易模型「`QuantitativeTradingJulia`」項目 : 
 ```
 C:\QuantitativeTrading> C:/QuantitativeTrading/Julia/Julia-1.10.10/bin/julia.exe -p 4 --project=C:/QuantitativeTrading/QuantitativeTradingJulia/ C:/QuantitativeTrading/QuantitativeTradingJulia/src/QuantitativeTradingServer.jl configFile=C:/QuantitativeTrading/QuantitativeTradingJulia/config.txt interface_Function=http_Server webPath=C:/QuantitativeTrading/html/ host=::0 port=10001 key=username:password number_Worker_threads=1 isConcurrencyHierarchy=Tasks readtimeout=0 connecttimeout=0 input_K_Line=C:/QuantitativeTrading/Data/K-Day-source/ is_save_JLD=true output_jld_K_Line=C:/QuantitativeTrading/Data/steppingData.jld is_save_csv=false output_csv_K_Line=C:/QuantitativeTrading/Data/K-Day/ is_save_xlsx=false output_xlsx_K_Line=C:/QuantitativeTrading/Data/K-Day/ Cleaned_K_Line=C:/QuantitativeTrading/Data/steppingData.jld
 ```
 
-4. 壓縮檔 : `QuantitativeTradingPython-Python3.11.2-Window10-AMD_FX8800P_x86_64.7z`
+5. 壓縮檔 : `QuantitativeTradingPython-Python3.11.2-Window10-AMD_FX8800P_x86_64.7z`
 
 壓縮檔「`QuantitativeTradingPython-Python3.11.2-Window10-AMD_FX8800P_x86_64.7z`」爲微軟視窗作業系統 ( Operating System: Acer-NEO-2023 Windows10 x86_64 Inter(R)-Core(TM)-m3-6Y30 ) 數量化交易模型 'QuantitativeTradingPython' 開箱即用 ( out of the box ) ( portable application ) 版，已配置計算機程式設計語言 ( computer programming language ) : Python 解釋器 ( Interpreter ) 運行此數量化交易模型 'QuantitativeTradingPython' 項目所需的第三方擴展模組 ( third-party extensions ( libraries or modules ) ) 的運行環境，可自行下載解壓縮，將其保存至檔案夾 ( folder ) : `QuantitativeTrading/QuantitativeTradingPython/` 内，再因應協調配置壓縮檔「`Python-3.11.2-Window10-AMD_FX8800P_x86_64.7z`」之後，即可使用如下指令啓動運行數量化交易模型「'QuantitativeTradingPython`」項目 : 
 ```
@@ -7882,7 +7886,7 @@ C:\QuantitativeTrading> C:/QuantitativeTrading/QuantitativeTradingPython/Scripts
 C:\QuantitativeTrading> C:/QuantitativeTrading/Python/Python311/python.exe C:/QuantitativeTrading/QuantitativeTradingPython/src/QuantitativeTradingServer.py configFile=C:/QuantitativeTrading/QuantitativeTradingPython/config.txt interface_Function=http_Server webPath=C:/QuantitativeTrading/html/ host=::0 port=10001 Key=username:password Is_multi_thread=False number_Worker_process=0 input_K_Line=C:/QuantitativeTrading/Data/K-Day-source/ is_save_pickle=True output_pickle_K_Line=C:/QuantitativeTrading/Data/steppingData.pickle is_save_csv=False output_csv_K_Line=C:/QuantitativeTrading/Data/K-Day/ is_save_xlsx=False output_xlsx_K_Line=C:/QuantitativeTrading/Data/K-Day/ Cleaned_K_Line=C:/QuantitativeTrading/Data/steppingData.pickle
 ```
 
-5. 壓縮檔 : `QuantitativeTrading-Window10-AMD_FX8800P_x86_64.7z`
+6. 壓縮檔 : `QuantitativeTrading-Window10-AMD_FX8800P_x86_64.7z`
 
 壓縮檔「`QuantitativeTrading-Window10-AMD_FX8800P_x86_64.7z`」爲微軟視窗作業系統 ( Operating System: Acer-NEO-2023 Windows10 x86_64 Inter(R)-Core(TM)-m3-6Y30 ) 數量化交易模型 'QuantitativeTrading' 開箱即用 ( out of the box ) ( portable application ) 版，已配置計算機程式設計語言 ( computer programming language ) : Julia 解釋器 ( Interpreter ) 和 Python 解釋器 ( Interpreter ) 運行此數量化交易模型 'QuantitativeTrading' 項目所需的第三方擴展模組 ( third-party extensions ( libraries or modules ) ) 的運行環境，可自行下載解壓縮，將其保存至根目錄 ( Root Directory ) : `C:` 内，即可使用如下指令啓動運行數量化交易模型「'QuantitativeTrading'」項目 : 
 
@@ -7907,7 +7911,7 @@ C:\QuantitativeTrading> C:/Windows/System32/cmd.exe C:/QuantitativeTrading/start
 C:\QuantitativeTrading> C:/QuantitativeTrading/QuantitativeTrading.exe configFile=C:/QuantitativeTrading/config.txt executableFile=C:/QuantitativeTrading/Julia/Julia-1.10.10/julia.exe interpreterFile=-p,4,--project=C:/QuantitativeTrading/QuantitativeTradingJulia/ scriptFile=C:/QuantitativeTrading/QuantitativeTradingJulia/src/QuantitativeTradingServer.jl configInstructions=configFile=/home/QuantitativeTrading/QuantitativeTradingJulia/config.txt,interface_Function=http_Server,webPath=C:/QuantitativeTrading/html/,host=::0,port=10001,key=username:password,number_Worker_threads=1,isConcurrencyHierarchy=Tasks,input_K_Line=C:/QuantitativeTrading/Data/K-Day-source/,is_save_JLD=true,output_jld_K_Line=C:/QuantitativeTrading/Data/steppingData.jld,is_save_csv=false,output_csv_K_Line=C:/QuantitativeTrading/Data/K-Day/,is_save_xlsx=false,output_xlsx_K_Line=C:/QuantitativeTrading/Data/K-Day/,Cleaned_K_Line=C:/QuantitativeTrading/Data/steppingData.jld
 ```
 
-6. 壓縮檔 : `google-pixel-2_android-11_termux-0.118_arm64_ubuntu-22.04_arm64_QuantitativeTrading.tar.gz`
+7. 壓縮檔 : `google-pixel-2_android-11_termux-0.118_arm64_ubuntu-22.04_arm64_QuantitativeTrading.tar.gz`
 
 壓縮檔「`google-pixel-2_android-11_termux-0.118_arm64_ubuntu-22.04_arm64_QuantitativeTrading.tar.gz`」爲谷歌安卓作業系統 ( Operating System: Google-Pixel-7 Android-11 Termux-0.118 Ubuntu-22.04-LTS-rootfs Arm64-aarch64 MSM8998-Snapdragon835-Qualcomm®-Kryo™-280 ) 數量化交易運算伺服器「'QuantitativeTrading'」項目源代碼脚本，可自行下載將其移動至 Android-Termux-Ubuntu 系統的檔案夾 ( folder ) : `/home/` 内，然後再使用如下指令解壓縮 : 
 ```
@@ -8011,13 +8015,13 @@ root@localhost:~# /bin/bash /home/QuantitativeTrading/startServer.sh configFile=
 root@localhost:~# /home/QuantitativeTrading/QuantitativeTrading.exe configFile=/home/QuantitativeTrading/config.txt executableFile=/bin/julia interpreterFile=-p,4,--project=/home/QuantitativeTrading/QuantitativeTradingJulia/ scriptFile=/home/QuantitativeTrading/QuantitativeTradingJulia/src/QuantitativeTradingServer.jl configInstructions=configFile=/home/QuantitativeTrading/QuantitativeTradingJulia/config.txt,interface_Function=http_Server,webPath=/home/QuantitativeTrading/html/,host=::0,port=10001,key=username:password,number_Worker_threads=1,isConcurrencyHierarchy=Tasks
 ```
 
-7. 二進位可執行檔 : `QuantitativeTrading-Window10-AMD_FX8800P_x86_64.exe`
+8. 二進位可執行檔 : `QuantitativeTrading-Window10-AMD_FX8800P_x86_64.exe`
 
 二進位可執行檔「`QuantitativeTrading-Window10-AMD_FX8800P_x86_64.exe`」爲微軟視窗作業系統 ( Operating System: Acer-NEO-2023 Windows10 x86_64 Inter(R)-Core(TM)-m3-6Y30 ) 數量化交易運算伺服器「'QuantitativeTrading'」項目内 C 語言源代碼檔「'QuantitativeTrading/c/c2exe.c'」使用 Window10 - MinGW-w64 - gcc 編譯器，編譯之後得到的二進位可執行檔，可自行下載保存至檔案夾 ( folder ) : `C:/QuantitativeTrading/` 内，使用如下指令將其重命名 :
 ```
 C:\QuantitativeTrading> rename C:/QuantitativeTrading/QuantitativeTrading-Window10-AMD_FX8800P_x86_64.exe C:/QuantitativeTrading/QuantitativeTrading.exe
 ```
-8. 二進位可執行檔 : `QuantitativeTrading_google-pixel-2_android-11_termux-0.118_ubuntu-22.04-LTS-rootfs_arm64.exe`
+9. 二進位可執行檔 : `QuantitativeTrading_google-pixel-2_android-11_termux-0.118_ubuntu-22.04-LTS-rootfs_arm64.exe`
 
 二進位可執行檔「`QuantitativeTrading_google-pixel-2_android-11_termux-0.118_ubuntu-22.04-LTS-rootfs_arm64.exe`」爲谷歌安卓作業系統 ( Operating System: Google-Pixel-7 Android-11 Termux-0.118 Ubuntu-22.04-LTS-rootfs Arm64-aarch64 MSM8998-Snapdragon835-Qualcomm®-Kryo™-280 ) 數量化交易運算伺服器「'QuantitativeTrading'」項目内 C 語言源代碼檔「'QuantitativeTrading/c/c2exe.c'」使用 Ubuntu 22.04 - gcc 編譯器，編譯之後得到的二進位可執行檔，可自行下載保存至檔案夾 ( folder ) : `/home/QuantitativeTrading/` 内，使用如下指令將其重命名 :
 ```
@@ -8027,4 +8031,47 @@ root@localhost:~# /home/QuantitativeTrading/QuantitativeTrading_google-pixel-2_a
 ```
 root@localhost:~# chmod 777 /home/QuantitativeTrading/QuantitativeTrading.exe
 ```
-即可 .
+
+10. 壓縮檔 : `NodejsToMongoDB-MongoDB_8.2.3-Window10-AMD_FX8800P_x86_64.zip`
+
+壓縮檔「`NodejsToMongoDB-MongoDB_8.2.3-Window10-AMD_FX8800P_x86_64.zip`」爲微軟視窗作業系統 ( Operating System: Acer-NEO-2023 Windows10 x86_64 Inter(R)-Core(TM)-m3-6Y30 ) 使用程式設計語言 ( computer programming language ) : JavaScript 鏈接操作 MongoDB 資料庫的伺服器 'NodejsToMongoDB' 開箱即用 ( out of the box ) ( portable application ) 版，已配置計算機程式設計語言 ( computer programming language ) : JavaScript 解釋器 ( Interpreter ) 運行此資料庫伺服器 'NodejsToMongoDB' 項目所需的第三方擴展模組 ( third-party extensions ( libraries or modules ) ) 的運行環境，可自行下載解壓縮，將其保存至檔案夾 ( folder ) : `QuantitativeTrading/Data/MongoDB/NodejsToMongoDB/` 内，再因應協調配置壓縮檔「`Nodejs-22.20.0-Window10-AMD_FX8800P_x86_64.7z`」之後，即可使用如下指令啓動運行資料庫伺服器「`NodejsToMongoDB`」項目 : 
+```
+C:\QuantitativeTrading\Data\MongoDB> C:/QuantitativeTrading/Nodejs/Nodejs-22.20.0/node.exe C:/QuantitativeTrading/Data/MongoDB/NodejsToMongoDB/Nodejs2MongodbServer.js host=::0 port=27016 number_cluster_Workers=0 MongodbHost=[::1] MongodbPort=27017 dbUser=admin_Database1 dbPass=admin dbName=Database1
+```
+
+11. 壓縮檔 : `PythonToMariaDB-MariaDB10.11-Window10-AMD_FX8800P_x86_64.zip`
+
+壓縮檔「`PythonToMariaDB-MariaDB10.11-Window10-AMD_FX8800P_x86_64.zip`」爲微軟視窗作業系統 ( Operating System: Acer-NEO-2023 Windows10 x86_64 Inter(R)-Core(TM)-m3-6Y30 ) 使用程式設計語言 ( computer programming language ) : Python 鏈接操作 MariaDB 資料庫的伺服器 'PythonToMariaDB' 開箱即用 ( out of the box ) ( portable application ) 版，已配置計算機程式設計語言 ( computer programming language ) : Python 解釋器 ( Interpreter ) 運行此資料庫伺服器 'PythonToMariaDB' 項目所需的第三方擴展模組 ( third-party extensions ( libraries or modules ) ) 的運行環境，可自行下載解壓縮，將其保存至檔案夾 ( folder ) : `QuantitativeTrading/Data/MariaDB/PythonToMariaDB/` 内，再因應協調配置壓縮檔「`Python-3.11.2-Window10-AMD_FX8800P_x86_64.7z`」之後，即可使用如下指令啓動運行統計運算伺服器「'PythonToMariaDB`」項目 : 
+```
+C:\QuantitativeTrading\Data\MariaDB> C:/QuantitativeTrading/Data/MariaDB/PythonToMariaDB/Scripts/python.exe C:/QuantitativeTrading/Data/MariaDB/PythonToMariaDB/src/Python2MariaDBServer.py host=::0 port=27016 Is_multi_thread=False number_Worker_process=0 MongodbHost=[::1] MongodbPort=27017 dbUser=admin_Database1 dbPass=admin dbName=Database1
+```
+或者 : 
+```
+C:\QuantitativeTrading\Data\MariaDB> C:/QuantitativeTrading/Python/Python311/python.exe C:/QuantitativeTrading/Data/MariaDB/PythonToMariaDB/src/Python2MariaDBServer.py host=::0 port=27016 Is_multi_thread=False number_Worker_process=0 MongodbHost=[::1] MongodbPort=27017 dbUser=admin_Database1 dbPass=admin dbName=Database1
+```
+
+12. 壓縮檔 : `Server-MongoDB_8.2.3-Window10-AMD_FX8800P_x86_64.zip`
+
+壓縮檔「`Server-MongoDB_8.2.3-Window10-AMD_FX8800P_x86_64.zip`」爲微軟視窗作業系統 ( Operating System: Acer-NEO-2023 Windows10 x86_64 Inter(R)-Core(TM)-m3-6Y30 ) 資料庫應用 MongoDB 伺服器端二進位可執行啓動檔 'mongod.exe' 開箱即用 ( out of the box ) ( portable application ) 版運行環境，可自行下載解壓縮，將其保存至檔案夾 ( folder ) : `QuantitativeTrading/MongoDB/Server/` 内，最終完整路徑應爲「`QuantitativeTrading/MongoDB/Server/8.2/bin/mongod.exe`」，即可使用如下指令啓動運行資料庫 MongoDB 伺服器應用 : 
+```
+C:\QuantitativeTrading\Data\MongoDB> C:/QuantitativeTrading/MongoDB/Server/8.2/bin/mongod.exe --config=C:/QuantitativeTrading/Data/MongoDB/NodejsToMongoDB/mongod.cfg
+```
+
+13. 壓縮檔 : `mongosh_2.6.0-Window10-AMD_FX8800P_x86_64.zip`
+
+壓縮檔「`mongosh_2.6.0-Window10-AMD_FX8800P_x86_64.zip`」爲微軟視窗作業系統 ( Operating System: Acer-NEO-2023 Windows10 x86_64 Inter(R)-Core(TM)-m3-6Y30 ) 資料庫應用 MongoDB 用戶端二進位可執行啓動檔 'mongosh.exe' 開箱即用 ( out of the box ) ( portable application ) 版運行環境，可自行下載解壓縮，將其保存至檔案夾 ( folder ) : `QuantitativeTrading/MongoDB/mongosh/` 内，最終完整路徑應爲「`QuantitativeTrading/MongoDB/mongosh/mongosh.exe`」，即可使用如下指令啓動運行資料庫 MongoDB 用戶端應用 : 
+```
+C:\QuantitativeTrading\Data\MongoDB> C:/QuantitativeTrading/MongoDB/mongosh/mongosh.exe mongodb://username:password@[::1]:27017/Database1
+```
+
+14. 壓縮檔 : `data-MongoDB_8.2.3-Window10-AMD_FX8800P_x86_64.zip`
+
+壓縮檔「`data-MongoDB_8.2.3-Window10-AMD_FX8800P_x86_64.zip`」爲微軟視窗作業系統 ( Operating System: Acer-NEO-2023 Windows10 x86_64 Inter(R)-Core(TM)-m3-6Y30 ) 資料庫應用 MongoDB 伺服器端自定義創建的名爲 'Database1' 資料庫 ( Database ) , 内含名爲 'Collection1' 自定義數據集 ( Collection/Table ) , 開箱即用 ( out of the box ) ( portable application ) 版運行環境，可自行下載解壓縮，將其保存至檔案夾 ( folder ) : `QuantitativeTrading/Data/MongoDB/data/` 内，可使用資料庫 MongoDB 用戶端應用鏈接伺服器之後，操作處理增、刪、改、查資料集合.
+
+15. 壓縮檔 : `MariaDB10.11-Window10-AMD_FX8800P_x86_64.zip`
+
+壓縮檔「`MariaDB10.11-Window10-AMD_FX8800P_x86_64.zip`」爲微軟視窗作業系統 ( Operating System: Acer-NEO-2023 Windows10 x86_64 Inter(R)-Core(TM)-m3-6Y30 ) 資料庫應用 MariaDB 伺服器端二進位可執行啓動檔 'mysqld.exe' 開箱即用 ( out of the box ) ( portable application ) 版運行環境，可自行下載解壓縮，將其保存至檔案夾 ( folder ) : `QuantitativeTrading/MariaDB/MariaDB10.11/` 内，最終完整路徑應爲「`QuantitativeTrading/MariaDB/MariaDB10.11/bin/mysqld.exe`」，即可使用如下指令啓動運行資料庫 MongoDB 伺服器應用 : 
+```
+C:\QuantitativeTrading\Data\MariaDB> C:/QuantitativeTrading/MariaDB/MariaDB10.11/bin/mysqld.exe
+```
+即可.
