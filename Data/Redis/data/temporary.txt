@@ -15,3 +15,12 @@ logfile "C:/QuantitativeTrading/Data/Redis/server_log.txt"
 dir /home/QuantitativeTrading/Data/Redis/data/
 logfile /home/QuantitativeTrading/Data/Redis/redis-server.log
 pidfile /home/QuantitativeTrading/Data/Redis/redis-server.pid
+
+修改工程空間路徑爲 Redis 應用可讀可寫可執行：
+root@localhost:~# sudo chown redis:redis /home/QuantitativeTrading/Data/Redis -R
+修改工程空間路徑權限爲所有用戶可讀可寫可執行：
+root@localhost:~# sudo chmod 755 /home/QuantitativeTrading/Data/Redis
+修改文檔權限爲所有用戶可讀可寫：
+root@localhost:~# sudo chmod 640 /home/QuantitativeTrading/Data/Redis/configuring_redis_with_option_files.conf
+root@localhost:~# sudo chmod 640 /home/QuantitativeTrading/Data/Redis/redis-server.log
+root@localhost:~# sudo chmod 640 /home/QuantitativeTrading/Data/Redis/redis-server.pid
